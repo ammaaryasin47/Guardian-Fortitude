@@ -35,14 +35,20 @@
             </ul>
         </div>
         <ul class="fs-4 list-unstyled d-flex">
-            <a data-mdb-button-init data-mdb-toggle="sidenav" data-mdb-target="#sidenav-1" data-mdb-ripple-init
-                class="btn logo ps-5 justify-content-start" aria-controls="#sidenav-1" aria-haspopup="true">
-                <img src="../IMAGES/HOME/Logo.png" height="50px"></a>
+            <a><img class="logo01" src="../IMAGES/HOME/Logo.png" height="50px"></a>
             <!-- LOGO -->
+
+            <div class="fs-1 hamburger-icon">
+                <i class="bx bx-menu"></i>
+            </div>
+            
 
             <!-- Sidenav For Mobile -->
             <nav id="sidenav-1" data-mdb-sidenav-init class="sidenav" data-mdb-hidden="true">
-                <ul style=" list-style-type: none;" class="sidenav-menu">
+                <ul style=" list-style-type: none;" class="mt-5 sidenav-menu">
+                    <a><img class="logo02" src="../IMAGES/HOME/Logo.png" height="50px"></a>
+                    <!-- LOGO -->
+
                     <li class="sidenav-item">
                         <a href="../HTML/INDEX.html" class="sidenav-link">
                             <span>HOME</span></a>
@@ -102,15 +108,15 @@
             </nav>
 
             <ul style="cursor: pointer;"
-        class="navbtnul justify-content-end align-items-center list-unstyled gap-3 ms-auto d-flex pe-3 fs-2">
-        <li><a href="../HTML/INDEX.html">HOME</a></li>
-        <li style="color: maroon; font-weight: 500;"><a href="../HTML/ABOUTUS.html">ABOUT US</a></li>
-        <li><a href="../HTML/SERVICES.html">SERVICES</a></li>
-        <li><a>PRODUCTS</a></li>
-        <li><a>CONTACT US</a></li>
-        <li><a>QUOTE</a></li>
-        <li><a>LOGIN</a></li>
-      </ul>
+                class="navbtnul justify-content-end align-items-center list-unstyled gap-3 ms-auto d-flex pe-3 fs-2">
+                <li><a href="../HTML/INDEX.html">HOME</a></li>
+                <li style="color: maroon; font-weight: 500;"><a href="../HTML/ABOUTUS.html">ABOUT US</a></li>
+                <li><a href="../HTML/SERVICES.html">SERVICES</a></li>
+                <li><a>PRODUCTS</a></li>
+                <li><a>CONTACT US</a></li>
+                <li><a>QUOTE</a></li>
+                <li><a>LOGIN</a></li>
+            </ul>
         </ul>
     </nav>
 
@@ -151,21 +157,19 @@
 
     <!---------------------------------------------------------- GOALS ----------------------------------------------------------->
 
-    <div class="goals bg-light w-100">
+    <div class="goals justify-content-between bg-light w-100">
         <h1 class="text-center">GOALS</h1>
         <div class="goal-1">
             <h2 class="fs-1 text-center mb-5">Asset Protection</h2>
-            <p class=" fs-3 text-center">Our Primary Goal Of As Security Company Is To Safeguard The Assets Of Our
-                Clients. This Includes Physical
-                Assets Such As Property, Buildings, And Equipment, As Well As Intangible Assets Like Data And
-                Intellectual
-                Property.</p>
+            <p class=" fs-3 text-center">Our Primary Goal As A Security Company Is To Safeguard The Valuable Assets Of
+                Our Clients. This Encompasses Both Physical Assets, Such As Property, And Equipment, And Intangible
+                Assets, Including Sensitive Data & Intellectual Property.</p>
         </div>
         <div class="goal-1">
             <h2 class="fs-1 text-center mb-5">Risk Mitigation</h2>
             <p class="fs-3 text-center">We Aim To Identify, Assess, And Minimize Risks To Their Clients. This Involves
                 Conducting Thorough Risk Assessments, Implementing Effective Security Measures, And Providing Ongoing
-                Monitoring And Response Services To Prevent Security Breaches And Minimize Impact.</p>
+                Monitoring And Response Services To Prevent Security Breaches.</p>
         </div>
         <div class="goal-2 ">
             <h2 class=" fs-1 text-center mb-5">Client Safety & Peace Of Mind</h2>
@@ -363,10 +367,10 @@
     <h1 style="border-bottom: 2px solid maroon;" class="pb-5 text-center text-light mt-5">CLIENTS</h1>
 
     <div class="clients d-flex justify-content-around mt-5">
-        <img src="../IMAGES/ABOUT US/CLIENTS/Client 01.jpeg" >
-        <img src="../IMAGES/ABOUT US/CLIENTS/Client 02.jpeg" >
-        <img src="../IMAGES/ABOUT US/CLIENTS/Client 03.png" >
-        <img src="../IMAGES/ABOUT US/CLIENTS/Client 04.jpeg" >
+        <img src="../IMAGES/ABOUT US/CLIENTS/Client 01.jpeg">
+        <img src="../IMAGES/ABOUT US/CLIENTS/Client 02.jpeg">
+        <img src="../IMAGES/ABOUT US/CLIENTS/Client 03.png">
+        <img src="../IMAGES/ABOUT US/CLIENTS/Client 04.jpeg">
     </div>
 
     <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
@@ -437,7 +441,7 @@
     </footer>
 
 
-    <script src="../JS/index.js"></script>
+    <script src="../JS/navbar.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

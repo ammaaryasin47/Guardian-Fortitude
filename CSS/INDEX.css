@@ -79,6 +79,8 @@ html {
     padding: 8px;
     border-radius: 1.5rem;
     background-color: grey;
+    display: block;
+    color: inherit;
 }   
 
 .Blogs{

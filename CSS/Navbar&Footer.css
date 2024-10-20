@@ -12,7 +12,15 @@
     color: red;
 }
 
+.uppernav {
+    border-bottom: 2px solid white;
+    align-items: center;
+}
+
 .sidenav {
+    display: flex;
+    align-items: center;
+    border-left: 3px solid maroon;
     width: 250px;
     height: 100%;
     position: fixed;
@@ -43,9 +51,27 @@
     padding-left: 2rem;
 }
 
+.lowernav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.hamburger-icon {
+    display: none;
+    /* Hidden by default */
+    cursor: pointer;
+}
+
+.navbtnul {
+    order: 2;
+}
+
 /*<------------------------------------------------ FOOTER -------------------------------------------------------------->*/
 
 footer {
+    text-align: center;
     width: 100%;
     background: black;
     color: #fff;
@@ -84,13 +110,15 @@ footer {
 }
 
 .footer-col h3 {
-    width: max-content;
+    display: inline-block;
+    padding-bottom: 1rem;
+    width: auto;
     margin-bottom: 4rem;
     position: relative;
 }
 
 .footer-email-id {
-    width: fit-content;
+    width: max-content;
     margin: 2rem 0;
 
 }
@@ -185,22 +213,40 @@ hr {
     left: 1rem;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
+    .logo01 {
+        display: none;
+    }
+
+    .logo02 {
+        font-size: 5rem;
+        display: block;
+        position: relative;
+        align-items: center;
+    }
+
+    .fs-4.d-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .hamburger-icon {
+        margin-top: 1rem;
+        display: block;
+        font-size: 2rem;
+        order: 1;
+    }
 
     .sidenav {
         display: block;
-    }
-
-    .btn {
-        display: block;
-        position: fixed;
-        top: 1rem;
-        left: 1rem;
-        z-index: 1000;
     }
 
     .navbtnul li,
     .uppernav {
         display: none;
     }
+
 }

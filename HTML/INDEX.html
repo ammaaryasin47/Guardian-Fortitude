@@ -18,7 +18,7 @@
   <!--------------------------------------------- NAVBAR ----------------------------------------------------->
   <nav style="background-color: black; position:sticky; top: 0; z-index: 10;" class=" text-light w-100">
     <div class="uppernav">
-      <ul style="cursor:default;" class="fs-4 list-unstyled gap-5 d-flex ps-3 ">
+      <ul style="cursor:default; margin-bottom: 0rem;" class="fs-4  gap-5 d-flex ps-3 ">
         <li class="pe-3 border-light align-items-center" style="border-right: 1px dotted #fff;"> <i
             class='bx bx-envelope'></i>
           guardianfortitudeservice@gmail.com</li>
@@ -39,6 +39,11 @@
         class="btn logo ps-5 justify-content-start" aria-controls="#sidenav-1" aria-haspopup="true">
         <img src="../IMAGES/HOME/Logo.png" height="50px"></a>
 
+      <div id="hamburger" class="hamburger-icon" onclick="toggleSidenav()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
       <!-- Sidenav For Mobile -->
       <nav id="sidenav-1" data-mdb-sidenav-init class="sidenav" data-mdb-hidden="true">
         <ul style=" list-style-type: none;" class="sidenav-menu">
@@ -111,6 +116,7 @@
     </ul>
   </nav>
 
+
   <!--------------------------------------- COMPANY BANNER --------------------------------------------------->
 
   <div class="NamePlate">
@@ -122,7 +128,7 @@
 
   <!------------------------------------------ QUOTE CAROUSEL --------------------------------------------------------->
 
-  <div id="carouselTwo" class="carousel slide" data-bs-ride="carousel" style="cursor: default;">
+  <div id="carouselTwo" class="carousel slide" data-bs-ride="carousel" style="border-top: 2px solid white; cursor: default;">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselTwo" data-bs-slide-to="0" class="active" aria-current="true"
         aria-label="Slide 1"></button>
@@ -168,7 +174,7 @@
   </div>
 
   <!----------------------------------------- WHY CHOOSE US ? ----------------------------------------------->
-  <div style="background-color: black; cursor: default;" class="h-100">
+  <div style="background-color: black; cursor: default; border-top:2px solid white ;" class="h-100">
     <h1 style="border-bottom: 0.2rem solid maroon" class="h-1 text-center pt-5 pb-5 text-light">WHY CHOOSE US
       ?</h1>
 
@@ -196,7 +202,7 @@
       <img style="opacity: 25%;" src="../IMAGES/HOME/Logo.png" height="200rem">
     </div>
 
-    <div class="divbottom d-flex justify-content-around text-light pt-5">
+    <div class="divbottom d-flex justify-content-around text-light pt-5 mb-5 pb-5">
       <div style="width: 45rem; text-align: center;">
         <i style="font-size: 3rem;" class='bx bx-microchip'></i>
         <h1 class="h3">STATE-OF-THE-ART-TECHNOLOGY</h1>
@@ -274,14 +280,14 @@
       <h1>Understanding Bullet Calibers</h1>
       <h2>By <i>SUPPRESSOR</i></h2>
       <h3>5th March 2024</h3>
-      <a>Read More ...</a>
+      <a href="#" style="text-decoration: none; margin-top: 5rem; cursor:pointer ;">Read More ...</a>
     </div>
     <div style="border-right: 2px solid maroon" class="blog-2 px-5 text-center text-light mt-5">
       <img class="mb-3" src="https://i.pinimg.com/564x/ca/1b/95/ca1b95affeae5fa4063d21f0d1e55f71.jpg" height="150rem">
       <h1>Impacts Of Security Consultancy</h1>
       <h2>By <i>EK_VILLAIN</i></h2>
       <h3>5th March 2024</h3>
-      <a>Read More ...</a>
+      <a href="#" style="text-decoration: none; margin-top: 5rem; cursor:pointer ;">Read More ...</a>
     </div>
     <div class="blog-3 px-5 text-center text-light mt-5">
       <img class="mb-3"
@@ -290,7 +296,7 @@
       <h1>Exploring Your Legal Boundaries</h1>
       <h2>By <i>DAX</i></h2>
       <h3>5th March 2024</h3>
-      <a>Read More ...</a>
+      <a href="#" style="text-decoration: none; margin-top: 5rem; cursor:pointer ;">Read More ...</a>
     </div>
   </div>
 
@@ -300,10 +306,12 @@
 
       <div class="footer-col"> <!-- Logo And Tagline -->
         <img src="../IMAGES/HOME/Logo.png" id="footer-logo" alt="logo" width="150px" height="150px">
-        <p>Fortifying The Present, Safeguarding The Future ...</p>
-        <p>We Are The Saviours , The Last Hope , The Best</p>
+        <p>Fortifying The Present, </p>
+        <p>Safeguarding The Future ...</p>
+        <p>We Are The Saviours ,</p>
+        <p>The Last Hope , </p>
         <p>We Are
-        <h3>THE GUARDIAN FORTITUDE</h3>
+        <h3 class="text-align-center">THE GUARDIAN FORTITUDE</h3>
         </p>
       </div>
 
@@ -351,14 +359,16 @@
 
     <hr>
 
-    <p style="font-family: 'Barlow',sans-serif;" class="copyright">Guardian Fortitude Security Services &copy; 2024 - All Rights Reserved</p>
-    <p style="font-family: 'Barlow',sans-serif;" class="copyright">Guardian Fortitude Security Services Is A Registered Trademark Under The D-Fuzer
+    <p style="font-family: 'Barlow',sans-serif;" class="copyright">Guardian Fortitude Security Services &copy; 2024 -
+      All Rights Reserved</p>
+    <p style="font-family: 'Barlow',sans-serif;" class="copyright">Guardian Fortitude Security Services Is A Registered
+      Trademark Under The D-Fuzer
       Army&#174;</p>
 
   </footer>
 
 
-  <script src="../JS/index.js"></script>
+  <script src="../JS/navbar.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
