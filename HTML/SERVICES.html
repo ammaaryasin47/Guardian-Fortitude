@@ -35,26 +35,32 @@
             </ul>
         </div>
         <ul class="fs-4 list-unstyled d-flex">
-            <a data-mdb-button-init data-mdb-toggle="sidenav" data-mdb-target="#sidenav-1" data-mdb-ripple-init
-                class="btn logo ps-5 justify-content-start" aria-controls="#sidenav-1" aria-haspopup="true">
-                <img src="../IMAGES/HOME/Logo.png" height="50px"></a>
+            <a><img class="logo01" src="../IMAGES/HOME/Logo.png" height="50px"></a>
             <!-- LOGO -->
+
+            <div class="fs-1 hamburger-icon">
+                <i class="bx bx-menu"></i>
+            </div>
+
 
             <!-- Sidenav For Mobile -->
             <nav id="sidenav-1" data-mdb-sidenav-init class="sidenav" data-mdb-hidden="true">
-                <ul style=" list-style-type: none;" class="sidenav-menu">
+                <ul style=" list-style-type: none;" class="mt-5 sidenav-menu">
+                    <a><img class="logo02" src="../IMAGES/HOME/Logo.png" height="50px"></a>
+                    <!-- LOGO -->
+
                     <li class="sidenav-item">
-                        <a class="sidenav-link">
+                        <a href="../HTML/INDEX.html" class="sidenav-link">
                             <span>HOME</span></a>
                     </li>
 
                     <li class="sidenav-item">
-                        <a class="sidenav-link">
+                        <a href="../HTML/ABOUTUS.html" class="sidenav-link">
                             <span>ABOUT US</span></a>
                     </li>
 
                     <li class="sidenav-item">
-                        <a class="sidenav-link">
+                        <a href="../HTML/SERVICES.html" class="sidenav-link">
                             <span>SERVICES</span></a>
                     </li>
 
@@ -81,16 +87,16 @@
                             <li class=" fs-5 pe-3 border-light align-items-center"
                                 style="border-right: 1px dotted #fff;">
                                 <i class='bx bx-envelope'></i>
-                                guardianfortitudeservice@gmail.com
+                                guardianfortitude<p>service@gmail.com</p>
                             </li>
                             <li class="fs-5 pe-3 border-light align-items-center"
                                 style="border-right: 1px dotted #fff;"> <i class='bx bx-phone-call'></i>
                                 +91 1234567890</li>
-                            <li class="fs-5"><i class='bx bx-map'></i> Ahemdabad , Gujarat</li>
+                            <li class="fs-5"><i class='bx bx-map'></i> Ahemdabad , India</li>
                         </div>
 
-                        <li class="sidenav-item">
-                            <ul style="list-style-type: none;" class="justify-content-around d-flex">
+                        <li class="sidenav-item d-flex">
+                            <ul style="list-style-type: none;" class="justify-content-around d-flex flex-column">
                                 <li><i class='bx bxl-meta'></i></li>
                                 <li><i class='bx bxl-linkedin'></i></li>
                                 <li><i class='bx bxl-github'></i></li>
@@ -104,16 +110,15 @@
             <ul style="cursor: pointer;"
                 class="navbtnul justify-content-end align-items-center list-unstyled gap-3 ms-auto d-flex pe-3 fs-2">
                 <li><a href="../HTML/INDEX.html">HOME</a></li>
-                <li><a href="../HTML/ABOUTUS.html">ABOUT US</a></li>
-                <li style="color: maroon; font-weight: 500;"><a href="../HTML/SERVICES.html">SERVICES</a></li>
-                <li><a href="../HTML/ABOUTUS.html">PRODUCTS</a></li>
-                <li><a href="../HTML/ABOUTUS.html">CONTACT US</a></li>
-                <li><a href="../HTML/ABOUTUS.html">QUOTE</a></li>
-                <li><a href="../HTML/ABOUTUS.html">LOGIN</a></li>
+                <li style="color: maroon; font-weight: 500;"><a href="../HTML/ABOUTUS.html">ABOUT US</a></li>
+                <li><a href="../HTML/SERVICES.html">SERVICES</a></li>
+                <li><a>PRODUCTS</a></li>
+                <li><a>CONTACT US</a></li>
+                <li><a>QUOTE</a></li>
+                <li><a>LOGIN</a></li>
             </ul>
         </ul>
     </nav>
-
     <!------------------------------------------------------------ BANNER ---------------------------------------------------------->
 
     <div class="service-banner">
@@ -346,7 +351,7 @@
     </div>
 
     <!--------------------------------------------------------- USER INFORMATION ---------------------------------------------------->
-
+    <h1 style="border-bottom: 2px solid maroon; width: max-content;" class="d-flex fs-1 text-center text-light mt-5 pt-5 pb-2">USER INFORMATION</h1>
     
     <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
     <footer class="footer mt-5">
@@ -417,6 +422,7 @@
 
 
     <script src="../JS/SERVICES.js"></script>
+    <script src="../JS/navbar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

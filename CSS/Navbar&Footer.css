@@ -18,8 +18,6 @@
 }
 
 .sidenav {
-    display: flex;
-    align-items: center;
     border-left: 3px solid maroon;
     width: 250px;
     height: 100%;

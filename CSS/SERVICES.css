@@ -32,17 +32,22 @@ html {
 /*<--------------------------------- SERVICES ------------------------------------------------->*/
 
 .dropdown-content {
-    display: none;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
-    padding: 1rem;
+    max-height: 0; /* Start with a max-height of 0 */
+    opacity: 0; /* Start with opacity 0 */
+    overflow: hidden; /* Hide any overflow */
+    transition: max-height 0.4s ease, opacity 0.4s ease; /* Transition for max-height and opacity */
+    padding: 0; /* Remove padding initially */
     background-color: #f0f0f0;
     border-radius: 0.5rem;
     margin-top: 1rem;
 }
 
 .dropdown-open .dropdown-content {
-    display: block;
+    max-height: 200px; /* Set a maximum height that fits your content */
+    opacity: 1; /* Set opacity to 1 when open */
+    padding: 1rem; /* Add padding when open */
 }
+
 
 @media only screen and (max-width: 767px) {
 
