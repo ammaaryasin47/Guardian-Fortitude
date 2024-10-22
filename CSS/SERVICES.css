@@ -33,15 +33,10 @@ html {
 
 .dropdown-content {
     max-height: 0;
-    /* Start with a max-height of 0 */
     opacity: 0;
-    /* Start with opacity 0 */
     overflow: hidden;
-    /* Hide any overflow */
     transition: max-height 0.4s ease, opacity 0.4s ease;
-    /* Transition for max-height and opacity */
     padding: 0;
-    /* Remove padding initially */
     background-color: #f0f0f0;
     border-radius: 0.5rem;
     margin-top: 1rem;
@@ -49,11 +44,25 @@ html {
 
 .dropdown-open .dropdown-content {
     max-height: 200px;
-    /* Set a maximum height that fits your content */
     opacity: 1;
-    /* Set opacity to 1 when open */
     padding: 1rem;
-    /* Add padding when open */
+}
+
+.dropdown-content div p {
+    font-size: 1.5rem;
+}
+
+.weprovideimg {
+    border: 1px solid grey;
+    border-radius: 2rem;
+    height: 15rem;
+}
+
+.weprovidelogo {
+    background-color: #fff;
+    border-radius: 1rem;
+    transform: scaleX(-1);
+    height: 4rem;
 }
 
 .heading-container {
@@ -71,43 +80,84 @@ html {
 
 .transition-effect {
     opacity: 0;
-    transform: translateY(10px); /* Initial offset for transition */
-    transition: all 0.3s ease; /* Smooth transition */
-    color: #fff; /* Ensure text color is visible */
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    color: #fff;
 }
 
-/* When the label is active (input is focused) */
 .transition-effect.active {
     opacity: 1;
-    transform: translateY(-25px); /* Move label up */
+    transform: translateY(-25px);
 }
 
-/* General input styles */
 input {
-    width: 100%; /* Make inputs full width */
+    width: 100%;
     color: #fff;
     background: transparent;
     outline: none !important;
     text-align: center;
     border: none;
-    padding: 15px 0; /* Add padding for spacing */
+    padding: 15px 0;
 }
 
-/* Remove spinner controls for number input (CONTACT) */
 #contactinput::-webkit-outer-spin-button,
 #contactinput::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-#contactinput[type=number] {
-    -moz-appearance: textfield; /* For Firefox */
+.leftdiv,
+.rightdiv {
+    position: relative;
+    width: 40%;
 }
 
-/* Responsive label positioning */
-.leftdiv, .rightdiv {
-    position: relative; /* Positioning context for labels */
-    width: 40%; /* Set width for both columns, can adjust as needed */
+.leftdiv input,
+.rightdiv input {
+    margin-top: 40px;
+
+}
+
+#contact-label,
+#location-label {
+    top: 200%;
+
+}
+
+/* <---------------------------------------------------- CHOOSE SERVICE ------------------------------------------------------------------>*/
+.radio-container {
+    display: flex;
+    justify-content: space-around;   /* Evenly space columns */
+    width: 100%;                    /* Full width */
+}
+
+.column {
+    display: flex;
+    flex-direction: column;          /* Stack checkboxes vertically */
+    align-items: flex-start;         /* Align boxes to the left */
+}
+
+.checkbox-box {
+    display: flex;
+    align-items: center;             /* Align checkbox and label parallel */
+    margin-bottom: 10px;             /* Space between each checkbox */
+}
+
+.checkbox-box input[type="checkbox"] {
+    width: 20px;                     /* Square size for the checkbox */
+    height: 20px;                    /* Square size for the checkbox */
+    margin-right: 30px;              /* Space to push label away from the box */
+}
+
+label {
+    margin-left: 0px;                /* Align label parallel to the checkbox */
+    position: relative;
+    left: 50px;                      /* Move label outside and parallel to the box */
+}
+
+
+.chooseservice{
+    font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 767px) {
@@ -117,5 +167,46 @@ input {
         text-align: right;
         padding-right: 15rem;
         font-size: 3rem;
+    }
+
+    .weprovide ul li h2 {
+        font-size: 0.5rem;
+    }
+
+    .weprovidelogo {
+        border-radius: 0.5rem;
+        height: 2rem;
+    }
+
+    .dropdown-open .dropdown-content {
+        max-height: 15rem;
+    }
+
+    .dropdown-content div p {
+        font-size: 0.5rem;
+        width: 30rem;
+    }
+
+    .weprovideimg {
+        height: 6rem;
+    }
+
+    .service-banner img {
+        height: 15rem;
+    }
+
+    .radio-container {
+        flex-direction: column;       /* Stack the two columns vertically */
+        justify-content: center;      /* Center the stacked columns */
+        align-items: center;          /* Align them in the center horizontally */
+    }
+
+    .column {
+        width: 100%;                  /* Each column takes up full width */
+        max-width: 400px;             /* Optional: Limit max width for readability */
+    }
+
+    label {
+        left: 30px;                   /* Reduce label spacing for smaller screens */
     }
 }
