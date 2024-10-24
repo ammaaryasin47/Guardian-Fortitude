@@ -160,6 +160,29 @@ label {
     font-size: 1.5rem;
 }
 
+.submitbutton-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.submitbutton-container a{
+    border-radius:0.7rem;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+    background-color: rgb(43, 43, 43);
+    text-decoration: none; /* Ensure there's no underline */
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.submitbutton-container a:hover{
+    background-color: rgb(65, 64, 64);
+}
+
 @media only screen and (max-width: 767px) {
 
     .service-banner h1 {
