@@ -13,8 +13,9 @@
 }
 
 .uppernav {
+    padding-top: 0.5rem;
     border-bottom: 2px solid white;
-    align-items: center;
+    align-items: center;    
 }
 
 .sidenav {
@@ -247,4 +248,51 @@ hr {
         display: none;
     }
 
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-col {
+        flex-basis: 100%;
+        padding: 2rem 0;
+    }
+
+    .footer-col h3 {
+        margin-bottom: 2rem;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-icons .bx {
+        margin-right: 1rem;
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    .footer-form {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-form input {
+        margin-bottom: 1rem;
+    }
+
+    .footer-form button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Adjusting padding for the footer for smaller screens */
+    footer {
+        padding: 5rem 1rem 3rem;
+    }
 }

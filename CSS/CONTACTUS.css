@@ -1,0 +1,76 @@
+/* FONT  */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    background-color: black;
+    font-family: "Barlow", sans-serif;
+    font-size: 65.7%;
+}
+
+/*<----------------------------------- BANNER  ------------------------------------------------->*/
+
+.contactus-banner h1 {
+    transform: translateY(-550%);
+    text-align: left;
+    padding-left: 20rem;
+    font-size: 3rem;
+}
+
+.contactus-banner img {
+    overflow: hidden;
+    height: 25rem;
+    filter: blur(4px);
+}
+
+.contactus div i {
+    border-bottom: 2px solid maroon;
+    padding-bottom: 0.5rem;
+}
+
+.contactus div h3 {
+    padding-top: 2rem;
+}
+
+#map {
+    z-index: 2;
+    height: 400px;
+    /* Adjust as needed */
+    width: 100%;
+    border-right: 2px solid maroon;
+}
+
+@media only screen and (max-width: 767px) {
+    .contactus-banner h1 {
+        transform: translateY(-175%);
+        text-align: right;
+        padding-right: 15rem;
+        font-size: 3rem;
+    }
+
+    .contactus-banner img {
+        height: 15rem;
+    }
+
+    .contactus {
+        flex-direction: column;
+        width: max-content;
+    }
+
+    .mapandform{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contactform{
+        padding-left: 3rem;
+    }
+}
