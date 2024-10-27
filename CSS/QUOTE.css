@@ -25,6 +25,7 @@ html {
     display: flex;
     flex-direction: column;
 }
+
 .quote-para {
     font-size: 1.7rem;
     width: 106.5rem;
@@ -109,16 +110,66 @@ html {
     border-color: rgb(40, 157, 235);
 }
 
+#quote-para-span {
+    font-size: 1.7rem;
+}
+
+.Terms-Conditions {
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: white;
+}
+
 @media only screen and (max-width: 767px) {
     .quote-banner h1 {
-        transform: translateY(-175%);
-        text-align: right;
-        padding-right: 15rem;
-        font-size: 3rem;
+        transform: translateY(-391%);
+        text-align: left;
+        padding-left: 13rem;
+        font-size: 2rem;
     }
 
     .quote-banner img {
         height: 15rem;
     }
 
+    .quote-para {
+        width: 100%;
+        font-size: 1rem;
+        left: 2.5rem;
+        margin-top: 1rem;
+        line-height: 15px;
+    }
+
+    .quote-para input {
+        margin-left: 5px;
+        width: 7rem;
+        font-size: 1rem;
+    }
+
+    #quote-para-span {
+        font-size: 1rem;
+    }
+
+    .quote-send {
+        padding: 0rem;
+        border-radius: 10%;
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+        position: relative;
+        left: 13rem;
+        width: 3rem;
+        font-size: 1rem;
+    }
+
+    .quote-para-drop {
+        font-size: 1rem;
+    }
+
+    .Terms-Conditions {
+        font-size: 1rem;
+    }
+
+    #checkbox{
+        width: 1rem;
+    }
 }
