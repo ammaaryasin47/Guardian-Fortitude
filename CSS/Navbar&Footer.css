@@ -109,6 +109,11 @@ footer {
     color: red;
 }
 
+.footer-col ul li a:hover {
+    color: maroon;
+}
+
+
 #footer-logo {
     margin-bottom: 3rem;
 }

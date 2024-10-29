@@ -414,17 +414,12 @@ a:hover {
     transform: translateY(-50%);
 }
 
-.bg-golden {
-    background-color: #FFD700 !important;
-}
+@media only screen and (max-width: 767px) {
 
-.slide-in {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.slide-in.show {
-    opacity: 1;
-    transform: translateX(0);
+    .contactus-banner h1 {
+        transform: translateY(-200%);
+        text-align: center;
+        padding-left: 0rem;
+        font-size: 3rem;
+    }
 }
