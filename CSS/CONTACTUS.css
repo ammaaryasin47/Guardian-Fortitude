@@ -43,16 +43,15 @@ html {
 #map {
     z-index: 2;
     height: 400px;
-    /* Adjust as needed */
     width: 100%;
     border-right: 2px solid maroon;
 }
 
 @media only screen and (max-width: 767px) {
     .contactus-banner h1 {
-        transform: translateY(-175%);
-        text-align: right;
-        padding-right: 15rem;
+        transform: translateY(-270%);
+        text-align: left;
+        padding-left: 6rem;
         font-size: 3rem;
     }
 
@@ -62,19 +61,19 @@ html {
 
     .contactus {
         display: flex;
-        flex-direction: column; /* Stack the items vertically */
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh; /* Full viewport height to center vertically */
-        width: 100%; /* Ensure it spans full width */
+        height: 100vh;
+        width: 100%;
     }
 
-    .mapandform{
+    .mapandform {
         flex-direction: column;
         align-items: center;
     }
 
-    .contactform{
+    .contactform {
         padding-left: 3rem;
     }
 }

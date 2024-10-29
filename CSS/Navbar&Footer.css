@@ -12,6 +12,11 @@
     color: red;
 }
 
+.navbar-nav .nav-link:hover,
+.navbtnul li a:hover {
+    color: maroon;
+}
+
 .uppernav {
     padding-top: 0.5rem;
     border-bottom: 2px solid white;

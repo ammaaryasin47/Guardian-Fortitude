@@ -1,0 +1,430 @@
+/* FONT  */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    background-color: black;
+    font-family: "Barlow", sans-serif;
+    font-size: 65.7%;
+}
+
+/*<----------------------------------- BANNER  ------------------------------------------------->*/
+
+.contactus-banner h1 {
+    transform: translateY(-500%);
+    text-align: left;
+    padding-left: 45rem;
+    font-size: 3.5rem;
+}
+
+.contactus-banner img {
+    overflow: hidden;
+    height: 25rem;
+    filter: blur(2px);
+}
+
+/*<--------------------------------------------------- PRODUCT CARDS  ----------------------------------------------------->*/
+.Product-head {
+    font-family: 'Barlow', sans-serif;
+    font-size: 3rem;
+    border-bottom: 2px solid maroon;
+    width: fit-content;
+    margin: 0 auto;
+    /* Center horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-products {
+    padding: 80px 0 54px;
+}
+
+.section-products .header {
+    margin-bottom: 50px;
+}
+
+.section-products .header h3 {
+    font-size: 1rem;
+    color: #fe302f;
+    font-weight: 500;
+}
+
+.section-products .header h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #444444;
+}
+
+.section-products .single-product {
+    margin-bottom: 26px;
+}
+
+.section-products .single-product .part-1 {
+    z-index: 1;
+    border: 2px solid grey;
+    border-radius: 20%;
+    position: relative;
+    height: 290px;
+    max-height: 290px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.section-products .single-product .part-1::before {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.section-products .single-product:hover .part-1::before {
+    transform: scale(1.2, 1.2) rotate(5deg);
+}
+
+.section-products #product-1 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Mercedes-G63.webp") no-repeat center;
+    background-size: contain;
+    transition: all 0.3s;
+}
+
+.section-products #product-2 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Range-Rover.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-3 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Rolls-Royce.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-4 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Mercedes-S680-Maybach.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-5 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Toyota-Land-Cruiser-300.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-6 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Lexus-LX-600.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-7 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Toyota-Camry.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-8 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Cadillac-Escalade.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-9 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/DS-SWAT.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-10 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/6X6.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-11 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/S.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-12 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/V.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-13 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Combat.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-14 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/FS.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-15 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Comabt-S.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-16 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/GT.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-17 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Akusm-Armored-Vehicles-Toyota-Land-Cruiser-79-CIT-thumb.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-18 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Akusm-Armored-Vehicles-GMC-Savana-CIT-thumb.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-19 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Akusm-Armored-Vehicles-Toyota-Hilux-Double-Cab-thumb.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-20 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Akusm-Armored-Vehicles-Toyota-Hiace-CIT-thumb.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-21 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Akusm-Armored-Vehicles-Mercedes-Actros-thumb.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-22 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Akusm-Armored-Vehicles-Ashok-Leyland-Falcon-thumb.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-23 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Akusm-Armored-Vehicles-Toyota-Hiace-Commuter-thumb.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-24 .part-1::before {
+    background: url("https://aksumarmored.com/wp-content/uploads/2024/04/Akusm-Armored-Vehicles-Toyota-Coaster-thumb.webp") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-25 .part-1::before {
+    background: url("../../IMAGES/Products/MRAP/cougar-6x6-mrap-01.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-26 .part-1::before {
+    background: url("../../IMAGES/Products/MRAP/buffalo-mprc-vehicle-001.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-27 .part-1::before {
+    background: url("../../IMAGES/Products/MRAP/Temsah.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-28 .part-1::before {
+    background: url("../../IMAGES/Products/MRAP/Oshkosh-Defense-M-ATV.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-29 .part-1::before {
+    background: url("../../IMAGES/Products/MRAP/Typhoon\ K.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-30 .part-1::before {
+    background: url("../../IMAGES/Products/MRAP/Kamaz-53.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-31 .part-1::before {
+    background: url("../../IMAGES/Products/Riot-Control/inkas-riot-control-vehicle.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-32 .part-1::before {
+    background: url("../../IMAGES/Products/Riot-Control/Bozena.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-33 .part-1::before {
+    background: url("../../IMAGES/Products/Riot-Control/Alpine-Riot-Control.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-34 .part-1::before {
+    background: url("../../IMAGES/Products/Riot-Control/Scania\ P-40.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-35 .part-1::before {
+    background: url("../../IMAGES/Products/Riot-Control/IAG_Rhino_new_large_volume_riot_control_protected_armored_vehicle_925_001.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-36 .part-1::before {
+    background: url("../../IMAGES/Products/Riot-Control/titan04.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-37 .part-1::before {
+    background: url("../../IMAGES/Products/Riot-Control/Tata-Xenon.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-38 .part-1::before {
+    background: url("../../IMAGES/Products/Riot-Control/THYSSEN.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-39 .part-1::before {
+    background: url("../../IMAGES/Products/ACV/BAE-ACV-30.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-40 .part-1::before {
+    background: url("../../IMAGES/Products/ACV/AAV-7.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-41 .part-1::before {
+    background: url("../../IMAGES/Products/ACV/General-Dynamics.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-42 .part-1::before {
+    background: url("../../IMAGES/Products/ACV/Terrex-2.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-43 .part-1::before {
+    background: url("../../IMAGES/Products/ACV/Lockheed-Martin-Havoc8X8.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-44 .part-1::before {
+    background: url("../../IMAGES/Products/ACV/Lockheed-Martin-Gibbs.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-45 .part-1::before {
+    background: url("../../IMAGES/Products/ACV/KMW.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-46 .part-1::before {
+    background: url("../../IMAGES/Products/ACV/PTS-2.png") no-repeat center;
+    background-size: contain;
+}
+
+.section-products .single-product .part-1 .discount,
+.section-products .single-product .part-1 .new {
+    position: absolute;
+    top: 15px;
+    left: 2px;
+    color: #ffffff;
+    background-color: maroon;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.section-products .single-product .part-1 .new {
+    left: 0;
+    background-color: maroon;
+}
+
+.section-products .single-product .part-1 ul {
+    position: absolute;
+    bottom: -41px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.section-products .single-product:hover .part-1 ul {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.section-products .single-product .part-1 ul li {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.section-products .single-product .part-1 ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ffffff;
+    color: #444444;
+    text-align: center;
+    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+    transition: color 0.2s;
+    font-size: 1.2rem;
+}
+
+.section-products .single-product .part-1 ul li a:hover {
+    color: #fe302f;
+}
+
+.section-products .single-product .part-2 .product-title {
+    font-size: 2.5rem;
+}
+
+.section-products .single-product .part-2 h4 {
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
+.section-products .single-product .part-2 .product-old-price {
+    position: relative;
+    padding: 0 7px;
+    margin-right: 2px;
+    opacity: 0.6;
+}
+
+.section-products .single-product .part-2 .product-old-price::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #444444;
+    transform: translateY(-50%);
+}
+
+.bg-golden {
+    background-color: #FFD700 !important;
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.slide-in.show {
+    opacity: 1;
+    transform: translateX(0);
+}
