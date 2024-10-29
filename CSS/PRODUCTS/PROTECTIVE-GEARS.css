@@ -47,12 +47,19 @@ html {
 }
 
 /*<--------------------------------------------------- PRODUCT CARDS  ----------------------------------------------------->*/
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    width: 100%;             
+}
+
+
 .Product-head {
     font-size: 4rem;
     border-bottom: 2px solid rgb(131, 29, 29);
     width: fit-content;
-    position: relative;
-    left: 55rem;
 }
 
 .Product-head-2 {
@@ -320,4 +327,32 @@ a:hover {
     height: 1px;
     background-color: #444444;
     transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 767px) {
+    .gear-banner img {
+        width: 100%;
+    }
+
+    .armor-intro {
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        bottom: 15rem;
+    }
+
+    .text-primary {
+        bottom: 25rem;
+        font-size: 2rem;
+    }
+
+    .text-secondary {
+        bottom: 24rem;
+        font-size: 2rem;
+    }
+
+    .topic{
+        bottom: 21rem;
+        font-size: 4rem;
+    }
 }
