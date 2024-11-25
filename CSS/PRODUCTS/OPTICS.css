@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+body,
+html {
+    font-size: 62.7%;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    background-repeat: no-repeat;
+    font-family: "Barlow", sans-serif;
+    background-size: cover;
+    background-position: center;
+}
+
+/*<--------------------------------------------------- PRODUCT CARDS  ----------------------------------------------------->*/
+.Product-head {
+    font-size: 4rem;
+    border-bottom: 2px solid maroon;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-products {
+    padding: 80px 0 54px;
+}
+
+.section-products .header {
+    margin-bottom: 50px;
+}
+
+.section-products .header h3 {
+    font-size: 1rem;
+    color: maroon;
+    font-weight: 500;
+}
+
+.section-products .header h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: maroon;
+}
+
+.section-products .single-product {
+    margin-bottom: 26px;
+}
+
+.section-products .single-product .part-1 {
+    border: 1px solid maroon;
+    border-radius: 20%;
+    position: relative;
+    height: 290px;
+    max-height: 290px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.section-products .single-product .part-1::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.section-products .single-product:hover .part-1::before {
+    transform: scale(1.2, 1.2) rotate(5deg);
+}
+
+.section-products #product-1 .part-1::before {
+    background: url("https://cdna.artstation.com/p/assets/images/images/036/341/792/large/bucket-hex-tbrender001-shot-1-fullquality.jpg?1617390227") no-repeat center;
+    background-size:contain;
+    transition: all 0.3s;
+}
+
+.section-products #product-2 .part-1::before {
+    background: url("https://cdnb.artstation.com/p/assets/images/images/057/988/125/large/eldon-henrique-k.jpg?1673134831") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-3 .part-1::before {
+    background: url("https://cdnb.artstation.com/p/assets/images/images/065/363/617/large/georgiy-kiselev-1pn138-render002-test-6.jpg?1690201799") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-4 .part-1::before {
+    background: url("https://cdnb.artstation.com/p/assets/images/images/077/116/711/large/ilya-rukhlyada-1-viewport-019.jpg?1718642929") no-repeat center;
+    background-size:cover;
+}
+
+.section-products #product-5 .part-1::before {
+    background: url("https://cdna.artstation.com/p/assets/images/images/077/116/672/large/ilya-rukhlyada-1-viewport-012.jpg?1718642871") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-6 .part-1::before {
+    background: url("https://cdnb.artstation.com/p/assets/images/images/011/362/481/large/nicholas-lim-helmet-composite.jpg?1529196400") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-7 .part-1::before {
+    background: url("https://cdna.artstation.com/p/assets/images/images/070/409/944/large/antoine-george-explode-01.jpg?1702471561") no-repeat center;
+    background-size: contain;
+}
+
+.section-products #product-8 .part-1::before {
+    background: url("https://cdnb.artstation.com/p/assets/images/images/037/912/099/large/roman-kozak-shot-1.jpg?1621634549") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-9 .part-1::before {
+    background: url("https://cdna.artstation.com/p/assets/images/images/037/383/280/large/benedict-burns-perst-4-artstation-presentation-3.jpg?1620232422") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-10 .part-1::before {
+    background: url("https://cdna.artstation.com/p/assets/images/images/043/925/382/large/wenwen-ar15keys-4-17.jpg?1638633290") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-11 .part-1::before {
+    background: url("https://cdnb.artstation.com/p/assets/images/images/015/471/275/large/anton-pismennyy-anton-pismennyy-lcu-13.jpg?1548454625") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-12 .part-1::before {
+    background: url("https://cdnb.artstation.com/p/assets/images/images/058/956/651/large/vladislav-kravchenko-5.jpg?1675317718") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-13 .part-1::before {
+    background: url("https://cdnb.artstation.com/p/assets/images/images/022/265/741/large/linus-scheffel-schmidt-benderoptic1.jpg?1574764917") no-repeat center;
+    background-size: contain;
+}
+.section-products #product-14 .part-1::before {
+    background: url("https://cdnb.artstation.com/p/assets/images/images/036/668/529/large/mustafa-majeed-3.jpg?1618306315") no-repeat center;
+    background-size: contain;
+}
+.section-products #product-15 .part-1::before {
+    background: url("https://cdnb.artstation.com/p/assets/images/images/044/501/097/large/nestor-sarmiento-prueba-main-camera-002.jpg?1640187426") no-repeat center;
+    background-size: cover;
+}
+.section-products #product-16 .part-1::before {
+    background: url("https://cdnb.artstation.com/p/assets/images/images/074/822/599/large/stephen-mok-c-02-c-c-04-p05-vanity-wide.jpg?1713060893") no-repeat center;
+    background-size: contain;
+}
+.section-products #product-17 .part-1::before {
+    background: url("https://cdnb.artstation.com/p/assets/images/images/076/165/283/large/dmytro-bushylov-pose-1.jpg?1716328861") no-repeat center;
+    background-size: contain;
+}
+.section-products #product-18 .part-1::before {
+    background: url("https://cdnb.artstation.com/p/assets/images/images/071/756/895/large/carlos-morales-empire-3d-std-acog-013.jpg?17058823063") no-repeat center;
+    background-size: contain;
+}
+.section-products #product-19 .part-1::before {
+    background: url("https://cdna.artstation.com/p/assets/images/images/058/137/986/large/hector-cervantes-asset.jpg?1673466449") no-repeat center;
+    background-size: contain;
+}
+
+.section-products .single-product .part-1 .discount,
+.section-products .single-product .part-1 .new {
+    position: absolute;
+    top: 15px;
+    left: 2px;
+    color: #ffffff;
+    background-color: maroon;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.section-products .single-product .part-1 .new {
+    left: 0;
+    background-color: maroon;
+}
+
+.section-products .single-product .part-1 ul {
+    position: absolute;
+    bottom: -41px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.section-products .single-product:hover .part-1 ul {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.section-products .single-product .part-1 ul li {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.section-products .single-product .part-1 ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ffffff;
+    color: #444444;
+    text-align: center;
+    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+    transition: color 0.2s;
+    font-size: 1.2rem;
+}
+
+.section-products .single-product .part-1 ul li a:hover {
+    color: maroon;
+}
+
+.section-products .single-product .part-2 .product-title {
+    font-size: 2.5rem;
+}
+
+.section-products .single-product .part-2 h4 {
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
+.section-products .single-product .part-2 .product-old-price {
+    position: relative;
+    padding: 0 7px;
+    margin-right: 2px;
+    opacity: 0.6;
+}
+
+.section-products .single-product .part-2 .product-old-price::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: maroon;
+    transform: translateY(-50%);
+}
+
+.bg-golden {
+    background-color: maroon !important;
+}
+
+.modal-content{
+    border: 0.2rem solid grey;
+    background-color: black;
+  }
+
+/*<------------------------------------------------ FOOTER -------------------------------------------------------------->*/
+
+.footer {
+    z-index: 0;
+    width: 100%;
+    background: linear-gradient(to right, #000000, #3a9768);
+    color: #fff;
+    padding: 10rem 0 3rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+@media only screen and (max-width: 767px) {
+    .Product-head{
+        font-size: 3rem;
+    }
+}
