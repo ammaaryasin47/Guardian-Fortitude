@@ -82,7 +82,7 @@ a:hover {
 
 .section-products #product-1 .part-1::before {
     background: url("https://cdna.artstation.com/p/assets/images/images/036/341/792/large/bucket-hex-tbrender001-shot-1-fullquality.jpg?1617390227") no-repeat center;
-    background-size:contain;
+    background-size: contain;
     transition: all 0.3s;
 }
 
@@ -98,7 +98,7 @@ a:hover {
 
 .section-products #product-4 .part-1::before {
     background: url("https://cdnb.artstation.com/p/assets/images/images/077/116/711/large/ilya-rukhlyada-1-viewport-019.jpg?1718642929") no-repeat center;
-    background-size:cover;
+    background-size: cover;
 }
 
 .section-products #product-5 .part-1::before {
@@ -125,42 +125,52 @@ a:hover {
     background: url("https://cdna.artstation.com/p/assets/images/images/037/383/280/large/benedict-burns-perst-4-artstation-presentation-3.jpg?1620232422") no-repeat center;
     background-size: cover;
 }
+
 .section-products #product-10 .part-1::before {
     background: url("https://cdna.artstation.com/p/assets/images/images/043/925/382/large/wenwen-ar15keys-4-17.jpg?1638633290") no-repeat center;
     background-size: cover;
 }
+
 .section-products #product-11 .part-1::before {
     background: url("https://cdnb.artstation.com/p/assets/images/images/015/471/275/large/anton-pismennyy-anton-pismennyy-lcu-13.jpg?1548454625") no-repeat center;
     background-size: cover;
 }
+
 .section-products #product-12 .part-1::before {
     background: url("https://cdnb.artstation.com/p/assets/images/images/058/956/651/large/vladislav-kravchenko-5.jpg?1675317718") no-repeat center;
     background-size: cover;
 }
+
 .section-products #product-13 .part-1::before {
     background: url("https://cdnb.artstation.com/p/assets/images/images/022/265/741/large/linus-scheffel-schmidt-benderoptic1.jpg?1574764917") no-repeat center;
     background-size: contain;
 }
+
 .section-products #product-14 .part-1::before {
     background: url("https://cdnb.artstation.com/p/assets/images/images/036/668/529/large/mustafa-majeed-3.jpg?1618306315") no-repeat center;
     background-size: contain;
 }
+
 .section-products #product-15 .part-1::before {
     background: url("https://cdnb.artstation.com/p/assets/images/images/044/501/097/large/nestor-sarmiento-prueba-main-camera-002.jpg?1640187426") no-repeat center;
     background-size: cover;
 }
+
 .section-products #product-16 .part-1::before {
     background: url("https://cdnb.artstation.com/p/assets/images/images/074/822/599/large/stephen-mok-c-02-c-c-04-p05-vanity-wide.jpg?1713060893") no-repeat center;
     background-size: contain;
 }
+
 .section-products #product-17 .part-1::before {
     background: url("https://cdnb.artstation.com/p/assets/images/images/076/165/283/large/dmytro-bushylov-pose-1.jpg?1716328861") no-repeat center;
     background-size: contain;
 }
+
 .section-products #product-18 .part-1::before {
     background: url("https://cdnb.artstation.com/p/assets/images/images/071/756/895/large/carlos-morales-empire-3d-std-acog-013.jpg?17058823063") no-repeat center;
     background-size: contain;
 }
+
 .section-products #product-19 .part-1::before {
     background: url("https://cdna.artstation.com/p/assets/images/images/058/137/986/large/hector-cervantes-asset.jpg?1673466449") no-repeat center;
     background-size: contain;
@@ -252,25 +262,14 @@ a:hover {
     background-color: maroon !important;
 }
 
-.modal-content{
+.modal-content {
     border: 0.2rem solid grey;
     background-color: black;
-  }
-
-/*<------------------------------------------------ FOOTER -------------------------------------------------------------->*/
-
-.footer {
-    z-index: 0;
-    width: 100%;
-    background: linear-gradient(to right, #000000, #3a9768);
-    color: #fff;
-    padding: 10rem 0 3rem;
-    font-size: 1.3rem;
-    line-height: 2rem;
 }
 
+
 @media only screen and (max-width: 767px) {
-    .Product-head{
+    .Product-head {
         font-size: 3rem;
     }
 }
