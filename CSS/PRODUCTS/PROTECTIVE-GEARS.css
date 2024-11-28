@@ -164,8 +164,8 @@ a:hover {
 }
 
 .section-products #product-8 .part-1::before {
-    background: url("https://www.mku.com/image/cache/catalog/Kavro%20Ballistic%20Helmets/ACH%20Combat%20Helmets/Kavro-ACH-111%20T/Kavro-ACH-111%20T%20(4)-228x228.png") no-repeat center;
-    background-size: auto;
+    background: url("https://www.mku.com/image/cache/catalog/Kavro%20Ballistic%20Helmets/ACH%20Combat%20Helmets/Kavro-ACH-114%20T/Kavro-ACH-114T-Left-463x421.png") no-repeat center;
+    background-size: contain;
 }
 
 .section-products #product-9 .part-1::before {

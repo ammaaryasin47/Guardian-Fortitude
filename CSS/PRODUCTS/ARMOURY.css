@@ -19,24 +19,61 @@ html {
 /*<----------------------------------- BANNER  ------------------------------------------------->*/
 
 .armoury-banner h1 {
-    position: absolute; /* Use absolute positioning to center it */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Offset by 50% of its own width and height */
-    text-align: center; /* Center the text */
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
     font-size: 3.5rem;
 }
 
 .armoury-banner {
-    position: relative; /* Ensure the h1 is positioned relative to the banner */
+    position: relative; 
 }
 
 .armoury-banner img {
     overflow: hidden;
     height: 25rem;
-    width: 100%; /* Ensure the image stretches across the full width */
+    width: 100%; 
     filter: blur(2px);
-    object-fit: cover; /* Ensure the image fits within its container */
+    object-fit: cover; 
 }
+
+/*<--------------------------------------------- SVG SCROLL ------------------------------------------->*/
+.scroll-container {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto; /* Horizontal scrolling only */
+    overflow-y: hidden; /* Disable vertical scrolling */
+    padding: 10px;
+    background-color: #000; /* Black background */
+    gap: 20px;
+}
+
+.svg-item {
+    flex: 0 0 auto;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.svg-item:hover {
+    transform: scale(1.1);
+}
+
+.svg-item svg {
+    width: 63.4px;
+    height: auto;
+}
+
+.svg-label {
+    margin-top: 5px;
+    color: white;
+    font-size: 14px;
+    font-family: 'Barlow', sans-serif;
+    text-align: center;
+}
+
+
 
 

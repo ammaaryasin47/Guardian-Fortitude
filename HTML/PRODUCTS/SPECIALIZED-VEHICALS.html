@@ -201,6 +201,37 @@
 		</div>
 	</section>
 
+	<!-- Product Modal -->
+	<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content bg-dark text-light">
+				<div class="modal-header">
+					<h3 class="modal-title" id="productModalLabel"></h3>
+					<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-6">
+								<img id="productModalImage" src="" alt="Product Image" class="img-fluid rounded">
+							</div>
+							<div class="col-md-6">
+								<h3 id="productModalPrice"></h3>
+								<h4 id="productModalCategory"></h4> <!-- Dynamic section for category -->
+								<button class="btn btn-success mt-3">
+									<i class="fas fa-shopping-cart"></i> Add to Cart
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
 	<!----------------------------------------------------- PRODUCT CARDS  -------------------------------------------------->
 	<h3 class="Product-head pb-5 text-light text-center">LUXURY SECTION
 	</h3>
@@ -208,6 +239,7 @@
 		<div class="container">
 			<div class="row justify-content-center text-center">
 				<div class="col-md-8 col-lg-6">
+					<h2 class="text-light">Luxury Section</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -217,8 +249,19 @@
 						<div class="part-1">
 							<span class="discount">15% off</span>
 							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
+								<li>
+									<a href="#" class="add-to-cart-button" data-product-id="1">
+										<i class="fas fa-shopping-cart"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+										data-title="ARMORED Mercedes G63 AMG" data-price="$629,000"
+										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Mercedes-G63.webp"
+										data-category="Luxury">
+										<i class="fas fa-expand"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 						<div class="part-2">
@@ -233,9 +276,19 @@
 					<div id="product-2" class="single-product">
 						<div class="part-1">
 							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
+								<li>
+									<a href="#" class="add-to-cart-button" data-product-id="2">
+										<i class="fas fa-shopping-cart"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+										data-title="ARMORED Range Rover" data-price="$490,500"
+										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Range-Rover.webp"
+										data-category="Luxury">
+										<i class="fas fa-expand"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 						<div class="part-2">
@@ -250,8 +303,19 @@
 						<div class="part-1">
 							<span class="new">new</span>
 							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
+								<li>
+									<a href="#" class="add-to-cart-button" data-product-id="3">
+										<i class="fas fa-shopping-cart"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+										data-title="ARMORED Rolls Royce Phantom" data-price="$900,000"
+										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Rolls-Royce.webp"
+										data-category="Luxury">
+										<i class="fas fa-expand"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 						<div class="part-2">
@@ -265,8 +329,19 @@
 					<div id="product-4" class="single-product">
 						<div class="part-1">
 							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
+								<li>
+									<a href="#" class="add-to-cart-button" data-product-id="4">
+										<i class="fas fa-shopping-cart"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+										data-title="ARMORED Mercedes S600 Maybach" data-price="$450,000"
+										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Mercedes-S680-Maybach.webp"
+										data-category="Luxury">
+										<i class="fas fa-expand"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 						<div class="part-2">
@@ -280,12 +355,23 @@
 					<div id="product-5" class="single-product">
 						<div class="part-1">
 							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
+								<li>
+									<a href="#" class="add-to-cart-button" data-product-id="5">
+										<i class="fas fa-shopping-cart"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+										data-title="ARMORED Toyota Land Cruiser 300" data-price="$350,000"
+										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Toyota-Land-Cruiser-300.webp"
+										data-category="Luxury">
+										<i class="fas fa-expand"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 						<div class="part-2">
-							<h3 class="product-title text-light">ARMORED Toyota Land Crusiser 300</h3>
+							<h3 class="product-title text-light">ARMORED Toyota Land Cruiser 300</h3>
 							<h4 class="product-price text-light">$350,000</h4>
 						</div>
 					</div>
@@ -295,8 +381,19 @@
 					<div id="product-6" class="single-product">
 						<div class="part-1">
 							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
+								<li>
+									<a href="#" class="add-to-cart-button" data-product-id="6">
+										<i class="fas fa-shopping-cart"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+										data-title="ARMORED Lexus LX-600" data-price="$450,000"
+										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Lexus-LX-600.webp"
+										data-category="Luxury">
+										<i class="fas fa-expand"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 						<div class="part-2">
@@ -310,8 +407,19 @@
 					<div id="product-7" class="single-product">
 						<div class="part-1">
 							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
+								<li>
+									<a href="#" class="add-to-cart-button" data-product-id="7">
+										<i class="fas fa-shopping-cart"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+										data-title="ARMORED Toyota Camry" data-price="$490,000"
+										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Toyota-Camry.webp"
+										data-category="Luxury">
+										<i class="fas fa-expand"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 						<div class="part-2">
@@ -326,8 +434,19 @@
 						<div class="part-1">
 							<span class="new">new</span>
 							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
+								<li>
+									<a href="#" class="add-to-cart-button" data-product-id="8">
+										<i class="fas fa-shopping-cart"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+										data-title="ARMORED Cadillac Escalade" data-price="$850,000"
+										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Cadillac-Escalade.webp"
+										data-category="Luxury">
+										<i class="fas fa-expand"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 						<div class="part-2">
@@ -336,18 +455,14 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<!------------------------------------------ TACTICAL SECTION  --------------------------------------------------------->
+	
+	<!------------------------------------------ TACTICAL SECTION  --------------------------------------------------------->
 
-		<h3 id="slideInSection" class="Product-head mt-50 pb-5 mb-5 text-light text-center">TACTICAL VEHICAL SECTION
-		</h3>
+	<h3 id="slideInSection" class="Product-head mt-50 pb-5 mb-5 text-light text-center">TACTICAL VEHICAL SECTION
+	</h3>
 
+	<section class="section-products">
 		<div class="container">
-			<div class="row justify-content-center text-center">
-				<div class="col-md-8 col-lg-6">
-				</div>
-			</div>
 			<div class="row">
 				<!-- Single Product -->
 				<div class="col-md-6 col-lg-4 col-xl-3">
@@ -355,12 +470,23 @@
 						<div class="part-1">
 							<span class="discount">15% off</span>
 							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
+								<li>
+									<a href="#" class="add-to-cart-button" data-product-id="9">
+										<i class="fas fa-shopping-cart"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+										data-title="ARMORED SWAT Vehicle" data-price="$459,000"
+										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/DS-SWAT.webp"
+										data-category="Tactical">
+										<i class="fas fa-expand"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 						<div class="part-2">
-							<h3 class="product-title text-light">ARMORED SWAT Vehical</h3>
+							<h3 class="product-title text-light">ARMORED SWAT Vehicle</h3>
 							<h4 class="product-old-price text-light">$540,000</h4>
 							<h4 class="product-price text-light">$459,000</h4>
 						</div>
@@ -371,9 +497,19 @@
 					<div id="product-10" class="single-product">
 						<div class="part-1">
 							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
+								<li>
+									<a href="#" class="add-to-cart-button" data-product-id="10">
+										<i class="fas fa-shopping-cart"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+										data-title="ARMORED 6X6" data-price="$1,990,000"
+										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/6X6.webp"
+										data-category="Tactical">
+										<i class="fas fa-expand"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 						<div class="part-2">
@@ -387,8 +523,19 @@
 					<div id="product-11" class="single-product">
 						<div class="part-1">
 							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
+								<li>
+									<a href="#" class="add-to-cart-button" data-product-id="11">
+										<i class="fas fa-shopping-cart"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+										data-title="ARMORED 8 Seater PCV" data-price="$990,000"
+										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/S.webp"
+										data-category="Tactical">
+										<i class="fas fa-expand"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 						<div class="part-2">
@@ -403,8 +550,19 @@
 						<div class="part-1">
 							<span class="new">new</span>
 							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
+								<li>
+									<a href="#" class="add-to-cart-button" data-product-id="12">
+										<i class="fas fa-shopping-cart"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+										data-title="ARMORED 12 Seater PCV" data-price="$1,999,000"
+										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/V.webp"
+										data-category="Tactical">
+										<i class="fas fa-expand"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 						<div class="part-2">
@@ -419,12 +577,23 @@
 						<div class="part-1">
 							<span class="discount">15% off</span>
 							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
+								<li>
+									<a href="#" class="add-to-cart-button" data-product-id="13">
+										<i class="fas fa-shopping-cart"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+										data-title="ARMORED HUMMER APC" data-price="$1,622,650"
+										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Combat.webp"
+										data-category="Tactical">
+										<i class="fas fa-expand"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 						<div class="part-2">
-							<h3 class="product-title text-light">ARMORED HUMMER APC </h3>
+							<h3 class="product-title text-light">ARMORED HUMMER APC</h3>
 							<h4 class="product-old-price text-light">$1,909,000</h4>
 							<h4 class="product-price text-light">$1,622,650</h4>
 						</div>
@@ -435,8 +604,19 @@
 					<div id="product-14" class="single-product">
 						<div class="part-1">
 							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
+								<li>
+									<a href="#" class="add-to-cart-button" data-product-id="14">
+										<i class="fas fa-shopping-cart"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+										data-title="ARMORED 10 Seater PCV" data-price="$2,100,999"
+										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/FS.webp"
+										data-category="Tactical">
+										<i class="fas fa-expand"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 						<div class="part-2">
@@ -450,8 +630,19 @@
 					<div id="product-15" class="single-product">
 						<div class="part-1">
 							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
+								<li>
+									<a href="#" class="add-to-cart-button" data-product-id="15">
+										<i class="fas fa-shopping-cart"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+										data-title="ARMORED 4 Seater Pickup" data-price="$599,000"
+										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Comabt-S.webp"
+										data-category="Tactical">
+										<i class="fas fa-expand"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 						<div class="part-2">
@@ -466,8 +657,19 @@
 						<div class="part-1">
 							<span class="new">new</span>
 							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
+								<li>
+									<a href="#" class="add-to-cart-button" data-product-id="16">
+										<i class="fas fa-shopping-cart"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+										data-title="ARMORED 2 Seater Pickup" data-price="$250,000"
+										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/GT.webp"
+										data-category="Tactical">
+										<i class="fas fa-expand"></i>
+									</a>
+								</li>
 							</ul>
 						</div>
 						<div class="part-2">
@@ -476,533 +678,620 @@
 						</div>
 					</div>
 				</div>
+	
+
+	<!------------------------------------------------------------- LIGHT ARMORED VEHICAL ----------------------------------------------------------------------->
+	<h3 id="slideInSection" class="Product-head mt-5 pb-5 mb-5 mt-5 pt-5 text-light text-center">LIGHT ARMORED
+		VEHICALS (LAV)</h3>
+
+		<section class="section-products">
+			<div class="container">
+				<div class="row justify-content-center text-center">
+					<div class="col-md-8 col-lg-6">
+						<h2 class="text-light">Light Armored Vehicles</h2>
+					</div>
+				</div>
+				<div class="row">
+					<!-- Single Product -->
+					<div class="col-md-6 col-lg-4 col-xl-3">
+						<div id="product-17" class="single-product">
+							<div class="part-1">
+								<span class="discount">15% off</span>
+								<ul>
+									<li>
+										<a href="#" class="add-to-cart-button" data-product-id="17">
+											<i class="fas fa-shopping-cart"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+											data-title="ARMORED Toyota Hilux" data-price="$459,000"
+											data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Akusm-Armored-Vehicles-Toyota-Land-Cruiser-79-CIT-thumb.webp"
+											data-category="Light Armored">
+											<i class="fas fa-expand"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="part-2">
+								<h3 class="product-title text-light">ARMORED Toyota Hilux</h3>
+								<h4 class="product-old-price text-light">$540,000</h4>
+								<h4 class="product-price text-light">$459,000</h4>
+							</div>
+						</div>
+					</div>
+					<!-- Single Product -->
+					<div class="col-md-6 col-lg-4 col-xl-3">
+						<div id="product-18" class="single-product">
+							<div class="part-1">
+								<ul>
+									<li>
+										<a href="#" class="add-to-cart-button" data-product-id="18">
+											<i class="fas fa-shopping-cart"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+											data-title="ARMORED GMC Savana" data-price="$1,990,000"
+											data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Akusm-Armored-Vehicles-GMC-Savana-CIT-thumb.webp"
+											data-category="Light Armored">
+											<i class="fas fa-expand"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="part-2">
+								<h3 class="product-title text-light">ARMORED GMC Savana</h3>
+								<h4 class="product-price text-light">$1,990,000</h4>
+							</div>
+						</div>
+					</div>
+					<!-- Single Product -->
+					<div class="col-md-6 col-lg-4 col-xl-3">
+						<div id="product-19" class="single-product">
+							<div class="part-1">
+								<ul>
+									<li>
+										<a href="#" class="add-to-cart-button" data-product-id="19">
+											<i class="fas fa-shopping-cart"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+											data-title="ARMORED Hilux Pickup" data-price="$990,000"
+											data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Akusm-Armored-Vehicles-Toyota-Hilux-Double-Cab-thumb.webp"
+											data-category="Light Armored">
+											<i class="fas fa-expand"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="part-2">
+								<h3 class="product-title text-light">ARMORED Hilux Pickup</h3>
+								<h4 class="product-price text-light">$990,000</h4>
+							</div>
+						</div>
+					</div>
+					<!-- Single Product -->
+					<div class="col-md-6 col-lg-4 col-xl-3">
+						<div id="product-20" class="single-product">
+							<div class="part-1">
+								<span class="new">new</span>
+								<ul>
+									<li>
+										<a href="#" class="add-to-cart-button" data-product-id="20">
+											<i class="fas fa-shopping-cart"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+											data-title="ARMORED Toyota HiAce" data-price="$1,999,000"
+											data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Akusm-Armored-Vehicles-Toyota-Hiace-CIT-thumb.webp"
+											data-category="Light Armored">
+											<i class="fas fa-expand"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="part-2">
+								<h3 class="product-title text-light">ARMORED Toyota HiAce</h3>
+								<h4 class="product-price text-light">$1,999,000</h4>
+							</div>
+						</div>
+					</div>
+					<!-- Single Product -->
+					<div class="col-md-6 col-lg-4 col-xl-3">
+						<div id="product-21" class="single-product">
+							<div class="part-1">
+								<span class="discount">15% off</span>
+								<ul>
+									<li>
+										<a href="#" class="add-to-cart-button" data-product-id="21">
+											<i class="fas fa-shopping-cart"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+											data-title="ARMORED Mercedes Actros" data-price="$1,622,650"
+											data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Akusm-Armored-Vehicles-Mercedes-Actros-thumb.webp"
+											data-category="Light Armored">
+											<i class="fas fa-expand"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="part-2">
+								<h3 class="product-title text-light">ARMORED Mercedes Actros</h3>
+								<h4 class="product-old-price text-light">$1,909,000</h4>
+								<h4 class="product-price text-light">$1,622,650</h4>
+							</div>
+						</div>
+					</div>
+					<!-- Single Product -->
+					<div class="col-md-6 col-lg-4 col-xl-3">
+						<div id="product-22" class="single-product">
+							<div class="part-1">
+								<ul>
+									<li>
+										<a href="#" class="add-to-cart-button" data-product-id="22">
+											<i class="fas fa-shopping-cart"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+											data-title="ARMORED Ashok Leyland" data-price="$2,100,999"
+											data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Akusm-Armored-Vehicles-Ashok-Leyland-Falcon-thumb.webp"
+											data-category="Light Armored">
+											<i class="fas fa-expand"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="part-2">
+								<h3 class="product-title text-light">ARMORED Ashok Leyland</h3>
+								<h4 class="product-price text-light">$2,100,999</h4>
+							</div>
+						</div>
+					</div>
+					<!-- Single Product -->
+					<div class="col-md-6 col-lg-4 col-xl-3">
+						<div id="product-23" class="single-product">
+							<div class="part-1">
+								<ul>
+									<li>
+										<a href="#" class="add-to-cart-button" data-product-id="23">
+											<i class="fas fa-shopping-cart"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+											data-title="ARMORED Hi Ace Bus" data-price="$599,000"
+											data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Akusm-Armored-Vehicles-Toyota-Hiace-Commuter-thumb.webp"
+											data-category="Light Armored">
+											<i class="fas fa-expand"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="part-2">
+								<h3 class="product-title text-light">ARMORED Hi Ace Bus</h3>
+								<h4 class="product-price text-light">$599,000</h4>
+							</div>
+						</div>
+					</div>
+					<!-- Single Product -->
+					<div class="col-md-6 col-lg-4 col-xl-3">
+						<div id="product-24" class="single-product">
+							<div class="part-1">
+								<span class="new">new</span>
+								<ul>
+									<li>
+										<a href="#" class="add-to-cart-button" data-product-id="24">
+											<i class="fas fa-shopping-cart"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="expand-button" data-bs-toggle="modal" data-bs-target="#productModal"
+											data-title="ARMORED Toyota Coaster" data-price="$250,000"
+											data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Akusm-Armored-Vehicles-Toyota-Coaster-thumb.webp"
+											data-category="Light Armored">
+											<i class="fas fa-expand"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="part-2">
+								<h3 class="product-title text-light">ARMORED Toyota Coaster</h3>
+								<h4 class="product-price text-light">$250,000</h4>
+							</div>
+						</div>
+					</div>
+		
+
+	<!--------------------------------------------------------------------------- Mine Resistant Ambush Protected ---------------------------------------------------------------------------->
+	<h3 id="slideInSection" class="Product-head mt-50 pb-5 mb-5 text-light text-center">MINE RESISTANT AMBUSH
+		PROTECTED (MRAP)</h3>
+
+	<div class="container">
+		<div class="row justify-content-center text-center">
+			<div class="col-md-8 col-lg-6">
 			</div>
 		</div>
-
-		<!------------------------------------------------------------- LIGHT ARMORED VEHICAL ----------------------------------------------------------------------->
-		<h3 id="slideInSection" class="Product-head mt-5 pb-5 mb-5 mt-5 pt-5 text-light text-center">LIGHT ARMORED
-			VEHICALS (LAV)</h3>
-
-		<div class="container">
-			<div class="row justify-content-center text-center">
-				<div class="col-md-8 col-lg-6">
-				</div>
-			</div>
-			<div class="row">
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-17" class="single-product">
-						<div class="part-1">
-							<span class="discount">15% off</span>
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">ARMORED Toyota Hilux</h3>
-							<h4 class="product-old-price text-light">$540,000</h4>
-							<h4 class="product-price text-light">$459,000</h4>
-						</div>
+		<div class="row">
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-25" class="single-product">
+					<div class="part-1">
+						<span class="discount">15% off</span>
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
 					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-18" class="single-product">
-						<div class="part-1">
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">ARMORED GMC Savana</h3>
-							<h4 class="product-price text-light">$1,990,000</h4>
-						</div>
-					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-19" class="single-product">
-						<div class="part-1">
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">ARMORED Hilux Pickup</h3>
-							<h4 class="product-price text-light">$990,000</h4>
-						</div>
-					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-20" class="single-product">
-						<div class="part-1">
-							<span class="new">new</span>
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">ARMORED Toyota HiAce</h3>
-							<h4 class="product-price text-light">$1,999,000</h4>
-						</div>
-					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-21" class="single-product">
-						<div class="part-1">
-							<span class="discount">15% off</span>
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">ARMORED Mercedes Actros </h3>
-							<h4 class="product-old-price text-light">$1,909,000</h4>
-							<h4 class="product-price text-light">$1,622,650</h4>
-						</div>
-					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-22" class="single-product">
-						<div class="part-1">
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">ARMORED Ashok Leyland</h3>
-							<h4 class="product-price text-light">$2,100,999</h4>
-						</div>
-					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-23" class="single-product">
-						<div class="part-1">
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">ARMORED Hi Ace Bus</h3>
-							<h4 class="product-price text-light">$599,000</h4>
-						</div>
-					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-24" class="single-product">
-						<div class="part-1">
-							<span class="new">new</span>
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">ARMORED Toyota Coaster</h3>
-							<h4 class="product-price text-light">$250,000</h4>
-						</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">ARMORED Cougar</h3>
+						<h4 class="product-old-price text-light">$540,000</h4>
+						<h4 class="product-price text-light">$459,000</h4>
 					</div>
 				</div>
 			</div>
-		</div>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-26" class="single-product">
+					<div class="part-1">
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
 
-		<!--------------------------------------------------------------------------- Mine Resistant Ambush Protected ---------------------------------------------------------------------------->
-		<h3 id="slideInSection" class="Product-head mt-50 pb-5 mb-5 text-light text-center">MINE RESISTANT AMBUSH
-			PROTECTED (MRAP)</h3>
-
-		<div class="container">
-			<div class="row justify-content-center text-center">
-				<div class="col-md-8 col-lg-6">
-				</div>
-			</div>
-			<div class="row">
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-25" class="single-product">
-						<div class="part-1">
-							<span class="discount">15% off</span>
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">ARMORED Cougar</h3>
-							<h4 class="product-old-price text-light">$540,000</h4>
-							<h4 class="product-price text-light">$459,000</h4>
-						</div>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
 					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-26" class="single-product">
-						<div class="part-1">
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">ARMORED M-ATV</h3>
-							<h4 class="product-price text-light">$1,990,000</h4>
-						</div>
-					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-27" class="single-product">
-						<div class="part-1">
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">ARMORED Temsah</h3>
-							<h4 class="product-price text-light">$990,000</h4>
-						</div>
-					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-28" class="single-product">
-						<div class="part-1">
-							<span class="new">new</span>
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">ARMORED ATV</h3>
-							<h4 class="product-price text-light">$1,999,000</h4>
-						</div>
-					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-29" class="single-product">
-						<div class="part-1">
-							<span class="discount">15% off</span>
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">ARMORED Typhoon </h3>
-							<h4 class="product-old-price text-light">$1,909,000</h4>
-							<h4 class="product-price text-light">$1,622,650</h4>
-						</div>
-					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-30" class="single-product">
-						<div class="part-1">
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">ARMORED Kamaz </h3>
-							<h4 class="product-price text-light">$2,100,999</h4>
-						</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">ARMORED M-ATV</h3>
+						<h4 class="product-price text-light">$1,990,000</h4>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!----------------------------------------------------------------------------- RIOT CONTROL ---------------------------------------------------------------------->
-		<h3 id="slideInSection" class="Product-head mt-50 pb-5 mb-5 text-light text-center">RIOT CONROL VEHICALS</h3>
-
-		<div class="container">
-			<div class="row justify-content-center text-center">
-				<div class="col-md-8 col-lg-6">
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-27" class="single-product">
+					<div class="part-1">
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">ARMORED Temsah</h3>
+						<h4 class="product-price text-light">$990,000</h4>
+					</div>
 				</div>
 			</div>
-			<div class="row">
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-31" class="single-product">
-						<div class="part-1">
-							<span class="discount">15% off</span>
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">INKAS </h3>
-							<h4 class="product-old-price text-light">$540,000</h4>
-							<h4 class="product-price text-light">$459,000</h4>
-						</div>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-28" class="single-product">
+					<div class="part-1">
+						<span class="new">new</span>
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">ARMORED ATV</h3>
+						<h4 class="product-price text-light">$1,999,000</h4>
 					</div>
 				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-32" class="single-product">
-						<div class="part-1">
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">Monster </h3>
-							<h4 class="product-price text-light">$1,990,000</h4>
-						</div>
+			</div>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-29" class="single-product">
+					<div class="part-1">
+						<span class="discount">15% off</span>
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">ARMORED Typhoon </h3>
+						<h4 class="product-old-price text-light">$1,909,000</h4>
+						<h4 class="product-price text-light">$1,622,650</h4>
 					</div>
 				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-33" class="single-product">
-						<div class="part-1">
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">Alpine </h3>
-							<h4 class="product-price text-light">$990,000</h4>
-						</div>
+			</div>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-30" class="single-product">
+					<div class="part-1">
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
 					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-34" class="single-product">
-						<div class="part-1">
-							<span class="new">new</span>
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">Scania </h3>
-							<h4 class="product-price text-light">$1,999,000</h4>
-						</div>
-					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-35" class="single-product">
-						<div class="part-1">
-							<span class="discount">15% off</span>
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">IAG </h3>
-							<h4 class="product-old-price text-light">$1,909,000</h4>
-							<h4 class="product-price text-light">$1,622,650</h4>
-						</div>
-					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-36" class="single-product">
-						<div class="part-1">
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">CxxM </h3>
-							<h4 class="product-price text-light">$2,100,999</h4>
-						</div>
-					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-37" class="single-product">
-						<div class="part-1">
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">Telcoline </h3>
-							<h4 class="product-price text-light">$2,100,999</h4>
-						</div>
-					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-38" class="single-product">
-						<div class="part-1">
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">TM-170</h3>
-							<h4 class="product-price text-light">$2,100,999</h4>
-						</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">ARMORED Kamaz </h3>
+						<h4 class="product-price text-light">$2,100,999</h4>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	<!----------------------------------------------------------------------------- RIOT CONTROL ---------------------------------------------------------------------->
+	<h3 id="slideInSection" class="Product-head mt-50 pb-5 mb-5 text-light text-center">RIOT CONROL VEHICALS</h3>
 
-		<!------------------------------------------------------ AMPHIBIOUS COMBAT VEHICAL --------------------------------------------------------------------->
-		<h3 id="slideInSection" class="Product-head mt-50 pb-5 mb-5 text-light text-center">AMPHIBIOUS COMBAT VEHICALS
-			(ACV)</h3>
-
-		<div class="container">
-			<div class="row justify-content-center text-center">
-				<div class="col-md-8 col-lg-6">
+	<div class="container">
+		<div class="row justify-content-center text-center">
+			<div class="col-md-8 col-lg-6">
+			</div>
+		</div>
+		<div class="row">
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-31" class="single-product">
+					<div class="part-1">
+						<span class="discount">15% off</span>
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">INKAS </h3>
+						<h4 class="product-old-price text-light">$540,000</h4>
+						<h4 class="product-price text-light">$459,000</h4>
+					</div>
 				</div>
 			</div>
-			<div class="row">
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-39" class="single-product">
-						<div class="part-1">
-							<span class="discount">15% off</span>
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">BAE Systems</h3>
-							<h4 class="product-old-price text-light">$540,000</h4>
-							<h4 class="product-price text-light">$459,000</h4>
-						</div>
-					</div>
-				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-40" class="single-product">
-						<div class="part-1">
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-32" class="single-product">
+					<div class="part-1">
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
 
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">AAV7</h3>
-							<h4 class="product-price text-light">$1,990,000</h4>
-						</div>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">Monster </h3>
+						<h4 class="product-price text-light">$1,990,000</h4>
 					</div>
 				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-41" class="single-product">
-						<div class="part-1">
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">Mowag Piranha</h3>
-							<h4 class="product-price text-light">$990,000</h4>
-						</div>
+			</div>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-33" class="single-product">
+					<div class="part-1">
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">Alpine </h3>
+						<h4 class="product-price text-light">$990,000</h4>
 					</div>
 				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-42" class="single-product">
-						<div class="part-1">
-							<span class="new">new</span>
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">Terrex</h3>
-							<h4 class="product-price text-light">$1,999,000</h4>
-						</div>
+			</div>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-34" class="single-product">
+					<div class="part-1">
+						<span class="new">new</span>
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">Scania </h3>
+						<h4 class="product-price text-light">$1,999,000</h4>
 					</div>
 				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-43" class="single-product">
-						<div class="part-1">
-							<span class="discount">15% off</span>
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">Patria</h3>
-							<h4 class="product-old-price text-light">$1,909,000</h4>
-							<h4 class="product-price text-light">$1,622,650</h4>
-						</div>
+			</div>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-35" class="single-product">
+					<div class="part-1">
+						<span class="discount">15% off</span>
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">IAG </h3>
+						<h4 class="product-old-price text-light">$1,909,000</h4>
+						<h4 class="product-price text-light">$1,622,650</h4>
 					</div>
 				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-44" class="single-product">
-						<div class="part-1">
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">Gibbs</h3>
-							<h4 class="product-price text-light">$2,100,999</h4>
-						</div>
+			</div>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-36" class="single-product">
+					<div class="part-1">
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">CxxM </h3>
+						<h4 class="product-price text-light">$2,100,999</h4>
 					</div>
 				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-45" class="single-product">
-						<div class="part-1">
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">AVPT</h3>
-							<h4 class="product-price text-light">$2,100,999</h4>
-						</div>
+			</div>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-37" class="single-product">
+					<div class="part-1">
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">Telcoline </h3>
+						<h4 class="product-price text-light">$2,100,999</h4>
 					</div>
 				</div>
-				<!-- Single Product -->
-				<div class="col-md-6 col-lg-4 col-xl-3">
-					<div id="product-46" class="single-product">
-						<div class="part-1">
-							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
-							</ul>
-						</div>
-						<div class="part-2">
-							<h3 class="product-title text-light">Openwater</h3>
-							<h4 class="product-price text-light">$2,100,999</h4>
-						</div>
+			</div>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-38" class="single-product">
+					<div class="part-1">
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">TM-170</h3>
+						<h4 class="product-price text-light">$2,100,999</h4>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<!------------------------------------------------------ AMPHIBIOUS COMBAT VEHICAL --------------------------------------------------------------------->
+	<h3 id="slideInSection" class="Product-head mt-50 pb-5 mb-5 text-light text-center">AMPHIBIOUS COMBAT VEHICALS
+		(ACV)</h3>
+
+	<div class="container">
+		<div class="row justify-content-center text-center">
+			<div class="col-md-8 col-lg-6">
+			</div>
+		</div>
+		<div class="row">
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-39" class="single-product">
+					<div class="part-1">
+						<span class="discount">15% off</span>
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">BAE Systems</h3>
+						<h4 class="product-old-price text-light">$540,000</h4>
+						<h4 class="product-price text-light">$459,000</h4>
+					</div>
+				</div>
+			</div>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-40" class="single-product">
+					<div class="part-1">
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">AAV7</h3>
+						<h4 class="product-price text-light">$1,990,000</h4>
+					</div>
+				</div>
+			</div>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-41" class="single-product">
+					<div class="part-1">
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">Mowag Piranha</h3>
+						<h4 class="product-price text-light">$990,000</h4>
+					</div>
+				</div>
+			</div>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-42" class="single-product">
+					<div class="part-1">
+						<span class="new">new</span>
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">Terrex</h3>
+						<h4 class="product-price text-light">$1,999,000</h4>
+					</div>
+				</div>
+			</div>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-43" class="single-product">
+					<div class="part-1">
+						<span class="discount">15% off</span>
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">Patria</h3>
+						<h4 class="product-old-price text-light">$1,909,000</h4>
+						<h4 class="product-price text-light">$1,622,650</h4>
+					</div>
+				</div>
+			</div>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-44" class="single-product">
+					<div class="part-1">
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">Gibbs</h3>
+						<h4 class="product-price text-light">$2,100,999</h4>
+					</div>
+				</div>
+			</div>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-45" class="single-product">
+					<div class="part-1">
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">AVPT</h3>
+						<h4 class="product-price text-light">$2,100,999</h4>
+					</div>
+				</div>
+			</div>
+			<!-- Single Product -->
+			<div class="col-md-6 col-lg-4 col-xl-3">
+				<div id="product-46" class="single-product">
+					<div class="part-1">
+						<ul>
+							<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+							<li><a href="#"><i class="fas fa-expand"></i></a></li>
+						</ul>
+					</div>
+					<div class="part-2">
+						<h3 class="product-title text-light">Openwater</h3>
+						<h4 class="product-price text-light">$2,100,999</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	</section>
 
 	<!------------------------------------------------------------ FOOTER ------------------------------------------------------->
