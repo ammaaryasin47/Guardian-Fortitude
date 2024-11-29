@@ -11,6 +11,7 @@
 
 body,
 html {
+    height: 100%;
     background-color: black;
     font-family: "Barlow", sans-serif;
     font-size: 65.7%;
@@ -20,33 +21,133 @@ html {
 
 .armoury-banner h1 {
     position: absolute;
-    top: 50%; 
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     text-align: center;
     font-size: 3.5rem;
 }
 
 .armoury-banner {
-    position: relative; 
+    position: relative;
 }
 
 .armoury-banner img {
     overflow: hidden;
-    height: 25rem;
-    width: 100%; 
-    filter: blur(2px);
-    object-fit: cover; 
+    height: 50rem;
+    width: 100%;
+    filter: blur(3px);
+    object-fit: cover;
 }
+
+/*<-------------------------------------------- SELECTOR ------------------------------------------------------>*/
+
+.tabs-selector {
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.tabs-selector-item {
+    padding: 0.5rem;
+    border: 2px solid maroon;
+    cursor: pointer;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+}
+
+.tabs-selector-item.active {
+    background-color: maroon;
+    color: white;
+    
+}
+
+#home-by-series {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+    grid-gap: 20px; /* Add space between items */
+    padding: 20px;
+    justify-items: center; /* Center the items */
+    box-sizing: border-box; /* Ensure padding doesn't mess with the layout */
+}
+
+/* Style for individual series item cards */
+.series-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    background-color: #fff; /* Ensure white background */
+    display: flex; /* Use flex to ensure proper item alignment */
+    flex-direction: column;
+    align-items: center; /* Center the image and text */
+    justify-content: flex-end; /* Align text at the bottom of the image */
+    box-sizing: border-box; /* Include padding in the size */
+}
+
+/* Image styles for each series item */
+.series-item img {
+    width:100%;
+    height: 100%; /* Ensure the image covers the full height of the container */
+    object-fit: cover;
+    border-radius: 10px; /* Match rounded corners */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Heading styles for the series name */
+.series-item h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8); /* Semi-transparent text color */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition for color and position */
+}
+
+/* Hover effects */
+.series-item:hover {
+    transform: translateY(-10px); /* Lift the item */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    filter: brightness(1.1); /* Increase brightness */
+    background-color: rgba(0, 0, 0, 0.3); /* Optional: Add a background color to the card on hover */
+}
+
+.series-item:hover img {
+    transform: scale(1.1) rotate(3deg); /* Scale and rotate the image */
+}
+
+.series-item:hover h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: maroon; /* Change text color to white */
+    transform: translateX(-50%) translateY(-10px); /* Move text up */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+    #home-by-series {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    #home-by-series {
+        grid-template-columns: 1fr; /* 1 column on smaller screens */
+    }
+}
+
 
 /*<--------------------------------------------- SVG SCROLL ------------------------------------------->*/
 .scroll-container {
     display: flex;
     justify-content: space-between;
-    overflow-x: auto; /* Horizontal scrolling only */
-    overflow-y: hidden; /* Disable vertical scrolling */
+    overflow-x: auto;
+    overflow-y: hidden;
     padding: 10px;
-    background-color: #000; /* Black background */
+    background-color: #000;
     gap: 20px;
 }
 
@@ -73,7 +174,3 @@ html {
     font-family: 'Barlow', sans-serif;
     text-align: center;
 }
-
-
-
-
