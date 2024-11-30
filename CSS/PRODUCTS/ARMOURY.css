@@ -64,37 +64,36 @@ html {
 
 #home-by-series {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
-    grid-gap: 20px; /* Add space between items */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; 
     padding: 20px;
-    justify-items: center; /* Center the items */
-    box-sizing: border-box; /* Ensure padding doesn't mess with the layout */
+    justify-items: center;
+    box-sizing: border-box; 
 }
 
-/* Style for individual series item cards */
+/*<------------------------------------------------------------- SERIES --------------------------------------------------------------------->*/
+
 .series-item {
     position: relative;
     overflow: hidden;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px; 
     transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-    background-color: #fff; /* Ensure white background */
-    display: flex; /* Use flex to ensure proper item alignment */
+    background-color: #fff; 
+    display: flex;
     flex-direction: column;
-    align-items: center; /* Center the image and text */
-    justify-content: flex-end; /* Align text at the bottom of the image */
-    box-sizing: border-box; /* Include padding in the size */
+    align-items: center; 
+    justify-content: flex-end; 
+    box-sizing: border-box; 
 }
 
-/* Image styles for each series item */
 .series-item img {
     width:100%;
-    height: 100%; /* Ensure the image covers the full height of the container */
+    height: 100%; 
     object-fit: cover;
-    border-radius: 10px; /* Match rounded corners */
+    border-radius: 10px; 
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Heading styles for the series name */
 .series-item h3 {
     position: absolute;
     bottom: 10px;
@@ -103,44 +102,95 @@ html {
     margin: 0;
     padding: 10px;
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.8); /* Semi-transparent text color */
-    transition: color 0.3s ease, transform 0.3s ease; /* Transition for color and position */
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effects */
 .series-item:hover {
-    transform: translateY(-10px); /* Lift the item */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    filter: brightness(1.1); /* Increase brightness */
-    background-color: rgba(0, 0, 0, 0.3); /* Optional: Add a background color to the card on hover */
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
+    filter: brightness(1.1); 
+    background-color: rgba(0, 0, 0, 0.3); 
 }
 
 .series-item:hover img {
-    transform: scale(1.1) rotate(3deg); /* Scale and rotate the image */
+    transform: scale(1.1) rotate(3deg); 
 }
 
 .series-item:hover h3 {
     font-size: 1.5rem;
     font-weight: bold;
-    color: maroon; /* Change text color to white */
-    transform: translateX(-50%) translateY(-10px); /* Move text up */
+    color: maroon; 
+    transform: translateX(-50%) translateY(-10px); 
 }
 
-/* Responsive design for smaller screens */
 @media (max-width: 1024px) {
     #home-by-series {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     #home-by-series {
-        grid-template-columns: 1fr; /* 1 column on smaller screens */
+        grid-template-columns: 1fr; 
     }
 }
 
+/*<--------------------------------------------- PRODUCTS ----------------------------------------------------------------------------------->*/
 
-/*<--------------------------------------------- SVG SCROLL ------------------------------------------->*/
+.card{
+	width: 250px;
+	border-radius: 10px;
+}
+
+.card-body{
+    background-color: #000;
+}
+
+.card-img-top{
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+span.text-muted{
+	font-size: 12px;
+}
+small.text-muted{
+	font-size: 8px;
+}
+h5.mb-0{
+	font-size: 1rem;
+}
+small.ghj{
+	font-size: 9px;
+}
+.mid{
+	background: #000;
+}
+h6.ml-1{
+	font-size: 13px;
+}
+small.key{
+	font-size: 9px;
+	cursor: pointer;
+}
+.btn-danger{
+	color: #000;
+}
+.btn-danger:focus{
+	box-shadow: none;
+}
+small.justify-content-center{
+	font-size: 9px;
+	cursor: pointer;
+}
+
+@media screen and (max-width:600px){
+    .col-sm-4{
+        margin-bottom: 50px;
+    }
+}
+
+/*<--------------------------------------------------------------- SVG SCROLL --------------------------------------------------------------->*/
 .scroll-container {
     display: flex;
     justify-content: space-between;
