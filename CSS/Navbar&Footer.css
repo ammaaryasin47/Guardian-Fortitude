@@ -2,6 +2,7 @@
 
 .navbar {
     background-color: #000;
+    z-index: 100;
 }
 
 .navbar-nav .nav-link {
@@ -20,7 +21,7 @@
 .uppernav {
     padding-top: 0.5rem;
     border-bottom: 2px solid white;
-    align-items: center;    
+    align-items: center;
 }
 
 .sidenav {
@@ -71,6 +72,27 @@
 .navbtnul {
     order: 2;
 }
+
+/*<------------------------------------------------- SCROLLBAR ----------------------------------------------->*/
+
+::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+    /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: maroon;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
+
 
 /*<------------------------------------------------ FOOTER -------------------------------------------------------------->*/
 
