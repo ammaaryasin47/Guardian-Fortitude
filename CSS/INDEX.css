@@ -66,6 +66,8 @@ html {
 
 .divtop p,
 .divbottom p {
+    letter-spacing: 1.5px;
+    line-height: 2rem;
     font-size: 1.8rem;
 }
 
@@ -84,6 +86,7 @@ html {
 }   
 
 .Blogs{
+    letter-spacing: 1px;
     display: flex;
     flex-wrap: wrap;
 }

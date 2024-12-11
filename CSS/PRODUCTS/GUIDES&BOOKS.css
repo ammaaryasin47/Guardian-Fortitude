@@ -1,0 +1,130 @@
+/* FONT  */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100%;
+    background-color: black;
+    font-family: "Barlow", sans-serif;
+    font-size: 65.7%;
+}
+
+/*<----------------------------------- BANNER  ------------------------------------------------->*/
+
+.books-banner h1 {
+    letter-spacing: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 8rem;
+}
+
+.books-banner img {
+    overflow: hidden;
+    height: 50rem;
+    width: 100%;
+    filter: blur(2px);
+    object-fit: cover;
+}
+
+.books-intro {
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+    line-height: 2.5rem;
+}
+
+/* Simplified and enhanced CSS for the card */
+.popular {
+    letter-spacing: 2px;
+}
+
+.cardcontainer {
+    width: 350px;
+    height: auto;
+    background-color: #000;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid grey;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardcontainer:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.photo {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.cardcontainer:hover .photo img {
+    transform: scale(1.1);
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+
+.book-footer {
+    padding: 10px;
+    background-color: #000;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: maroon;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #C0392B;
+}
+
+@media only screen and (max-width: 767px) {
+    .books-title {}
+
+    .books-banner h1 {
+        top: 35%;
+        font-size: 7em;
+    }
+
+    .books-intro {
+        line-height: 1rem;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        bottom: 15rem;
+    }
+}

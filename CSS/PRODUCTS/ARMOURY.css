@@ -172,7 +172,7 @@ html {
 /*<--------------------------------------------- PRODUCTS ----------------------------------------------------------------------------------->*/
 
 
-.pistol-heading-container, .hunting-heading-container {
+.heading-container {
     width: 100%;
     background-color: black;
     position: relative;
