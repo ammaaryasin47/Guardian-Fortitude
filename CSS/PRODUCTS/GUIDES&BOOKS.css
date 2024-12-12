@@ -113,7 +113,6 @@ html {
 }
 
 @media only screen and (max-width: 767px) {
-    .books-title {}
 
     .books-banner h1 {
         top: 35%;

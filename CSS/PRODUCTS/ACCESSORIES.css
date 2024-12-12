@@ -79,203 +79,150 @@ html {
 
 /*<---------------------------------------------- PRODUCTS -------------------------------------------------->*/
 
-.product-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.heading-container {
     width: 100%;
-}
-
-.Product-head {
-    font-size: 4rem;
-    border-bottom: 2px solid rgb(131, 29, 29);
-    width: fit-content;
-}
-
-.Product-head-2 {
-    font-size: 4rem;
-    border-bottom: 2px solid rgb(131, 29, 29);
-    width: fit-content;
+    background-color: black;
     position: relative;
-    left: 45rem;
+    display: inline-block;
 }
-
-a,
-a:hover {
-    text-decoration: none;
-    color: inherit;
+.heading-large {
+    opacity: 0.2;
+    font-weight: bolder;
+    font-size: 15rem; /* Adjust as needed */
+    color: grey;
+    font-weight: bold;
 }
-
-.section-products,.section-gloves {
-    padding: 80px 0 54px;
-}
-
-.section-products,.section-gloves .header {
-    margin-bottom: 50px;
-}
-
-.section-products,.section-gloves .header h3 {
-    font-size: 1rem;
-    color: #fe302f;
-    font-weight: 500;
-}
-
-.section-products,.section-gloves .header h2 {
-    font-size: 2.2rem;
+.heading-normal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8.5rem; /* Adjust for desired size */
+    color: white;
     font-weight: 400;
-    color: #444444;
 }
 
-.section-products,.section-gloves .single-product {
-    margin-bottom: 26px;
+.hidden {
+    display: none !important;
 }
 
-.section-products,.section-gloves .single-product .part-1 {
-    border: 1px solid rgb(131, 29, 29);
-    border-radius: 20%;
-    position: relative;
-    height: 290px;
-    max-height: 290px;
-    margin-bottom: 20px;
+.cont {
+    max-width: 1200px; /* Adjust width for horizontal layout */
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column; /* Keeps rows in a column layout */
+    gap: 20px; /* Adds spacing between rows */
+}
+
+.product-row {
+    display: flex;
+    justify-content: center; /* Centers cards within the row */
+    gap: 20px; /* Adds spacing between cards */
+}
+
+.product-card {
+    background-color: var(--card-background);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px; /* Fixed width for each card */
+    display: flex;
+    flex-direction: column; /* Keeps card contents stacked vertically */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-card__image {
+    height: 200px; /* Fixed height for images */
     overflow: hidden;
 }
 
-.section-products,.section-gloves .single-product .part-1::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
+.product-card__image img {
     width: 100%;
     height: 100%;
-    z-index: 0;
-    transition: all 0.3s;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-card__image img {
+    transform: scale(1.05);
+}
+
+.product-card__info {
+    padding: 15px;
+    text-align: center; /* Centers text */
+}
+
+.product-card__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.product-card__description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.product-card__price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card__price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.product-card__btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card__btn:hover {
+    background-color: maroon;
 }
 
 
-.section-gloves .single-product:hover .part-1::before {
-    transform: scale(1.2, 1.2) rotate(5deg);
-}
+@media (max-width: 480px) {
+    .cont {
+        max-width: 100%;
+        padding: 0 20px;
+    }
 
-.section-gloves #product-1 .part-1::before {
-    background: url("https://www.mku.com/image/cache/catalog/Kavro%20Ballistic%20Helmets/ACH%20Combat%20Helmets/Kavro%20ACH-126T/Mandible-Helmet_Right_463_72-dpi-228x228.png") no-repeat center;
-    background-size: auto;
-    transition: all 0.3s;
-}
+    .product-card__image {
+        height: 200px;
+    }
 
-.section-gloves #product-2 .part-1::before {
-    background: url("https://www.mku.com/image/cache/catalog/Kavro%20Ballistic%20Helmets/ACH%20Combat%20Helmets/Kavro%20ACH-4/MKH-ACH-4-Product-Left-228x228.png") no-repeat center;
-    background-size: auto;
-}
+    .product-card__title {
+        font-size: 1.3rem;
+    }
 
-.section-gloves #product-3 .part-1::before {
-    background: url("https://www.mku.com/image/cache/catalog/Kavro%20Ballistic%20Helmets/ACH%20Combat%20Helmets/Kavro%20ACH-126%20T/Kavro%20ACH-126%20T%20(1)-228x228.png") no-repeat center;
-    background-size: auto;
-}
+    .product-card__description {
+        font-size: 0.8rem;
+    }
 
-.section-gloves #product-4 .part-1::before {
-    background: url("https://www.mku.com/image/cache/catalog/Kavro%20Ballistic%20Helmets/ACH%20Combat%20Helmets/Kavro%20ACH-125%20T/Kavro%20ACH-125%20T%20(4)-228x228.png") no-repeat center;
-    background-size: auto;
-}
+    .product-card__price {
+        font-size: 1.1rem;
+    }
 
-.section-gloves #product-5 .part-1::before {
-    background: url("https://www.mku.com/image/cache/catalog/Kavro%20Ballistic%20Helmets/Accessories/Kavro%20Visors/KAVRO-VD-20-SM_Product_Image-228x228.png") no-repeat center;
-    background-size: auto;
-}
-
-.section-gloves #product-6 .part-1::before {
-    background: url("https://www.mku.com/image/cache/catalog/Kavro%20Ballistic%20Helmets/Accessories/Kavro%20Ballistic%20Eyewear/KAVRO-BALLISTIC-EYEWEAR-(3)-228x228.png") no-repeat center;
-    background-size: auto;
-}
-
-.section-gloves #product-7 .part-1::before {
-    background: url("https://www.mku.com/image/cache/catalog/Kavro%20Ballistic%20Helmets/Accessories/Kavro%20Visors/VD-06%20FM/VD-06-FM-(3)-228x228.png") no-repeat center;
-    background-size: auto;
-}
-
-.section-gloves #product-8 .part-1::before {
-    background: url("https://www.mku.com/image/cache/catalog/Kavro%20Ballistic%20Helmets/ACH%20Combat%20Helmets/Kavro-ACH-114%20T/Kavro-ACH-114T-Left-463x421.png") no-repeat center;
-    background-size: contain;
-}
-
-
-.section-gloves .single-product .part-1 .discount,
-.section-gloves .single-product .part-1 .new {
-    position: absolute;
-    top: 15px;
-    left: 2px;
-    color: #ffffff;
-    background-color: rgb(131, 29, 29);
-    padding: 2px 8px;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-}
-
-.section-gloves .single-product .part-1 .new {
-    left: 0;
-    background-color: rgb(131, 29, 29);
-}
-
-.section-gloves .single-product .part-1 ul {
-    position: absolute;
-    bottom: -41px;
-    left: 20px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    opacity: 0;
-    transition: bottom 0.5s, opacity 0.5s;
-}
-
-.section-gloves .single-product:hover .part-1 ul {
-    bottom: 30px;
-    opacity: 1;
-}
-
-.section-gloves .single-product .part-1 ul li {
-    display: inline-block;
-    margin-right: 4px;
-}
-
-.section-gloves .single-product .part-1 ul li a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    background-color: #ffffff;
-    color: #444444;
-    text-align: center;
-    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
-    transition: color 0.2s;
-    font-size: 1.2rem;
-}
-
-.section-gloves .single-product .part-1 ul li a:hover {
-    color: #fe302f;
-}
-
-.section-gloves .single-product .part-2 .product-title {
-    font-size: 2.5rem;
-}
-
-.section-gloves .single-product .part-2 h4 {
-    display: inline-block;
-    font-size: 1.5rem;
-}
-
-.section-gloves .single-product .part-2 .product-old-price {
-    position: relative;
-    padding: 0 7px;
-    margin-right: 2px;
-    opacity: 0.6;
-}
-
-.section-gloves .single-product .part-2 .product-old-price::after {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #444444;
-    transform: translateY(-50%);
+    .product-card__btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
 }
