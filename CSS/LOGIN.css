@@ -21,7 +21,7 @@ html {
     background-color: black;
     position: relative;
     overflow: hidden;
-    font-family: 'Barlow',sans-serif;
+    font-family: 'Barlow', sans-serif;
     border: none;
     cursor: pointer;
 }
@@ -57,7 +57,56 @@ html {
     font-size: 2rem;
 }
 
-.login-btn{
-    background-color: black;
+.login-btn {
+    position: relative;
+    width: 180px;
+    height: 60px;
     border: none;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    transition: 1s ease-in-out;
+}
+
+.login-btn svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+}
+
+
+.login-btn:hover {
+    transition: 1s ease-in-out;
+    font-weight: 900;
+    background: maroon;
+}
+
+.login-btn:hover svg {
+    stroke-dashoffset: -480;
+}
+
+.login-btn span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+#form2Example17:focus, #form2Example27:focus{
+    border-color:rgb(241, 96, 96);
+}
+
+@media only screen and (max-width: 767px) {
+
+    .card{
+        padding: 5rem;
+    }
 }
