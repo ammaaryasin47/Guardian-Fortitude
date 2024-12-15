@@ -53,6 +53,30 @@ html {
     letter-spacing: 2px;
 }
 
+
+.heading-container {
+    width: 100%;
+    background-color: black;
+    position: relative;
+    display: inline-block;
+}
+.heading-large {
+    opacity: 0.2;
+    font-weight: bolder;
+    font-size: 15rem; /* Adjust as needed */
+    color: grey;
+    font-weight: bold;
+}
+.heading-normal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8.5rem; /* Adjust for desired size */
+    color: white;
+    font-weight: 400;
+}
+
 .dropdown-content div p {
     font-size: 1.5rem;
     line-height: 2.5rem;
