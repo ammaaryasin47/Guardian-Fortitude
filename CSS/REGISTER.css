@@ -13,6 +13,30 @@ html {
     font-size: 65.7%;
 }
 
+/*<-------------------------------------------------------- BREADCRUMB ------------------------------------------------------------------------>*/
+
+.breadcrumbs {
+    background-color: #000;
+    justify-content:space-evenly ;
+}
+
+.crumb-active{
+    font-weight: 500;
+    color: maroon;
+}
+
+.crumb{
+    letter-spacing: 2px;
+    border-radius: 0.7rem;
+    border: 2px solid white;
+    padding: 1rem;
+    width: max-content;
+}
+
+
+
+/*<---------------------------------------------------------- REG-CARD --------------------------------------------------------------------->*/
+
 .card {
     background-color: black;
     position: relative;
@@ -20,6 +44,7 @@ html {
     font-family: 'Barlow', sans-serif;
     border: none;
     cursor: pointer;
+    height: max-content;
 }
 
 
@@ -52,6 +77,8 @@ html {
     text-align: center;
     font-size: 2rem;
 }
+
+/*<---------------------------------------------------------- REG-BUTTON ------------------------------------------------------------------------>*/
 
 
 .reg-btn {
@@ -93,19 +120,33 @@ html {
     font-weight: 100;
 }
 
-a:hover{
+a:hover {
     text-decoration: none;
 }
 
-#formName:focus, #formAge:focus, #formContact:focus, #formEmail:focus{
-    border-color:rgb(241, 96, 96);
+#formName:focus,
+#formAge:focus,
+#formContact:focus,
+#formEmail:focus,
+#formGender:focus {
+    border-color: rgb(241, 96, 96);
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 
 @media only screen and (max-width: 767px) {
 
-    .card{
+    .card {
         padding: 5rem;
+    }
+
+    .breadcrumbs{
+        flex-wrap: wrap;
+        flex-direction: row;
     }
 }
