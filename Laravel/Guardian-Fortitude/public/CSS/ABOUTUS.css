@@ -1,0 +1,282 @@
+/* FONT  */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    background-color: black;
+    font-family: "Barlow", sans-serif;
+    font-size: 65.7%;
+}
+
+/*<----------------------------------- BANNER  ------------------------------------------------->*/
+
+.about-banner img {
+    height: 20rem;
+}
+
+.about-banner h1 {
+    transform: translateY(-300%);
+    text-align: right;
+    padding-right: 40rem;
+    font-size: 3rem;
+}
+
+.about-para {
+    font-size: 2rem;
+}
+
+/*<-------------------------------- GOALS ------------------------------------------------------>*/
+
+.goals {
+    width: 100rem;
+    display: flex;
+    justify-content: space-around;
+    padding: 5rem;
+    align-items: center;
+}
+
+.goals h1 {
+    transform: rotate(-90deg);
+    border-bottom: 2px solid maroon;
+    padding-bottom: 1rem;
+    font-size: 3.5rem;
+}
+
+.goal-1,
+.goal-2 {
+    width: 30rem;
+}
+
+.goal-1 {
+    padding-right: 3rem;
+    border-right: 2px solid maroon;
+}
+
+/*<-------------------------------------- TEAM ---------------------------->*/
+.profile-card-2 {
+    height: 40rem;
+    width: 300px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2:hover {
+    filter: grayscale(100%);
+}
+
+.profile-card-2 .profile-name,
+.profile-card-2 .profile-username,
+.profile-card-2 .profile-icons {
+    position: absolute;
+    color: #FFF;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-name {
+    left: 30px;
+    bottom: 70px;
+    font-size: 30px;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.profile-card-2 .profile-username {
+    bottom: 50px;
+    left: 30px;
+    font-size: 13px;
+}
+
+.profile-card-2 .profile-icons {
+    bottom: 30px;
+    right: 30px;
+    text-decoration: none;
+}
+
+.profile-card-2:hover .profile-name {
+    bottom: 80px;
+}
+
+.profile-card-2:hover .profile-username {
+    bottom: 60px;
+}
+
+.profile-card-2:hover .profile-icons {
+    right: 40px;
+}
+
+/*<---------------------------------------------- TIMELINE ---------------------------------------------------------------->*/
+
+.timeline-row h2{
+    position: relative; 
+    font-size: 3rem; 
+    padding-bottom: 10rem; 
+    padding-left: 3rem;
+}
+
+.leftBox {
+    left: -17%;
+}
+
+.rightBox {
+    left: 19%;
+}
+
+.card-timeline img {
+    position: absolute;
+    border-radius: 5px;
+    right: -77px;
+    top: 32px;
+    z-index: 2;
+}
+
+.rightBox img {
+    left: -77px;
+}
+
+.left-arrow {
+    position: absolute;
+    height: 0;
+    width: 9;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 1px solid #fff;
+    right: 14px;
+}
+
+.right-arrow {
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 1px solid #fff;
+    left: -14px;
+}
+
+.whiteLine::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #fff;
+    top: 42px;
+    left: 50%;
+    margin-left: 9px;
+    z-index: 0;
+}
+
+.card-title {
+    color: white;
+    font-size: 2rem;
+}
+
+.card-text{
+    font-size: 1.3rem;
+}
+
+.card-timeline{
+    width: 28rem;
+}
+
+.clients img{
+    height: 15rem;
+}
+
+/*<--------------------------------------------- RESPONSIVE ---------------------------------------------->*/
+
+@media only screen and (max-width: 767px) {
+
+    .about-banner img {
+        height: 15rem;
+    }
+
+    .about-banner h1 {
+        transform: translateY(-375%);
+        padding-right: 20rem;
+        font-size: 2rem;
+    }
+
+    .about-para {
+        font-size: 1.5rem;
+    }
+
+    .goals {
+        flex-direction: column;
+    }
+
+    .goal-1 {
+        border-right: none;
+        border-bottom: 1px solid maroon;
+        padding-bottom: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .goals h1 {
+        transform: rotate(0deg);
+        margin-bottom: 5rem;
+    }
+
+    .profile-card-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-card-2 {
+        max-width: 100%;
+        /* Full width for smaller screens */
+        margin: 10px 0;
+    }
+
+    .card-timeline{
+        width: 8rem;
+    }
+
+    .card-title{
+        font-size: 1.2rem;
+    }
+
+    .card-text{
+        font-size: 1rem;
+    }
+    
+    .card-body{
+        width: 15rem;
+    }
+
+    .leftBox {
+        left: -22%;
+    }
+
+    .rightBox {
+        left: 35%;
+    }
+    
+    .clients{
+        flex-direction: column;
+    }
+
+    .clients img{
+        height: 45rem;
+    }
+}

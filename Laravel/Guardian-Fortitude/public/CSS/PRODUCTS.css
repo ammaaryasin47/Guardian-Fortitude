@@ -1,0 +1,280 @@
+/* FONT  */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    background-color: black;
+    font-family: "Barlow", sans-serif;
+    font-size: 65.7%;
+}
+
+/*<----------------------------------- BANNER  ------------------------------------------------->*/
+
+.products-banner h1 {
+    transform: translateY(-550%);
+    text-align: right;
+    padding-right: 40rem;
+    font-size: 3rem;
+}
+
+.products-banner img {
+    overflow: hidden;
+    height: 30rem;
+    filter: blur(2px);
+}
+
+/* PRODUCT CATALOGUE  */
+
+.cardscontainer {
+    width: 100%;
+    background: black;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.cardscontainer a {
+    text-decoration: none;
+    outline: none;
+}
+
+/*---- Card ----*/
+.row {
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.card {
+    border: none;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    margin-top: 0px;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.50);
+}
+
+.card:hover {
+    box-shadow: 0px 9px 17px rgba(0, 0, 0, 0.70);
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.card .image-box {
+    background: #ffffff;
+    overflow: hidden;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+    border-radius: 5px;
+    height: 450px;
+}
+
+.card .card1 {
+    background: url(https://images.squarespace-cdn.com/content/v1/5f6f5a30a49b5d4c23bee3fe/ab198a33-1032-4e38-a300-3de3be395787/overhead-front-angled-dark.png?format=1500w);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card .card2 {
+    background: url(https://i.pinimg.com/564x/93/5f/52/935f52fde0180d61a5698b880133a197.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card .card3 {
+    background: url(https://www.aa-store.at/images/cached/625EE5A2489D5/products/27040/65758/800x800/pts-mtek-flux-helmet-tan.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card .card4 {
+    background: url(https://i.pinimg.com/564x/09/4f/2f/094f2ff1d0be52d7c4cd0b341f0c8915.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card .card5 {
+    background: url(https://i.pinimg.com/564x/73/2b/78/732b78bdda48879fc118633568f4b0e5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card .card6 {
+    background: url(https://i.pinimg.com/736x/20/80/dd/2080ddd565c3228750a349741760cf7c.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card .card7 {
+    background: url(https://i.pinimg.com/564x/26/07/35/260735e3296d490859538d4fbd56262d.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card .card8 {
+    background: url(https://i.pinimg.com/564x/ac/54/e9/ac54e9f9e65b83b8dbdf17c0afd46f68.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card .card9 {
+    background: url(https://i.redd.it/rwk6zckyj1v71.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*---- Date Box ----*/
+.card .container-date {
+    padding: 0px;
+    margin: 0px;
+    font-size: 15px;
+    color: #FFFFFF !important;
+    font-weight: 900;
+}
+
+.card .date-box {
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+    padding: 16px 0px;
+    background: none;
+    text-align: center;
+    width: 58px;
+    float: right;
+    margin: 0px 12px 0px 0px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.card:hover .date-box {
+    background: #FFFF00;
+    color: #000000;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+.container-date .date-box span {
+    font-size: 26px;
+    line-height: 29px;
+}
+
+.container-date .date-box p {
+    line-height: 14px;
+    margin: auto 0px;
+    text-transform: uppercase;
+}
+
+/*---- Text Container ----*/
+.card .image-box .text-container {
+    font-family: 'Barlow', sans-serif;
+    padding: 18px 20px;
+    margin-top: 324px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+
+.card .image-box:hover .text-container {
+    padding: 16px 20px;
+    margin-top: 204px;
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.card .image-box .text-container p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    margin: 12px 0px 5px 0px;
+    padding: 0px;
+}
+
+.subtitle {
+    font-size: 38px;
+    text-align: left;
+    color: #FFFFFF;
+    font-weight: 700;
+    line-height: 46px;
+    font-family: 'Barlow', sans-serif;
+    margin-top: 0px;
+}
+
+.subtitle i {
+    color: grey;
+    visibility: hidden;
+    margin-left: 8px;
+}
+
+.card:hover .subtitle i {
+    visibility: visible;
+}
+
+/*---- Button ----*/
+.button-down {
+    font-weight: 500;
+    background: grey;
+    padding: 12px 0px;
+    text-align: center;
+    font-size: 15px;
+    color: #000000 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.button-down:hover {
+    font-size: 17px;
+}
+
+.button-down a {
+    color: #FFFFFF;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .products-banner h1 {
+        transform: translateY(-277%);
+        text-align: right;
+        padding-right: 15rem;
+        font-size: 3rem;
+    }
+}

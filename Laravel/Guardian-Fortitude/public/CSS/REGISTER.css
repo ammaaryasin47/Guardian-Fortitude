@@ -1,0 +1,145 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    background-color: black;
+    font-family: "Barlow", sans-serif;
+    font-size: 65.7%;
+}
+
+/*<-------------------------------------------------------- BREADCRUMB ------------------------------------------------------------------------>*/
+
+.breadcrumbs {
+    background-color: #000;
+    justify-content:space-evenly ;
+}
+
+.crumb-active{
+    font-weight: 500;
+    color: maroon;
+}
+
+.crumb{
+    letter-spacing: 2px;
+    border-radius: 0.7rem;
+    border: 2px solid white;
+    padding: 1rem;
+    width: max-content;
+}
+
+
+
+/*<---------------------------------------------------------- REG-CARD --------------------------------------------------------------------->*/
+
+.card {
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Barlow', sans-serif;
+    border: none;
+    cursor: pointer;
+    height: max-content;
+}
+
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .card-overlay {
+    transform: translateY(0);
+}
+
+.card .card-overlay h3 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/*<---------------------------------------------------------- REG-BUTTON ------------------------------------------------------------------------>*/
+
+
+.reg-btn {
+    position: relative;
+    width: 180px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    transition: 1s ease-in-out;
+}
+
+.reg-btn svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+}
+
+
+.reg-btn:hover {
+    transition: 1s ease-in-out;
+    font-weight: 900;
+    background: maroon;
+}
+
+.reg-btn:hover svg {
+    stroke-dashoffset: -480;
+}
+
+.reg-btn span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .card {
+        padding: 5rem;
+    }
+
+    .breadcrumbs{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
