@@ -68,8 +68,8 @@
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                 <div class="card-body p-4 p-lg-5 text-black">
 
-                                    <form>
-
+                                    <form action="{{ route('register.storeadditionaldetails') }}" method="POST">
+                                    @csrf
                                         <div class="d-flex align-items-center mb-3 pb-1">
                                             <img src="../../IMAGES/HOME/Logo.png" style="width: 10rem;">
                                             <span class="fs-1">GUARDIAN FORTITUDE<br> SECURITY SERVICES</span>
@@ -81,7 +81,7 @@
                                         <div data-mdb-input-init class="form-outline mb-4">
                                             <label style="letter-spacing: 2px;" class="fs-5 form-label" name="formSector"
                                                 for="formSector">SECTOR / OCCUPATION</label>
-                                            <input style="background-color: #000;" type="email" name="sector" id="formSector"
+                                            <input style="background-color: #000;" type="text" name="sector" id="formSector"
                                                 class=" text-light form-control form-control-lg" />
                                         </div>
 
@@ -112,7 +112,7 @@
                                                 name="publicprofile" class="fs-5 text-light form-select custom-dropdown"
                                                 required>
                                                 <option disabled selected>Select Your Public Profile</option>
-                                                <option value="Individual">Common Man</option>
+                                                <option value="Common Man">Common Man</option>
                                                 <option value="HNWI">High Net Worth Individual</option>
                                                 <option value="Influencer">Influencer</option>
                                                 <option value="HPB">High Profile Brand</option>
@@ -131,14 +131,14 @@
                                         </div>
 
                                         <div class="pt-1 mb-4">
-                                            <a href="{{URL::to('/register/registerpreferences')}}" class="reg-btn btn btn-lg btn-block text-light"
+                                            <button type="submit" class="reg-btn btn btn-lg btn-block text-light"
                                                 style="letter-spacing: 2px;" data-mdb-button-init data-mdb-ripple-init>
                                                 <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                                                     <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                                                     <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
                                                 </svg>
                                                 <span>NEXT</span>
-                                            </a>
+                                            </button>
                                         </div>
 
                                         <a href="#!" class="small text-muted fs-5">Terms & Conditions</a>

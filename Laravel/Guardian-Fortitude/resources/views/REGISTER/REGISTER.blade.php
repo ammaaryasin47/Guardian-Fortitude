@@ -24,7 +24,7 @@
 <x-navbar />
 
     <!------------------------------------------------------- BREADCRUMBS ----------------------------------------------------->
-    <div class="breadcrumbs d-flex align-items-center">
+    <div style="cursor:arrow;" class="breadcrumbs d-flex align-items-center">
         <div class="crumb crumb-active fs-5 text-center">
             <span>PERSONAL INFO</span>
         </div>
@@ -69,7 +69,7 @@
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                 <div class="card-body p-4 p-lg-5 text-black">
 
-                                    <form method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('register.storebasicinfo') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                         <div class="d-flex align-items-center mb-3 pb-1">
                                             <img src="../../IMAGES/HOME/Logo.png" style="width: 10rem;">
@@ -79,18 +79,21 @@
                                         <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">REGISTER YOUR
                                             ACCOUNT</h5>
 
+                                            @if ($errors->any())
+                                                <div class="alert alert-danger">
+                                                     <ul>
+                                                         @foreach ($errors->all() as $error)
+                                                         <li class="fs-2">{{ $error }}</li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                            @endif
+
                                         <div data-mdb-input-init class="form-outline mb-4">
                                             <label style="letter-spacing: 2px;" class="fs-5 form-label" name="name"
                                                 for="formName">NAME</label>
-                                            <input style="background-color: #000;" type="text" name="name" id="formName"
+                                            <input style="background-color: #000;" type="text" name="name" id="name"
                                                 class=" text-light form-control form-control-lg" />
-                                        </div>
-
-                                        <div data-mdb-input-init class="form-outline mb-4">
-                                            <label style="letter-spacing: 2px;" class="fs-5 form-label"
-                                                for="formAge">AGE (IF INDIVIDUAL)</label>
-                                            <input style="background-color: #000;" type="number" name="age"  id="formAge"
-                                                class="text-light form-control form-control-lg" />
                                         </div>
 
                                         <div class="fs-5 mb-4">
@@ -104,7 +107,7 @@
                                                 for="formContact">CONTACT NUMBER</label>
                                             <div class="input-group">
                                                 <select class="form-select form-select-lg text-light" name="countrycode"  id="countryCode"
-                                                    style="max-width: 120px;background-color: #000;letter-spacing: 2px;">
+                                                    style="max-width: 120px;background-color: #000;letter-spacing: 2px;" required>
                                                     <option value="+91" selected>+91 (INDIA)</option>
                                                     <option value="+1">+1 (USA)</option>
                                                     <option value="+44">+44 (UK)</option>
@@ -123,8 +126,15 @@
                                                 class="text-light form-control form-control-lg" />
                                         </div>
 
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <label style="letter-spacing: 2px;" class="fs-5 form-label"
+                                                for="password">PASSWORD</label>
+                                            <input style="background-color: #000;" type="password" name="password" id="password"
+                                                class="text-light form-control form-control-lg" />
+                                        </div>
+
                                         <div class="pt-1 mb-4">
-                                            <a href="{{URL::to('/register/registerdetails')}}"
+                                            <button type="submit"
                                                 class="reg-btn btn btn-lg btn-block text-light"
                                                 style="letter-spacing: 2px;" data-mdb-button-init data-mdb-ripple-init>
                                                 <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
@@ -132,8 +142,10 @@
                                                     <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
                                                 </svg>
                                                 <span>NEXT</span>
-                                            </a>
+                                            </button>
                                         </div>
+
+
 
                                         <a href="#!" class="small text-muted fs-5">Terms & Conditions</a>
                                     </form>

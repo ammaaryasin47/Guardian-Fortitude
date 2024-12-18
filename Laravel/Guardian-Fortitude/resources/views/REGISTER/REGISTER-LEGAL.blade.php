@@ -68,8 +68,8 @@
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                 <div class="card-body p-4 p-lg-5 text-black">
 
-                                    <form>
-
+                                    <form action="{{ route('register.storepreferences') }}" method="POST">
+                                    @csrf
                                         <div class="d-flex align-items-center mb-3 pb-1">
                                             <img src="../../IMAGES/HOME/Logo.png" style="width: 10rem;">
                                             <span class="fs-1">GUARDIAN FORTITUDE<br> SECURITY SERVICES</span>
@@ -96,14 +96,14 @@
                                             Terms And Conditions And Any Updates Thereto.
                                         </div>
                                         <div class="pt-1 mb-4">
-                                            <a href="{{URL::to('/register/confirmationwaiting')}}" class="reg-btn btn btn-lg btn-block text-light"
+                                            <button href="{{URL::to('/register/confirmationwaiting')}}" class="reg-btn btn btn-lg btn-block text-light"
                                                 style="letter-spacing: 2px;" data-mdb-button-init data-mdb-ripple-init>
                                                 <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                                                     <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                                                     <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
                                                 </svg>
                                                 <span>NEXT</span>
-                                            </a>
+                                            </button>
                                         </div>
 
                                         <a href="#!" class="small text-muted fs-5">Terms & Conditions</a>

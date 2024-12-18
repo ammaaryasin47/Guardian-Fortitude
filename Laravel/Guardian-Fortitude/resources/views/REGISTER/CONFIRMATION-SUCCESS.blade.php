@@ -83,7 +83,12 @@
     <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
   <x-footer />
 
-
+  <script>
+        // Redirect to the index page after 3 seconds
+        setTimeout(function() {
+            window.location.href = "{{ url('/') }}"; // Redirect to the homepage
+        }, 3000); // 3000ms = 3 seconds
+    </script>
     <script src="../../JS/navbar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

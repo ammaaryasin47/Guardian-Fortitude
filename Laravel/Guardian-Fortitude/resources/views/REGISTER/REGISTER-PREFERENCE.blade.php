@@ -68,8 +68,8 @@
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                 <div class="card-body p-4 p-lg-5 text-black">
 
-                                    <form>
-
+                                    <form  action="{{ route('register.storepreferences') }}" method="POST" enctype="multipart/form-data">
+                                    @csrf
                                         <div class="d-flex align-items-center mb-3 pb-1">
                                             <img src="../../IMAGES/HOME/Logo.png" style="width: 10rem;">
                                             <span class="fs-1">GUARDIAN FORTITUDE<br> SECURITY SERVICES</span>
@@ -83,14 +83,14 @@
                                             <label for="formLanguage" style="letter-spacing: 2px; "
                                                 class="fs-5 form-label" name="formLanguage">LANGUAGE PREFERENCE</label>
                                             <select style="background-color: #000;cursor: pointer;" id="formLanguage"
-                                                name="language" class="fs-5 text-light form-select custom-dropdown">
+                                                name="langprefer" class="fs-5 text-light form-select custom-dropdown">
                                                 <option value="" disabled selected>Select Prefered Language For Security
                                                 </option>
-                                                <option value="Individual">Hindi</option>
-                                                <option value="Business">English</option>
-                                                <option value="Organisation">Spanish</option>
-                                                <option value="Organisation">Chinese</option>
-                                                <option value="Organisation">Mandarin</option>
+                                                <option value="Hindi">Hindi</option>
+                                                <option value="English">English</option>
+                                                <option value="Spanish">Spanish</option>
+                                                <option value="Chinese">Chinese</option>
+                                                <option value="Mandarin">Mandarin</option>
                                             </select>
                                         </div>
 
@@ -100,12 +100,12 @@
                                                 class="fs-5 form-label" name="command">CHAIN OF COMMAND
                                                 PREFERENCE</label>
                                             <select style="background-color: #000;cursor: pointer;" id="formCommand"
-                                                name="formCommand" class="fs-5 text-light form-select custom-dropdown">
+                                                name="commandprefer" class="fs-5 text-light form-select custom-dropdown">
                                                 <option value="" disabled selected>Prefered Chain Of Command During
                                                     Emergency </option>
-                                                <option value="Individual">Notify Before Action</option>
-                                                <option value="Business">Immediate Intervention</option>
-                                                <option value="Organisation">Contact Law Enforcement Before Action
+                                                <option value="Notify Before Action">Notify Before Action</option>
+                                                <option value="Immediate Intervention">Immediate Intervention</option>
+                                                <option value="Contact Law Enforcement Before Action">Contact Law Enforcement Before Action
                                                 </option>
                                             </select>
                                         </div>
@@ -114,33 +114,33 @@
                                             <label for="formUpdates" style="letter-spacing: 2px; "
                                                 class="fs-5 form-label" name="formUpdates">UPDATE PREFERENCE</label>
                                             <select style="background-color: #000;cursor: pointer;" id="formUpdates"
-                                                name="updates" class="fs-5 text-light form-select custom-dropdown">
+                                                name="updateprefer" class="fs-5 text-light form-select custom-dropdown">
                                                 <option value="" disabled selected>Prefered Method To Receieve Updates
                                                 </option>
-                                                <option value="Individual">Call</option>
-                                                <option value="Business">Message</option>
-                                                <option value="Organisation">Email</option>
-                                                <option value="Organisation">Notification</option>
-                                                <option value="Organisation">Scheduled Meet</option>
+                                                <option value="Call">Call</option>
+                                                <option value="Message">Message</option>
+                                                <option value="Email">Email</option>
+                                                <option value="Notification">Notification</option>
+                                                <option value="Scheduled Meet">Scheduled Meet</option>
                                             </select>
                                         </div>
 
                                         <div data-mdb-input-init class="form-outline mb-4">
                                             <label style="letter-spacing: 2px;" class="fs-5 form-label"
                                                 name="formThreats" for="formThreatsr">PAST THREATS OR INCIDENTS</label>
-                                            <input style="background-color: #000;" type="text" id="formThreats" name="threats"
+                                            <input style="background-color: #000;" type="text" id="formThreats" name="pastthreat"
                                                 class=" text-light form-control form-control-lg" />
                                         </div>
 
                                         <div class="pt-1 mb-4">
-                                            <a href="{{URL::to('/register/registerlegal')}}" class="reg-btn btn btn-lg btn-block text-light"
+                                            <button type="submit" class="reg-btn btn btn-lg btn-block text-light"
                                                 style="letter-spacing: 2px;" data-mdb-button-init data-mdb-ripple-init>
                                                 <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                                                     <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                                                     <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
                                                 </svg>
                                                 <span>NEXT</span>
-                                            </a>
+                                            </button>
                                         </div>
 
                                         <a href="#!" class="small text-muted fs-5">Terms & Conditions</a>
