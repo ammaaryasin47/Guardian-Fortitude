@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 
 class RegisterController extends Controller
@@ -78,6 +80,7 @@ class RegisterController extends Controller
         'armsliscence' => 'nullable|string|max:255',
         'publicprofile' => 'nullable|string|max:255',
         'address' => 'required|string|max:255',
+        'type' => 'required|in:Customer,Admin,Manager,Employee',
     ]);
 
     // Store additional details in session
@@ -88,35 +91,58 @@ class RegisterController extends Controller
 
     // -------------------- PREFERENCES -------------------------------------------------
     public function storePreferences(Request $request)
-{
-    // Validate the third page data
-    $validatedData = $request->validate([
-        'langprefer' => 'nullable|string|max:255',
-        'commandprefer' => 'nullable|string|max:255',
-        'updateprefer' => 'nullable|string|max:255',
-        'pastthreats' => 'nullable|string|max:255',
+    {
+    // Validate the form inputs
+    $request->validate([
+        'langprefer' => 'required|string',
+        'commandprefer' => 'required|string',
+        'updateprefer' => 'required|string',
+        'pastthreats' => 'nullable|string',
     ]);
 
-    // Store preferences in session
-    session()->put('preferences', $validatedData);
+    // Store the preferences in the session or database
+    $preferences = $request->only(['langprefer', 'commandprefer', 'updateprefer', 'pastthreats']);
+    // Example: Save to session or database
+    session(['preferences' => $preferences]);
 
-    // Combine all data from the session, using empty arrays as defaults if the session data is not set
-    $userData = array_merge(
-        session()->get('basic_info', []), // Default to empty array if 'basic_info' is not in session
-        session()->get('additional_details', []), // Default to empty array if 'additional_details' is not in session
-        session()->get('preferences', []) // Default to empty array if 'preferences' is not in session
-    );
+    // Redirect to the next step
+    return redirect()->route('register.legal'); // Adjust the route as needed
+    }
 
+    
+    public function storeLegal(Request $request)
+{
+    // Validate the checkbox
+    $request->validate([
+        'agree_to_terms' => 'required|accepted',
+    ]);
 
-    // Create the user in the database
-    User::create($userData);
+    // Save logic here (if needed)
+    $user = User::find(session('user_id'));
+    if ($user) {
+        $user->agree_to_terms = true; // Save the agreement
+        $user->save();
+    }
 
-    // Clear session data after user creation
-    session()->forget(['basic_info', 'additional_details', 'preferences']);
-
-    // Redirect to the confirmation success page
-    return redirect()->route('register.confirmation.waiting');
+    // Redirect to the login page
+    return redirect()->route('login')->with('success', 'Registration completed! Please log in.');
 }
+
+
+
+public function updateProfilePicture(Request $request)
+    {
+    $request->validate([
+        'profile_picture' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+    ]);
+
+    if ($request->hasFile('profile_picture')) {
+        $path = $request->file('profile_picture')->store('profile_pictures', 'public');
+        auth()->user()->update(['profile_picture' => $path]);
+    }
+
+    return back();
+    }
 
 }
 

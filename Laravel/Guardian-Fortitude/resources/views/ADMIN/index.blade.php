@@ -565,7 +565,7 @@
             </div><!-- End Reports -->
 
             <!-- Recent Sales -->
-            <div class="col-12 w-100">
+            <div style="width:100%;" class="col-12 ">
               <div class="card recent-sales overflow-auto">
 
                 <div class="filter">

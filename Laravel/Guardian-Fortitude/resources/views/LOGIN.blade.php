@@ -140,8 +140,24 @@
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                 <div class="card-body p-4 p-lg-5 text-black">
 
-                                    <form>
+                                @if (session('success'))
+    <div class="fs-2 alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
 
+@if ($errors->any())
+    <div class=" fs-2 alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+                                    <form method="POST" action="{{ route('login') }}">
+                                    @csrf
                                         <div class="d-flex align-items-center mb-3 pb-1">
                                             <!-- <img src="../IMAGES/HOME/Logo.png" style="width: 10rem;"> -->
                                             <span class="fs-1">GUARDIAN FORTITUDE<br> SECURITY SERVICES</span>
@@ -154,18 +170,18 @@
                                             <label style="letter-spacing: 2px;" class="fs-5 form-label"
                                                 for="form2Example17">EMAIL ADDRESS</label>
                                             <input style="background-color: #000;" type="email" id="form2Example17"
-                                                class=" text-light form-control form-control-lg" />
+                                                class=" text-light form-control form-control-lg" name="email" required/>
                                         </div>
 
                                         <div data-mdb-input-init class="form-outline mb-4">
                                             <label style="letter-spacing: 2px;" class="fs-5 form-label"
                                                 for="form2Example27">PASSWORD</label>
                                             <input style="background-color: #000;" type="password" id="form2Example27"
-                                                class=" text-light form-control form-control-lg" />
+                                                class=" text-light form-control form-control-lg" name="password" required/>
                                         </div>
 
                                         <div class="pt-1 mb-4">
-                                            <button data-mdb-button-init data-mdb-ripple-init
+                                            <button type="submit" data-mdb-button-init data-mdb-ripple-init
                                                 style="letter-spacing: 2px;"
                                                 class="login-btn btn btn-lg btn-block text-light" type="button">
                                                 <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">

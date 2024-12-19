@@ -78,6 +78,16 @@
                                         <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">REGISTER YOUR
                                             ACCOUNT</h5>
 
+                                            @if ($errors->any())
+                                                <div class="alert alert-danger">
+                                                     <ul>
+                                                         @foreach ($errors->all() as $error)
+                                                         <li class="fs-2">{{ $error }}</li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                            @endif
+
                                         <div data-mdb-input-init class="form-outline mb-4">
                                             <label style="letter-spacing: 2px;" class="fs-5 form-label" name="formSector"
                                                 for="formSector">SECTOR / OCCUPATION</label>
@@ -106,22 +116,16 @@
                                         </div>
 
                                         <div class="mb-4">
-                                            <label for="gender" style="letter-spacing: 2px;"
-                                                class="fs-5 form-label">PUBLIC PROFILE</label>
-                                            <select style="background-color: #000; cursor: pointer;" id="formPublicProfile"
-                                                name="publicprofile" class="fs-5 text-light form-select custom-dropdown"
-                                                required>
-                                                <option disabled selected>Select Your Public Profile</option>
-                                                <option value="Common Man">Common Man</option>
-                                                <option value="HNWI">High Net Worth Individual</option>
-                                                <option value="Influencer">Influencer</option>
-                                                <option value="HPB">High Profile Brand</option>
-                                                <option value="Individual">Politician</option>
-                                                <option value="Celebrity">Celebrity</option>
-                                                <option value="PF">Public Figure</option>
-                                                <option value="Other">Other</option>
+                                            <label for="role" style="letter-spacing: 2px;" class="fs-5 form-label">ROLE</label>
+                                            <select style="background-color: #000; cursor: pointer;" id="type" name="type" class="fs-5 text-light form-select custom-dropdown" required>
+                                                <option disabled selected>Select Your Role</option>
+                                                <option value="Customer">Customer</option>
+                                                <option value="Admin">Admin</option>
+                                                <option value="Manager">Manager</option>
+                                                <option value="Employee">Employee</option>
                                             </select>
                                         </div>
+
 
                                         <div data-mdb-input-init class="form-outline mb-4">
                                             <label style="letter-spacing: 2px;" class="fs-5 form-label"

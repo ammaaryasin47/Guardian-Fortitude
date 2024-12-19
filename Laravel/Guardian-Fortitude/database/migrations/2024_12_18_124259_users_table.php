@@ -24,14 +24,13 @@ return new class extends Migration
             $table->string('sector');
             $table->string('nature');
             $table->string('armsliscence');
-            $table->string('publicprofile');
+            $table->string('type');
             $table->string('address');
             $table->string('langprefer')->nullable(); // Make langprefer nullable
             $table->string('commandprefer')->nullable();
             $table->string('updateprefer')->nullable();
             $table->string('pastthreats')->nullable();
-            $table->string('type')->default("Customer");
-            $table->string('status')->default('Pending'); // New column for status
+            $table->string('status')->default('Pending');
             $table->timestamps();
         });
     }

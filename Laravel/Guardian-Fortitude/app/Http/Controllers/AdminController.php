@@ -22,18 +22,17 @@ class AdminController extends Controller
         $user->status = 'Approved'; // Set status to approved
         $user->save();
 
-        // Redirect to confirmation waiting page
-        return redirect()->route('register.confirmation.waiting')->with('user_id', $user->id);
+    return redirect()->route('register.confirmation.success')->with('success', 'User approved successfully.');
     }
 
     public function reject($id)
     {
-        $user = User::findOrFail($id);
-        $user->status = 'Rejected'; // Set status to rejected
-        $user->save();
+    $user = User::findOrFail($id);
+    $user->status = 'Rejected'; // Set status to rejected
+    $user->save();
 
-        // Redirect to confirmation failed page
-        return redirect()->route('register.confirmation.failed');
+    return redirect()->route('register.confirmation.failed ')->with('success', 'User rejected.');
     }
+
 
 }

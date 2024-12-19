@@ -33,7 +33,7 @@ class MainController extends Controller
     }
     public function LOGIN()
     {
-        return view('LOGIN');
+        return view('login');
     }
     public function ACCESSORIES()
     {

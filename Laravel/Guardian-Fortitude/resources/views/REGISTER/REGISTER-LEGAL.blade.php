@@ -68,7 +68,18 @@
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                 <div class="card-body p-4 p-lg-5 text-black">
 
-                                    <form action="{{ route('register.storepreferences') }}" method="POST">
+                                @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+    
+
+                                    <form action="{{ route('register.storelegal') }}" method="POST">
                                     @csrf
                                         <div class="d-flex align-items-center mb-3 pb-1">
                                             <img src="../../IMAGES/HOME/Logo.png" style="width: 10rem;">
@@ -95,8 +106,15 @@
                                             And May Result In Legal Action. By Proceeding, You Agree To Adhere To These
                                             Terms And Conditions And Any Updates Thereto.
                                         </div>
+                                        
+                                         <!-- Checkbox for Agreement -->
+                                         <div class="form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="agree_to_terms" name="agree_to_terms" value="1" required>
+        <label class="form-check-label" for="agree_to_terms">I Agree to the Terms and Conditions</label>
+    </div>
+
                                         <div class="pt-1 mb-4">
-                                            <button href="{{URL::to('/register/confirmationwaiting')}}" class="reg-btn btn btn-lg btn-block text-light"
+                                            <button type="submit" class="reg-btn btn btn-lg btn-block text-light"
                                                 style="letter-spacing: 2px;" data-mdb-button-init data-mdb-ripple-init>
                                                 <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                                                     <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />

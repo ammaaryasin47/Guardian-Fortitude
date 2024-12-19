@@ -67,6 +67,15 @@
                             </div>
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                 <div class="card-body p-4 p-lg-5 text-black">
+                                @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
                                     <form  action="{{ route('register.storepreferences') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
@@ -128,7 +137,7 @@
                                         <div data-mdb-input-init class="form-outline mb-4">
                                             <label style="letter-spacing: 2px;" class="fs-5 form-label"
                                                 name="formThreats" for="formThreatsr">PAST THREATS OR INCIDENTS</label>
-                                            <input style="background-color: #000;" type="text" id="formThreats" name="pastthreat"
+                                            <input style="background-color: #000;" type="text" id="formThreats" name="pastthreats"
                                                 class=" text-light form-control form-control-lg" />
                                         </div>
 
