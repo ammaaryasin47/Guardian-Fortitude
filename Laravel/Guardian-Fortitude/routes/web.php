@@ -119,8 +119,7 @@ Route::middleware(['auth', 'checkUserStatus'])->group(function () {
     // Add other routes that require authentication and approval here
 });
 
-
-//Auth::routes();
+Route::post('/profile/picture', [ProfileController::class, 'updateProfilePicture'])->name('profile.picture.update');
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

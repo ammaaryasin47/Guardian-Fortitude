@@ -48,27 +48,37 @@ class RegisterController extends Controller
     //TO STORAGE
 
     public function storeBasicInfo(Request $request)
-    {
-        // Validate the first page data
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'picture' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
-            'countrycode' => 'required|string|max:5',
-            'contact' => 'required|numeric|digits:10',
-            'email' => 'required|email|max:255|unique:users,email',
-            'password' => 'required|string|min:8',
-        ]);
-    
-        // Handle file upload for the profile picture
-        if ($request->hasFile('picture')) {
-            $validatedData['picture'] = $request->file('picture')->store('profile_pictures', 'public');
-        }
-    
-        // Store data in session or database
-        session()->put('basic_info', $validatedData);
-    
-        return redirect()->route('registerdetails');
+{
+    // Validate the first page data
+    $validatedData = $request->validate([
+        'name' => 'required|string|max:255',
+        'picture' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+        'countrycode' => 'required|string|max:5',
+        'contact' => 'required|numeric|digits:10',
+        'email' => 'required|email|max:255|unique:users,email',
+        'password' => 'required|string|min:8',
+    ]);
+
+    // Handle file upload for the profile picture
+    if ($request->hasFile('picture')) {
+        // Store the file and get its path
+        $filePath = $request->file('picture')->store('profile_pictures', 'public');
+$url = Storage::url($filePath);
+echo $url; // Outputs: /storage/profile_pictures/<filename>
+        
+        // Generate the URL for the file
+        $validatedData['picture'] = Storage::url($filePath);
     }
+
+    // Hash the password
+    $validatedData['password'] = bcrypt($validatedData['password']);
+
+    // Store data in session or database
+    session()->put('basic_info', $validatedData);
+
+    return redirect()->route('registerdetails');
+}
+
     
     // ---------------------- DETAILS ----------------------------------------------
 
@@ -110,23 +120,38 @@ class RegisterController extends Controller
     }
 
     
-    public function storeLegal(Request $request)
+   public function storeLegal(Request $request)
 {
     // Validate the checkbox
     $request->validate([
         'agree_to_terms' => 'required|accepted',
     ]);
 
-    // Save logic here (if needed)
-    $user = User::find(session('user_id'));
-    if ($user) {
-        $user->agree_to_terms = true; // Save the agreement
-        $user->save();
+    // Retrieve all data from the session
+    $basicInfo = session('basic_info');
+    $additionalDetails = session('additional_details');
+    $preferences = session('preferences');
+
+    if (!$basicInfo || !$additionalDetails || !$preferences) {
+        return redirect()->route('register')->withErrors('Incomplete registration data.');
     }
+
+    // Merge all data into a single array
+    $userData = array_merge($basicInfo, $additionalDetails, $preferences, [
+        'agree_to_terms' => true,
+        'status' => 'Pending', // Default status for new users
+    ]);
+
+    // Save the user data to the database
+    $user = User::create($userData);
+
+    // Clear session data
+    session()->forget(['basic_info', 'additional_details', 'preferences']);
 
     // Redirect to the login page
     return redirect()->route('login')->with('success', 'Registration completed! Please log in.');
 }
+
 
 
 

@@ -94,7 +94,7 @@
                             class="rounded-circle" 
                             height="40px">
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="fs-2 dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('profile') }}">Profile</a></li>
                         <li><a class="dropdown-item" href="{{ route('logout') }}">Logout</a></li>
                     </ul>
@@ -121,10 +121,10 @@
             <li class="nav-item dropdown">
                 <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
                     <img 
-                        src="{{ Auth::user()->profile_picture ? asset('storage/' . Auth::user()->profile_picture) : asset('default-profile.png') }}" 
-                        alt="Profile Picture" 
-                        class="rounded-circle" 
-                        height="40px">
+                    src="{{ Auth::user()->profile_picture ?? asset('default-profile.png') }}" 
+                    alt="Profile Picture" 
+                    class="rounded-circle" 
+                    height="40px">
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{{ route('profile') }}">Profile</a></li>
