@@ -42,6 +42,4 @@ class LoginController extends Controller
         return view('/login'); // Make sure the view exists at resources/views/auth/login.blade.php
     }
 
-
-
 }

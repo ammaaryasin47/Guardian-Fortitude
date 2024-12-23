@@ -2,18 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ProfileUpdateRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
     /**
      * Display the user's profile form.
      */
-    public function edit(Request $request)
+    public function edit(Request $request): View
     {
         return view('profile.edit', [
             'user' => $request->user(),
@@ -23,46 +24,36 @@ class ProfileController extends Controller
     /**
      * Update the user's profile information.
      */
-    public function update(Request $request): RedirectResponse
-    {
-        $request->user()->fill($request->validated());
+    public function update(Request $request)
+{
+    $validated = $request->validate([
+        'name' => 'required|string|max:255',
+        'picture' => 'nullable|image|max:1024',
+        'countrycode' => 'nullable|string|max:10',
+        'contact' => 'nullable|string|max:15',
+        'email' => 'required|email|max:255',
+        'type' => 'nullable|string|max:255',
+        'sector' => 'nullable|string|max:255',
+        'nature' => 'nullable|string|max:255',
+        'armsliscence' => 'nullable|string|max:255',
+        'address' => 'nullable|string',
+        'langprefer' => 'nullable|string|max:255',
+        'commandprefer' => 'nullable|string|max:255',
+        'updateprefer' => 'nullable|string|max:255',
+        'pastthreats' => 'nullable|string',
+    ]);
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
-        }
-
-        $request->user()->save();
-
-        return Redirect::route('profile.edit')->with('status', 'profile-updated');
+    $user = $request->user();
+    if ($request->hasFile('picture')) {
+        $path = $request->file('picture')->store('profile_pictures', 'public');
+        $validated['picture'] = $path;
     }
 
-    /**
-     * Update the user's profile picture.
-     */
-    public function updateProfilePicture(Request $request): RedirectResponse
-    {
-        // Validate the uploaded file
-        $request->validate([
-            'picture' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
+    $user->update($validated);
 
-        // Check if a file is uploaded
-        if ($request->hasFile('picture')) {
-            // Delete the old profile picture if it exists
-            $user = $request->user();
-            if ($user->profile_picture && Storage::exists('public/' . $user->profile_picture)) {
-                Storage::delete('public/' . $user->profile_picture);
-            }
+    return back()->with('status', 'Profile updated successfully!');
+}
 
-            // Store the new profile picture
-            $path = $request->file('picture')->store('profile_pictures', 'public');
-
-            // Update the user's profile picture path in the database
-            $user->update(['profile_picture' => $path]);
-        }
-
-        return Redirect::route('profile.edit')->with('status', 'profile-picture-updated');
-    }
 
     /**
      * Delete the user's account.
@@ -85,4 +76,3 @@ class ProfileController extends Controller
         return Redirect::to('/');
     }
 }
-

@@ -42,6 +42,7 @@ class Kernel extends HttpKernel
             // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \App\Http\Middleware\CheckUserStatus::class,
         ],
     ];
 
@@ -71,6 +72,6 @@ class Kernel extends HttpKernel
         \Illuminate\View\Middleware\ShareErrorsFromSession::class,
         \App\Http\Middleware\Authenticate::class, // 'auth' middleware
         \Illuminate\Routing\Middleware\SubstituteBindings::class,
-        \App\Http\Middleware\CheckUserStatus::class, // 'check.user.status' middleware
-    ];    
+        \App\Http\Middleware\CheckUserStatus::class, // 'check.user.status' middleware,
+    ];
 }

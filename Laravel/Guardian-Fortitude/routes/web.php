@@ -18,9 +18,7 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -32,23 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index']);
-    Route::get('/profile', [ProfileController::class, 'edit']);
-});
-
 require __DIR__.'/auth.php';
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 
 // ------------------------- MAIN PAGES ------------------------------------------------------------------
@@ -113,11 +95,11 @@ Route::post('/login', [LoginController::class, 'login'])->name('login');
 
 
 
-Route::middleware(['auth', 'checkUserStatus'])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/profile', [UserController::class, 'profile'])->name('profile');
-    // Add other routes that require authentication and approval here
-});
+// Route::middleware(['auth', 'checkUserStatus'])->group(function () {
+//     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+//     Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+//     // Add other routes that require authentication and approval here
+// });
 
 Route::post('/profile/picture', [ProfileController::class, 'updateProfilePicture'])->name('profile.picture.update');
 

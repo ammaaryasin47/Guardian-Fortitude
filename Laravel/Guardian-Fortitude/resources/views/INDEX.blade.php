@@ -95,7 +95,7 @@
                             height="40px">
                     </a>
                     <ul class="fs-2 dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('profile') }}">Profile</a></li>
+                        <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a></li>
                         <li><a class="dropdown-item" href="{{ route('logout') }}">Logout</a></li>
                     </ul>
                 </li>
@@ -127,8 +127,8 @@
                     height="40px">
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{{ route('profile') }}">Profile</a></li>
-                    <li><a class="dropdown-item" href="{{ route('logout') }}">Logout</a></li>
+                    <li><a class="dropdown-item" href="{{ route('profile.edit') }}">PROFILE</a></li>
+                    <li><a class="dropdown-item" href="{{ route('logout') }}">LOGOUT</a></li>
                 </ul>
             </li>
             @else
