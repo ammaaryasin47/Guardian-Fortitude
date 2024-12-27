@@ -42,4 +42,12 @@ class LoginController extends Controller
         return view('/login'); // Make sure the view exists at resources/views/auth/login.blade.php
     }
 
+    public function logout(Request $request)
+    {
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    return redirect('/');
+    }
+
 }

@@ -92,14 +92,7 @@ Route::prefix('register')->controller(RegisterController::class)->group(function
 
 // In routes/web.php
 Route::post('/login', [LoginController::class, 'login'])->name('login');
-
-
-
-// Route::middleware(['auth', 'checkUserStatus'])->group(function () {
-//     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-//     Route::get('/profile', [UserController::class, 'profile'])->name('profile');
-//     // Add other routes that require authentication and approval here
-// });
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::post('/profile/picture', [ProfileController::class, 'updateProfilePicture'])->name('profile.picture.update');
 

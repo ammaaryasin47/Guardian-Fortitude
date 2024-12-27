@@ -86,24 +86,33 @@
 
                 <!-- Conditional Login/Profile Picture -->
                 @auth
-                <li class="sidenav-item dropdown">
-                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
-                        <img 
-                            src="{{ Auth::user()->profile_picture ? asset('storage/' . Auth::user()->profile_picture) : asset('default-profile.png') }}" 
-                            alt="Profile Picture" 
-                            class="rounded-circle" 
-                            height="40px">
-                    </a>
-                    <ul class="fs-2 dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a></li>
-                        <li><a class="dropdown-item" href="{{ route('logout') }}">Logout</a></li>
-                    </ul>
-                </li>
-                @else
-                <li class="sidenav-item">
-                    <a href="{{URL::to('/login')}}" class="sidenav-link">LOGIN</a>
-                </li>
-                @endauth
+<li class="sidenav-item dropdown">
+    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+        <img 
+            src="{{ Auth::user()->profile_picture ? asset('storage/' . Auth::user()->profile_picture) : asset('default-profile.png') }}" 
+            alt="Profile Picture" 
+            class="rounded-circle" 
+            height="40px">
+    </a>
+    <ul class="fs-2 dropdown-menu">
+        <li><a class="dropdown-item" href="{{ route('profile.edit') }}">PROFILE</a></li>
+        <li><a class="dropdown-item" href="{{ route('profile.edit') }}">CART</a></li>
+        <li>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="dropdown-item">LOGOUT</button>
+            </form>
+        </li>
+    </ul>
+</li>
+@else
+<li class="sidenav-item">
+    <a href="{{ URL::to('/login') }}" class="sidenav-link">LOGIN</a>
+</li>
+@endauth
+
+
+
             </ul>
         </nav>
 
@@ -128,7 +137,13 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{{ route('profile.edit') }}">PROFILE</a></li>
-                    <li><a class="dropdown-item" href="{{ route('logout') }}">LOGOUT</a></li>
+                    <li><a class="dropdown-item" href="{{ route('profile.edit') }}">CART</a></li>
+                    <li>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="dropdown-item">LOGOUT</button>
+            </form>
+        </li>
                 </ul>
             </li>
             @else
