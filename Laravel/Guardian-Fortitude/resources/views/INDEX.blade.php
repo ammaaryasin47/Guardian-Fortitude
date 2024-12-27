@@ -138,6 +138,7 @@
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{{ route('profile.edit') }}">PROFILE</a></li>
                     <li><a class="dropdown-item" href="{{ route('profile.edit') }}">CART</a></li>
+                    <li><a class="dropdown-item" href="{{ route('profile.edit') }}">YOUR ORDERS</a></li>
                     <li>
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
@@ -154,10 +155,6 @@
         </ul>
     </ul>
 </nav>
-
-
-
-
 
   <!--------------------------------------- COMPANY BANNER --------------------------------------------------->
 
@@ -314,7 +311,7 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-
+  
   <!--------------------------------------------------------- BLOGS ------------------------------------------------------------->
 
   <h3 style="border-bottom: 0.2rem solid maroon; background-color: black;"

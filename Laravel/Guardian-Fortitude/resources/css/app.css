@@ -1,7 +1,6 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
 /*<------------------------------------------------- SCROLLBAR ----------------------------------------------->*/
 
 ::-webkit-scrollbar {
@@ -20,4 +19,20 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: white;
+}
+
+@keyframes typing {
+    from    { 
+        width :0;
+    }
+
+    to  { 
+        width:100%;
+    }
+}
+
+@keyframes blink{
+    50%{
+        border-color: transparent;
+    }
 }
