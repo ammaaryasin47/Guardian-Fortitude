@@ -1,0 +1,69 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+/*<------------------------------------------------- SCROLLBAR ----------------------------------------------->*/
+
+::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+    /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: maroon;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
+
+@keyframes typing {
+    from    { 
+        width :0;
+    }
+
+    to  { 
+        width:100%;
+    }
+}
+
+@keyframes blink{
+    50%{
+        border-color: transparent;
+    }
+}
+
+.subscriptionCheckbox {
+    appearance: none; /* Remove default checkbox styling */
+    width: 20px;
+    height: 20px;
+    border: 2px solid maroon;
+    border-radius: 4px;
+    background-color: #000;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.subscriptionCheckbox:checked {
+    background-color: maroon;
+    border-color: maroon;
+}
+
+.subscriptionCheckbox:checked::after {
+    content: "";
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 2px;
+    left: 4px;
+}
+
+.subscriptionCheckbox:hover {
+    border-color: white;
+}
