@@ -20,6 +20,11 @@ class ProfileController extends Controller
             'user' => $request->user(),
         ]);
     }
+    public function cart(Request $request)
+    {
+        return view('cart', [
+        ]);
+    }
 
 
     public function update(Request $request)

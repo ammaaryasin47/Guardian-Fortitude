@@ -618,7 +618,7 @@
                                         </ul>
                                     </div>
                                     <div class="part-2">
-                                        <h3 class="product-title text-light">BALLISTIC Plate Carrier</h3>
+                                        <h3 class="product-title text-light">Hand Held Sheild (MSH-06)</h3>
                                         <h4 class="product-price text-light">$8,500</h4>
                                     </div>
                                 </div>
@@ -637,7 +637,7 @@
                                         </ul>
                                     </div>
                                     <div class="part-2">
-                                        <h3 class="product-title text-light">BALLISTIC Plate Carrier</h3>
+                                        <h3 class="product-title text-light">BALLISTIC Bagpack</h3>
                                         <h4 class="product-price text-light">$20,000</h4>
                                     </div>
                                 </div>

@@ -37,7 +37,7 @@
   <link href="ADMIN/css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="200%">
 
   <!-- ======= Header ======= -->
   <header style="background:#000;" id="header" class="text-light header fixed-top d-flex align-items-center">
@@ -661,10 +661,10 @@
 
             <!------------------------------------------------------ SUBSCRIPTIONS LIST --------------------------------------------------------------------->
             
-            <div>
+            <div style="overflow-x: scroll; width:100%;">
               <form action="{{ route('admin.subscription.update', $user->user_id) }}" method="POST">
                 @csrf
-              <table style="background:#000; " class="table custom-table bg-dark table-borderless datatable">
+              <table style="background:#000;" class="table custom-table bg-dark table-borderless datatable">
                 <thead>
                   <tr>
                     <th>NAME</th>
@@ -785,118 +785,15 @@
 
   </main><!-- End #main -->
 
-<!-- Website Traffic -->
-<div class="card">
-  <div class="filter">
-    <a class="icon" href="ADMIN/#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-      <li class="dropdown-header text-start">
-        <h6>Filter</h6>
-      </li>
-
-      <li><a class="dropdown-item" href="ADMIN/#">Today</a></li>
-      <li><a class="dropdown-item" href="ADMIN/#">This Month</a></li>
-      <li><a class="dropdown-item" href="ADMIN/#">This Year</a></li>
-    </ul>
-  </div>
-
-  <div class="card-body pb-0">
-    <h5 class="card-title">Website Traffic <span>| Today</span></h5>
-
-    <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        echarts.init(document.querySelector("#trafficChart")).setOption({
-          tooltip: {
-            trigger: 'item'
-          },
-          legend: {
-            top: '5%',
-            left: 'center'
-          },
-          series: [{
-            name: 'Access From',
-            type: 'pie',
-            radius: ['40%', '70%'],
-            avoidLabelOverlap: false,
-            label: {
-              show: false,
-              position: 'center'
-            },
-            emphasis: {
-              label: {
-                show: true,
-                fontSize: '18',
-                fontWeight: 'bold'
-              }
-            },
-            labelLine: {
-              show: false
-            },
-            data: [{
-                value: 1048,
-                name: 'Search Engine'
-              },
-              {
-                value: 735,
-                name: 'Direct'
-              },
-              {
-                value: 580,
-                name: 'Email'
-              },
-              {
-                value: 484,
-                name: 'Union Ads'
-              },
-              {
-                value: 300,
-                name: 'Video Ads'
-              }
-            ]
-          }]
-        });
-      });
-    </script>
-
-  </div>
-</div><!-- End Website Traffic -->
-
 
 </div><!-- End Right side columns -->
 
 </div>
 </section>
 
-  <!-- Table with stripped rows -->
-  <table class="table datatable">
-                <thead>
-                  <tr>
-                    <th>
-                      <b>N</b>ame
-                    </th>
-                    <th>Ext.</th>
-                    <th>City</th>
-                    <th data-type="date" data-format="YYYY/DD/MM">Start Date</th>
-                    <th>Completion</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Unity Pugh</td>
-                    <td>9958</td>
-                    <td>Curicó</td>
-                    <td>2005/02/11</td>
-                    <td>37%</td>
-                  </tr>
-                </tbody>
-              </table>
-
 </main><!-- End #main -->
 
 <x-footer />
-<a href="ADMIN/#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
 <script src="ADMIN/vendor/apexcharts/apexcharts.min.js"></script>
@@ -916,7 +813,6 @@
 <script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  console.log("JavaScript loaded");
 
   // Function to update valid_till and remaining days
   function updateValidTill(checkbox, index, fieldName) {

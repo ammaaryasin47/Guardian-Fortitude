@@ -22,7 +22,109 @@
 
 <body>
     <!--------------------------------------------- NAVBAR ----------------------------------------------------->
-   <x-productsnavbar />
+    <nav style="background-color: black; position:sticky !important; top: 0; z-index: 10;" class=" text-light w-100">
+        <div class="uppernav">
+            <ul style="cursor:default;" class="fs-4 list-unstyled gap-5 d-flex ps-3 ">
+                <li class="pe-3 border-light align-items-center" style="border-right: 1px dotted #fff;"> <i
+                        class='bx bx-envelope'></i>
+                    guardianfortitudeservice@gmail.com</li>
+                <li class="pe-3 border-light align-items-center" style="border-right: 1px dotted #fff;"> <i
+                        class='bx bx-phone-call'></i>
+                    +91 1234567890</li>
+                <li> <i class='bx bx-map'></i> Ahemdabad , Gujarat</li>
+                <ul style="cursor: pointer;" class="justify-content-end list-unstyled gap-5 ms-auto d-flex pe-3 wrap">
+                    <li><i class='bx bxl-meta'></i></li>
+                    <li><i class='bx bxl-linkedin'></i></li>
+                    <li><i class='bx bxl-github'></i></li>
+                    <li><i class='bx bxl-instagram'></i></li>
+                </ul>
+            </ul>
+        </div>
+        <ul class="fs-4 list-unstyled d-flex">
+            <a><img class="logo01" src="../../IMAGES/HOME/Logo.png" height="50px"></a>
+            <!-- LOGO -->
+
+            <div class="fs-1 hamburger-icon">
+                <i class="bx bx-menu"></i>
+            </div>
+
+
+            <!-- Sidenav For Mobile -->
+            <nav id="sidenav-1" data-mdb-sidenav-init class="sidenav" data-mdb-hidden="true">
+                <ul style=" list-style-type: none;" class="mt-5 sidenav-menu">
+                    <a><img class="logo02" src="../../IMAGES/HOME/Logo.png" height="50px"></a>
+                    <!-- LOGO -->
+
+                    <li class="sidenav-item">
+                        <a href="../../HTML/INDEX.html" class="sidenav-link">
+                            <span>HOME</span></a>
+                    </li>
+
+                    <li class="sidenav-item">
+                        <a href="../../HTML/ABOUTUS.html" class="sidenav-link">
+                            <span>ABOUT US</span></a>
+                    </li>
+
+                    <li class="sidenav-item">
+                        <a href="../../HTML/SERVICES.html" class="sidenav-link">
+                            <span>SERVICES</span></a>
+                    </li>
+
+                    <li class="sidenav-item">
+                        <a href="../../HTML/PRODUCTS.html" class="sidenav-link">
+                            <span>PRODUCTS</span></a>
+                    </li>
+
+                    <li class="sidenav-item">
+                        <a href="../../HTML/CONTACT US.html" class="sidenav-link">
+                            <span>CONTACT US</span></a>
+                    </li>
+                    <li class="sidenav-item">
+                        <a href="../../HTML/QUOTE.html" class="sidenav-link">
+                            <span>QUOTE</span></a>
+                    </li>
+
+                    <li class="sidenav-item">
+                        <a href="../../HTML/LOGIN.html" class="sidenav-link">
+                            <span>LOGIN</span></a>
+                    </li>
+                    <div class="mt-5">
+                        <div class="mb-5">
+                            <li class=" fs-5 pe-3 border-light align-items-center"
+                                style="border-right: 1px dotted #fff;">
+                                <i class='bx bx-envelope'></i>
+                                guardianfortitude<p>service@gmail.com</p>
+                            </li>
+                            <li class="fs-5 pe-3 border-light align-items-center"
+                                style="border-right: 1px dotted #fff;"> <i class='bx bx-phone-call'></i>
+                                +91 1234567890</li>
+                            <li class="fs-5"><i class='bx bx-map'></i> Ahemdabad , India</li>
+                        </div>
+
+                        <li class="sidenav-item d-flex">
+                            <ul style="list-style-type: none;" class="justify-content-around d-flex flex-column">
+                                <li><i class='bx bxl-meta'></i></li>
+                                <li><i class='bx bxl-linkedin'></i></li>
+                                <li><i class='bx bxl-github'></i></li>
+                                <li><i class='bx bxl-instagram'></i></li>
+                            </ul>
+                        </li>
+                    </div>
+                </ul>
+            </nav>
+
+            <ul style="cursor: pointer;"
+                class="navbtnul justify-content-end align-items-center list-unstyled gap-3 ms-auto d-flex pe-3 fs-2">
+                <li><a href="../../HTML/INDEX.html">HOME</a></li>
+                <li><a href="../../HTML/ABOUTUS.html">ABOUT US</a></li>
+                <li><a href="../../HTML/SERVICES.html">SERVICES</a></li>
+                <li><a style="color: maroon; font-weight: 500;" href="../../HTML/PRODUCTS.html">PRODUCTS</a></li>
+                <li><a href="../../HTML/CONTACT US.html">CONTACT US</a></li>
+                <li><a href="../../HTML/QUOTE.html">QUOTE</a></li>
+                <li><a href="../../HTML/LOGIN.html">LOGIN</a></li>
+            </ul>
+        </ul>
+    </nav>
 
     <!--------------------------------------------------------------- BANNER --------------------------------------------------------->
     <div class="armoury-banner">
@@ -96,7 +198,8 @@
             <h3 class="text-center">GRENADES & IED</h3>
         </div>
         <div class="series-item">
-            <img src="https://cdna.artstation.com/p/assets/images/images/042/387/512/large/emmanuel-marshall-pavlovvr-m1-garand-knife-01.jpg?1634366710" alt="REVOLVERS">
+            <img
+                src="https://cdna.artstation.com/p/assets/images/images/051/947/416/large/jason-h-ka-bar-second.jpg?1658571531">
             <h3 class="text-center">KNIVES</h3>
         </div>
     </div>
@@ -309,6 +412,7 @@
                         d="M47,124C47,68.5,31.8,3.2,31.8,3.2h-.4s-15.2,65.4-15.2,120.8l-3.2,23.4-10.9,26.1v219l3.5,4.6v6l-5.5,5.1s-3.2,4.7,26.1,5.7v.2h11v-.3c29.4-1,26.1-5.7,26.1-5.7l-5.5-5.1v-6l3.5-4.6v-219l-11-26.1-3.3-23.3h0Z">
                     </path>
                 </svg>
+                <p class="svg-label">50 CAL.</p>
             </div>
 
         </div>
@@ -746,8 +850,8 @@
             <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
                 <!-- SIG SAUER P322 -->
                 <div class="card h-100 d-flex flex-column">
-                    <img src="https://cdnb.artstation.com/p/assets/images/images/076/860/535/large/sergii-kolesnyk-4-2jpg.jpg?1718014232"
-                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/060/765/108/large/niraj-sahgel-1-013.jpg?1679290256"
+                         class="card-img-top" width="100%">
                     <div class="card-body pt-0 px-0 d-flex flex-column">
                         <div class="d-flex flex-row justify-content-between mb-0 px-3">
                             <small class="fs-4 text-muted mt-1">SIG SAUER P322 </small>
@@ -878,7 +982,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="HUNTINGRIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/037/324/030/large/sheila-hernanz-rifle-11.jpg?1620091356"
@@ -920,7 +1024,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="HUNTINGRIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/052/251/938/large/paddingsons-outsourcing-argocomfortech-5.jpg?1659352972"
@@ -962,7 +1066,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="HUNTINGRIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/065/938/295/large/wanis-kazi-03-1-pp.jpg?1691604687"
@@ -1004,7 +1108,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="HUNTINGRIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/014/185/133/large/joshua-abbott-8.jpg?1542849472"
@@ -1046,14 +1150,14 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="HUNTINGRIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/077/515/427/large/ryland-scott-howahr-ue-neutral-renderv01.jpg?1719645588"
                         style="transform: scaleX(-1);" class="card-img-top" width="100%">
                     <div class="card-body pt-0 px-0 d-flex flex-column">
                         <div class="d-flex flex-row justify-content-between mb-0 px-3">
-                            <small class="fs-4 text-muted mt-1">Howa 1500 </small>
+                            <small class="fs-4 text-muted mt-1">HOWA 1500 </small>
                             <h6>&dollar;22,495&ast;</h6>
                         </div>
                         <hr class="mt-2 mx-3">
@@ -1088,7 +1192,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="HUNTINGRIFLES">
                 <!-- TOZ 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/043/728/865/large/luminiferous_slavoch-toz-34-art-2.jpg?1638120893"
@@ -1130,7 +1234,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="HUNTINGRIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/032/036/716/large/bastien-blanch-sauer-render-4.jpg?1605286506"
@@ -1179,7 +1283,7 @@
                 <div class="heading-normal">SMG</div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/075/391/806/large/laurentiun-sow-mp9-006.jpg?1714466659"
@@ -1220,7 +1324,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/047/110/807/large/vladislav-babiak-main.jpg?1646820274"
@@ -1261,7 +1365,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/077/318/398/large/barkin-eraslan-be-lwrc-9.jpg?1719161863"
@@ -1302,7 +1406,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/038/185/817/large/jinyi-zhu-zj01-15.jpg?1622425072"
@@ -1343,7 +1447,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/017/502/931/large/jonathan-norden-new-render7.jpg?1556230289"
@@ -1384,7 +1488,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/009/780/566/large/linus-scheffel-2.jpg?1520872244"
@@ -1425,7 +1529,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/051/088/058/large/sam-white-1.jpg?1656429947"
@@ -1466,7 +1570,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/014/486/737/large/sviatoslav-chervatiuk-3-1.jpg?1544138779"
@@ -1507,7 +1611,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/078/529/115/large/laurentiun-sow-kv-showcase-014.jpg?1722359554"
@@ -1548,7 +1652,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/011/742/678/large/ben-armstrong-kh9-alternate-01.jpg?1531173726"
@@ -1589,7 +1693,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/032/635/884/large/laurentiu-nedelca-pms-mac-10-v2-003.jpg?1607013910"
@@ -1630,7 +1734,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/068/328/445/large/stefan-engdahl-render06.jpg?1697550040"
@@ -1679,7 +1783,7 @@
                 <div class="heading-normal">SHOTGUNS</div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/030/503/648/large/ryzin-art-screenshot005.jpg?1600801744"
@@ -1720,7 +1824,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/071/149/895/large/artem-n-anton-huleha-benelli-m4-1.jpg?1704558641"
@@ -1761,7 +1865,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/035/815/734/large/amc-ro-studio-render-6.jpg?1615976732"
                         class="card-img-top" width="100%">
@@ -1801,7 +1905,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/069/643/793/large/pascual-hernandez-pascualhernandez-remington-870-frontground.jpg?1700641488"
@@ -1842,7 +1946,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/033/584/731/large/alexandru-voinea-studio-1.jpg?1610020632"
@@ -1883,7 +1987,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/068/328/445/large/stefan-engdahl-render06.jpg?1697550040"
@@ -1924,7 +2028,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/054/264/885/large/ben-bolton-cs-039.jpg?1664149233"
@@ -1965,7 +2069,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="PISTOLS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/032/738/658/large/laurentiu-nedelca-pms-m12-006.jpg?1607341003"
@@ -2007,14 +2111,3499 @@
                 </div>
             </div>
 
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/016/207/242/large/johann-william-loffler-win1895-3.jpg?1551305389"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1"> WINCHESTER 1895 </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 text-muted">Magazine Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">4 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">4.1 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Lever Action</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/019/878/478/large/carlos-morales-sm-shotgun-01f.jpg?1565379313"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1"> REMINGTON 870 </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/015/032/659/large/carlos-morales-cmgs-dp12-00.jpg?1546801438"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1"> DP12 </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">14 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">4 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/039/699/066/large/game-weapons-spas12-main-camera.jpg?1626687138"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1"> FRANCHI SPAS12 </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!------------------------------------------------- ASSAULT RIFLES -------------------------------------------------------------------------->
+
+            <div class="heading-container text-center">
+                <div class="heading-large">ASSAULT RIFLES</div>
+                <div class="heading-normal">ASSAULT RIFLES</div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/038/298/795/large/emiel-sleegers-gun-cama.jpg?1622709260"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1"> AR15</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/063/012/355/large/vladyslav-narozhnyi-4-1.jpg?1684483766"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1"> SCAR-L </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/026/080/777/large/alvaro-fuster-plano01-2.jpg?1587825005"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">AK-74</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/023/908/824/large/ohle-mathiebe-asd.jpg?1580739750"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">OZ-14 GROZA</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/051/522/759/large/games-artist-side-view-a-main-camera-side-render-fullquality.jpg?1657528828"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1"> M4</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/007/790/849/large/patrick-benai-screenshot003.jpg?1508520605"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">M16A4</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/004/870/763/large/hong-kim-type-95-2.jpg?1486890963"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1"> TYPE-95</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/032/564/734/large/mattias-h-mattias-h-sako-rk-95tp-1.jpg?1606821646"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1"> SAKO RK 95 TP</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/074/103/752/large/parisa-mohammadsadeghi-untitled-001.jpg?1711233352"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1"> CZ 805 BREN A1 </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/083/105/797/large/pavel-proskurin-08.jpg?1734780815"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">KAT-4</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/009/411/894/large/sergejs-karpovs-saiga12-xts-render-3k-fn1.jpg?1518833428"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">SAIGA 12 XTS</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/028/156/669/large/philipp-neumann-side.jpg?1593635121"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1"> MDR</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!------------------------------------------------- SNIPER RIFLES -------------------------------------------------------------------------->
+
+            <div class="heading-container text-center">
+                <div class="heading-large">SNIPER RIFLES</div>
+                <div class="heading-normal">SNIPER RIFLES</div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/058/455/110/large/dreamerz-lab-1.jpg?1674190194"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1"> THE BARRETT (MRAD) MK22</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/020/398/178/large/jinyi-zhu-asset.jpg?1567617654"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1"> SNOW OWL </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/009/881/160/large/airam-hernandez-9.jpg?1521393280"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1"> SPEED MODELING - M40</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/075/542/400/large/vladyslav-narozhnyi-2.jpg?1714828450"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1"> REMINTON R11</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/083/453/255/large/ed-zukan-untitled-viewport-006.jpg?1735988933"
+                        style="transform:scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1"> SOLOTHURN S18</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/031/003/458/large/matthieu-labrie-vss-side-1.jpg?1602282112"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">VSS VINTOREZ</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/032/985/571/large/ryzin-art-tbrender135.jpg?1608061890"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">AWM </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/009/556/217/large/madushan-wenuranga-m82-01.jpg?1519659409"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">BARRETT M82 </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/032/325/342/large/laurentiu-nedelca-pms-akrapov-s4-artstation-001.jpg?1606131100"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">PMS AKRAPOV S4</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/029/739/346/large/zachary-shertz-screenshot176.jpg?1598486375"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">PSG-1 </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/042/554/882/large/david-avakov-base-right.jpg?1634820191"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">MCMILLAN TAC-50 </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/014/728/241/large/peetu-gronholm-trg42.jpg?1545198043"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">SAKO TRG 42</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!------------------------------------------------- LAUNCHERS -------------------------------------------------------------------------->
+
+            <div class="heading-container text-center">
+                <div class="heading-large">LAUNCHERS</div>
+                <div class="heading-normal">LAUNCHERS</div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/022/975/710/large/stefan-engdahl-rend3.jpg?1577552097"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">RGM-40 </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/082/794/963/large/canoe-render-003-logo.jpg?1733935435"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">LAUNCHER </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/043/651/684/large/james-mainwaring-m320-06.jpg?1637867742"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">M320 GRENADE LAUNCHER
+                            </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/075/667/816/large/oliver-kay-fim92j-05.jpg?1715135077"
+                       style="transform:scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">FIM 92J STINGER </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/001/759/636/large/waqas-iqbal-missilelauncher-01.jpg?1452316612"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">RENEGADE X </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/081/207/922/large/anton-kunstmann-tbrender-camera-3.jpg?1729658616"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">M79 GRENADE LAUNCHER</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/028/341/786/large/alexandru-voinea-2.jpg?1594196392"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">MGL GRL</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/060/861/682/large/keal-team-shot-1.jpg?1679481919"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">M203 M4 </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/039/317/318/large/diptiranjan-panigrahi-rpg-5.jpg?1625567421"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">RPG LAUNCHER</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/035/073/849/large/jona-pahl-05.jpg?1614032492"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">GL06 </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/024/644/401/large/andrey-nepryahin-screenshot000.jpg?1583087796"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">STEAMPUNK</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/039/049/886/large/simon-mercuzot-shot01.jpg?1624815562"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">GP-25</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!------------------------------------------------- MACHINE GUNS -------------------------------------------------------------------------->
+
+            <div class="heading-container text-center">
+                <div class="heading-large">MACHINE GUNS</div>
+                <div class="heading-normal">MACHINE GUNS</div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/067/302/959/large/yahli-mendler-full-right-front.jpg?1695055452"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">NSV </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/030/906/233/large/ryzin-art-screenshot004.jpg?1602009117"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">BREN LMG </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/035/824/176/large/laurentiu-nedelca-pms-stal-51-0017.jpg?1615994607"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">PMS STAL-51 </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/016/368/578/large/tim-shumaker-3.jpg?1551896691"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">MA DEUCE
+                            </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/024/711/350/large/slava-kireev-render8.jpg?1583284348"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">LEWIS MG</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/080/931/942/large/3dma-studios-saw-pb-01.jpg?1728933712"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">M249 SAW
+                            </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/073/818/901/large/deepak-gollar-dp-28-02.jpg?1710536645"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">DP 28
+                            </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/032/692/467/large/kameron-brooks-u100-2.jpg?1607185687"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">ULTIMAX 100 LMG
+
+                            </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/071/609/751/large/artem-n-anton-huleha-m240d-2.jpg?1705538196"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">M-240 </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/031/404/822/large/akash-bhatt-gatling-close.jpg?1603523410"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">GATLING GUN </small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/008/557/367/large/pawin-changkiendee-pawin-changkiendee-minimimk3-7.jpg?1513545241"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">MINIMI MK3</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/059/114/297/large/kevuru-games-m2-browning-50cal-02.jpg?1675686492"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">M2 BROWNING</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!------------------------------------------------- GRENADES & IED-------------------------------------------------------------------------->
+
+            <div class="heading-container text-center">
+                <div class="heading-large">GRENADES & IED</div>
+                <div class="heading-normal">GRENADES & IED</div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/081/831/355/large/lorenzo-pace-1a.jpg?1731354533"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">WWII GERMAN GRENADE</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+
+
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/056/277/092/large/jason-h-m48-fourth-new.jpg?1668861580"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">FLASHBANG</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/052/385/505/large/ted-manske-tnt-001.jpg?1659665510"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">IED</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/056/277/269/large/jason-h-smoke-grenade-diagonal2.jpg?1668861933"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">SMOKE GRENADE</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/064/474/107/large/fan-cheng-tbrender-main-camera.jpg?1688002790"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">C4</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/030/533/330/large/damith-galhena-2.jpg?1600884258"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">ANTI TANK MINE</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/016/076/593/large/declan-sheehan-sub-02.jpg?1550791446"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">PINEAPPLE GRENADE MK2</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/035/152/499/large/vladislav-fjh-gavrilin-shot0.jpg?1614223264"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">M67 FRAGMENTATION GRENADE</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/023/096/827/large/marwan-ammar-german-m24-stick-grenade-anti-tank-bundle-wwii-marwan-ammar-04.jpg?1578071224"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">GERMAN M24 STICK</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/034/049/943/large/andre-foster-stun-grenade.jpg?1611255790"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">12/29 STUN</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/063/628/966/large/sidharth-s-grenaderendermain1.jpg?1685987897"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">M26 GRENADE</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/049/223/734/large/somdatta-das-grenade-1.jpg?1651997929"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">MKV GAS</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <!-------------------------------------------------KNIVES-------------------------------------------------------------------------->
+
+            <div class="heading-container text-center">
+                <div class="heading-large">KNIVES</div>
+                <div class="heading-normal">KNIVES</div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/marketplace/presentation_assets/001/760/002/large/file.jpg?1654356909"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">COMBAT KUKRI</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/027/658/722/large/frederico-martins-05.jpg?1592179937"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">KARAMBIT</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/marketplace/presentation_assets/001/170/070/large/file.jpg?1629957542"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">M48 KUKRI</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/019/679/677/large/osman-3d-render-2.jpg?1564562939"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">FOLDING KNIFE</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/021/447/898/large/kevin-brunt-medieval-dagger-1920-04.jpg?1571729764"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">MEDIEVAL DAGGER</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/031/993/418/large/joe-kennett-screenshot004.jpg?1605173949"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">FAIRBAIRN</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/047/819/666/large/kathryn-parr-2.jpg?1648524120"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">JACKLE KNIFE</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/025/184/491/large/brx-boyles-featherblade-01.jpg?1584938761"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">FEATHER BLADE</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/079/003/761/large/james-bolton-moderngyutorendersfinal-4.jpg?1723679978"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">MODERN GYUTO</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/044/531/558/large/mike-kennedy-moonsplinter-2021-1.jpg?1640278852"
+                        class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">MOON SPLINTER</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/072/596/515/large/wanis-kazi-2.jpg?1707760452"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">HUNTING KNIFE</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+                <!-- GLOCK 34 -->
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/004/804/432/large/valentin-oana-screenshot009.jpg?1486402505"
+                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <div class="card-body pt-0 px-0 d-flex flex-column">
+                        <div class="d-flex flex-row justify-content-between mb-0 px-3">
+                            <small class="fs-4 text-muted mt-1">TACTICAL BLADE</small>
+                            <h6>&dollar;22,495&ast;</h6>
+                        </div>
+                        <hr class="mt-2 mx-3">
+                        <div class="d-flex flex-row justify-content-between px-3 pb-4">
+                            <div class="d-flex flex-column"><span class="fs-5 tRemington 870ext-muted">Magazine
+                                    Cap.</span>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between p-3 mid">
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-1">Weight</small>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-column ml-1 fs-5">3.6 kg</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column"><small class="fs-5 text-muted mb-2">Action
+                                    Type</small>
+                                <div class="d-flex flex-row">
+                                    <h6 class="fs-5">Pump Action Type</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
+                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                            </div>
+                            <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
+                                Disclaimer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
+
 
 
 
     <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
-    <x-footer />
+    <footer class="footer mt-5">
+        <div class="footer-row">
+
+            <div class="footer-col"> <!-- Logo And Tagline -->
+                <img src="../../IMAGES/HOME/Logo.png" id="footer-logo" alt="logo" width="150px" height="150px">
+                <p>Fortifying The Present, </p>
+                <p>Safeguarding The Future ...</p>
+                <p>We Are The Saviours ,</p>
+                <p>The Last Hope , </p>
+                <p>We Are
+                <h3 class="text-align-center">THE GUARDIAN FORTITUDE</h3>
+                </p>
+            </div>
+
+            <div class="footer-col"> <!--OFFICE ADDRESS & CONTACT -->
+                <h3 style="border-bottom: 1px solid maroon;">OFFICE <div><span></span></div>
+                </h3>
+                <p>D-Fuzer HQ Security Wing ,</p>
+                <p>99th Avenue,</p>
+                <p>Ahmedabad , INDIA </p>
+                <p class="footer-email-id"><i class='bx bx-envelope'></i>&nbsp;guardianfortitudeservice@gmail.com</p>
+                <h4>+91 1234567890</h4>
+            </div>
+
+            <div class="footer-col"> <!-- Nav Pages -->
+                <h3 style="border-bottom: 1px solid maroon;">PAGES<div><span></span></div>
+                </h3>
+                <ul>
+                    <li><a href="../../HTML/INDEX.html">Home</a></li>
+                    <li><a href="../../HTML/ABOUTUS.html">About Us</a></li>
+                    <li><a href="../../HTML/SERVICES.html">Services</a></li>
+                    <li><a href="../../HTML/PRODUCTS.html">Products</a></li>
+                    <li><a href="../../HTML/CONTACT US.html">Contact Us</a></li>
+                    <li><a href="../../HTML/QUOTE.html">Quote</a></li>
+                    <li><a href="../../HTML/LOGIN.html">Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col"> <!-- Email Form For Latest Upadates -->
+                <h3 style="border-bottom: 1px solid maroon;">TO RECIEVE OUR LATEST UPDATES<div>
+                        <span></span>
+                    </div>
+                </h3>
+                <form class="footer-form">
+                    <i class='bx bxs-envelope'></i>
+                    <input type="email" placeholder="Enter Your Email ID" required>
+                    <button type="submit"><i class='bx bxs-arrow-from-left'></i></i></i></button>
+                </form>
+
+                <div class="social-icons"> <!-- Social Media Icons -->
+                    <a class='bx bxl-instagram' href="#"></a>
+                    <a class='bx bxl-twitter' href="#"></a>
+                    <a class='bx bxl-reddit' href="#"></a>
+                    <a class='bx bxl-whatsapp' href="#"></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p style="font-family: 'Barlow',sans-serif;" class="copyright">Guardian Fortitude Security
+            Services
+            &copy;
+            2024
+            -
+            All Rights Reserved</p>
+        <p style="font-family: 'Barlow',sans-serif;" class="copyright">Guardian Fortitude Security
+            Services Is A
+            Registered
+            Trademark Under The D-Fuzer
+            Army&#174;</p>
+
+    </footer>
 
     <script src="../../JS/PRODUCTS/ARMOURY.js"></script>
     <script src="../../JS/navbar.js"></script>

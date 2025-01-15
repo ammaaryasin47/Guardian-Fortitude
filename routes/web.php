@@ -8,6 +8,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminSubscriptionController;
 use App\Http\Controllers\UserSubscriptionController;
+use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -94,8 +95,6 @@ Route::prefix('register')->controller(RegisterController::class)->group(function
 
 //<------------------------------ MIDDLEWARE ----------------------------------------------------------------------
 
-
-
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
@@ -103,4 +102,9 @@ Route::post('/profile/picture', [ProfileController::class, 'updateProfilePicture
 Route::post('/admin/update-services', [AdminSubscriptionController::class, 'updateServices'])->name('admin.update.services');
 Route::post('/admin/subscription/update/{userId}', [AdminSubscriptionController::class, 'updateSubscription'])->name('admin.subscription.update');
 
+Route::get('/cart', [ProfileController::class, 'cart'])->name('cart');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// <----------------------------- PAYMENT ROUTES --------------------------------------------------------------
+Route::post('/payment', [PaymentController::class, 'processPayment'])->name('payment');

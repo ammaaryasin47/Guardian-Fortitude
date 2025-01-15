@@ -96,7 +96,7 @@
     </a>
     <ul class="fs-2 dropdown-menu">
         <li><a class="dropdown-item" href="{{ route('profile.edit') }}">PROFILE</a></li>
-        <li><a class="dropdown-item" href="{{ route('profile.edit') }}">CART</a></li>
+        <li><a class="dropdown-item" href="{{ route('cart') }}">CART</a></li>
         <li>
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
@@ -137,7 +137,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{{ route('profile.edit') }}">PROFILE</a></li>
-                    <li><a class="dropdown-item" href="{{ route('profile.edit') }}">CART</a></li>
+                    <li><a class="dropdown-item" href="{{ route('cart') }}">CART</a></li>
                     <li><a class="dropdown-item" href="{{ route('profile.edit') }}">YOUR ORDERS</a></li>
                     <li>
             <form action="{{ route('logout') }}" method="POST">
