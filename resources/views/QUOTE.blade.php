@@ -10,6 +10,21 @@
     <!-- BOOTSTRAP CDN -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- BOXICONS CDN -->
     <link href="../CSS/Navbar&Footer.css" rel="stylesheet">
+    <script>
+     window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    const content = document.getElementById('content');
+
+    // Hide the preloader
+    preloader.classList.add('hidden');
+
+    // Show the main content after a delay
+    setTimeout(() => {
+      preloader.style.display = 'none';
+      content.style.display = 'block';
+    }, 5000); // Match the transition duration
+    });
+    </script>
     <link href="../CSS/QUOTE.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <!---- FAVICONS ---->
@@ -18,8 +33,7 @@
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/android-chrome-192x192.png" type="image/svg+xml">
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/android-chrome-512x512.png" type="image/svg+xml">
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/apple-touch-icon.png" type="image/svg+xml">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
             emailjs.init({
@@ -30,6 +44,11 @@
 </head>
 
 <body>
+
+    <div id="preloader">
+      <img src="../IMAGES/HOME/Logo.png" alt="Loading...">
+    </div>
+
     <nav style="background-color: black; position:sticky; top: 0; z-index: 10;" class=" text-light w-100">
         <div class="uppernav">
             <ul style="cursor:default;" class="fs-4 list-unstyled gap-5 d-flex ps-3 ">

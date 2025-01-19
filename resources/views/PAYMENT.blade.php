@@ -10,6 +10,21 @@
     <!-- BOOTSTRAP CDN -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- BOXICONS CDN -->
     <link href="../CSS/Navbar&Footer.css" rel="stylesheet">
+    <script>
+     window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    const content = document.getElementById('content');
+
+    // Hide the preloader
+    preloader.classList.add('hidden');
+
+    // Show the main content after a delay
+    setTimeout(() => {
+      preloader.style.display = 'none';
+      content.style.display = 'block';
+    }, 5000); // Match the transition duration
+    });
+    </script>
     <link href="../CSS/LOGIN.css" rel="stylesheet">
     <!---- FAVICONS ---->
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/favicon-16x16.png" type="image/x-icon">
@@ -26,6 +41,8 @@
 </head>
 
 <body>
+
+
     <!--------------------------------------------- NAVBAR ----------------------------------------------------->
     <nav style="background-color: black; position:sticky; top: 0; z-index: 10;" class=" text-light w-100">
         <div class="uppernav">

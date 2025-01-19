@@ -56,36 +56,36 @@
                     <!-- LOGO -->
 
                     <li class="sidenav-item">
-                        <a href="../../HTML/INDEX.html" class="sidenav-link">
+                        <a href="{{URL::to('/')}}" class="sidenav-link">
                             <span>HOME</span></a>
                     </li>
 
                     <li class="sidenav-item">
-                        <a href="../../HTML/ABOUTUS.html" class="sidenav-link">
+                        <a href="{{URL::to('/aboutus')}}" class="sidenav-link">
                             <span>ABOUT US</span></a>
                     </li>
 
                     <li class="sidenav-item">
-                        <a href="../../HTML/SERVICES.html" class="sidenav-link">
+                        <a href="{{URL::to('/services')}}" class="sidenav-link">
                             <span>SERVICES</span></a>
                     </li>
 
                     <li class="sidenav-item">
-                        <a href="../../HTML/PRODUCTS.html" class="sidenav-link">
+                        <a href="{{URL::to('/products')}}" class="sidenav-link">
                             <span>PRODUCTS</span></a>
                     </li>
 
                     <li class="sidenav-item">
-                        <a href="../../HTML/CONTACT US.html" class="sidenav-link">
+                        <a href="{{URL::to('/contactus')}}" class="sidenav-link">
                             <span>CONTACT US</span></a>
                     </li>
                     <li class="sidenav-item">
-                        <a href="../../HTML/QUOTE.html" class="sidenav-link">
+                        <a href="{{URL::to('/quote')}}" class="sidenav-link">
                             <span>QUOTE</span></a>
                     </li>
 
                     <li class="sidenav-item">
-                        <a href="../../HTML/LOGIN.html" class="sidenav-link">
+                        <a href="{{URL::to('/login')}}" class="sidenav-link">
                             <span>LOGIN</span></a>
                     </li>
                     <div class="mt-5">
@@ -115,13 +115,13 @@
 
             <ul style="cursor: pointer;"
                 class="navbtnul justify-content-end align-items-center list-unstyled gap-3 ms-auto d-flex pe-3 fs-2">
-                <li><a href="../../HTML/INDEX.html">HOME</a></li>
-                <li><a href="../../HTML/ABOUTUS.html">ABOUT US</a></li>
-                <li><a href="../../HTML/SERVICES.html">SERVICES</a></li>
-                <li><a style="color: maroon; font-weight: 500;" href="../../HTML/PRODUCTS.html">PRODUCTS</a></li>
-                <li><a href="../../HTML/CONTACT US.html">CONTACT US</a></li>
-                <li><a href="../../HTML/QUOTE.html">QUOTE</a></li>
-                <li><a href="../../HTML/LOGIN.html">LOGIN</a></li>
+                <li><a href="{{URL::to('/')}}">HOME</a></li>
+                <li><a href="{{URL::to('/aboutus')}}">ABOUT US</a></li>
+                <li><a href="{{URL::to('/services')}}">SERVICES</a></li>
+                <li><a href="{{URL::to('/products')}}">PRODUCTS</a></li>
+                <li><a href="{{URL::to('/contactus')}}">CONTACT US</a></li>
+                <li><a href="{{URL::to('/quote')}}">QUOTE</a></li>
+                <li><a href="{{URL::to('/login')}}">LOGIN</a></li>
             </ul>
         </ul>
     </nav>
@@ -3399,7 +3399,7 @@
                         class="card-img-top" width="100%">
                     <div class="card-body pt-0 px-0 d-flex flex-column">
                         <div class="d-flex flex-row justify-content-between mb-0 px-3">
-                            <small class="fs-4 text-muted mt-1">LAUNCHER </small>
+                            <small class="fs-4 text-muted mt-1">TOW</small>
                             <h6>&dollar;22,495&ast;</h6>
                         </div>
                         <hr class="mt-2 mx-3">
@@ -4440,7 +4440,7 @@
                         style="transform: scaleX(-1);" class="card-img-top" width="100%">
                     <div class="card-body pt-0 px-0 d-flex flex-column">
                         <div class="d-flex flex-row justify-content-between mb-0 px-3">
-                            <small class="fs-4 text-muted mt-1">WWII GERMAN GRENADE</small>
+                            <small class="fs-4 text-muted mt-1">HAND GRENADE</small>
                             <h6>&dollar;22,495&ast;</h6>
                         </div>
                         <hr class="mt-2 mx-3">
@@ -4479,8 +4479,6 @@
 
 
             <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
-
-
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/056/277/092/large/jason-h-m48-fourth-new.jpg?1668861580"
@@ -5033,7 +5031,7 @@
             <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
-                    <img src="https://cdna.artstation.com/p/assets/images/images/027/658/722/large/frederico-martins-05.jpg?1592179937"
+                    <img src="https://cdna.artstation.com/p/assets/images/images/026/197/952/large/himanshu-sandhu-5k.jpg?1588155323"
                         class="card-img-top" width="100%">
                     <div class="card-body pt-0 px-0 d-flex flex-column">
                         <div class="d-flex flex-row justify-content-between mb-0 px-3">
@@ -5124,11 +5122,11 @@
             <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
-                    <img src="https://cdnb.artstation.com/p/assets/images/images/019/679/677/large/osman-3d-render-2.jpg?1564562939"
+                    <img src="https://cdna.artstation.com/p/assets/images/images/002/706/618/large/billy-lundevall-cold-steel-recon-1.jpg?1464796870"
                         style="transform: scaleX(-1);" class="card-img-top" width="100%">
                     <div class="card-body pt-0 px-0 d-flex flex-column">
                         <div class="d-flex flex-row justify-content-between mb-0 px-3">
-                            <small class="fs-4 text-muted mt-1">FOLDING KNIFE</small>
+                            <small class="fs-4 text-muted mt-1">TANTO</small>
                             <h6>&dollar;22,495&ast;</h6>
                         </div>
                         <hr class="mt-2 mx-3">
@@ -5169,11 +5167,11 @@
             <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
-                    <img src="https://cdna.artstation.com/p/assets/images/images/021/447/898/large/kevin-brunt-medieval-dagger-1920-04.jpg?1571729764"
+                    <img src="https://cdna.artstation.com/p/assets/images/images/034/982/294/large/sean-o-brien-renders1.jpg?1613765173"
                         style="transform: scaleX(-1);" class="card-img-top" width="100%">
                     <div class="card-body pt-0 px-0 d-flex flex-column">
                         <div class="d-flex flex-row justify-content-between mb-0 px-3">
-                            <small class="fs-4 text-muted mt-1">MEDIEVAL DAGGER</small>
+                            <small class="fs-4 text-muted mt-1">BUTTERFLY KNIFE</small>
                             <h6>&dollar;22,495&ast;</h6>
                         </div>
                         <hr class="mt-2 mx-3">
@@ -5214,11 +5212,11 @@
             <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
-                    <img src="https://cdna.artstation.com/p/assets/images/images/031/993/418/large/joe-kennett-screenshot004.jpg?1605173949"
+                    <img src="https://cdna.artstation.com/p/assets/images/images/077/133/282/large/sergey-nikulshin-sergey-nikulshin-2.jpg?1718686307"
                         style="transform: scaleX(-1);" class="card-img-top" width="100%">
                     <div class="card-body pt-0 px-0 d-flex flex-column">
                         <div class="d-flex flex-row justify-content-between mb-0 px-3">
-                            <small class="fs-4 text-muted mt-1">FAIRBAIRN</small>
+                            <small class="fs-4 text-muted mt-1">PUSH DAGGER</small>
                             <h6>&dollar;22,495&ast;</h6>
                         </div>
                         <hr class="mt-2 mx-3">
@@ -5260,11 +5258,11 @@
             <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
-                    <img src="https://cdna.artstation.com/p/assets/images/images/047/819/666/large/kathryn-parr-2.jpg?1648524120"
-                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/031/660/680/large/kirill-sp-8-5.jpg?1604253408"
+                         class="card-img-top" width="100%">
                     <div class="card-body pt-0 px-0 d-flex flex-column">
                         <div class="d-flex flex-row justify-content-between mb-0 px-3">
-                            <small class="fs-4 text-muted mt-1">JACKLE KNIFE</small>
+                            <small class="fs-4 text-muted mt-1">MACHETE</small>
                             <h6>&dollar;22,495&ast;</h6>
                         </div>
                         <hr class="mt-2 mx-3">
@@ -5483,11 +5481,11 @@
             <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
-                    <img src="https://cdna.artstation.com/p/assets/images/images/004/804/432/large/valentin-oana-screenshot009.jpg?1486402505"
-                        style="transform: scaleX(-1);" class="card-img-top" width="100%">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/072/895/272/large/reviron-img-9.jpg?1708449581"
+                         class="card-img-top" width="100%">
                     <div class="card-body pt-0 px-0 d-flex flex-column">
                         <div class="d-flex flex-row justify-content-between mb-0 px-3">
-                            <small class="fs-4 text-muted mt-1">TACTICAL BLADE</small>
+                            <small class="fs-4 text-muted mt-1">TOMHAWK</small>
                             <h6>&dollar;22,495&ast;</h6>
                         </div>
                         <hr class="mt-2 mx-3">

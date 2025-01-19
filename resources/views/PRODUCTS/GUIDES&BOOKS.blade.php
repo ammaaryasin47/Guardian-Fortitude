@@ -21,6 +21,11 @@
 </head>
 
 <body>
+
+    <div id="preloader">
+      <img src="../IMAGES/HOME/Logo.png" alt="Loading...">
+    </div>
+
     <!--------------------------------------------- NAVBAR ----------------------------------------------------->
     <x-productsnavbar />
 
@@ -66,27 +71,25 @@
                         alt="City Lights">
                 </div>
                 <div class="content">
-                    <p class="fs-1">100 DEADLY SKILLS</p>
+                    <p class="fs-1">100 <br> DEADLY SKILLS</p>
                     <p class="fs-3">CLINT EMERSON</p>
-                    <p class="fs-5">New York, the largest city in the U.S., is an architectural marvel with plenty of
-                        historic monuments, magnificent buildings, and countless dazzling skyscrapers.</p>
+                    <p class="fs-5">A Practical Guide Detailing Survival Techniques Inspired By Special Forces.</p>
                 </div>
                 <div class="book-footer">
-                    <a class="btn" href="#">Read</a>
+                    <a target="_blank" style="font-size:1.5rem; text-decoration:none; color:white; background:maroon; border-radius:0.3rem;" class="text-center px-4 py-3" href="https://drive.google.com/file/d/1IVO2CjZ3WpU99k30NPxU0j0j0bJmp4d_/view?usp=sharing">READ</a>
                 </div>
             </div>
             <div class="cardcontainer">
                 <div class="photo">
-                    <img src="https://m.media-amazon.com/images/I/61az51CLQtL.jpg" alt="City Lights">
+                    <img src="https://m.media-amazon.com/images/I/91dLDp5XzYL._UF1000,1000_QL80_.jpg" alt="City Lights">
                 </div>
                 <div class="content">
-                    <p class="fs-1">THE SELF DEFENSE HANDBOOK</p>
-                    <p class="fs-3">Author</p>
-                    <p class="fs-5">New York, the largest city in the U.S., is an architectural marvel with plenty of
-                        historic monuments, magnificent buildings, and countless dazzling skyscrapers.</p>
+                    <p class="fs-1">HACKING : THE ART OF EXPLOITATION</p>
+                    <p class="fs-3">ERICKSON</p>
+                    <p class="fs-5">A Comprehensive Guide To Understand The Technical Foundations Of Hacking. </p>
                 </div>
                 <div class="book-footer">
-                    <a class="btn" href="#">Read</a>
+                    <a  target="_blank" style="font-size:1.5rem; text-decoration:none; color:white; background:maroon; border-radius:0.3rem;" class="m-5 text-center px-4 py-3" href="#">READ</a>
                 </div>
             </div>
             <div class="cardcontainer">
@@ -97,11 +100,72 @@
                 <div class="content">
                     <p class="fs-1">LAW FOR THE LAYMAN</p>
                     <p class="fs-3">MINISTRY OF INFORMATION & BROADCASTING , INDIA</p>
-                    <p class="fs-5">New York, the largest city in the U.S., is an architectural marvel with plenty of
-                        historic monuments, magnificent buildings, and countless dazzling skyscrapers.</p>
+                    <p class="fs-5">A Practical Guide That Presents Essential Legal Concepts In Accessible Language.</p>
                 </div>
                 <div class="book-footer">
-                    <a class="btn" href="#">Read</a>
+                    <a style="font-size:1.5rem; text-decoration:none; color:white; background:maroon; border-radius:0.3rem;" class="text-center px-4 py-3 m-5" href="https://drive.google.com/file/d/1Q7_cltT-XB9O_nl9WvspnfXqAxnvga0K/view?usp=sharing"  target="_blank">READ</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex">
+            <div class="cardcontainer">
+                <div class="photo">
+                    <img src="https://m.media-amazon.com/images/I/61vKRgeuSGL._AC_UF1000,1000_QL80_.jpg"
+                        alt="City Lights">
+                </div>
+                <div class="content">
+                    <p class="fs-1">THE ART OF DECEPTION</p>
+                    <p class="fs-3">KELVIN D. MITNIK</p>
+                    <p class="fs-5">It Explores The Psychology Of Social Engineering And How Attackers Manipulate People To Gain Sensitive Information.</p>
+                </div>
+                <div class="book-footer">
+                    <a style="font-size:1.5rem; text-decoration:none; color:white; background:maroon; border-radius:0.3rem;" class="text-center px-4 py-3 m-5" href="https://drive.google.com/file/d/1m7coiUOY88lXM7gwXsfiF2Wv5iz2x2Do/view?usp=sharing"  target="_blank">READ</a>
+                </div>
+            </div>
+            <div class="cardcontainer">
+                <div class="photo">
+                    <img src="https://m.media-amazon.com/images/I/4179SEOOobL._UF1000,1000_QL80_.jpg"
+                        alt="City Lights">
+                </div>
+                <div class="content">
+                    <p class="fs-1">HANDBOOK OF CRIME PREVENTION</p>
+                    <p class="fs-3">LAWRENCE J. FENNELLY</p>
+                    <p class="fs-5">A Comprehensive Resource That Offers Practical Solutions For Safeguarding Individuals And Property, Makeing A Valueable Asset.</p>
+                </div>
+                <div class="book-footer">
+                    <a style="font-size:1.5rem; text-decoration:none; color:white; background:maroon; border-radius:0.3rem;" class="text-center px-4 py-3 m-5" href="https://drive.google.com/file/d/1m7coiUOY88lXM7gwXsfiF2Wv5iz2x2Do/view?usp=sharing"  target="_blank">READ</a>
+                </div>
+            </div>
+            <div class="cardcontainer">
+                <div class="photo">
+                    <img src="https://m.media-amazon.com/images/I/91920apJNBL._UF1000,1000_QL80_.jpg"
+                        alt="City Lights">
+                </div>
+                <div class="content">
+                    <p class="fs-1">METASPLOIT : THE PENETRATION TESTER'S GUIDE</p>
+                    <p class="fs-3">KELVIN D. MITNIK</p>
+                    <p class="fs-5">It Explores The Psychology Of Social Engineering And How Attackers Manipulate People To Gain Sensitive Information.</p>
+                </div>
+                <div class="book-footer">
+                    <a style="font-size:1.5rem; text-decoration:none; color:white; background:maroon; border-radius:0.3rem;" class="text-center px-4 py-3 m-5" href="https://drive.google.com/file/d/1m7coiUOY88lXM7gwXsfiF2Wv5iz2x2Do/view?usp=sharing"  target="_blank">READ</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex">
+            <div class="cardcontainer">
+                <div class="photo">
+                    <img src="https://m.media-amazon.com/images/I/4179SEOOobL._UF1000,1000_QL80_.jpg"
+                        alt="City Lights">
+                </div>
+                <div class="content">
+                    <p class="fs-1">HANDBOOK OF CRIME PREVENTION</p>
+                    <p class="fs-3">LAWRENCE J. FENNELLY</p>
+                    <p class="fs-5">A Comprehensive Resource That Offers Practical Solutions For Safeguarding Individuals And Property.</p>
+                </div>
+                <div class="book-footer">
+                    <a style="font-size:1.5rem; text-decoration:none; color:white; background:maroon; border-radius:0.3rem;" class="text-center px-4 py-3 m-5" href="https://drive.google.com/file/d/1m7coiUOY88lXM7gwXsfiF2Wv5iz2x2Do/view?usp=sharing"  target="_blank">READ</a>
                 </div>
             </div>
         </div>

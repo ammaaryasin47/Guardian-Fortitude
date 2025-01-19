@@ -10,6 +10,21 @@
   <!-- BOOTSTRAP CDN -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- BOXICONS CDN -->
   <link href="../CSS/Navbar&Footer.css" rel="stylesheet">
+  <script>
+     window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    const content = document.getElementById('content');
+
+    // Hide the preloader
+    preloader.classList.add('hidden');
+
+    // Show the main content after a delay
+    setTimeout(() => {
+      preloader.style.display = 'none';
+      content.style.display = 'block';
+    }, 5000); // Match the transition duration
+    });
+  </script>
   <link href="../CSS/INDEX.css" rel="stylesheet">
   <!---- FAVICONS ---->
   <link rel="icon" href="../../IMAGES/HOME/favicon_io/favicon-16x16.png" type="image/x-icon">
@@ -20,10 +35,15 @@
 </head>
 
 <body>
+
+  <div id="preloader">
+      <img src="../IMAGES/HOME/Logo.png" alt="Loading...">
+  </div>
+
   <!--------------------------------------------- NAVBAR ----------------------------------------------------->
   <nav style="background-color: black; position:sticky; top: 0; z-index: 10;" class=" text-light w-100">
     <div class="uppernav">
-        <ul style="cursor:default;" class="fs-4 list-unstyled gap-5 d-flex ps-3">
+        <ul style="cursor:default;" class="align-items-end fs-4 list-unstyled gap-5 d-flex ps-3">
             <li class="pe-3 border-light align-items-center" style="border-right: 1px dotted #fff;">
                 <i class='bx bx-envelope'></i>
                 guardianfortitudeservice@gmail.com
@@ -110,9 +130,6 @@
     <a href="{{ URL::to('/login') }}" class="sidenav-link">LOGIN</a>
 </li>
 @endauth
-
-
-
             </ul>
         </nav>
 
@@ -327,7 +344,7 @@
       <a href="#" style="text-decoration: none; margin-top: 5rem; cursor:pointer ;">Read More ...</a>
     </div>
     <div style="border-right: 2px solid maroon" class="blog-2 px-5 text-center text-light mt-5">
-      <img class="mb-3" src="https://i.pinimg.com/564x/ca/1b/95/ca1b95affeae5fa4063d21f0d1e55f71.jpg" height="150rem">
+      <img class="mb-3" src="https://img.freepik.com/free-photo/close-up-man-writing-paper_23-2148377689.jpg" height="150rem">
       <h1>Impacts Of Security Consultancy</h1>
       <h2>By <i>EK_VILLAIN</i></h2>
       <h3>5th March 2024</h3>
@@ -335,7 +352,7 @@
     </div>
     <div class="blog-3 px-5 text-center text-light mt-5">
       <img class="mb-3"
-        src="https://media.licdn.com/dms/image/v2/D4D12AQEv2KHdL2uj4Q/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1662038357618?e=1734566400&v=beta&t=Mcvrk0AlHeeXzuMCh5YACh_m1NK-DxwOxDQVmVfVr5E"
+        src="https://t4.ftcdn.net/jpg/05/82/19/57/360_F_582195761_R6KLj1upLmNAtkn5GM2Lsc4Sv56gxeT8.jpg"
         height="150rem">
       <h1>Exploring Your Legal Boundaries</h1>
       <h2>By <i>DAX</i></h2>
