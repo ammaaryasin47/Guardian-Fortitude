@@ -156,15 +156,15 @@
                     <div class="card" style="border-radius: 1rem;">
                         <div class="row g-0">
                             <div class="col-md-6 col-lg-5 d-none d-md-block">
-                                <img src="https://e1.pxfuel.com/desktop-wallpaper/848/247/desktop-wallpaper-agents-of-shield-shield.jpg"
+                                <img src="../IMAGES/PAYMENT/payment-banner.jpg"
                                     alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
                             </div>
                             <div style="background:#000;" class="col-md-6 col-lg-7 d-flex align-items-center">
                                 <div style="background:#000;" class="card-body p-4 p-lg-5 text-black">
-                                    <form >
+                                    <form method="POST" action="{{ route('payment') }}">
                                     @csrf
                                         <div class="d-flex align-items-center mb-3 pb-1">
-                                            <!-- <img src="../IMAGES/HOME/Logo.png" style="width: 10rem;"> -->
+                                            <img src="../IMAGES/HOME/Logo.png" style="width: 10rem;">
                                             <span class="fs-1">GUARDIAN FORTITUDE<br> SECURITY SERVICES</span>
                                         </div>
 

@@ -19,11 +19,4 @@ class Payment extends Model
         'expdate',
         'cvv',
     ];
-
-    // Automatically encrypt and decrypt sensitive fields
-    protected $casts = [
-        'cardnumber' => 'encrypted',
-        'cvv' => 'encrypted',
-    ];
 }
-

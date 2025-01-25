@@ -10,6 +10,21 @@
   <!-- BOOTSTRAP CDN -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- BOXICONS CDN -->
   <link href="../../CSS/Navbar&Footer.css" rel="stylesheet">
+  <script>
+     window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    const content = document.getElementById('content');
+
+    // Hide the preloader
+    preloader.classList.add('hidden');
+
+    // Show the main content after a delay
+    setTimeout(() => {
+      preloader.style.display = 'none';
+      content.style.display = 'block';
+    }, 5000); // Match the transition duration
+    });
+    </script>
   <link href="../../CSS/PRODUCTS/ACCESSORIES.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
   <!---- FAVICONS ---->
@@ -21,6 +36,10 @@
 </head>
 
 <body>
+
+    <div id="preloader">
+      <img src="../IMAGES/HOME/Logo.png" alt="Loading...">
+    </div>
   <!--------------------------------------------- NAVBAR ----------------------------------------------------->
   <x-productsnavbar />
   <!------------------------------------------------------ BANNER ------------------------------------------------------------------>

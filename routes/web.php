@@ -107,4 +107,7 @@ Route::get('/cart', [ProfileController::class, 'cart'])->name('cart');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // <----------------------------- PAYMENT ROUTES --------------------------------------------------------------
+
+
 Route::post('/payment', [PaymentController::class, 'processPayment'])->name('payment');
+Route::any('/payment', function () { return view('payment'); })->name('payment.form');

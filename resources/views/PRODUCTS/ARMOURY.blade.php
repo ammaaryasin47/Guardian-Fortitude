@@ -10,6 +10,21 @@
     <!-- BOOTSTRAP CDN -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- BOXICONS CDN -->
     <link href="../../CSS/Navbar&Footer.css" rel="stylesheet">
+    <script>
+     window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    const content = document.getElementById('content');
+
+    // Hide the preloader
+    preloader.classList.add('hidden');
+
+    // Show the main content after a delay
+    setTimeout(() => {
+      preloader.style.display = 'none';
+      content.style.display = 'block';
+    }, 5000); // Match the transition duration
+    });
+    </script>
     <link href="../../CSS/PRODUCTS/ARMOURY.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <!---- FAVICONS ---->
@@ -21,6 +36,10 @@
 </head>
 
 <body>
+    
+    <div id="preloader">
+      <img src="../IMAGES/HOME/Logo.png" alt="Loading...">
+    </div>
     <!--------------------------------------------- NAVBAR ----------------------------------------------------->
     <nav style="background-color: black; position:sticky !important; top: 0; z-index: 10;" class=" text-light w-100">
         <div class="uppernav">
@@ -128,9 +147,9 @@
 
     <!--------------------------------------------------------------- BANNER --------------------------------------------------------->
     <div class="armoury-banner">
-        <img src="https://cdn11.bigcommerce.com/s-fex90914pb/images/stencil/760x1000/uploaded_images/ammo-blog-scaled-1-1536x1038.jpg?t=1633931274"
+        <img src="../../IMAGES/PRODUCTS/ARMOURY/armoury.jpg"
             class="w-100 object-fit-cover">
-        <h1 class="text-light">Armoury</h1>
+        <h1 style="color:maroon;" class="text-center">Armoury</h1>
     </div>
 
     <!------------------------------------------------------------- PARALLAX ----------------------------------------------------------------------->
