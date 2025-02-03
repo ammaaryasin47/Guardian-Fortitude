@@ -130,8 +130,30 @@
     <a href="{{ URL::to('/login') }}" class="sidenav-link">LOGIN</a>
 </li>
 @endauth
-            </ul>
-        </nav>
+<div class="mt-5">
+                        <div class="mb-5">
+                            <li class=" fs-5 pe-3 border-light align-items-center"
+                                style="border-right: 1px dotted #fff;">
+                                <i class='bx bx-envelope'></i>
+                                guardianfortitude<p>service@gmail.com</p>
+                            </li>
+                            <li class="fs-5 pe-3 border-light align-items-center"
+                                style="border-right: 1px dotted #fff;"> <i class='bx bx-phone-call'></i>
+                                +91 1234567890</li>
+                            <li class="fs-5"><i class='bx bx-map'></i> Ahemdabad , India</li>
+                        </div>
+
+                        <li class="sidenav-item d-flex">
+                            <ul style="list-style-type: none;" class="justify-content-around d-flex flex-column">
+                                <li><i class='bx bxl-meta'></i></li>
+                                <li><i class='bx bxl-linkedin'></i></li>
+                                <li><i class='bx bxl-github'></i></li>
+                                <li><i class='bx bxl-instagram'></i></li>
+                            </ul>
+                        </li>
+                    </div>
+                </ul>
+            </nav>
 
         <ul style="cursor: pointer;"
                 class="navbtnul justify-content-end align-items-center list-unstyled gap-3 ms-auto d-flex pe-3 fs-2">

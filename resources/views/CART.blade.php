@@ -288,8 +288,8 @@ p{
                             </div>
                             <div style="background:#000; color:#fff;" class=" card-body">
                                 <div class="fs-4 row justify-content-between">
-                                    <div class="col-auto mt-0"><p><b>address</b></p></div>
-                                    <div class="col-auto"><p><b>email</b> </p></div>
+                                    <div class="col-auto mt-0"><p><b>{{ $address }}</b></p></div>
+                                    <div class="col-auto"><p><b>{{ $email }}</b> </p></div>
                                 </div>
                                 <div class="row mt-4">
                                     <div class="col"><p style="color:maroon;" class="text-center fs-3 mb-2">PAYMENT DETAILS</p><hr class="mt-0"></div>
@@ -336,7 +336,7 @@ p{
                                 <hr class="my-2">
                             </div>
                             <div class="card-body pt-0">
-                                <div class="row  justify-content-between">
+                                <div class="row justify-content-between">
                                     <div class="col-auto col-md-7">
                                         <div class="media flex-column flex-sm-row">
                                             <img class=" img-fluid" src="https://i.imgur.com/6oHix28.jpg" width="62" height="62">

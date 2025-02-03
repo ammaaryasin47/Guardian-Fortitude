@@ -11,6 +11,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- BOXICONS CDN -->
     <link href="../CSS/Navbar&Footer.css" rel="stylesheet">
     <script>
+        
      window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     const content = document.getElementById('content');
@@ -148,6 +149,16 @@
     </nav>
 
     <!------------------------------------------------------------ PAYMENT ------------------------------------------------------->
+    <!-- Displaying validation errors if any -->
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     <section class="vh-100 text-light" style="background-color: #000;">
         <div class="container py-5 h-100">
@@ -164,8 +175,13 @@
                                     <form method="POST" action="{{ route('payment') }}">
                                     @csrf
                                         <div class="d-flex align-items-center mb-3 pb-1">
-                                            <img src="../IMAGES/HOME/Logo.png" style="width: 10rem;">
+                                            <!-- <img src="../IMAGES/HOME/Logo.png" style="width: 10rem;"> -->
                                             <span class="fs-1">GUARDIAN FORTITUDE<br> SECURITY SERVICES</span>
+                                        </div>
+                                        <input type="hidden" name="user_id" value="{{ auth()->user()->user_id }}">
+
+                                        <div class="mb-3">
+                                        <h6 style="display:none;" name="referrer" value="{{ $referrer }}" class="text-light">Referred By: {{ $referrer }}</h6>
                                         </div>
 
                                         <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">CARD DETAILS</h5>
@@ -212,16 +228,7 @@
       <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
  <x-footer />
 
- <!-- <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Card Number Input
-        const cardNumberInput = document.getElementById('cardnumber');
-        cardNumberInput.addEventListener('input', (e) => {
-            let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
-            value = value.match(/.{1,4}/g)?.join(' ') || ''; // Group digits into blocks of 4
-            e.target.value = value;
-        });
-
+    <script>
         // Expiration Date Input
         const expDateInput = document.getElementById('expdate');
         expDateInput.addEventListener('input', (e) => {
@@ -268,9 +275,8 @@
             // If all validations pass, the form will be submitted
         });
     });
-</script> -->
 
-</script>
+    </script>
 <script src="../JS/navbar.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

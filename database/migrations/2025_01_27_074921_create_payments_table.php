@@ -10,11 +10,19 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
+            $table->uuid('user_id'); // Foreign key
+            $table->string('referrer')->nullable();
             $table->string('name');
             $table->string('cardnumber'); // Encrypted
             $table->string('expdate'); // Stored as plain text (non-sensitive)
             $table->string('cvv'); // Encrypted
             $table->timestamps();
+
+            // Foreign key constraint
+            $table->foreign('user_id')
+                  ->references('user_id')
+                  ->on('users')
+                  ->onDelete('cascade');
         });
     }
 
@@ -23,3 +31,4 @@ class CreatePaymentsTable extends Migration
         Schema::dropIfExists('payments');
     }
 }
+

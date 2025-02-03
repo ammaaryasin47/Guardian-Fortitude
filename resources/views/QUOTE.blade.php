@@ -111,10 +111,32 @@
                             <span>QUOTE</span></a>
                     </li>
 
-                    <li class="sidenav-item">
-                        <a href="{{URL::to('/login')}}" class="sidenav-link">
-                            <span>LOGIN</span></a>
-                    </li>
+                      <!-- Conditional Login/Profile Picture -->
+                @auth
+<li class="sidenav-item dropdown">
+    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+        <img 
+            src="{{ Auth::user()->profile_picture ? asset('storage/' . Auth::user()->profile_picture) : asset('default-profile.png') }}" 
+            alt="Profile Picture" 
+            class="rounded-circle" 
+            height="40px">
+    </a>
+    <ul class="fs-2 dropdown-menu">
+        <li><a class="dropdown-item" href="{{ route('profile.edit') }}">PROFILE</a></li>
+        <li><a class="dropdown-item" href="{{ route('cart') }}">CART</a></li>
+        <li>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="dropdown-item">LOGOUT</button>
+            </form>
+        </li>
+    </ul>
+</li>
+@else
+<li class="sidenav-item">
+    <a href="{{ URL::to('/login') }}" class="sidenav-link">LOGIN</a>
+</li>
+@endauth
                     <div class="mt-5">
                         <div class="mb-5">
                             <li class=" fs-5 pe-3 border-light align-items-center"
@@ -148,7 +170,33 @@
                 <li><a href="{{URL::to('/products')}}">PRODUCTS</a></li>
                 <li><a href="{{URL::to('/contactus')}}">CONTACT US</a></li>
                 <li><a style="color: maroon; font-weight: 500;" href="{{URL::to('/quote')}}">QUOTE</a></li>
-                <li><a href="{{URL::to('/login')}}">LOGIN</a></li>
+                 <!-- Conditional Login/Profile Picture -->
+            @auth
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+                    <img 
+                    src="{{ Auth::user()->profile_picture ?? asset('default-profile.png') }}" 
+                    alt="Profile Picture" 
+                    class="rounded-circle" 
+                    height="40px">
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ route('profile.edit') }}">PROFILE</a></li>
+                    <li><a class="dropdown-item" href="{{ route('cart') }}">CART</a></li>
+                    <li><a class="dropdown-item" href="{{ route('profile.edit') }}">YOUR ORDERS</a></li>
+                    <li>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="dropdown-item">LOGOUT</button>
+            </form>
+        </li>
+                </ul>
+            </li>
+            @else
+            <li class="nav-item">
+                <a href="{{URL::to('/login')}}">LOGIN</a>
+            </li>
+            @endauth
             </ul>
         </ul>
     </nav>

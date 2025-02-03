@@ -34,6 +34,18 @@ Route::middleware('auth')->group(function () {
     Route::post('/subscriptions', [AdminSubscriptionController::class, 'storeSubscription'])->name('subscriptions.store');
     Route::get('/subscriptions', [UserSubscriptionController::class, 'show'])->name('subscriptions.show');
     Route::get('/dashboard', [UserSubscriptionController::class, 'showDashboard'])->name('dashboard');
+    Route::get('/cart', [ProfileController::class, 'cart'])->name('cart');
+    Route::match(['get', 'post'], '/payment', function () {
+        if (!auth()->check()) {
+            return redirect()->route('login'); // Redirect to login if not authenticated
+        }
+    
+        if (request()->isMethod('post')) {
+            return app(\App\Http\Controllers\PaymentController::class)->processPayment(request());
+        }
+    
+        return view('payment');
+    })->name('payment');
 });
 
 require __DIR__.'/auth.php';
@@ -102,12 +114,10 @@ Route::post('/profile/picture', [ProfileController::class, 'updateProfilePicture
 Route::post('/admin/update-services', [AdminSubscriptionController::class, 'updateServices'])->name('admin.update.services');
 Route::post('/admin/subscription/update/{userId}', [AdminSubscriptionController::class, 'updateSubscription'])->name('admin.subscription.update');
 
-Route::get('/cart', [ProfileController::class, 'cart'])->name('cart');
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // <----------------------------- PAYMENT ROUTES --------------------------------------------------------------
 
 
-Route::post('/payment', [PaymentController::class, 'processPayment'])->name('payment');
-Route::any('/payment', function () { return view('payment'); })->name('payment.form');

@@ -40,6 +40,7 @@
     <div id="preloader">
       <img src="../IMAGES/HOME/Logo.png" alt="Loading...">
     </div>
+</div>
 
     <!--------------------------------------------- NAVBAR ----------------------------------------------------->
     <x-productsnavbar />
@@ -66,11 +67,21 @@
     <!--------------------------------------------------------- NEW RELEASE --------------------------------------------------------->
     <div style=" margin: 2rem; border: 2px solid grey;" class="books-container text-light">
         <div class="newrelease my-5 ps-5">
-            <h6 style="display: flex; justify-content: start; letter-spacing: 6px;">NEW RELEASE</h6>
+            <h6 style="display: flex; justify-content: start; letter-spacing: 6px;">OWNER'S FAVOURITE</h6>
         </div>
         <div>
-            <div>BOOK NAME</div>
-            <div></div>
+        
+                <div class="photo">
+                    <a style="z-index:5;" href="https://drive.google.com/file/d/1CIa4pyDlPDxFjiSby9e8TYEgyQtiWv9T/view?usp=sharing" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCRd3VIeHhNoH2TsFCjDDpCEgfVVkuJCfbSxKRT8vJ9yoGr1azKFU6NrBtqruE4A75tts&usqp=CAU"
+                        alt="City Lights"></a>
+                </div>
+                <div class="content">
+                    <p class="fs-1">THE ULTIMATE SNIPER</p>
+                    <p class="fs-3">JOHN L.</p>
+                    <p class="fs-5"></p>
+                </div>
+                
+            
         </div>
     </div>
 
@@ -158,9 +169,9 @@
                         alt="City Lights">
                 </div>
                 <div class="content">
-                    <p class="fs-1">METASPLOIT : THE PENETRATION TESTER'S GUIDE</p>
-                    <p class="fs-3">KELVIN D. MITNIK</p>
-                    <p class="fs-5">It Explores The Psychology Of Social Engineering And How Attackers Manipulate People To Gain Sensitive Information.</p>
+                    <p class="fs-1">METASPLOIT</p>
+                    <p class="fs-3">DEVON KEARNS</p>
+                    <p class="fs-5">A Hands-On Book That Teaches Ethical Hackers How To Use The Metasploit Framework For Exploiting Vulnerabilities , It Covers Everything From Reconnaissance To Advanced Post-Exploitation Techniques.</p>
                 </div>
                 <div class="book-footer">
                     <a style="font-size:1.5rem; text-decoration:none; color:white; background:maroon; border-radius:0.3rem;" class="text-center px-4 py-3 m-5" href="https://drive.google.com/file/d/1m7coiUOY88lXM7gwXsfiF2Wv5iz2x2Do/view?usp=sharing"  target="_blank">READ</a>
@@ -171,20 +182,94 @@
         <div class="container d-flex">
             <div class="cardcontainer">
                 <div class="photo">
-                    <img src="https://m.media-amazon.com/images/I/4179SEOOobL._UF1000,1000_QL80_.jpg"
+                    <img src="https://m.media-amazon.com/images/I/61y4xzISrVL.jpg"
                         alt="City Lights">
                 </div>
                 <div class="content">
-                    <p class="fs-1">HANDBOOK OF CRIME PREVENTION</p>
-                    <p class="fs-3">LAWRENCE J. FENNELLY</p>
-                    <p class="fs-5">A Comprehensive Resource That Offers Practical Solutions For Safeguarding Individuals And Property.</p>
+                    <p class="fs-1">RISK ANALYSIS & SECURITY COUNTERMEASURE</p>
+                    <p class="fs-3">THOMAS L. NORMAN</p>
                 </div>
                 <div class="book-footer">
                     <a style="font-size:1.5rem; text-decoration:none; color:white; background:maroon; border-radius:0.3rem;" class="text-center px-4 py-3 m-5" href="https://drive.google.com/file/d/1m7coiUOY88lXM7gwXsfiF2Wv5iz2x2Do/view?usp=sharing"  target="_blank">READ</a>
                 </div>
             </div>
-        </div>
+        
+           
+                <div class="cardcontainer">
+                    <div class="photo">
+                        <img src="https://m.media-amazon.com/images/I/71UnvnvCQEL._AC_UF1000,1000_QL80_.jpg"
+                            alt="City Lights">
+                    </div>
+                    <div class="content">
+                        <p class="fs-1">SECURITY ENGINEERING</p>
+                        <p class="fs-3">ROSS ANDERSON</p>
+                        <p class="fs-5">A Comprehensive Guide To Designing Secure Systems.</p>
+                    </div>
+                    <div class="book-footer">
+                        <a style="font-size:1.5rem; text-decoration:none; color:white; background:maroon; border-radius:0.3rem;" class="text-center px-4 py-3 m-5" href="https://drive.google.com/file/d/1m7coiUOY88lXM7gwXsfiF2Wv5iz2x2Do/view?usp=sharing"  target="_blank">READ</a>
+                    </div>
+                </div>
+                <div class="cardcontainer">
+                    <div class="photo">
+                        <img src="https://m.media-amazon.com/images/I/51WZWjgY1dL._AC_UF1000,1000_QL80_.jpg"
+                            alt="City Lights">
+                    </div>
+                    <div class="content">
+                        <p class="fs-1">US ARMY SURVIVAL MANUAL FM 21-76</p>
+                        <p class="fs-3">U.S ARMY</p>
+                        <p class="fs-5">Allrounded Survival Manual For Operatives.</p>
+                    </div>
+                    <div class="book-footer">
+                        <a style="font-size:1.5rem; text-decoration:none; color:white; background:maroon; border-radius:0.3rem;" class="text-center px-4 py-3 m-5" href="https://drive.google.com/file/d/1m7coiUOY88lXM7gwXsfiF2Wv5iz2x2Do/view?usp=sharing"  target="_blank">READ</a>
+                    </div>
+                </div>
     </div>
+
+    <div class="container d-flex">
+        <div class="cardcontainer">
+            <div class="photo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRbD25YpDH0HvfG0NGmFwE0U_S6UU9k4bC3A&s"
+                    alt="City Lights">
+            </div>
+                <div class="content">
+                    <p class="fs-1">THE ART OF RIFLE</p>
+                    <p class="fs-3">JEFF COOPER</p>
+                    <p class="fs-5">An Allrounded Survival Manual For Operatives.</p>
+                </div>
+                <div class="book-footer">
+                    <a style="font-size:1.5rem; text-decoration:none; color:white; background:maroon; border-radius:0.3rem;" class="text-center px-4 py-3 m-5" href="https://drive.google.com/file/d/1KzBPkvfvK1kHGwe-KRb5MbBc4TxZC5Yd/view?usp=sharing"  target="_blank">READ</a>
+            </div>
+        </div>
+        
+        <div class="cardcontainer">
+            <div class="photo">
+                <img src="https://m.media-amazon.com/images/I/61DB25+yH9L._AC_UF1000,1000_QL80_.jpg"
+                    alt="City Lights">
+            </div>
+                <div class="content">
+                    <p class="fs-1">ART OF WAR</p>
+                    <p class="fs-3">SUN TZU</p>
+                    <p class="fs-5">An Allrounded Survival Manual For Operatives.</p>
+                </div>
+                <div class="book-footer">
+                    <a style="font-size:1.5rem; text-decoration:none; color:white; background:maroon; border-radius:0.3rem;" class="text-center px-4 py-3 m-5" href="https://drive.google.com/file/d/1m7coiUOY88lXM7gwXsfiF2Wv5iz2x2Do/view?usp=sharing"  target="_blank">READ</a>
+            </div>
+        </div>
+        <div class="cardcontainer">
+            <div class="photo">
+                <img src="https://ia801907.us.archive.org/BookReader/BookReaderImages.php?zip=/32/items/fmfrp-12-80-kill-or-get-killed/FMFRP%2012-80%20Kill%20or%20Get%20Killed_jp2.zip&file=FMFRP%2012-80%20Kill%20or%20Get%20Killed_jp2/FMFRP%2012-80%20Kill%20or%20Get%20Killed_0000.jp2&id=fmfrp-12-80-kill-or-get-killed&scale=4&rotate=0"
+                    alt="City Lights">
+            </div>
+                <div class="content">
+                    <p class="fs-1">KILL OR GET KILLED</p>
+                    <p class="fs-3">U.S MARINE CORPS</p>
+                    <p class="fs-5">An Allrounded Survival Manual For Operatives.</p>
+                </div>
+                <div class="book-footer">
+                    <a style="font-size:1.5rem; text-decoration:none; color:white; background:maroon; border-radius:0.3rem;" class="text-center px-4 py-3 m-5" href="https://drive.google.com/file/d/1p2bFo6gs4mjQa9CTp3gu0cxx-DC6W5MB/view?usp=sharing"  target="_blank">READ</a>
+            </div>
+        </div>
+    </div>  
     <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
     <x-footer />
 

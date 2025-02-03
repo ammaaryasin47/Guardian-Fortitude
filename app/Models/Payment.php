@@ -9,10 +9,8 @@ class Payment extends Model
 {
     use HasFactory;
 
-    // Define the table (if it's not the default 'payments')
     protected $table = 'payments';
 
-    // Specify fillable fields for mass assignment
     protected $fillable = [
         'name',
         'cardnumber',
