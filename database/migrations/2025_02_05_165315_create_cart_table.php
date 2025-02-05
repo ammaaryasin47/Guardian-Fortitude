@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('cart', function (Blueprint $table) {
             $table->id();
-            $table->uuid('user_id'); // Foreign key for user
-            $table->integer('product_id'); // Foreign key for product
+            $table->uuid('user_id'); 
+            $table->string('product_id'); 
             $table->integer('quantity');
             $table->decimal('price', 10, 2);
             $table->timestamps();

@@ -130,8 +130,8 @@
         </a>
       </div>
 
-      <div class="col-md-6">
-        <a data-target="magpouch" class="text-decoration-none">
+      <div class="col-md-6" data-target="magpouch">
+        <a  class="text-decoration-none">
           <div class="card">
             <img
               src="https://taskandpurpose.com/wp-content/uploads/2022/03/10/Best-Mag-Pouches-For-Plate-Carriers-9.jpg?quality=85&w=800"
@@ -143,8 +143,8 @@
         </a>
       </div>
 
-      <div class="col-md-6">
-        <a data-target="tacticalpouch" class="text-decoration-none">
+      <div class="col-md-6" data-target="tactpouch">
+        <a class="text-decoration-none">
           <div class="card">
             <img src="https://getcyalume.com/wp-content/uploads/2020/12/cypouch-tactical-holder-with-IR-lightsticks.jpg"
               alt="Card 4">
@@ -155,19 +155,8 @@
         </a>
       </div>
 
-      <div class="col-md-6">
-        <a data-target="medpouch" class="text-decoration-none">
-          <div class="card">
-            <img src="https://ltcreed.com/cdn/shop/files/SilverlineFilms-5476.jpg?v=1709818907&width=4096" alt="Card 4">
-            <div class="card-overlay">
-              <h3>TACTICAL MED POUCH</h3>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-6">
-        <a data-target="headsets" class="text-decoration-none">
+      <div class="col-md-6" data-target="tactheadset">
+        <a class="text-decoration-none">
           <div class="card">
             <img
               src="https://www.karel-electronics.com/sites/karel-electronics.com/files/2023-12/askeri-baslik-takimlari.jpg"
@@ -179,8 +168,8 @@
         </a>
       </div>
 
-      <div class="col-md-6">
-        <a data-target="chemlights" class="text-decoration-none">
+      <div class="col-md-6" data-target="tactchemlight">
+        <a class="text-decoration-none">
           <div class="card">
             <img
               src="https://www.contactleft.co.uk/media/catalog/product/cache/d77ea550a5ef9fba7ebe6bdcefeef094/c/h/chemlight-15cm-6inch-orange-military-lightstick-cyalume-12-hours-24-hours-or-5-minutes_1_1_1_1_1.jpg"
@@ -192,20 +181,8 @@
         </a>
       </div>
 
-      <div class="col-md-6">
-        <a data-target="belts" class="text-decoration-none">
-          <div class="card">
-            <img src="https://www.bluealphabelts.com/wp-content/uploads/2023/12/leo-duty-belt-1024x538.png"
-              alt="Card 4">
-            <div class="card-overlay">
-              <h3>TACTICAL <br> UTILITY BELTS</h3>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-6">
-        <a data-target="merch" class="text-decoration-none">
+      <div class="col-md-6" data-target="merch">
+        <a class="text-decoration-none">
           <div class="card">
             <img src="../../IMAGES/PRODUCTS/ACCESSORIES/MERCH/Merch-Banner.jpeg" alt="Card 4">
             <div class="card-overlay">
@@ -215,18 +192,7 @@
         </a>
       </div>
 
-      <div class="col-md-6">
-        <a data-target="patches" class="text-decoration-none">
-          <div class="card">
-            <img
-              src="https://media.istockphoto.com/id/1360293405/vector/army-air-forces-airborne-units-badges-and-chevron.jpg?s=612x612&w=0&k=20&c=v2txTXvaOrtWn1mIjAPA6uMIiSvtACaf1Ajrc_aumkM="
-              alt="Card 4">
-            <div class="card-overlay">
-              <h3>PATCHES</h3>
-            </div>
-          </div>
-        </a>
-      </div>
+      
     </div>
   </div>
 
@@ -782,7 +748,7 @@
       <div class="product-card">
         <div class="product-card__image">
           <img
-            src="https://www.helikon-tex.com/media/catalog/product/cache/4/image/500x/17f82f742ffe127f42dca9de82fb58b1/c/d/cd-pc1-nl-11.jpg">
+           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0tBGJOWreIw6pDqU5y2oYtVBfezLh1_JlXg&s">
         </div>
         <div class="product-card__info">
           <h2 class="product-card__title fs-2">ATWOOD 550 - HELIKON TEX</h2>
@@ -1008,10 +974,10 @@
     <div class="product-row">
       <div class="product-card">
         <div class="product-card__image">
-          <img src="https://cdna.artstation.com/p/assets/images/images/057/535/634/large/chailu-b.jpg?1671867450">
+          <img src="https://cdna.artstation.com/p/assets/images/images/015/642/216/large/alessandro-chierici-screenshot000.jpg?1549067134">
         </div>
         <div class="product-card__info">
-          <h2 class="product-card__title fs-2">AN-PRC-90-2</h2>
+          <h2 class="product-card__title fs-2">PRC-152</h2>
           <p class="product-card__description fs-4"> Portable <br> DURABLE MATERIAL
             <br> Waterproof Rating IP54
           </p>
@@ -1024,10 +990,10 @@
       <div class="product-card">
         <div class="product-card__image">
           <img
-            src="https://cdn11.bigcommerce.com/s-79gwfdy8/images/stencil/1280x1280/products/452/80581/TUL_PFL_SSP365_BLK_LH_FRONT__72995.1617807426.jpg?c=2">"
+            src="https://cdna.artstation.com/p/assets/images/images/012/731/682/large/anton-berkov-rs-02-main-2.jpg?1536230326">"
         </div>
         <div class="product-card__info">
-          <h2 class="product-card__title fs-2">IWB HOLSTERS</h2>
+          <h2 class="product-card__title fs-2">PORTABLE VHF</h2>
           <p class="product-card__description fs-4">low-profile carry experience <br> dematte edge finish and minimal
             material facilitate <br> </p>
           <div class="product-card__price-row">
@@ -1055,6 +1021,472 @@
     </div>
   </div>
 
+<!-- ----------------------------------------------------------- MAGAZINE POUCH ---------------------------------------------------------------->
+
+  <div class="text-center mt-5" id="magpouch-heading">
+    <div class="heading-container">
+      <div class="heading-large">MAGAZINE POUCH</div>
+      <div class="heading-normal">MAGAZINE POUCH</div>
+    </div>
+  </div>
+
+  <div class="cont text-light" id="magpouch-products">
+    <div class="product-row">
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="https://loricaequipment.com/wp-content/uploads/2022/10/LORICA-Double-Pistol-Mag-Front.jpg"
+            alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">DUAL PISTOL</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions </p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="https://loricaequipment.com/wp-content/uploads/2022/09/LORICA-Rifle-Mag-Pouch-Front.jpg" alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">SINGLE CARBINE</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img
+            src="https://loricaequipment.com/wp-content/uploads/2023/01/LORICA-Triple-Rig-MCB.jpg"
+            alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">TRIPLE CARBINE</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-row">
+      <div class="product-card">
+        <div class="product-card__image">
+          <img
+            src="https://tracer-tactical.com/cdn/shop/products/image_689d1bfe-2eb0-4202-8ea5-ccd0031f480b_1024x1024@2x.jpg?v=1680043163">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">ANGLED MAG POUCH</h2>
+          <p class="product-card__description fs-4"> Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img
+           src="https://images.squarespace-cdn.com/content/v1/5de76ab6b674ec5a6465e1d9/1675560599079-Z70S2NSWCVODUFMPG7HG/Photo%252BFeb%252B04%252B2023%25252C%252B2%252B58%252B45%252BPM.jpg?format=750w">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">CARBINE & PISTOL COMBO</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="https://cdn11.bigcommerce.com/s-jlrunyc3d2/images/stencil/500x659/products/3277/8274/black_triple__72205.1705606337.jpg?c=1">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">TRIPLE</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-row">
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="https://carcajoutactical.com/cdn/shop/products/Mag-Pouch-Pistol-Black-Front_540x.jpg?v=1689343843">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">SINGLE PISTOL</h2>
+          <p class="product-card__description fs-4"> Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img
+            src="https://carcajoutactical.com/cdn/shop/files/WithMag_1800x1800.png?v=1697579246">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">SAW POUCH</h2>
+          <p class="product-card__description fs-4"> Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!------------------------------------------------------------- TACTICAL POUCH ------------------------------------------------------->
+
+    <div class="text-center mt-5" id="tactpouch-heading">
+      <div class="heading-container">
+        <div class="heading-large">TACTICAL POUCH</div>
+        <div class="heading-normal">TACTICAL POUCH</div>
+      </div>
+    </div>
+
+    <div class="cont text-light" id="tactpouch-products">
+    <div class="product-row">
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="https://assets.cat5.com/images/catalog/products/6/2/6/8/5/0-650-tasmanian-tiger-tac-pouch-14-black.jpg?v=70008"
+            alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">TASMANIAN POUCH</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions </p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="https://cdn11.bigcommerce.com/s-zv2yzuk65y/images/stencil/original/products/32328/141306/MF-A2601-B05__39277.1653639372.1280.1280__51685.1653646896.jpg?c=1" alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">MAGFORCE POUCH</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img
+            src="https://i5.walmartimages.com/seo/Multifunctional-Drop-Leg-Waist-Bag-Tactical-Military-Outdoor-Pack-Hunting-Bags-Hiking-Traveling-Tool-Pouch-Detachable-Water-Bottle-Phone-Black_cc101121-d061-4652-a103-123c83f588b5.e2950b0aea13c7b8506f1418d6e4ce81.jpeg?odnHeight=208&odnWidth=208&odnBg=FFFFFF"
+            alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">WALMART POUCH</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-row">
+      <div class="product-card">
+        <div class="product-card__image">
+          <img
+            src="https://img.myshopline.com/image/store/2001213091/1656481653253/kerospouch06.jpg?w=1800&h=1800">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">SINGAPORE POUCH</h2>
+          <p class="product-card__description fs-4"> Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img
+           src="https://www.warriorassaultsystems.com/wp-content/uploads/2016/07/Medium-Horizontal-Utility-Pouch-BLK.jpg">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">MOLLE POUCH</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGQOnH-uFMKXWXDJYWD5DF9fG2TNE8XV8xRHBzmgSRkeXCktZOZe40zJ5WKJ1KpQLkx5E&usqp=CAU">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">ORCA POUCH</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-row">
+      <div class="product-card">
+        <div class="product-card__image">
+          <img
+            src="https://img.myshopline.com/image/store/2001213091/1656481653253/WeChatImage-20210114143801copycopy.jpg?w=800&h=800">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">UBUY POUCH</h2>
+          <p class="product-card__description fs-4"> Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img
+           src="https://www.tacwrk.com/img/62756/511-tactical-flex-admin-pouch-black-56429abr019-1.jpg?options=rs:fill:616:762/g:ce/dpr:1">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">TACWRK POUCH</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="https://urbantactical.com/cdn/shop/files/56653_019_01_1.jpg?v=1686758151&width=460">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">URBAN POUCH</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!---------------------------------------------------------------- TACTICAL HEADSETS --------------------------------------------------------->
+  <div class="text-center mt-5" id="tactheadset-heading">
+      <div class="heading-container">
+        <div class="heading-large">TACTICAL HEADSET</div>
+        <div class="heading-normal">TACTICAL HEADSET</div>
+      </div>
+  </div>
+
+  <div class="cont text-light" id="tactheadset-products">
+    <div class="product-row">
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="https://cdna.artstation.com/p/assets/images/images/083/429/132/large/ruslan-kalinku-untitled.jpg?1735914036"
+            alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">Walker's XCEL-500 BT</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions </p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="https://png.pngtree.com/background/20231030/original/pngtree-sleek-black-headphones-against-a-dark-background-in-3d-rendering-picture-image_5800963.jpg" alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">SLEEK 250</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAazmWAixj8NVs_K1CELkWmFKx2wmMJPo9ig&s"
+            alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">TECHNINE EARPIECES</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!---------------------------------------------------------------- TACTICAL CHEMLIGHTS --------------------------------------------------------->
+  <div class="text-center mt-5" id="tactchemlight-heading">
+      <div class="heading-container">
+        <div class="heading-large">TACTICAL CHEMLIGHTS</div>
+        <div class="heading-normal">TACTICAL CHEMLIGHTS</div>
+      </div>
+  </div>
+
+  <div class="cont text-light" id="tactchemlight-products">
+    <div class="product-row">
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="https://m.media-amazon.com/images/I/6166RLrBV8L.jpg"
+            alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">Cyalume Red Chemlight</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions </p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="https://m.media-amazon.com/images/I/71lU+MQULLL._AC_UF894,1000_QL80_.jpg" alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">Cyalume Green Chemlight</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDj0vZ0tRP6sYAR-Yp6W8pio5gsjO_HyDTSvX3BfEO5k5jWePqYWLYFhygoRqjf5QYbgY&usqp=CAU"
+            alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">Cyalume Blue Chemlight</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!---------------------------------------------------------------- MERCH --------------------------------------------------------->
+  <div class="text-center mt-5" id="merch-heading">
+      <div class="heading-container">
+        <div class="heading-large">MERCH</div>
+        <div class="heading-normal">MERCH</div>
+      </div>
+  </div>
+
+  <div class="cont text-light" id="merch-products">
+    <div class="product-row">
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="../../IMAGES/PRODUCTS/ACCESSORIES/MERCH/cup.jpeg"
+            alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">Guardian Fortitude CUP</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions </p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="../../IMAGES/PRODUCTS/ACCESSORIES/MERCH/bigbacklogo.jpeg" alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">Guardian Fortitude Tshirt 01</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img
+            src="../../IMAGES/PRODUCTS/ACCESSORIES/MERCH/smallbacklogo.jpeg"
+            alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">Guardian Fortitude Tshirt 02</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-row">
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="../../IMAGES/PRODUCTS/ACCESSORIES/MERCH/smallfrontlogo.jpeg"
+            alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">Guardian Fortitude Tshirt 03</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions </p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="../../IMAGES/PRODUCTS/ACCESSORIES/MERCH/frontlogo.jpeg" alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">Guardian Fortitude Tshirt 04</h2>
+          <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
   <x-footer />
 
