@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>SPECIALIZED VEHICALS</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -173,7 +174,7 @@
 							<span class="discount">15% off</span>
 							<ul>
 								<li>
-									<a href="#" class="add-to-cart-button" data-product-id="1">
+									<a href="#" class="add-to-cart-button" data-product-id="Vehc-Lux-MercedesG6">
 										<i class="fas fa-shopping-cart"></i>
 									</a>
 								</li>
@@ -201,7 +202,7 @@
 						<div class="part-1">
 							<ul>
 								<li>
-									<a href="#" class="add-to-cart-button" data-product-id="2">
+									<a href="#" class="add-to-cart-button" data-product-id="Vehc-Lux-RangeRover">
 										<i class="fas fa-shopping-cart"></i>
 									</a>
 								</li>
@@ -229,7 +230,7 @@
 							<span class="new">new</span>
 							<ul>
 								<li>
-									<a href="#" class="add-to-cart-button" data-product-id="3">
+									<a href="#" class="add-to-cart-button" data-product-id="Vehc-Lux-RollsRoycePhantom">
 										<i class="fas fa-shopping-cart"></i>
 									</a>
 								</li>
@@ -256,7 +257,7 @@
 						<div class="part-1">
 							<ul>
 								<li>
-									<a href="#" class="add-to-cart-button" data-product-id="4">
+									<a href="#" class="add-to-cart-button" data-product-id="Vehc-Lux-S600Maybach">
 										<i class="fas fa-shopping-cart"></i>
 									</a>
 								</li>
@@ -283,7 +284,7 @@
 						<div class="part-1">
 							<ul>
 								<li>
-									<a href="#" class="add-to-cart-button" data-product-id="5">
+									<a href="#" class="add-to-cart-button" data-product-id="Vehc-Lux-ToyotaLandCruiser">
 										<i class="fas fa-shopping-cart"></i>
 									</a>
 								</li>
@@ -310,7 +311,7 @@
 						<div class="part-1">
 							<ul>
 								<li>
-									<a href="#" class="add-to-cart-button" data-product-id="6">
+									<a href="#" class="add-to-cart-button" data-product-id="Vehc-Lux-LexusLX-600">
 										<i class="fas fa-shopping-cart"></i>
 									</a>
 								</li>
@@ -337,7 +338,7 @@
 						<div class="part-1">
 							<ul>
 								<li>
-									<a href="#" class="add-to-cart-button" data-product-id="7">
+									<a href="#" class="add-to-cart-button" data-product-id="Vehc-Lux-ToyotaCamry">
 										<i class="fas fa-shopping-cart"></i>
 									</a>
 								</li>
@@ -365,7 +366,7 @@
 							<span class="new">new</span>
 							<ul>
 								<li>
-									<a href="#" class="add-to-cart-button" data-product-id="8">
+									<a href="#" class="add-to-cart-button" data-product-id="Vehc-Lux-CadillacEscalade">
 										<i class="fas fa-shopping-cart"></i>
 									</a>
 								</li>
@@ -403,7 +404,7 @@
 										<span class="discount">15% off</span>
 										<ul>
 											<li>
-												<a href="#" class="add-to-cart-button" data-product-id="9">
+												<a href="#" class="add-to-cart-button" data-product-id="Vehc-Tac-SWATVehicle">
 													<i class="fas fa-shopping-cart"></i>
 												</a>
 											</li>
@@ -431,7 +432,7 @@
 									<div class="part-1">
 										<ul>
 											<li>
-												<a href="#" class="add-to-cart-button" data-product-id="10">
+												<a href="#" class="add-to-cart-button" data-product-id="Vehc-Tac-6X6">
 													<i class="fas fa-shopping-cart"></i>
 												</a>
 											</li>
@@ -458,7 +459,7 @@
 									<div class="part-1">
 										<ul>
 											<li>
-												<a href="#" class="add-to-cart-button" data-product-id="11">
+												<a href="#" class="add-to-cart-button" data-product-id="Vehc-Tac-8SeaterPCV">
 													<i class="fas fa-shopping-cart"></i>
 												</a>
 											</li>
@@ -486,7 +487,7 @@
 										<span class="new">new</span>
 										<ul>
 											<li>
-												<a href="#" class="add-to-cart-button" data-product-id="12">
+												<a href="#" class="add-to-cart-button" data-product-id="Vehc-Tac-12SeaterPCV">
 													<i class="fas fa-shopping-cart"></i>
 												</a>
 											</li>
@@ -514,7 +515,7 @@
 										<span class="discount">15% off</span>
 										<ul>
 											<li>
-												<a href="#" class="add-to-cart-button" data-product-id="13">
+												<a href="#" class="add-to-cart-button" data-product-id="Vehc-Tac-HUMMERAPC">
 													<i class="fas fa-shopping-cart"></i>
 												</a>
 											</li>
@@ -542,7 +543,7 @@
 									<div class="part-1">
 										<ul>
 											<li>
-												<a href="#" class="add-to-cart-button" data-product-id="14">
+												<a href="#" class="add-to-cart-button" data-product-id="Vehc-Tac-10SeaterPCV">
 													<i class="fas fa-shopping-cart"></i>
 												</a>
 											</li>
@@ -569,7 +570,7 @@
 									<div class="part-1">
 										<ul>
 											<li>
-												<a href="#" class="add-to-cart-button" data-product-id="15">
+												<a href="#" class="add-to-cart-button" data-product-id="Vehc-Tac-4SeaterPickup">
 													<i class="fas fa-shopping-cart"></i>
 												</a>
 											</li>
@@ -597,7 +598,7 @@
 										<span class="new">new</span>
 										<ul>
 											<li>
-												<a href="#" class="add-to-cart-button" data-product-id="16">
+												<a href="#" class="add-to-cart-button" data-product-id="Vehc-Tac-2SeaterPickup">
 													<i class="fas fa-shopping-cart"></i>
 												</a>
 											</li>
@@ -640,7 +641,7 @@
 													<span class="discount">15% off</span>
 													<ul>
 														<li>
-															<a href="#" class="add-to-cart-button" data-product-id="17">
+															<a href="#" class="add-to-cart-button" data-product-id="Vehc-LAV-ToyotaHilux">
 																<i class="fas fa-shopping-cart"></i>
 															</a>
 														</li>
@@ -668,7 +669,7 @@
 												<div class="part-1">
 													<ul>
 														<li>
-															<a href="#" class="add-to-cart-button" data-product-id="18">
+															<a href="#" class="add-to-cart-button" data-product-id="Vehc-LAV-GMCSavana">
 																<i class="fas fa-shopping-cart"></i>
 															</a>
 														</li>
@@ -695,7 +696,7 @@
 												<div class="part-1">
 													<ul>
 														<li>
-															<a href="#" class="add-to-cart-button" data-product-id="19">
+															<a href="#" class="add-to-cart-button" data-product-id="Vehc-LAV-HiluxPickup">
 																<i class="fas fa-shopping-cart"></i>
 															</a>
 														</li>
@@ -723,7 +724,7 @@
 													<span class="new">new</span>
 													<ul>
 														<li>
-															<a href="#" class="add-to-cart-button" data-product-id="20">
+															<a href="#" class="add-to-cart-button" data-product-id="Vehc-LAV-ToyotaHiAce">
 																<i class="fas fa-shopping-cart"></i>
 															</a>
 														</li>
@@ -752,7 +753,7 @@
 													<span class="discount">15% off</span>
 													<ul>
 														<li>
-															<a href="#" class="add-to-cart-button" data-product-id="21">
+															<a href="#" class="add-to-cart-button" data-product-id="Vehc-LAV-MercedesActros">
 																<i class="fas fa-shopping-cart"></i>
 															</a>
 														</li>
@@ -781,7 +782,7 @@
 												<div class="part-1">
 													<ul>
 														<li>
-															<a href="#" class="add-to-cart-button" data-product-id="22">
+															<a href="#" class="add-to-cart-button" data-product-id="Vehc-LAV-AshokLeyland">
 																<i class="fas fa-shopping-cart"></i>
 															</a>
 														</li>
@@ -809,7 +810,7 @@
 												<div class="part-1">
 													<ul>
 														<li>
-															<a href="#" class="add-to-cart-button" data-product-id="23">
+															<a href="#" class="add-to-cart-button" data-product-id="Vehc-LAV-HiAceBus">
 																<i class="fas fa-shopping-cart"></i>
 															</a>
 														</li>
@@ -837,7 +838,7 @@
 													<span class="new">new</span>
 													<ul>
 														<li>
-															<a href="#" class="add-to-cart-button" data-product-id="24">
+															<a href="#" class="add-to-cart-button" data-product-id="Vehc-LAV-ToyotaCoaster">
 																<i class="fas fa-shopping-cart"></i>
 															</a>
 														</li>
@@ -879,7 +880,8 @@
 														<div class="part-1">
 															<span class="discount">15% off</span>
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-MRAP-Cougar">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -896,10 +898,12 @@
 													<div id="product-26" class="single-product">
 														<div class="part-1">
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button"  data-product-id="Vehc-MRAP-M-ATV">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 
-																<li><a href="#"><i class="fas fa-expand"></i></a></li>
+																<li><a href="#">
+																	<i class="fas fa-expand"></i></a></li>
 															</ul>
 														</div>
 														<div class="part-2">
@@ -913,7 +917,8 @@
 													<div id="product-27" class="single-product">
 														<div class="part-1">
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-MRAP-Temsah">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -930,7 +935,8 @@
 														<div class="part-1">
 															<span class="new">new</span>
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" data-product-id="Vehc-MRAP-ATV">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -947,7 +953,8 @@
 														<div class="part-1">
 															<span class="discount">15% off</span>
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" data-product-id="Vehc-MRAP-Typhoon">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -964,7 +971,8 @@
 													<div id="product-30" class="single-product">
 														<div class="part-1">
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-MRAP-Kamaz">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -994,7 +1002,8 @@
 														<div class="part-1">
 															<span class="discount">15% off</span>
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-Riot-INKAS">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -1011,7 +1020,8 @@
 													<div id="product-32" class="single-product">
 														<div class="part-1">
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-Riot-Monster">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
@@ -1028,7 +1038,8 @@
 													<div id="product-33" class="single-product">
 														<div class="part-1">
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-Riot-Alpine">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -1045,7 +1056,8 @@
 														<div class="part-1">
 															<span class="new">new</span>
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-Riot-Scania">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -1062,7 +1074,8 @@
 														<div class="part-1">
 															<span class="discount">15% off</span>
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-Riot-IAG">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -1079,7 +1092,8 @@
 													<div id="product-36" class="single-product">
 														<div class="part-1">
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-Riot-CxxM">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -1095,7 +1109,8 @@
 													<div id="product-37" class="single-product">
 														<div class="part-1">
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-Riot-Telcoline">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -1111,7 +1126,8 @@
 													<div id="product-38" class="single-product">
 														<div class="part-1">
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-Riot-TM-170">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -1143,7 +1159,8 @@
 														<div class="part-1">
 															<span class="discount">15% off</span>
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-ACV-BAESystems">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -1160,7 +1177,8 @@
 													<div id="product-40" class="single-product">
 														<div class="part-1">
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-ACV-AAV7">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
@@ -1177,7 +1195,8 @@
 													<div id="product-41" class="single-product">
 														<div class="part-1">
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-ACV-Mowag Piranha">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -1194,7 +1213,8 @@
 														<div class="part-1">
 															<span class="new">new</span>
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-ACV-Terrex">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -1211,7 +1231,7 @@
 														<div class="part-1">
 															<span class="discount">15% off</span>
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-ACV-Patria"><i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -1228,7 +1248,8 @@
 													<div id="product-44" class="single-product">
 														<div class="part-1">
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-ACV-Gibbs">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -1244,7 +1265,8 @@
 													<div id="product-45" class="single-product">
 														<div class="part-1">
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-ACV-AVPT">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -1260,7 +1282,8 @@
 													<div id="product-46" class="single-product">
 														<div class="part-1">
 															<ul>
-																<li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-ACV-Openwater">
+																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>
 															</ul>
@@ -1277,7 +1300,57 @@
 
 							<!------------------------------------------------------------ FOOTER ------------------------------------------------------->
 							<x-footer />
-							
+							<script>
+								document.addEventListener("DOMContentLoaded", function () {
+								console.log("DOM fully loaded and parsed");
+
+								// Select all add-to-cart buttons and log them
+								let buttons = document.querySelectorAll(".add-to-cart-button");
+								console.log("Found buttons:", buttons.length);
+
+								// Check if buttons exist
+								if (buttons.length === 0) {
+									console.error("No .add-to-cart-button elements found.");
+								}
+
+								buttons.forEach(button => {
+									button.addEventListener("click", function (event) {
+										event.preventDefault(); // Prevent default behavior
+										let productId = this.getAttribute("data-product-id");
+
+										if (productId) {
+											console.log("Clicked button. Product ID:", productId);
+											addToCart(productId);
+										} else {
+											console.error("No product ID found for clicked button");
+										}
+									});
+								});
+
+								function addToCart(productId) {
+									fetch("/cart/add", {
+										method: "POST",
+										headers: {
+											"Content-Type": "application/json",
+											"X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').content
+										},
+										body: JSON.stringify({ product_id: productId })
+									})
+									.then(response => response.json())
+									.then(data => {
+										console.log("Response:", data);
+										if (data.success) {
+											alert("Product added to cart!");
+										} else {
+											alert("Failed to add product.");
+										}
+									})
+									.catch(error => console.error("Error:", error));
+								}
+							});
+
+
+							</script>
 							<script src="../../JS/PRODUCTS/SPECIALIZED-VEHICALS.js"></script>
 							<script src="../../JS/navbar.js"></script>
 							<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>

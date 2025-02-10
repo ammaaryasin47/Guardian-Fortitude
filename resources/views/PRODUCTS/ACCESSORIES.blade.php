@@ -24,7 +24,7 @@
       content.style.display = 'block';
     }, 5000); // Match the transition duration
     });
-    </script>
+</script>
   <link href="../../CSS/PRODUCTS/ACCESSORIES.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
   <!---- FAVICONS ---->
@@ -36,7 +36,6 @@
 </head>
 
 <body>
-
     <div id="preloader">
       <img src="../IMAGES/HOME/Logo.png" alt="Loading...">
     </div>

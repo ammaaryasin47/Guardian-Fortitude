@@ -9,6 +9,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminSubscriptionController;
 use App\Http\Controllers\UserSubscriptionController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,16 +30,27 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+
+    //---------------------PROFILE--------------------------------------------
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    //---------------------SUBSCRIPTION--------------------------------------------
     Route::post('/subscriptions', [AdminSubscriptionController::class, 'storeSubscription'])->name('subscriptions.store');
     Route::get('/subscriptions', [UserSubscriptionController::class, 'show'])->name('subscriptions.show');
     Route::get('/dashboard', [UserSubscriptionController::class, 'showDashboard'])->name('dashboard');
-    Route::get('/cart', [ProfileController::class, 'cart'])->name('cart');
+
+    //---------------------CART------------------------------------------------------------
+    Route::get('/cart', [CartController::class, 'cart'])->name('cart');
+    Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
+    Route::post('/add-to-cart', [CartController::class, 'addToCart']);
+    Route::delete('/cart/remove/{cartItemId}', [CartController::class, 'removeFromCart'])->name('cart.remove');
+
+    //---------------------PAYMENT------------------------------------------------------------
     Route::match(['get', 'post'], '/payment', function () {
         if (!auth()->check()) {
-            return redirect()->route('login'); // Redirect to login if not authenticated
+            return redirect()->route('login');
         }
     
         if (request()->isMethod('post')) {
@@ -91,7 +104,6 @@ Route::patch('/users/{user_id}/approve', [AdminController::class, 'approve'])->n
 Route::patch('/users/{user_id}/reject', [AdminController::class, 'reject'])->name('users.reject');
 
 //<------------------------------- TO DATABASE ----------------------------------------------------------------------
-
 Route::prefix('register')->controller(RegisterController::class)->group(function () {
     Route::get('/register', 'register')->name('register'); // First page
     Route::post('/storebasicinfo', 'storeBasicInfo')->name('register.storebasicinfo'); // Store basic info
@@ -118,6 +130,6 @@ Route::post('/admin/subscription/update/{userId}', [AdminSubscriptionController:
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// <----------------------------- PAYMENT ROUTES --------------------------------------------------------------
-
-
+Route::get('/items', [ProductController::class, 'index']); // Change /products to /items
+Route::get('/items/{id}', [ProductController::class, 'show']); // Change /products/{id} to /items/{id}
+Route::post('/items', [ProductController::class, 'store']); // Change /products to /items

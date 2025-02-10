@@ -20,19 +20,6 @@ class ProfileController extends Controller
             'user' => $request->user(),
         ]);
     }
-    public function cart(Request $request)
-    {
-        $user = Auth::user(); // Get the authenticated user
-
-        if ($user) {
-            return view('cart', [
-                'address' => $user->address,
-                'email' => $user->email,
-            ]);
-        } else {
-            return redirect()->route('login')->with('error', 'Please log in first.');
-        }
-    }
 
 
     public function update(Request $request)

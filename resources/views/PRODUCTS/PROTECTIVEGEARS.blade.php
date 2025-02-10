@@ -667,7 +667,37 @@
 
                 <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
                 <x-footer />
+                <script>
+				    document.querySelectorAll('.add-to-cart-button').forEach(button => {
+					button.addEventListener('click', function(event) {
+										event.preventDefault();
+										let productId = this.dataset.productId;
+										let csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
+										console.log("Button clicked, Product ID:", productId); // Debugging
+
+										fetch('/cart/add', {
+											method: 'POST',
+											headers: {
+												'Content-Type': 'application/json',
+												'X-CSRF-TOKEN': csrfToken
+											},
+											body: JSON.stringify({ product_id: productId })
+										})
+										.then(response => response.json())
+										.then(data => {
+											console.log("Server response:", data); // Debugging
+									if (data.success) {
+									alert('Product added to cart!');
+									updateCartUI(); // Function to update cart count
+								} else {
+								alert('Failed to add product.');
+								}
+							})
+						.catch(error => console.error("Fetch error:", error)); // Debugging
+					});
+				});
+				</script>
                 <script src="../../JS/PRODUCTS/PROTECTIVE-GEARS.js"></script>
                 <script src="../../JS/navbar.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
