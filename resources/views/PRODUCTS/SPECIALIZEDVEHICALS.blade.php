@@ -1301,62 +1301,65 @@
 							<!------------------------------------------------------------ FOOTER ------------------------------------------------------->
 							<x-footer />
 							<script>
-								document.addEventListener("DOMContentLoaded", function () {
+							document.addEventListener("DOMContentLoaded", function () {
 								console.log("DOM fully loaded and parsed");
 
-								// Select all add-to-cart buttons and log them
 								let buttons = document.querySelectorAll(".add-to-cart-button");
 								console.log("Found buttons:", buttons.length);
 
-								// Check if buttons exist
 								if (buttons.length === 0) {
 									console.error("No .add-to-cart-button elements found.");
 								}
 
-								buttons.forEach(button => {
-									button.addEventListener("click", function (event) {
-										event.preventDefault(); // Prevent default behavior
-										let productId = this.getAttribute("data-product-id");
+								// Fix for dynamically added elements
+								$(document).on("click", ".add-to-cart-button", function (event) {
+									event.preventDefault();
 
-										if (productId) {
-											console.log("Clicked button. Product ID:", productId);
-											addToCart(productId);
-										} else {
-											console.error("No product ID found for clicked button");
+									let productId = $(this).data("product-id");
+									if (!productId) {
+										console.error("No product ID found for clicked button");
+										return;
+									}
+
+									console.log("Clicked button. Product ID:", productId);
+
+									$.ajax({
+										url: "/cart/add", // Ensure this route is correct
+										type: "POST",
+										data: {
+											_token: $('meta[name="csrf-token"]').attr("content"), // CSRF token
+											product_id: productId
+										},
+										headers: {
+											"X-Requested-With": "XMLHttpRequest" // Helps Laravel recognize AJAX requests
+										},
+										xhrFields: {
+											withCredentials: true // Ensures cookies (session) are sent with the request
+										},
+										success: function (response) {
+											console.log("Server response:", response);
+											if (response.success) {
+												alert("Product added to cart!");
+											} else {
+												alert("Failed to add product: " + response.message);
+											}
+										},
+										error: function (xhr, status, error) {
+											console.error("Error adding product:", xhr.responseText);
+											alert("Error adding product: " + xhr.responseText);
 										}
 									});
 								});
-
-								function addToCart(productId) {
-									fetch("/cart/add", {
-										method: "POST",
-										headers: {
-											"Content-Type": "application/json",
-											"X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').content
-										},
-										body: JSON.stringify({ product_id: productId })
-									})
-									.then(response => response.json())
-									.then(data => {
-										console.log("Response:", data);
-										if (data.success) {
-											alert("Product added to cart!");
-										} else {
-											alert("Failed to add product.");
-										}
-									})
-									.catch(error => console.error("Error:", error));
-								}
 							});
-
-
+							</script>
+							<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 							</script>
 							<script src="../../JS/PRODUCTS/SPECIALIZED-VEHICALS.js"></script>
 							<script src="../../JS/navbar.js"></script>
 							<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
 							<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 								integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-								crossorigin="anonymous"></script> <!--BOOTSTRAP JS-->
+								crossorigin="anonymous"></script> // BOOTSTRAP JS
 </body>
 
 </html>

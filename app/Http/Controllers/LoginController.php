@@ -9,31 +9,33 @@ class LoginController extends Controller
 {
     public function login(Request $request)
     {
-        
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
     
-        
         \Log::info('Login attempt with email:', ['email' => $credentials['email']]);
     
-        
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials, true)) { // 🔥 Always remember the user
+            $request->session()->regenerate(); // Prevent session fixation attacks
+    
             $user = Auth::user();
             \Log::info('Authenticated user:', ['user' => $user]);
     
-            
             if ($user->status === 'Approved') {
-                return redirect()->route('index'); 
+                return redirect()->route('index');
             } else {
                 \Log::warning('User not approved:', ['user' => $user]);
-                Auth::logout(); 
+                Auth::logout();
                 return redirect()->route('register.confirmation.failed');
             }
         }
     
-      
         \Log::warning('Invalid credentials provided:', ['email' => $credentials['email']]);
         return back()->withErrors(['email' => 'Invalid credentials.']);
     }
+    
+
     
 
     public function showLoginForm()

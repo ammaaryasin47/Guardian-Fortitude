@@ -15,8 +15,9 @@ class CartController extends Controller
         $user = Auth::user(); // Get the authenticated user
 
         if ($user) {
-            $cartItems = Cart::where('user_id', $user->id)->with('product')->get();
+            $cartItems = Cart::where('user_id', Auth::user()->user_id)->with('product')->get();
 
+            \Log::info('Cart items:', ['user_id' => Auth::id(), 'cartItems' => $cartItems->toArray()]);
             return view('cart', [
                 'address' => $user->address,
                 'email' => $user->email,
@@ -27,48 +28,55 @@ class CartController extends Controller
         }
     }
 
+    public function showCart()
+    {
+        $userId = Auth::user()->user_id;
+
+        $cartItems = Cart::where('user_id', $userId)
+            ->join('products', 'cart.product_id', '=', 'products.product_id') 
+            ->select('cart.*', 'products.name', 'products.image_url', 'products.price')
+            ->get();
+
+        \Log::info("Cart items fetched in showCart", ['cartItems' => $cartItems->toArray()]);
+
+        return view('cart', compact('cartItems'));
+    }
 
     public function addToCart(Request $request)
     {
-        \Log::info("addToCart function hit", ['product_id' => $request->product_id]); // Log right at the beginning
-        $userId = Auth::id();
-        $productId = $request->product_id;
-    
-        // Check if the request body contains the product_id
-        if (!$productId) {
-            \Log::error("No product ID provided");
-            return response()->json(['success' => false, 'message' => 'No product ID provided']);
-        }
-    
-        // Log user info
-        \Log::info("Authenticated user ID:", ['user_id' => $userId]);
-    
-        try {
-            // Update this query to search by product_id instead of id
-            $product = Product::where('product_id', $productId)->firstOrFail();
-            \Log::info("Product found", ['product' => $product]);
-        } catch (\Exception $e) {
-            \Log::error("Error finding product: " . $e->getMessage());
+        \Log::info('AddToCart method is being hit'); // Log the request
+        $userId = auth()->id(); 
+        $productId = $request->input('product_id');
+
+        \Log::info('User ID:', ['user_id' => $userId]);
+        \Log::info('Product ID:', ['product_id' => $productId]);
+
+        // Check if product exists
+        $product = Product::where('product_id', $productId)->first();
+        if (!$product) {
+            \Log::error('Product not found:', ['product_id' => $productId]);
             return response()->json(['success' => false, 'message' => 'Product not found']);
         }
-    
-        // Check if the product is already in the cart
+
+        // Check if item already exists in cart
         $cartItem = Cart::where('user_id', $userId)
                         ->where('product_id', $productId)
                         ->first();
-    
+
         if ($cartItem) {
             $cartItem->quantity += 1;
             $cartItem->save();
+            \Log::info('Updated cart item quantity:', ['cartItem' => $cartItem]);
         } else {
-            Cart::create([
+            $cartItem = Cart::create([
                 'user_id' => $userId,
                 'product_id' => $productId,
                 'quantity' => 1,
                 'price' => $product->price,
             ]);
+            \Log::info('New cart item created:', ['cartItem' => $cartItem]);
         }
-    
+
         return response()->json(['success' => true, 'message' => 'Product added to cart']);
     }
 
@@ -78,10 +86,7 @@ class CartController extends Controller
         $cartItem = Cart::find($cartItemId);
         if ($cartItem) {
             $cartItem->delete();
-            return response()->json(['success' => true, 'message' => 'Product removed from cart']);
         }
-
-        return response()->json(['success' => false, 'message' => 'Cart item not found']);
     }
 
     

@@ -42,7 +42,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [UserSubscriptionController::class, 'showDashboard'])->name('dashboard');
 
     //---------------------CART------------------------------------------------------------
-    Route::get('/cart', [CartController::class, 'cart'])->name('cart');
+    Route::get('/cart', [CartController::class, 'Cart'])->name('cart');
     Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
     Route::post('/add-to-cart', [CartController::class, 'addToCart']);
     Route::delete('/cart/remove/{cartItemId}', [CartController::class, 'removeFromCart'])->name('cart.remove');

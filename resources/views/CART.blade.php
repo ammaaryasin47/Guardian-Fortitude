@@ -329,45 +329,47 @@ p{
                         </div>
                     </div>
                     <div class="col-md-5">
-                        <div style="background:#000; color:#fff;" class="card border-0 ">
-                            <div style="background:#000;" class="card-header card-2">
-                                <p style="color:maroon;" class="text-center card-text mt-md-4 fs-4 mb-2 card-title space">YOUR ORDERS<br> 
-                                <span class="fs-6 text-muted ml-2 cursor-pointer">SHOPPING CART</span> </p>
-                                <hr class="my-2">
-                            </div>
-                            <div class="card-body pt-0">
-                                <div class="row justify-content-between">
-                                    <div class="col-auto col-md-7">
-                                        <div class="media flex-column flex-sm-row">
-                                            <img class=" img-fluid" src="https://i.imgur.com/6oHix28.jpg" width="62" height="62">
-                                            <div class="media-body  my-auto">
-                                                <div class="row ">
-                                                    <div class="col-auto"><p class="mb-0"><b>EC-GO Bag Standard</b></p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                    <div style="background:#000; color:#fff;" class="card border-0">
+                        <div style="background:#000;" class="card-header card-2">
+                            <p style="color:maroon;" class="text-center card-text mt-md-4 fs-4 mb-2 card-title space">
+                                YOUR ORDERS <br>
+                                <span class="fs-6 text-muted ml-2 cursor-pointer">SHOPPING CART</span>
+                            </p>
+                            <hr class="my-2">
+                        </div>
+                        <div class="card-body pt-0">
+                            @foreach($cartItems as $item)
+                            <div class="row d-flex justify-content-center align-items-center text-center mb-3">
+                                <div class="fs-3 col-auto col-md-7">
+                                    <div class="media d-flex flex-column flex-md-row align-items-center justify-content-center text-center">
+                                    <img class="img-fluid" src="{{ asset($item->product->image_url) }}" width="800" height="800">
+                                    <p class="mb-0"><b>{{ $item->product->name }}</b></p>
+                                        <div class="media-body my-auto">
+                                            <p class="fs-3 mb-0"><b>{{ $item->name }}</b></p>
                                         </div>
                                     </div>
-                                    <div class="quantity-container d-flex align-items-center">
-                                        <input style="background:#000; width:max-content; color:#fff;" type="number" class="form-control form-control-sm text-center quantity-input" value="1" min="1">
-                                    </div>
-
-                                    <div class="pl-0 flex-sm-col col-auto my-auto"><p><b>PRICE</b></p></div>
-                                    <button style="outline:none; background:#000; border:0;" 
-                                    class="text-center text-light fs-6 pl-0 flex-sm-col col-auto my-5">REMOVE</button>
                                 </div>
-                                <hr class="my-2">
-                                <div class="row ">
-                                    <div class="col">
-                                        <div class="row justify-content-between">
-                                            <div class="col-4"><p ><b>TOTAL</b></p></div>
-                                            <div class="flex-sm-col col-auto"><p  class="mb-1"><b>537 SEK</b></p> </div>
-                                        </div><hr class="my-0">
-                                    </div>
+                                <div class="quantity-container d-flex justify-content-center align-items-center text-center">
+                                    <input style="background:#000; width:max-content; color:#fff;" 
+                                        type="number" class="fs-5 form-control form-control-sm text-center quantity-input" 
+                                        value="{{ $item->quantity }}" min="1">
                                 </div>
+                                <div class="pl-0 flex-sm-col col-auto my-auto">
+                                    <p><b>${{ number_format($item->price * $item->quantity, 2) }}</b></p>
+                                </div>
+                                <form method="POST" action="{{ route('cart.remove', $item->id) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" style="outline:none; background:#000; border:0;" 
+                                            class="text-center text-light fs-6 pl-0 flex-sm-col col-auto my-5">
+                                        REMOVE
+                                    </button>
+                                </form>
                             </div>
+                            @endforeach
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
