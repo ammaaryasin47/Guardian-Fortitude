@@ -43,42 +43,51 @@ class CartController extends Controller
     }
 
     public function addToCart(Request $request)
-    {
-        \Log::info('AddToCart method is being hit'); // Log the request
-        $userId = auth()->id(); 
-        $productId = $request->input('product_id');
+{
+    \Log::info('Before adding to cart', session()->all()); // Debug session before
 
-        \Log::info('User ID:', ['user_id' => $userId]);
-        \Log::info('Product ID:', ['product_id' => $productId]);
-
-        // Check if product exists
-        $product = Product::where('product_id', $productId)->first();
-        if (!$product) {
-            \Log::error('Product not found:', ['product_id' => $productId]);
-            return response()->json(['success' => false, 'message' => 'Product not found']);
-        }
-
-        // Check if item already exists in cart
-        $cartItem = Cart::where('user_id', $userId)
-                        ->where('product_id', $productId)
-                        ->first();
-
-        if ($cartItem) {
-            $cartItem->quantity += 1;
-            $cartItem->save();
-            \Log::info('Updated cart item quantity:', ['cartItem' => $cartItem]);
-        } else {
-            $cartItem = Cart::create([
-                'user_id' => $userId,
-                'product_id' => $productId,
-                'quantity' => 1,
-                'price' => $product->price,
-            ]);
-            \Log::info('New cart item created:', ['cartItem' => $cartItem]);
-        }
-
-        return response()->json(['success' => true, 'message' => 'Product added to cart']);
+    if (!auth()->check()) {
+        \Log::warning('User is not authenticated!');
+        return response()->json(['success' => false, 'message' => 'User not logged in'], 401);
     }
+
+    $userId = auth()->id();
+    $productId = $request->input('product_id');
+
+    \Log::info('User ID:', ['user_id' => $userId]);
+    \Log::info('Product ID:', ['product_id' => $productId]);
+    \Log::info('Session Data:', session()->all()); // Debug session persistence
+
+    // Check if product exists
+    $product = Product::where('product_id', $productId)->first();
+    if (!$product) {
+        \Log::error('Product not found:', ['product_id' => $productId]);
+        return response()->json(['success' => false, 'message' => 'Product not found']);
+    }
+
+    // Check if item already exists in cart
+    $cartItem = Cart::where('user_id', $userId)
+                    ->where('product_id', $productId)
+                    ->first();
+
+    if ($cartItem) {
+        $cartItem->quantity += 1;
+        $cartItem->save();
+        \Log::info('Updated cart item quantity:', ['cartItem' => $cartItem]);
+    } else {
+        $cartItem = Cart::create([
+            'user_id' => $userId,
+            'product_id' => $productId,
+            'quantity' => 1,
+            'price' => $product->price,
+        ]);
+        \Log::info('New cart item created:', ['cartItem' => $cartItem]);
+    }
+
+    \Log::info('After adding to cart', session()->all()); // Debug session after
+    return response()->json(['success' => true, 'message' => 'Product added to cart']);
+}
+
 
     // Remove a product from the cart
     public function removeFromCart($cartItemId)

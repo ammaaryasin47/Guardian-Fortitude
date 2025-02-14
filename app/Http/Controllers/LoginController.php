@@ -16,8 +16,8 @@ class LoginController extends Controller
     
         \Log::info('Login attempt with email:', ['email' => $credentials['email']]);
     
-        if (Auth::attempt($credentials, true)) { // 🔥 Always remember the user
-            $request->session()->regenerate(); // Prevent session fixation attacks
+        if (Auth::attempt($credentials,true)) {
+            $request->session()->regenerate();
     
             $user = Auth::user();
             \Log::info('Authenticated user:', ['user' => $user]);

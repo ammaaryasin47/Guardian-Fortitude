@@ -10,6 +10,7 @@
     <!-- BOOTSTRAP CDN -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- BOXICONS CDN -->
     <link href="../CSS/Navbar&Footer.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
      window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
@@ -106,11 +107,11 @@
  @auth
 <li class="sidenav-item dropdown">
     <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
-        <img 
-            src="{{ Auth::user()->profile_picture ? asset('storage/' . Auth::user()->profile_picture) : asset('default-profile.png') }}" 
-            alt="Profile Picture" 
-            class="rounded-circle" 
-            height="40px">
+    <img 
+                    src="{{ Auth::user()->picture ? asset(Auth::user()->picture) : asset('default-profile.png') }}" 
+                    alt="Profile Picture" 
+                    class="rounded-circle" 
+                    height="40px">
     </a>
     <ul class="fs-2 dropdown-menu">
         <li><a class="dropdown-item" href="{{ route('profile.edit') }}">PROFILE</a></li>
@@ -165,8 +166,8 @@
             @auth
             <li class="nav-item dropdown">
                 <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
-                    <img 
-                    src="{{ Auth::user()->profile_picture ?? asset('default-profile.png') }}" 
+                <img 
+                    src="{{ Auth::user()->picture ? asset(Auth::user()->picture) : asset('default-profile.png') }}" 
                     alt="Profile Picture" 
                     class="rounded-circle" 
                     height="40px">
@@ -410,13 +411,6 @@
         <h1 class="fs-1 text-light mt-5 pt-5 pb-2 user-heading">USER INFORMATION</h1>
     </div>
 
-    <!-- <div class="text-center mt-5" id="backpack-heading">
-        <div class="heading-container">
-            <div class="heading-large text-center">USER INFORMATION</div>
-            <div class="heading-normal text-center">USER INFORMATION</div>
-        </div>
-    </div> -->
-
     <div class="d-flex justify-content-between text-light ps-5" style="height: 50vh;">
         <div class="leftdiv d-flex flex-column align-items-center position-relative">
             <!-- Name label and input -->
@@ -496,13 +490,55 @@
         </div>
     </form>
     <div class="submitbutton-container">
-        <a href="{{ route('payment', ['referrer' => 'services']) }}">SUBMIT</a>
+        <button id="submitBtn" class="btn btn-danger">SUBMIT</button>
     </div>
+
 
     <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
     <x-footer />
+    <script>
+    (function() {
+        emailjs.init("mPtxfekfXl_jZzpZy"); // Replace with your EmailJS User ID
+    })();
 
+    document.getElementById("submitBtn").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent form submission
 
+    // Get user details
+    let name = document.getElementById("nameinput").value;
+    let contact = document.getElementById("contactinput").value;
+    let zip = document.getElementById("zipinput").value;
+    let location = document.getElementById("locationinput").value;
+
+    // Get selected services and convert them to a comma-separated string
+    let checkboxes = document.querySelectorAll('input[name="options"]:checked');
+    let selectedServices = Array.from(checkboxes).map(cb => cb.nextElementSibling.textContent).join(", ");
+
+    // Validation
+    if (!name || !contact || !zip || !location || selectedServices.length === 0) {
+        alert("Please fill in all details and select at least one service.");
+        return;
+    }
+
+    // Send Email using EmailJS
+    emailjs.send("service_ehedojt", "template_6kwy2u2", {
+        user_name: name,
+        user_contact: contact,
+        user_zip: zip,
+        user_location: location,
+        user_services: selectedServices // Send as string
+    }).then(
+        function(response) {
+            alert("Service request sent successfully!");
+        },
+        function(error) {
+            alert("Failed to send request. Please try again.");
+            console.error("EmailJS error:", error);
+        }
+    );
+});
+
+</script>
     <script src="../JS/SERVICES.js"></script>
     <script src="../JS/navbar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>

@@ -40,6 +40,12 @@
     <div id="preloader">
       <img src="../IMAGES/HOME/Logo.png" alt="Loading...">
     </div>
+
+    @if(session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+    @endif
     <!--------------------------------------------- NAVBAR ----------------------------------------------------->
     <nav style="background-color: black; position:sticky !important; top: 0; z-index: 10;" class=" text-light w-100">
         <div class="uppernav">
@@ -103,10 +109,32 @@
                             <span>QUOTE</span></a>
                     </li>
 
-                    <li class="sidenav-item">
-                        <a href="{{URL::to('/login')}}" class="sidenav-link">
-                            <span>LOGIN</span></a>
-                    </li>
+                    <!-- Conditional Login/Profile Picture -->
+                @auth
+<li class="sidenav-item dropdown">
+    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+        <img 
+            src="{{ Auth::user()->profile_picture ? asset('storage/' . Auth::user()->profile_picture) : asset('default-profile.png') }}" 
+            alt="Profile Picture" 
+            class="rounded-circle" 
+            height="40px">
+    </a>
+    <ul class="fs-2 dropdown-menu">
+        <li><a class="dropdown-item" href="{{ route('profile.edit') }}">PROFILE</a></li>
+        <li><a class="dropdown-item" href="{{ route('cart') }}">CART</a></li>
+        <li>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="dropdown-item">LOGOUT</button>
+            </form>
+        </li>
+    </ul>
+</li>
+@else
+<li class="sidenav-item">
+    <a href="{{ URL::to('/login') }}" class="sidenav-link">LOGIN</a>
+</li>
+@endauth
                     <div class="mt-5">
                         <div class="mb-5">
                             <li class=" fs-5 pe-3 border-light align-items-center"
@@ -140,16 +168,42 @@
                 <li><a href="{{URL::to('/products')}}">PRODUCTS</a></li>
                 <li><a href="{{URL::to('/contactus')}}">CONTACT US</a></li>
                 <li><a href="{{URL::to('/quote')}}">QUOTE</a></li>
-                <li><a href="{{URL::to('/login')}}">LOGIN</a></li>
+                 <!-- Conditional Login/Profile Picture -->
+            @auth
+            <li class="nav-item dropdown">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+                    <img 
+                    src="{{ Auth::user()->profile_picture ?? asset('default-profile.png') }}" 
+                    alt="Profile Picture" 
+                    class="rounded-circle" 
+                    height="40px">
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ route('profile.edit') }}">PROFILE</a></li>
+                    <li><a class="dropdown-item" href="{{ route('cart') }}">CART</a></li>
+                    <li><a class="dropdown-item" href="{{ route('profile.edit') }}">YOUR ORDERS</a></li>
+                    <li>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="dropdown-item">LOGOUT</button>
+            </form>
+        </li>
+                </ul>
+            </li>
+            @else
+            <li class="nav-item">
+                <a href="{{URL::to('/login')}}">LOGIN</a>
+            </li>
+            @endauth
             </ul>
         </ul>
     </nav>
 
     <!--------------------------------------------------------------- BANNER --------------------------------------------------------->
     <div class="armoury-banner">
-        <img src="../../IMAGES/PRODUCTS/ARMOURY/armoury.jpg"
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/049/495/071/small_2x/bullet-isolated-on-black-background-with-reflexion-rifle-bullets-close-up-on-black-back-cartridges-for-rifle-and-carbine-on-a-black-photo.jpg"
             class="w-100 object-fit-cover">
-        <h1 style="color:maroon;" class="text-center">Armoury</h1>
+        <h1 class="text-light text-center">Armoury</h1>
     </div>
 
     <!------------------------------------------------------------- PARALLAX ----------------------------------------------------------------------->
@@ -172,53 +226,53 @@
     <!-------------------------------------------------------------- SORTING SECTION ----------------------------------------------------------------->
 
     <div id="home-by-series" class="tab-content content-section">
-        <div class="series-item">
+        <div class="series-item" data-category="HUNTINGRIFLES">
             <img src="https://cdnb.artstation.com/p/assets/images/images/031/942/803/large/ryzin-art-screenshot096.jpg?1605033339"
                 alt="PISTOLS">
             <h3 class="text-center">PISTOLS</h3>
         </div>
-        <div class="series-item">
+        <div class="series-item" data-category="HUNTINGRIFLES">
             <img src="https://cdna.artstation.com/p/assets/images/images/010/130/402/large/linus-scheffel-5.jpg?1522743897"
-                alt="HUNTING RIFLES">
+                alt="HUNTINGRIFLES">
             <h3 class="text-center">HUNTING RIFLES</h3>
         </div>
-        <div class="series-item">
+        <div class="series-item" data-category="SUB_MACHINE_GUNS">
             <img src="https://cdna.artstation.com/p/assets/images/images/075/080/848/large/egor-rzhevskii-ump-4k-right-min.jpg?1713714355"
-                alt="SUB MACHINE GUNS">
+                alt="SUB_MACHINE_GUNS">
             <h3 class="text-center">SUB MACHINE GUNS</h3>
         </div>
-        <div class="series-item">
+        <div class="series-item" data-category="SHOTGUNS">
             <img src="https://cdnb.artstation.com/p/assets/images/images/069/643/793/large/pascual-hernandez-pascualhernandez-remington-870-frontground.jpg?1700641488"
                 alt="SHOTGUNS">
             <h3 class="text-center">SHOTGUNS</h3>
         </div>
-        <div class="series-item">
+        <div class="series-item" data-category="ASSAULT_RIFLES">
             <img src="https://cdnb.artstation.com/p/assets/images/images/024/195/279/large/florian-neumann-06-side.jpg?1581607642"
-                alt="ASSAULT RIFLES">
+                alt="ASSAULT_RIFLES">
             <h3 class="text-center">ASSAULT RIFLES</h3>
         </div>
-        <div class="series-item">
+        <div class="series-item" data-category="SNIPER_RIFLES">
             <img src="https://cdnb.artstation.com/p/assets/images/images/032/325/659/large/laurentiu-nedelca-pms-akrapov-s4-artstation-010.jpg?1606131873"
-                alt="SNIPER RIFLES">
+                alt="SNIPER_RIFLES">
             <h3 class="text-center">SNIPER RIFLES</h3>
         </div>
-        <div class="series-item">
+        <div class="series-item" data-category="HUNTINGRIFLES">
             <img src="https://cdna.artstation.com/p/assets/images/images/043/750/398/large/james-shock-2-edited.jpg?1638179700"
-                alt="BOWS">
+                alt="LAUNCHERS">
             <h3 class="text-center">LAUNCHERS</h3>
         </div>
-        <div class="series-item">
+        <div class="series-item" data-category="MACHINE_GUNS">
             <img src="https://cdnb.artstation.com/p/assets/images/images/035/824/167/large/laurentiu-nedelca-pms-stal-51-0011.jpg?1615993846"
-                alt="MACHINE GUNS">
+                alt="MACHINE_GUNS">
             <h3 class="text-center">MACHINE GUNS</h3>
         </div>
-        <div class="series-item">
-            <img src="https://images2.alphacoders.com/108/1085880.jpg" alt="REVOLVERS">
+        <div class="series-item" data-category="GRENADES_&_IED">
+            <img src="https://images2.alphacoders.com/108/1085880.jpg" alt="GRENADES_&_IED">
             <h3 class="text-center">GRENADES & IED</h3>
         </div>
-        <div class="series-item">
+        <div class="series-item" data-category="KNIVES">
             <img
-                src="https://cdna.artstation.com/p/assets/images/images/051/947/416/large/jason-h-ka-bar-second.jpg?1658571531">
+                src="https://cdna.artstation.com/p/assets/images/images/051/947/416/large/jason-h-ka-bar-second.jpg?1658571531" alt="KNIVES">
             <h3 class="text-center">KNIVES</h3>
         </div>
     </div>
@@ -407,7 +461,7 @@
                 <p class="svg-label">7 MM</p>
             </div>
 
-            <div class="svg-item">
+            <div class="svg-item" data-caliber="50CAL">
                 <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" version="1.1"
                     viewBox="0 0 63.4 415">
                     <defs>
@@ -482,7 +536,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Pstl-M9BERETTA">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -524,7 +578,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Pstl-COLT1911">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -566,7 +620,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Pstl-GLOCK17">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -608,7 +662,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Pstl-GLOCK19X">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -649,7 +703,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Pstl-GLOCK19">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -690,7 +744,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Pstl-GLOCK22">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -731,7 +785,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Pstl-GLOCK34">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -773,7 +827,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Pstl-SIGP226">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -815,7 +869,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Pstl-SIGP320">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -857,7 +911,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Pstl-SIGP365">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -899,7 +953,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Pstl-SIGP322">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -940,7 +994,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Pstl-SIGP228">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -952,7 +1006,7 @@
 
             <img src="../../IMAGES/1_00000 (1).jpg">
 
-            <!---------------------------------------------- HUNTING RIFLES ---------------------------------------------------->
+<!---------------------------------------------- HUNTING RIFLES ---------------------------------------------------->
 
             <div class="heading-container text-center">
                 <div class="heading-large">HUNTING RIFLES</div>
@@ -992,7 +1046,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-HuntRif-WINCHESTER70">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1034,7 +1088,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-HuntRif-SAVAGE99">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1076,7 +1130,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-HuntRif-M40A5">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1118,7 +1172,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-HuntRif-ZASTAVA93">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1160,7 +1214,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-HuntRif-HOLLANDHOLLAND">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1202,7 +1256,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-HuntRif-HOWA1500">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1244,7 +1298,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-HuntRif-TOZ-34">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1286,7 +1340,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-HuntRif-SAUER101">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1295,14 +1349,14 @@
                 </div>
             </div>
 
-            <!---------------------------------------------------- SUB MACHINE GUNS ----------------------------------------------------------------------->
+ <!---------------------------------------------------- SUB MACHINE GUNS ----------------------------------------------------------------------->
 
             <div class="heading-container text-center">
                 <div class="heading-large">SUB-MACHINE GUNS</div>
                 <div class="heading-normal">SMG</div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="9MM" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/075/391/806/large/laurentiun-sow-mp9-006.jpg?1714466659"
@@ -1335,7 +1389,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SMG-MP-9">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1343,7 +1397,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="9MM" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/047/110/807/large/vladislav-babiak-main.jpg?1646820274"
@@ -1376,7 +1430,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SMG-RHN-9">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1384,7 +1438,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".45ACP" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/077/318/398/large/barkin-eraslan-be-lwrc-9.jpg?1719161863"
@@ -1417,7 +1471,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SMG-SMG-45">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1425,7 +1479,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="5.56" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/038/185/817/large/jinyi-zhu-zj01-15.jpg?1622425072"
@@ -1458,7 +1512,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SMG-ZJ01">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1466,7 +1520,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="9MM" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/017/502/931/large/jonathan-norden-new-render7.jpg?1556230289"
@@ -1499,7 +1553,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SMG-P90">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1507,7 +1561,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="9MM" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/009/780/566/large/linus-scheffel-2.jpg?1520872244"
@@ -1540,7 +1594,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SMG-TOMMY">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1548,7 +1602,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="5.56" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/051/088/058/large/sam-white-1.jpg?1656429947"
@@ -1581,7 +1635,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SMG-ADT-CENTAUR">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1589,7 +1643,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".45ACP" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/014/486/737/large/sviatoslav-chervatiuk-3-1.jpg?1544138779"
@@ -1622,7 +1676,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SMG-LWRC-45">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1630,7 +1684,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="9MM" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/078/529/115/large/laurentiun-sow-kv-showcase-014.jpg?1722359554"
@@ -1663,7 +1717,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SMG-SOW-VECTOR">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1671,7 +1725,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="9MM" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/011/742/678/large/ben-armstrong-kh9-alternate-01.jpg?1531173726"
@@ -1704,7 +1758,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SMG-KH9">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1712,7 +1766,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="9MM" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/032/635/884/large/laurentiu-nedelca-pms-mac-10-v2-003.jpg?1607013910"
@@ -1745,7 +1799,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SMG-MAC-10">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1753,7 +1807,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SMG">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="7MM" data-category="SMG">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/068/328/445/large/stefan-engdahl-render06.jpg?1697550040"
@@ -1786,7 +1840,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SMG-PPK-42">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1802,7 +1856,7 @@
                 <div class="heading-normal">SHOTGUNS</div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="12GAUGE" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/030/503/648/large/ryzin-art-screenshot005.jpg?1600801744"
@@ -1835,7 +1889,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Shotgun-DOUBLEBARELL">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1843,7 +1897,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="16GAUGE" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/071/149/895/large/artem-n-anton-huleha-benelli-m4-1.jpg?1704558641"
@@ -1876,7 +1930,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Shotgun-BENELI-M4">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1884,7 +1938,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="12GAUGE" data-category="SHOTGUNS">
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/035/815/734/large/amc-ro-studio-render-6.jpg?1615976732"
                         class="card-img-top" width="100%">
@@ -1916,7 +1970,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Shotgun-MOSSBERG-590M">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1924,7 +1978,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="10GAUGE" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/069/643/793/large/pascual-hernandez-pascualhernandez-remington-870-frontground.jpg?1700641488"
@@ -1957,7 +2011,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Shotgun-REMINGTON-870">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -1965,7 +2019,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="16GAUGE" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/033/584/731/large/alexandru-voinea-studio-1.jpg?1610020632"
@@ -1998,7 +2052,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Shotgun-SIX12">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2006,7 +2060,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="12GAUGE" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/068/328/445/large/stefan-engdahl-render06.jpg?1697550040"
@@ -2039,7 +2093,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Shotgun-PPK-42">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2047,7 +2101,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="12GAUGE" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/054/264/885/large/ben-bolton-cs-039.jpg?1664149233"
@@ -2080,7 +2134,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Shotgun-BOLTON-BSS">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2088,7 +2142,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="12GAUGE" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/032/738/658/large/laurentiu-nedelca-pms-m12-006.jpg?1607341003"
@@ -2121,7 +2175,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Shotgun-PMS-M12">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2130,7 +2184,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="12GAUGE" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/016/207/242/large/johann-william-loffler-win1895-3.jpg?1551305389"
@@ -2163,7 +2217,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Shotgun-WINCHESTER-1895">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2172,7 +2226,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="12GAUGE" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/019/878/478/large/carlos-morales-sm-shotgun-01f.jpg?1565379313"
@@ -2206,7 +2260,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Shotgun-WINCHESTER-1895">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2215,7 +2269,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="16GAUGE" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/015/032/659/large/carlos-morales-cmgs-dp12-00.jpg?1546801438"
@@ -2249,7 +2303,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Shotgun-DP12">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2258,7 +2312,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SHOTGUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="12GAUGE" data-category="SHOTGUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/039/699/066/large/game-weapons-spas12-main-camera.jpg?1626687138"
@@ -2292,7 +2346,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Shotgun-FRANCHI-SPAS12">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2302,14 +2356,14 @@
             </div>
 
 
-            <!------------------------------------------------- ASSAULT RIFLES -------------------------------------------------------------------------->
+<!------------------------------------------------- ASSAULT RIFLES -------------------------------------------------------------------------->
 
             <div class="heading-container text-center">
                 <div class="heading-large">ASSAULT RIFLES</div>
                 <div class="heading-normal">ASSAULT RIFLES</div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="5.56" data-category="ASSAULT_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/038/298/795/large/emiel-sleegers-gun-cama.jpg?1622709260"
@@ -2343,7 +2397,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-AsltRif-AR15">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2352,7 +2406,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="5.56" data-category="ASSAULT_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/063/012/355/large/vladyslav-narozhnyi-4-1.jpg?1684483766"
@@ -2386,7 +2440,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-AsltRif-SCAR-L">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2396,7 +2450,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="5.56" data-category="ASSAULT_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/026/080/777/large/alvaro-fuster-plano01-2.jpg?1587825005"
@@ -2430,7 +2484,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-AsltRif-AK-74">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2440,7 +2494,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="9MM" data-category="ASSAULT_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/023/908/824/large/ohle-mathiebe-asd.jpg?1580739750"
@@ -2474,7 +2528,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-AsltRif-OZ-14-GROZA">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2483,7 +2537,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="5.56" data-category="ASSAULT_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/051/522/759/large/games-artist-side-view-a-main-camera-side-render-fullquality.jpg?1657528828"
@@ -2517,7 +2571,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-AsltRif-M4">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2526,7 +2580,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="5.56" data-category="ASSAULT_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/007/790/849/large/patrick-benai-screenshot003.jpg?1508520605"
@@ -2560,7 +2614,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-AsltRif-M16A4">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2570,7 +2624,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="5.56" data-category="ASSAULT_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/004/870/763/large/hong-kim-type-95-2.jpg?1486890963"
@@ -2604,7 +2658,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-AsltRif-Type95">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2613,7 +2667,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="5.56" data-category="ASSAULT_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/032/564/734/large/mattias-h-mattias-h-sako-rk-95tp-1.jpg?1606821646"
@@ -2647,7 +2701,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-AsltRif-SakoRK95TP">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2656,7 +2710,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="5.56" data-category="ASSAULT_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/074/103/752/large/parisa-mohammadsadeghi-untitled-001.jpg?1711233352"
@@ -2690,7 +2744,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-AsltRif-CZ805BREN">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2699,7 +2753,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="9MM" data-category="ASSAULT_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/083/105/797/large/pavel-proskurin-08.jpg?1734780815"
@@ -2733,7 +2787,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-AsltRif-KAT4">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2743,7 +2797,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="5.56" data-category="ASSAULT_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/009/411/894/large/sergejs-karpovs-saiga12-xts-render-3k-fn1.jpg?1518833428"
@@ -2777,7 +2831,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-AsltRif-Saiga12XTS">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2787,7 +2841,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="ASSAULT_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="5.56" data-category="ASSAULT_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/028/156/669/large/philipp-neumann-side.jpg?1593635121"
@@ -2821,7 +2875,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-AsltRif-MDR">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2831,14 +2885,14 @@
             </div>
 
 
-            <!------------------------------------------------- SNIPER RIFLES -------------------------------------------------------------------------->
+<!------------------------------------------------- SNIPER RIFLES -------------------------------------------------------------------------->
 
             <div class="heading-container text-center">
                 <div class="heading-large">SNIPER RIFLES</div>
                 <div class="heading-normal">SNIPER RIFLES</div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="7MM" data-category="SNIPER_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/058/455/110/large/dreamerz-lab-1.jpg?1674190194"
@@ -2872,7 +2926,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SnprRif-BarrettMRADMK22">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2881,7 +2935,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".308" data-category="SNIPER_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/020/398/178/large/jinyi-zhu-asset.jpg?1567617654"
@@ -2915,7 +2969,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SnprRif-SnowOwl">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2925,7 +2979,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="7MM" data-category="SNIPER_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/009/881/160/large/airam-hernandez-9.jpg?1521393280"
@@ -2959,7 +3013,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SnprRif-SpeedModelingM40">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -2969,7 +3023,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber=".308" data-category="SNIPER_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/075/542/400/large/vladyslav-narozhnyi-2.jpg?1714828450"
@@ -3003,7 +3057,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SnprRif-RemintonR11">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3013,7 +3067,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="50CAL" data-category="SNIPER_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/083/453/255/large/ed-zukan-untitled-viewport-006.jpg?1735988933"
@@ -3047,7 +3101,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SnprRif-DVL10M2Urbana">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3056,7 +3110,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="9MM" data-category="SNIPER_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/031/003/458/large/matthieu-labrie-vss-side-1.jpg?1602282112"
@@ -3090,7 +3144,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SnprRif-VSSVINTOREZ">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3099,7 +3153,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="50CAL" data-category="SNIPER_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/032/985/571/large/ryzin-art-tbrender135.jpg?1608061890"
@@ -3133,7 +3187,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SnprRif-AWM">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3142,7 +3196,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="50CAL" data-category="SNIPER_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/009/556/217/large/madushan-wenuranga-m82-01.jpg?1519659409"
@@ -3176,7 +3230,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SnprRif-BARRETTM82">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3185,7 +3239,7 @@
                 </div>
             </div> 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="7MM" data-category="SNIPER_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/032/325/342/large/laurentiu-nedelca-pms-akrapov-s4-artstation-001.jpg?1606131100"
@@ -3219,7 +3273,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SnprRif-PMSAKRAPOV-S4">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3229,7 +3283,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="7MM" data-category="SNIPER_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/029/739/346/large/zachary-shertz-screenshot176.jpg?1598486375"
@@ -3263,7 +3317,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SnprRif-PSG1">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3272,7 +3326,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="7MM" data-category="SNIPER_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/042/554/882/large/david-avakov-base-right.jpg?1634820191"
@@ -3306,7 +3360,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SnprRif-MCMILLANTAC-50">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3315,7 +3369,7 @@
                 </div>
             </div>          
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="SNIPER_RIFLES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="7MM" data-category="SNIPER_RIFLES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/014/728/241/large/peetu-gronholm-trg42.jpg?1545198043"
@@ -3349,7 +3403,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-SnprRif-SAKOTRG-42">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3359,7 +3413,7 @@
             </div>
 
 
-            <!------------------------------------------------- LAUNCHERS -------------------------------------------------------------------------->
+<!------------------------------------------------- LAUNCHERS -------------------------------------------------------------------------->
 
             <div class="heading-container text-center">
                 <div class="heading-large">LAUNCHERS</div>
@@ -3367,7 +3421,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="LAUNCHERS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/022/975/710/large/stefan-engdahl-rend3.jpg?1577552097"
@@ -3401,7 +3455,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Lnchr-RGM-40">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3411,7 +3465,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="LAUNCHERS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/082/794/963/large/canoe-render-003-logo.jpg?1733935435"
@@ -3445,7 +3499,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Lnchr-TOW">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3455,7 +3509,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="LAUNCHERS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/043/651/684/large/james-mainwaring-m320-06.jpg?1637867742"
@@ -3490,7 +3544,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Lnchr-M320">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3500,7 +3554,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="LAUNCHERS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/075/667/816/large/oliver-kay-fim92j-05.jpg?1715135077"
@@ -3534,7 +3588,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Lnchr-FIM-92J">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3544,7 +3598,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="LAUNCHERS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/001/759/636/large/waqas-iqbal-missilelauncher-01.jpg?1452316612"
@@ -3578,7 +3632,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Lnchr-RenegadeX">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3588,7 +3642,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="LAUNCHERS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/081/207/922/large/anton-kunstmann-tbrender-camera-3.jpg?1729658616"
@@ -3622,7 +3676,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Lnchr-M79">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3633,7 +3687,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="LAUNCHERS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/028/341/786/large/alexandru-voinea-2.jpg?1594196392"
@@ -3667,7 +3721,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Lnchr-MGL-GRL">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3678,7 +3732,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="LAUNCHERS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/060/861/682/large/keal-team-shot-1.jpg?1679481919"
@@ -3712,7 +3766,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Lnchr-M203-M4">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3722,7 +3776,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="LAUNCHERS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/039/317/318/large/diptiranjan-panigrahi-rpg-5.jpg?1625567421"
@@ -3756,7 +3810,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Lnchr-RPG-LAUNCHER">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3766,7 +3820,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="LAUNCHERS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/035/073/849/large/jona-pahl-05.jpg?1614032492"
@@ -3800,7 +3854,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Lnchr-GL06">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3810,7 +3864,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="LAUNCHERS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/024/644/401/large/andrey-nepryahin-screenshot000.jpg?1583087796"
@@ -3844,7 +3898,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Lnchr-STEAMPUNK">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3854,7 +3908,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="LAUNCHERS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="LAUNCHERS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/039/049/886/large/simon-mercuzot-shot01.jpg?1624815562"
@@ -3888,7 +3942,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Lnchr-GP-25">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3899,7 +3953,7 @@
 
 
 
-            <!------------------------------------------------- MACHINE GUNS -------------------------------------------------------------------------->
+<!------------------------------------------------- MACHINE GUNS -------------------------------------------------------------------------->
 
             <div class="heading-container text-center">
                 <div class="heading-large">MACHINE GUNS</div>
@@ -3907,7 +3961,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="6CM" data-category="MACHINE_GUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/067/302/959/large/yahli-mendler-full-right-front.jpg?1695055452"
@@ -3941,7 +3995,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-MchnGun-NSV">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3952,7 +4006,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="6CM" data-category="MACHINE_GUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/030/906/233/large/ryzin-art-screenshot004.jpg?1602009117"
@@ -3986,7 +4040,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-MchnGun-BRENLMG">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -3996,7 +4050,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="6CM" data-category="MACHINE_GUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/035/824/176/large/laurentiu-nedelca-pms-stal-51-0017.jpg?1615994607"
@@ -4030,7 +4084,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-MchnGun-PMSSTAL51">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4041,7 +4095,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="50CAL" data-category="MACHINE_GUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/016/368/578/large/tim-shumaker-3.jpg?1551896691"
@@ -4076,7 +4130,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-MchnGun-MADEUCE">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4087,7 +4141,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="50CAL" data-category="MACHINE_GUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/024/711/350/large/slava-kireev-render8.jpg?1583284348"
@@ -4121,7 +4175,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-MchnGun-LEWISMG">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4131,7 +4185,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="5.56" data-category="MACHINE_GUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/080/931/942/large/3dma-studios-saw-pb-01.jpg?1728933712"
@@ -4166,7 +4220,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-MchnGun-M249SAW">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4176,7 +4230,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="7MM" data-category="MACHINE_GUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/073/818/901/large/deepak-gollar-dp-28-02.jpg?1710536645"
@@ -4211,7 +4265,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-MchnGun-DP28">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4221,7 +4275,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="50CAL" data-category="MACHINE_GUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/032/692/467/large/kameron-brooks-u100-2.jpg?1607185687"
@@ -4257,7 +4311,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-MchnGun-Ultimax100">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4267,7 +4321,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="7MM" data-category="MACHINE_GUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/071/609/751/large/artem-n-anton-huleha-m240d-2.jpg?1705538196"
@@ -4301,7 +4355,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-MchnGun-M240">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4311,7 +4365,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="6CM" data-category="MACHINE_GUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/031/404/822/large/akash-bhatt-gatling-close.jpg?1603523410"
@@ -4345,7 +4399,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-MchnGun-Gatling">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4355,7 +4409,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="5.56" data-category="MACHINE_GUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/008/557/367/large/pawin-changkiendee-pawin-changkiendee-minimimk3-7.jpg?1513545241"
@@ -4389,7 +4443,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-MchnGun-MinimiMk3">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4400,7 +4454,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="MACHINE_GUNS">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="50CAL" data-category="MACHINE_GUNS">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/059/114/297/large/kevuru-games-m2-browning-50cal-02.jpg?1675686492"
@@ -4434,7 +4488,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-MchnGun-M2Browning">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4444,7 +4498,7 @@
             </div>
 
 
-            <!------------------------------------------------- GRENADES & IED-------------------------------------------------------------------------->
+<!------------------------------------------------- GRENADES & IED-------------------------------------------------------------------------->
 
             <div class="heading-container text-center">
                 <div class="heading-large">GRENADES & IED</div>
@@ -4452,7 +4506,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="GRENADES_&_IED">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/081/831/355/large/lorenzo-pace-1a.jpg?1731354533"
@@ -4468,7 +4522,7 @@
                                     Cap.</span>
                             </div>
                             <div class="d-flex flex-column">
-                                <h5 class=" fs-5 mb-0">8 Rounds</h5>
+                                <h5 class=" fs-5 mb-0"> - </h5>
                             </div>
                         </div>
                         <div class="d-flex flex-row justify-content-between p-3 mid">
@@ -4486,7 +4540,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Grnd-HANDGRENADE">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4497,7 +4551,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="GRENADES_&_IED">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/056/277/092/large/jason-h-m48-fourth-new.jpg?1668861580"
@@ -4531,7 +4585,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Grnd-FLASHBANG">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4543,7 +4597,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="GRENADES_&_IED">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/052/385/505/large/ted-manske-tnt-001.jpg?1659665510"
@@ -4577,7 +4631,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Grnd-IED">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4587,7 +4641,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="GRENADES_&_IED">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/056/277/269/large/jason-h-smoke-grenade-diagonal2.jpg?1668861933"
@@ -4621,7 +4675,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Grnd-SMOKEGRENADE">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4666,7 +4720,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Grnd-C4">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4677,7 +4731,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="GRENADES_&_IED">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/030/533/330/large/damith-galhena-2.jpg?1600884258"
@@ -4711,7 +4765,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Grnd-ANTITANKMINE">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4721,7 +4775,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="GRENADES_&_IED">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/016/076/593/large/declan-sheehan-sub-02.jpg?1550791446"
@@ -4755,7 +4809,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Grnd-PINEAPPLEGRENADE">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4765,7 +4819,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="GRENADES_&_IED">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/035/152/499/large/vladislav-fjh-gavrilin-shot0.jpg?1614223264"
@@ -4799,7 +4853,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Grnd-M67">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4810,7 +4864,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="GRENADES_&_IED">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/023/096/827/large/marwan-ammar-german-m24-stick-grenade-anti-tank-bundle-wwii-marwan-ammar-04.jpg?1578071224"
@@ -4844,7 +4898,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Grnd-M24">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4856,7 +4910,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="GRENADES_&_IED">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/034/049/943/large/andre-foster-stun-grenade.jpg?1611255790"
@@ -4890,7 +4944,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Grnd-1229STUN">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4901,7 +4955,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="GRENADES_&_IED">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/063/628/966/large/sidharth-s-grenaderendermain1.jpg?1685987897"
@@ -4935,7 +4989,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Grnd-M26">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -4946,7 +5000,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="GRENADES_&_IED">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="GRENADES_&_IED">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/049/223/734/large/somdatta-das-grenade-1.jpg?1651997929"
@@ -4980,7 +5034,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Grnd-MKVGAS">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -5002,7 +5056,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/marketplace/presentation_assets/001/760/002/large/file.jpg?1654356909"
@@ -5036,7 +5090,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Knife-COMBATKUKRI">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -5047,7 +5101,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/026/197/952/large/himanshu-sandhu-5k.jpg?1588155323"
@@ -5081,7 +5135,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Knife-KARAMBIT">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -5092,7 +5146,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/marketplace/presentation_assets/001/170/070/large/file.jpg?1629957542"
@@ -5126,7 +5180,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Knife-M48KUKRI">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -5138,7 +5192,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/002/706/618/large/billy-lundevall-cold-steel-recon-1.jpg?1464796870"
@@ -5172,7 +5226,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Knife-TANTO">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -5183,7 +5237,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/034/982/294/large/sean-o-brien-renders1.jpg?1613765173"
@@ -5217,7 +5271,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Knife-BUTTERFLY">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -5228,7 +5282,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/077/133/282/large/sergey-nikulshin-sergey-nikulshin-2.jpg?1718686307"
@@ -5262,7 +5316,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Knife-PUSHDAGGER">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -5274,7 +5328,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/031/660/680/large/kirill-sp-8-5.jpg?1604253408"
@@ -5308,7 +5362,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Knife-MACHETE">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -5319,7 +5373,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/025/184/491/large/brx-boyles-featherblade-01.jpg?1584938761"
@@ -5353,7 +5407,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Knife-FEATHERBLADE">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -5363,7 +5417,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/079/003/761/large/james-bolton-moderngyutorendersfinal-4.jpg?1723679978"
@@ -5397,7 +5451,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Knife-MODERNGYUTO">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -5408,7 +5462,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/044/531/558/large/mike-kennedy-moonsplinter-2021-1.jpg?1640278852"
@@ -5442,7 +5496,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Knife-MOONSPLINTER">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -5452,7 +5506,7 @@
             </div>
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/072/596/515/large/wanis-kazi-2.jpg?1707760452"
@@ -5486,7 +5540,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Knife-HUNTINGKNIFE">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -5497,7 +5551,7 @@
 
 
 
-            <div class="col-md-3 col-sm-6 card-container" data-caliber=".22LR" data-category="KNIVES">
+            <div class="col-md-3 col-sm-6 card-container" data-caliber="PROJECTILE" data-category="KNIVES">
                 <!-- GLOCK 34 -->
                 <div class="card h-100 d-flex flex-column">
                     <img src="https://cdna.artstation.com/p/assets/images/images/072/895/272/large/reviron-img-9.jpg?1708449581"
@@ -5531,7 +5585,7 @@
                         </div>
                         <div class="mt-auto">
                             <div class="d-flex justify-content-center mx-3 mt-3 mb-2">
-                                <button type="button" class="btn btn-danger btn-block fs-5">ORDER</button>
+                                <button type="button" class="btn btn-danger btn-block fs-5 add-to-cart-button" data-product-id="Armoury-Knife-TOMHAWK">ORDER</button>
                             </div>
                             <small class="legal-disclaimer d-flex justify-content-center text-muted fs-6">*Legal
                                 Disclaimer</small>
@@ -5621,7 +5675,72 @@
             Army&#174;</p>
 
     </footer>
+    <script>
+    document.querySelectorAll(".series-item").forEach(card => {
+    card.addEventListener("click", function () {
+        const category = this.getAttribute("data-category") || this.querySelector("img").alt;
+        console.log("Clicked category:", category);
+        });
+    });
 
+    </script>
+    <script>
+    document.querySelectorAll(".svg-item").forEach(button => {
+        button.addEventListener("click", function () {
+            console.log("Clicked:", this.getAttribute("data-caliber"));
+        });
+    });
+    </script>
+    <script>
+	document.addEventListener("DOMContentLoaded", function () {
+		console.log("DOM fully loaded and parsed");
+		let buttons = document.querySelectorAll(".add-to-cart-button");
+		console.log("Found buttons:", buttons.length);
+		if (buttons.length === 0) {
+			console.error("No .add-to-cart-button elements found.");
+		}
+								// Fix for dynamically added elements
+								$(document).on("click", ".add-to-cart-button", function (event) {
+									event.preventDefault();
+
+									let productId = $(this).data("product-id");
+									if (!productId) {
+										console.error("No product ID found for clicked button");
+										return;
+									}
+
+									console.log("Clicked button. Product ID:", productId);
+
+									$.ajax({
+										url: "/cart/add", // Ensure this route is correct
+										type: "POST",
+										data: {
+											_token: $('meta[name="csrf-token"]').attr("content"), // CSRF token
+											product_id: productId
+										},
+										headers: {
+											"X-Requested-With": "XMLHttpRequest" // Helps Laravel recognize AJAX requests
+										},
+										xhrFields: {
+											withCredentials: true // Ensures cookies (session) are sent with the request
+										},
+										success: function (response) {
+											console.log("Server response:", response);
+											if (response.success) {
+												alert("Product added to cart!");
+											} else {
+												alert("Failed to add product: " + response.message);
+											}
+										},
+										error: function (xhr, status, error) {
+											console.error("Error adding product:", xhr.responseText);
+											alert("Error adding product: " + xhr.responseText);
+										}
+									});
+								});
+							});
+	</script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../../JS/PRODUCTS/ARMOURY.js"></script>
     <script src="../../JS/navbar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>

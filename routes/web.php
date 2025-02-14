@@ -78,7 +78,7 @@ Route::controller(MainController::class)->group(function () {
 // ------------------------- PRODUCT SUB-PAGES -----------------------------------------------------------
 Route::prefix('products')->controller(MainController::class)->group(function () {
     Route::get('/accessories', 'ACCESSORIES');
-    Route::get('/armoury', 'ARMOURY');
+    Route::get('/armoury', 'ARMOURY')->middleware(['auth', 'arms_license']);
     Route::get('/guides&books', 'GUIDESBOOKS');
     Route::get('/optics', 'OPTICS');
     Route::get('/protectivegears', 'PROTECTIVEGEARS');
@@ -98,7 +98,7 @@ Route::prefix('register')->controller(RegisterController::class)->group(function
 });
 
 // <------------------------------ ADMIN ROUTES --------------------------------------------------------------
-Route::get('/adminphp', [AdminController::class, 'index']);
+Route::get('/adminphp', [AdminController::class, 'index'])->middleware(['auth', 'admin']);
 Route::get('/adminregister', [AdminController::class, 'register']);
 Route::patch('/users/{user_id}/approve', [AdminController::class, 'approve'])->name('users.approve');
 Route::patch('/users/{user_id}/reject', [AdminController::class, 'reject'])->name('users.reject');
@@ -133,3 +133,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/items', [ProductController::class, 'index']); // Change /products to /items
 Route::get('/items/{id}', [ProductController::class, 'show']); // Change /products/{id} to /items/{id}
 Route::post('/items', [ProductController::class, 'store']); // Change /products to /items
+
+Route::post('/submit-service', [ServiceController::class, 'submit'])->name('service.submit');
+Route::get('/debug-session', function () {
+    dd(session()->all());
+});

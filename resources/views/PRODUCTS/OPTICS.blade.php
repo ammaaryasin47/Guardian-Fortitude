@@ -61,7 +61,7 @@
                         <div class="part-1">
                             <span class="new">new</span>
                             <ul>
-                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#" class="add-to-cart-button" data-product-id="Optics-Scope-HolosunElite"><i class="fas fa-shopping-cart"></i></a></li>
                                 <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                         data-bs-target="#productModal" data-title="Holosun Elite" data-price="$30,000"
                                         data-image="https://cdnb.artstation.com/p/assets/images/images/058/956/651/large/vladislav-kravchenko-5.jpg?1675317718"><i
@@ -79,7 +79,7 @@
                         <div class="part-1">
                             <span class="new">new</span>
                             <ul>
-                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#" class="add-to-cart-button" data-product-id="Optics-Scope-M110k1"><i class="fas fa-shopping-cart"></i></a></li>
                                 <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                         data-bs-target="#productModal" data-title="M110k1" data-price="$30,000"
                                         data-image="https://cdnb.artstation.com/p/assets/images/images/022/265/741/large/linus-scheffel-schmidt-benderoptic1.jpg?1574764917"><i
@@ -97,7 +97,7 @@
                         <div class="part-1">
                             <span class="new">new</span>
                             <ul>
-                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#" class="add-to-cart-button" data-product-id="Optics-Scope-RedDot"><i class="fas fa-shopping-cart"></i></a></li>
                                 <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                         data-bs-target="#productModal" data-title="Red Dot" data-price="$30,000"
                                         data-image="https://cdnb.artstation.com/p/assets/images/images/036/668/529/large/mustafa-majeed-3.jpg?1618306315"><i
@@ -115,7 +115,7 @@
                         <div class="part-1">
                             <span class="new">new</span>
                             <ul>
-                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#" class="add-to-cart-button" data-product-id="Optics-Scope-LeupoldMarkIV"><i class="fas fa-shopping-cart"></i></a></li>
                                 <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                         data-bs-target="#productModal" data-title="Leupold Mark IV" data-price="$30,000"
                                         data-image="https://cdnb.artstation.com/p/assets/images/images/044/501/097/large/nestor-sarmiento-prueba-main-camera-002.jpg?1640187426"><i
@@ -133,7 +133,7 @@
                         <div class="part-1">
                             <span class="new">new</span>
                             <ul>
-                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#" class="add-to-cart-button" data-product-id="Optics-Scope-BushnellTRS25"><i class="fas fa-shopping-cart"></i></a></li>
                                 <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                         data-bs-target="#productModal" data-title="Bushnell TRS-25" data-price="$30,000"
                                         data-image="https://cdnb.artstation.com/p/assets/images/images/074/822/599/large/stephen-mok-c-02-c-c-04-p05-vanity-wide.jpg?1713060893"><i
@@ -151,7 +151,7 @@
                         <div class="part-1">
                             <span class="new">new</span>
                             <ul>
-                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#" class="add-to-cart-button" data-product-id="Optics-Scope-AimpointMicroT2"><i class="fas fa-shopping-cart"></i></a></li>
                                 <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                         data-bs-target="#productModal" data-title="Aimpoint Micro T2"
                                         data-price="$30,000"
@@ -170,7 +170,7 @@
                         <div class="part-1">
                             <span class="new">new</span>
                             <ul>
-                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#" class="add-to-cart-button" data-product-id="Optics-Scope-TrijiconACOG"><i class="fas fa-shopping-cart"></i></a></li>
                                 <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                         data-bs-target="#productModal" data-title="Trijicon ACOG" data-price="$30,000"
                                         data-image="https://cdnb.artstation.com/p/assets/images/images/071/756/895/large/carlos-morales-empire-3d-std-acog-013.jpg?17058823063"><i
@@ -188,7 +188,7 @@
                         <div class="part-1">
                             <span class="new">new</span>
                             <ul>
-                                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                <li><a href="#" class="add-to-cart-button" data-product-id="Optics-Scope-S9LPVO"><i class="fas fa-shopping-cart"></i></a></li>
                                 <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                         data-bs-target="#productModal" data-title="S9 LPVO" data-price="$30,000"
                                         data-image="https://cdna.artstation.com/p/assets/images/images/058/137/986/large/hector-cervantes-asset.jpg?1673466449"><i
@@ -215,7 +215,7 @@
                             <div class="part-1">
                                 <span class="discount">15% off</span>
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                    <li><a href="#" class="add-to-cart-button" data-product-id="Optics-NVG-PanoramicNVG"><i class="fas fa-shopping-cart"></i></a></li>
                                     <li>
                                         <a href="#" class="expand-button" data-bs-toggle="modal"
                                             data-bs-target="#productModal" data-title="Panoramic NVG"
@@ -238,7 +238,7 @@
                         <div id="product-2" class="single-product">
                             <div class="part-1">
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                    <li><a href="#" class="add-to-cart-button" data-product-id="Optics-NVG-Dual-Tube"><i class="fas fa-shopping-cart"></i></a></li>
                                     <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                             data-bs-target="#productModal" data-title="Dual-Tube NVG"
                                             data-price="$60,000"
@@ -260,7 +260,7 @@
                             <div class="part-1">
                                 <span class="new">new</span>
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                    <li><a href="#" class="add-to-cart-button" data-product-id="Optics-NVG-MonoTubeNVG"><i class="fas fa-shopping-cart"></i></a></li>
                                     <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                             data-bs-target="#productModal" data-title="Mono-Tube NVG"
                                             data-price="$70,000"
@@ -281,7 +281,7 @@
                         <div id="product-4" class="single-product">
                             <div class="part-1">
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                    <li><a href="#" class="add-to-cart-button" data-product-id="Optics-NVG-MinieWilcoxG29"><i class="fas fa-shopping-cart"></i></a></li>
                                     <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                             data-bs-target="#productModal" data-title="Minie Wilcox G29"
                                             data-price="$70,000"
@@ -302,7 +302,7 @@
                         <div id="product-5" class="single-product">
                             <div class="part-1">
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                    <li><a href="#" class="add-to-cart-button" data-product-id="Optics-NVG-WilcoxG29"><i class="fas fa-shopping-cart"></i></a></li>
                                     <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                             data-bs-target="#productModal" data-title="Wilcox G29" data-price="$50,000"
                                             data-image="https://cdna.artstation.com/p/assets/images/images/077/116/672/large/ilya-rukhlyada-1-viewport-012.jpg?1718642871">
@@ -322,7 +322,7 @@
                         <div id="product-6" class="single-product">
                             <div class="part-1">
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                    <li><a href="#" class="add-to-cart-button" data-product-id="Optics-NVG-FuturisticNVG"><i class="fas fa-shopping-cart"></i></a></li>
                                     <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                             data-bs-target="#productModal" data-title="Futuristic NVG"
                                             data-price="$30,000"
@@ -343,7 +343,7 @@
                         <div id="product-7" class="single-product">
                             <div class="part-1">
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                    <li><a href="#" class="add-to-cart-button" data-product-id="Optics-NVG-DualTubeWithMount"><i class="fas fa-shopping-cart"></i></a></li>
                                     <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                             data-bs-target="#productModal" data-title="Dual-Tube With Mount"
                                             data-price="$55,000"
@@ -369,7 +369,7 @@
                             <div class="part-1">
                                 <span class="new">new</span>
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                    <li><a href="#" class="add-to-cart-button" data-product-id="Optics-NVG-Dual-DBAL-D2"><i class="fas fa-shopping-cart"></i></a></li>
                                     <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                             data-bs-target="#productModal" data-title="DBAL-D2" data-price="$30,000"
                                             data-image="https://cdnb.artstation.com/p/assets/images/images/037/912/099/large/roman-kozak-shot-1.jpg?1621634549">
@@ -390,7 +390,7 @@
                             <div class="part-1">
                                 <span class="discount">20% off</span>
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                    <li><a href="#" class="add-to-cart-button" data-product-id="Optics-Laser-MAWL-C1"><i class="fas fa-shopping-cart"></i></a></li>
                                     <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                             data-bs-target="#productModal" data-title="MAWL-C1" data-price="$70,000"
                                             data-image="https://cdna.artstation.com/p/assets/images/images/037/383/280/large/benedict-burns-perst-4-artstation-presentation-3.jpg?1620232422">
@@ -411,7 +411,7 @@
                         <div id="product-10" class="single-product">
                             <div class="part-1">
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                    <li><a href="#" class="add-to-cart-button" data-product-id="Optics-Laser-PEQ-15"><i class="fas fa-shopping-cart"></i></a></li>
                                     <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                             data-bs-target="#productModal" data-title="PEQ-15" data-price="$40,000"
                                             data-image="https://cdna.artstation.com/p/assets/images/images/043/925/382/large/wenwen-ar15keys-4-17.jpg?1638633290">
@@ -431,7 +431,7 @@
                         <div id="product-11" class="single-product">
                             <div class="part-1">
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                    <li><a href="#" class="add-to-cart-button" data-product-id="Optics-Laser-LA5"><i class="fas fa-shopping-cart"></i></a></li>
                                     <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                             data-bs-target="#productModal" data-title="LA5" data-price="$60,000"
                                             data-image="https://cdnb.artstation.com/p/assets/images/images/015/471/275/large/anton-pismennyy-anton-pismennyy-lcu-13.jpg?1548454625">
@@ -454,7 +454,57 @@
 
     <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
     <x-footer />
+    <script>
+	document.addEventListener("DOMContentLoaded", function () {
+		console.log("DOM fully loaded and parsed");
 
+		let buttons = document.querySelectorAll(".add-to-cart-button");
+		console.log("Found buttons:", buttons.length);
+
+		if (buttons.length === 0) {
+			console.error("No .add-to-cart-button elements found.");
+		}							
+		$(document).on("click", ".add-to-cart-button", function (event) {
+			event.preventDefault();
+
+		let productId = $(this).data("product-id");
+			if (!productId) {
+				console.error("No product ID found for clicked button");
+			    return;
+			    }
+
+		console.log("Clicked button. Product ID:", productId);
+
+			$.ajax({
+				url: "/cart/add", // Ensure this route is correct
+				type: "POST",
+				data: {
+				_token: $('meta[name="csrf-token"]').attr("content"), // CSRF token
+				    product_id: productId
+				},
+				headers: {
+					"X-Requested-With": "XMLHttpRequest" // Helps Laravel recognize AJAX requests
+				},
+				xhrFields: {
+					withCredentials: true // Ensures cookies (session) are sent with the request
+				},
+				success: function (response) {
+				console.log("Server response:", response);
+					if (response.success) {
+						alert("Product added to cart!");
+						} else {
+							alert("Failed to add product: " + response.message);
+						}
+				    },
+				error: function (xhr, status, error) {
+				console.error("Error adding product:", xhr.responseText);
+				alert("Error adding product: " + xhr.responseText);
+				}
+			});
+		});
+	});
+	</script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../../JS/PRODUCTS/OPTICS.js"></script>
     <script src="../../JS/navbar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>

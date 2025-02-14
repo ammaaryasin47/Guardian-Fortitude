@@ -111,7 +111,7 @@
                             <span class="discount">15% off</span>
                             <ul>
                                 <li>
-                                    <a href="#" class="add-to-cart-button" data-product-id="1">
+                                    <a href="#" class="add-to-cart-button" data-product-id="Armor-Head-BallisticHeadGearWithMandible">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
                                 </li>
@@ -139,7 +139,7 @@
                         <div class="part-1">
                             <ul>
                                 <li>
-                                    <a href="#" class="add-to-cart-button" data-product-id="2">
+                                    <a href="#" class="add-to-cart-button" data-product-id="Armor-Head-BallisticHeadGearOliveGreen">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
                                 </li>
@@ -167,7 +167,7 @@
                             <span class="new">new</span>
                             <ul>
                                 <li>
-                                    <a href="#" class="add-to-cart-button" data-product-id="3">
+                                    <a href="#" class="add-to-cart-button" data-product-id="Armor-Head-BallisticHeadGearBlack">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
                                 </li>
@@ -194,7 +194,7 @@
                         <div class="part-1">
                             <ul>
                                 <li>
-                                    <a href="#" class="add-to-cart-button" data-product-id="4">
+                                    <a href="#" class="add-to-cart-button" data-product-id="Armor-Head-BallisticHeadGearDesertTan">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
                                 </li>
@@ -221,7 +221,7 @@
                         <div class="part-1">
                             <ul>
                                 <li>
-                                    <a href="#" class="add-to-cart-button" data-product-id="5">
+                                    <a href="#" class="add-to-cart-button" data-product-id="Armor-Head-BallisticVisor">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
                                 </li>
@@ -246,7 +246,7 @@
                         <div class="part-1">
                             <ul>
                                 <li>
-                                    <a href="#" class="add-to-cart-button" data-product-id="6">
+                                    <a href="#" class="add-to-cart-button" data-product-id="Armor-Head-BallisticGlasses">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
                                 </li>
@@ -272,7 +272,7 @@
                         <div class="part-1">
                             <ul>
                                 <li>
-                                    <a href="#" class="add-to-cart-button" data-product-id="7">
+                                    <a href="#" class="add-to-cart-button" data-product-id="Armor-Head-BallisticHeadset">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
                                 </li>
@@ -298,7 +298,7 @@
                         <div class="part-1">
                             <ul>
                                 <li>
-                                    <a href="#" class="add-to-cart-button" data-product-id="8">
+                                    <a href="#" class="add-to-cart-button" data-product-id="Armor-Head-BallisticHeadGearCamouflage">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
                                 </li>
@@ -331,7 +331,8 @@
                             <div id="product-9" class="single-product">
                                 <div class="part-1">
                                     <ul>
-                                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                        <li><a href="#" class="add-to-cart-button" data-product-id="Armor-PltCr-BallisticHeadGearCamouflage">
+                                            <i class="fas fa-shopping-cart"></i></a></li>
                                         <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                                 data-bs-target="#productModal"
                                                 data-title="BALLISTIC Plate Carrier (Black)" data-price="$9,000"
@@ -351,7 +352,8 @@
                             <div id="product-10" class="single-product">
                                 <div class="part-1">
                                     <ul>
-                                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                        <li><a href="#" class="add-to-cart-button" data-product-id="Armor-PltCr-BallisticPlateCarrierOliveGreen">
+                                            <i class="fas fa-shopping-cart"></i></a></li>
                                         <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                                 data-bs-target="#productModal"
                                                 data-title="BALLISTIC Plate Carrier (Olive Green)" data-price="$9,500"
@@ -371,7 +373,8 @@
                             <div id="product-11" class="single-product">
                                 <div class="part-1">
                                     <ul>
-                                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                        <li><a href="#" class="add-to-cart-button" data-product-id="Armor-PltCr-BallisticPlateCarrierDesertTan">
+                                            <i class="fas fa-shopping-cart"></i></a></li>
                                         <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                                 data-bs-target="#productModal"
                                                 data-title="BALLISTIC Plate Carrier (Desert Tan)" data-price="$90,000"
@@ -392,7 +395,8 @@
                                 <div class="part-1">
                                     <span class="new">new</span>
                                     <ul>
-                                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                        <li><a href="#" class="add-to-cart-button" data-product-id="Armor-PltCr-BallisticPlateCarrierBlue">
+                                            <i class="fas fa-shopping-cart"></i></a></li>
                                         <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                                 data-bs-target="#productModal"
                                                 data-title="BALLISTIC Plate Carrier (Blue)" data-price="$8,000"
@@ -413,7 +417,8 @@
                                 <div class="part-1">
                                     <span class="discount">15% off</span>
                                     <ul>
-                                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                        <li><a href="#" class="add-to-cart-button" data-product-id="Armor-PltCr-BallisticPlateCarrier01">
+                                            <i class="fas fa-shopping-cart"></i></a></li>
                                         <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                                 data-bs-target="#productModal"
                                                 data-title="BALLISTIC Plate Carrier (With Plate)" data-price="$8,500"
@@ -434,7 +439,8 @@
                             <div id="product-14" class="single-product">
                                 <div class="part-1">
                                     <ul>
-                                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                        <li><a href="#" class="add-to-cart-button" data-product-id="Armor-PltCr-BallisticPlateCarrier02">
+                                            <i class="fas fa-shopping-cart"></i></a></li>
                                         <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                                 data-bs-target="#productModal"
                                                 data-title="BALLISTIC Plate Carrier (With Plate)" data-price="$8,000"
@@ -454,7 +460,8 @@
                             <div id="product-15" class="single-product">
                                 <div class="part-1">
                                     <ul>
-                                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                        <li><a href="#" class="add-to-cart-button" data-product-id="Armor-PltCr-BallisticPlateCarrier03">
+                                            <i class="fas fa-shopping-cart"></i></a></li>
                                         <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                                 data-bs-target="#productModal"
                                                 data-title="BALLISTIC Plate Carrier (With Plate)" data-price="$8,300"
@@ -475,7 +482,8 @@
                                 <div class="part-1">
                                     <span class="new">new</span>
                                     <ul>
-                                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                        <li><a href="#" class="add-to-cart-button" data-product-id="Armor-PltCr-BallisticPlateCarrier04">
+                                            <i class="fas fa-shopping-cart"></i></a></li>
                                         <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                                 data-bs-target="#productModal" data-title="BALLISTIC Plate Carrier"
                                                 data-price="$10,000"
@@ -509,7 +517,8 @@
                                 <div id="product-17" class="single-product">
                                     <div class="part-1">
                                         <ul>
-                                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                            <li><a href="#" class="add-to-cart-button" data-product-id="Armor-Shld-BallisticBriefcase">
+                                                <i class="fas fa-shopping-cart"></i></a></li>
                                             <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                                     data-bs-target="#productModal" data-title="BALLISTIC Briefcase"
                                                     data-price="$11,000"
@@ -528,7 +537,8 @@
                                 <div id="product-18" class="single-product">
                                     <div class="part-1">
                                         <ul>
-                                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                            <li><a href="#" class="add-to-cart-button" data-product-id="Armor-Shld-MSH-11">
+                                                <i class="fas fa-shopping-cart"></i></a></li>
                                             <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                                     data-bs-target="#productModal"
                                                     data-title="Hand Held Shield (MSH-11)" data-price="$8,500"
@@ -548,7 +558,8 @@
                                     <div class="part-1">
                                         <span class="new">new</span>
                                         <ul>
-                                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                            <li><a href="#" class="add-to-cart-button" data-product-id="Armor-Shld-MSH-08">
+                                                <i class="fas fa-shopping-cart"></i></a></li>
                                             <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                                     data-bs-target="#productModal"
                                                     data-title="BALLISTIC Plate Carrier (MSH-08)" data-price="$9,500"
@@ -568,7 +579,8 @@
                                     <div class="part-1">
                                         <span class="discount">20% off</span>
                                         <ul>
-                                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                            <li><a href="#" class="add-to-cart-button" data-product-id="Armor-Shld-MSH-03">
+                                                <i class="fas fa-shopping-cart"></i></a></li>
                                             <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                                     data-bs-target="#productModal"
                                                     data-title="Hand Held Shield (MSH-03)" data-price="$12,000"
@@ -588,7 +600,8 @@
                                 <div id="product-21" class="single-product">
                                     <div class="part-1">
                                         <ul>
-                                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                            <li><a href="#" class="add-to-cart-button" data-product-id="Armor-Shld-MSH-04A">
+                                                <i class="fas fa-shopping-cart"></i></a></li>
                                             <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                                     data-bs-target="#productModal"
                                                     data-title="Hand Held Shield (MSH-04A)" data-price="$11,500"
@@ -608,7 +621,8 @@
                                     <div class="part-1">
                                         <span class="discount">10% off</span>
                                         <ul>
-                                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                            <li><a href="#" class="add-to-cart-button" data-product-id="Armor-Shld-MSH-01">
+                                                <i class="fas fa-shopping-cart"></i></a></li>
                                             <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                                     data-bs-target="#productModal"
                                                     data-title="Hand Held Shield (MSH-01)" data-price="$7,500"
@@ -628,7 +642,8 @@
                                 <div id="product-23" class="single-product">
                                     <div class="part-1">
                                         <ul>
-                                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                            <li><a href="#" class="add-to-cart-button" data-product-id="Armor-Shld-MSH-06">
+                                                <i class="fas fa-shopping-cart"></i></a></li>
                                             <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                                     data-bs-target="#productModal" data-title="BALLISTIC Plate Carrier"
                                                     data-price="$8,500"
@@ -647,7 +662,8 @@
                                 <div id="product-24" class="single-product">
                                     <div class="part-1">
                                         <ul>
-                                            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                                            <li><a href="#" class="add-to-cart-button" data-product-id="Armor-Shld-BallisticBackpack">
+                                                <i class="fas fa-shopping-cart"></i></a></li>
                                             <li><a href="#" class="expand-button" data-bs-toggle="modal"
                                                     data-bs-target="#productModal" data-title="BALLISTIC Plate Carrier"
                                                     data-price="$20,000"
@@ -668,36 +684,58 @@
                 <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
                 <x-footer />
                 <script>
-				    document.querySelectorAll('.add-to-cart-button').forEach(button => {
-					button.addEventListener('click', function(event) {
-										event.preventDefault();
-										let productId = this.dataset.productId;
-										let csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+							document.addEventListener("DOMContentLoaded", function () {
+								console.log("DOM fully loaded and parsed");
 
-										console.log("Button clicked, Product ID:", productId); // Debugging
+								let buttons = document.querySelectorAll(".add-to-cart-button");
+								console.log("Found buttons:", buttons.length);
 
-										fetch('/cart/add', {
-											method: 'POST',
-											headers: {
-												'Content-Type': 'application/json',
-												'X-CSRF-TOKEN': csrfToken
-											},
-											body: JSON.stringify({ product_id: productId })
-										})
-										.then(response => response.json())
-										.then(data => {
-											console.log("Server response:", data); // Debugging
-									if (data.success) {
-									alert('Product added to cart!');
-									updateCartUI(); // Function to update cart count
-								} else {
-								alert('Failed to add product.');
+								if (buttons.length === 0) {
+									console.error("No .add-to-cart-button elements found.");
 								}
-							})
-						.catch(error => console.error("Fetch error:", error)); // Debugging
-					});
-				});
-				</script>
+
+								// Fix for dynamically added elements
+								$(document).on("click", ".add-to-cart-button", function (event) {
+									event.preventDefault();
+
+									let productId = $(this).data("product-id");
+									if (!productId) {
+										console.error("No product ID found for clicked button");
+										return;
+									}
+
+									console.log("Clicked button. Product ID:", productId);
+
+									$.ajax({
+										url: "/cart/add", // Ensure this route is correct
+										type: "POST",
+										data: {
+											_token: $('meta[name="csrf-token"]').attr("content"), // CSRF token
+											product_id: productId
+										},
+										headers: {
+											"X-Requested-With": "XMLHttpRequest" // Helps Laravel recognize AJAX requests
+										},
+										xhrFields: {
+											withCredentials: true // Ensures cookies (session) are sent with the request
+										},
+										success: function (response) {
+											console.log("Server response:", response);
+											if (response.success) {
+												alert("Product added to cart!");
+											} else {
+												alert("Failed to add product: " + response.message);
+											}
+										},
+										error: function (xhr, status, error) {
+											console.error("Error adding product:", xhr.responseText);
+											alert("Error adding product: " + xhr.responseText);
+										}
+									});
+								});
+							});
+							</script>
+							<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                 <script src="../../JS/PRODUCTS/PROTECTIVE-GEARS.js"></script>
                 <script src="../../JS/navbar.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>

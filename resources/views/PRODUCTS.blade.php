@@ -107,11 +107,11 @@
                 @auth
 <li class="sidenav-item dropdown">
     <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
-        <img 
-            src="{{ Auth::user()->profile_picture ? asset('storage/' . Auth::user()->profile_picture) : asset('default-profile.png') }}" 
-            alt="Profile Picture" 
-            class="rounded-circle" 
-            height="40px">
+    <img 
+    src="{{ Auth::user()->picture ? asset(Auth::user()->picture) : asset('default-profile.png') }}" 
+                    alt="Profile Picture" 
+                    class="rounded-circle" 
+                    height="40px">
     </a>
     <ul class="fs-2 dropdown-menu">
         <li><a class="dropdown-item" href="{{ route('profile.edit') }}">PROFILE</a></li>
@@ -166,8 +166,8 @@
             @auth
             <li class="nav-item dropdown">
                 <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
-                    <img 
-                    src="{{ Auth::user()->profile_picture ?? asset('default-profile.png') }}" 
+                <img 
+                src="{{ Auth::user()->picture ? asset(Auth::user()->picture) : asset('default-profile.png') }}" 
                     alt="Profile Picture" 
                     class="rounded-circle" 
                     height="40px">

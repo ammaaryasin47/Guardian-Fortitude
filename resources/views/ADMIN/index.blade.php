@@ -793,7 +793,7 @@
 
 </main><!-- End #main -->
 
-<x-footer />
+
 
 <!-- Vendor JS Files -->
 <script src="ADMIN/vendor/apexcharts/apexcharts.min.js"></script>
