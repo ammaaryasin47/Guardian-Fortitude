@@ -120,7 +120,19 @@ html {
     color: white;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 992px) {
+    .quote-form-div {
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+
+    .quote-para input {
+        width: 100%; /* Make inputs full width on smaller screens */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .quote-para-drop {
+        margin-left: 0; /* Remove left margin */
+    }
     .quote-banner h1 {
         transform: translateY(-391%);
         text-align: left;
@@ -133,7 +145,7 @@ html {
     }
 
     .quote-para {
-        width: 100%;
+        width: fit-content;
         font-size: 1rem;
         left: 2.5rem;
         margin-top: 1rem;

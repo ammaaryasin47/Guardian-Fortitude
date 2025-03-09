@@ -71,7 +71,8 @@
 
         <!-- Sidenav For Mobile -->
         <nav id="sidenav-1" data-mdb-sidenav-init class="sidenav" data-mdb-hidden="true">
-            <ul style=" list-style-type: none;" class="mt-5 sidenav-menu">
+          <i id="close-sidenav" style="padding:1.5rem 1.5rem;" class='text-light fs-1 bx bx-x'></i>
+            <ul style="list-style-type: none;" class="mt-5 sidenav-menu">
                 <a><img class="logo02" src="../IMAGES/HOME/Logo.png" height="50px"></a>
                 <!-- LOGO -->
 
@@ -131,20 +132,20 @@
 </li>
 @endauth
 <div class="mt-5">
-                        <div class="mb-5">
-                            <li class=" fs-5 pe-3 border-light align-items-center"
+                        <div class="fs-2 mb-5">
+                            <li class=" pe-3 border-light align-items-center"
                                 style="border-right: 1px dotted #fff;">
-                                <i class='bx bx-envelope'></i>
-                                guardianfortitude<p>service@gmail.com</p>
+                                <i class='bx bx-envelope ='></i>
+                                guardianfortitudeservice@gmail.com
                             </li>
-                            <li class="fs-5 pe-3 border-light align-items-center"
+                            <li class="fs-2 pe-3 border-light align-items-center"
                                 style="border-right: 1px dotted #fff;"> <i class='bx bx-phone-call'></i>
                                 +91 1234567890</li>
-                            <li class="fs-5"><i class='bx bx-map'></i> Ahemdabad , India</li>
+                            <li class="fs-2"><i class='bx bx-map'></i> Ahemdabad , India</li>
                         </div>
 
-                        <li class="sidenav-item d-flex">
-                            <ul style="list-style-type: none;" class="justify-content-around d-flex flex-column">
+                        <li class="sidenav-item d-flex justify-content-between">
+                            <ul style="list-style-type: none;" class="justify-content-between d-flex  flex-row">
                                 <li><i class='bx bxl-meta'></i></li>
                                 <li><i class='bx bxl-linkedin'></i></li>
                                 <li><i class='bx bxl-github'></i></li>
@@ -257,27 +258,19 @@
 
   <!----------------------------------------- WHY CHOOSE US ? ----------------------------------------------->
   <div style="background-color: black; cursor: default; border-top:2px solid white ;" class="h-100">
-    <h1 style="border-bottom: 0.2rem solid maroon" class="h-1 text-center pt-5 pb-5 text-light">WHY CHOOSE US
-      ?</h1>
+    <h1 style="border-bottom: 0.2rem solid maroon" class="h-1 text-center pt-5 pb-5 text-light">WHY CHOOSE US?</h1>
 
-    <div class="divtop d-flex justify-content-around text-light pt-5">
+    <div class="divtop d-flex justify-content-around text-light pt-5 ">
       <div style="width: 45rem; text-align: center;">
-        <i style="font-size: 3rem; " class='bx bxs-briefcase'></i>
-        <h1 class="h3">DECADES OF EXPERIENCE </h1>
-        <p> Founded In 2012, Our Extensive Knowledge And Proven Adaptability Enable Us To Address The
-          Evolving Threats
-          And Challenges Across Various Sectors. Our Longevity In The Industry Is A Testament To Our Ability To
-          Adapt .
-        </p>
+        <i style="font-size: 3rem;" class='bx bxs-briefcase'></i>
+        <h1 >DECADES OF EXPERIENCE </h1>
+        <p> Founded In 2012, Our Extensive Knowledge And Proven Adaptability Enable Us To Address The Evolving Threats And Challenges Across Various Sectors. Our Longevity In The Industry Is A Testament To Our Ability To Adapt.</p>
       </div>
 
       <div style="width: 45rem; text-align: center;">
         <i style="font-size: 3rem;" class='bx bx-headphone'></i>
-        <h1 class="h3"> 24/7 SUPPORT</h1>
-        <p>Guardian Fortitude Security Services Offers 24/7 Support, Ensuring That Security Needs Are
-          Addressed At Any
-          Hour Of The Day. Our Team Is Always On Standby Ready To Act Swiftly And Effectively To Safeguard Your
-          Interests At All Times.</p>
+        <h1 > 24/7 SUPPORT</h1>
+        <p>Guardian Fortitude Security Services Offers 24/7 Support, Ensuring That Security Needs Are Addressed At Any Hour Of The Day. Our Team Is Always On Standby Ready To Act Swiftly And Effectively To Safeguard Your Interests At All Times.</p>
       </div>
     </div>
 
@@ -285,24 +278,20 @@
       <img style="opacity: 25%;" src="../IMAGES/HOME/Logo.png" height="200rem">
     </div>
 
-    <div class="divbottom d-flex justify-content-around text-light pt-5 mb-5 pb-5">
+    <div class="divbottom d-flex justify-content-around text-light mb-5 pb-5">
       <div style="width: 45rem; text-align: center;">
         <i style="font-size: 3rem;" class='bx bx-microchip'></i>
-        <h1 class="h3">STATE-OF-THE-ART-TECHNOLOGY</h1>
-        <p> Guardian Fortitude Leverages Cutting-Edge Technology, Including Advanced Surveillance Systems,
-          Real-Time Monitoring, And Analytics, To Provide Proactive And Responsive Security Solutions.
-        </p>
+        <h1>STATE-OF-THE-ART-TECHNOLOGY</h1>
+        <p> Guardian Fortitude Leverages Cutting-Edge Technology, Including Advanced Surveillance Systems, Real-Time Monitoring, And Analytics, To Provide Proactive And Responsive Security Solutions.</p>
       </div>
 
-      <div style="width: 45rem; text-align: center; ">
+      <div style="width: 45rem; text-align: center;">
         <i style="font-size: 3rem;" class='bx bx-globe'></i>
-        <h1 class="h3">WORLD WIDE REACH</h1>
-        <p> Our Extensive Network Of International Partners And Highly Skilled Personnel Ensures That No
-          Matter Where You Are Located, We Can Deliver The Same High-Quality Security Services
-        </p>
+        <h1>WORLD WIDE REACH</h1>
+        <p> Our Extensive Network Of International Partners And Highly Skilled Personnel Ensures That No Matter Where You Are Located, We Can Deliver The Same High-Quality Security Services</p>
       </div>
     </div>
-  </div>
+</div>
 
   <!-------------------------------------- PRODUCT CAROUSEL --------------------------------------------------->
 
@@ -356,7 +345,7 @@
   <h3 style="border-bottom: 0.2rem solid maroon; background-color: black;"
     class="text-light mt-5 pb-5 fs-1 text-center">BLOGS</h3>
   <div class="Blogs justify-content-around mb-5">
-    <div style="border-right: 2px solid maroon" class=" blog-1 px-5 text-center text-light mt-5">
+    <div class=" blog-1 px-5 text-center text-light mt-5">
       <img class="mb-3"
         src="https://cdnb.artstation.com/p/assets/images/images/034/890/181/4k/andrei-popescu-357-s-w-magnum-357-s-w-magnum.jpg?1613514909"
         height="150rem">
@@ -365,7 +354,7 @@
       <h3>5th March 2024</h3>
       <a href="#" style="text-decoration: none; margin-top: 5rem; cursor:pointer ;">Read More ...</a>
     </div>
-    <div style="border-right: 2px solid maroon" class="blog-2 px-5 text-center text-light mt-5">
+    <div class="blog-2 px-5 text-center text-light mt-5">
       <img class="mb-3" src="https://img.freepik.com/free-photo/close-up-man-writing-paper_23-2148377689.jpg" height="150rem">
       <h1>Impacts Of Security Consultancy</h1>
       <h2>By <i>EK_VILLAIN</i></h2>

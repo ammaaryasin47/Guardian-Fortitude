@@ -71,6 +71,7 @@
 
             <!-- Sidenav For Mobile -->
             <nav id="sidenav-1" data-mdb-sidenav-init class="sidenav" data-mdb-hidden="true">
+            <i id="close-sidenav" style="padding:1.5rem 1.5rem;" class='text-light fs-1 bx bx-x'></i>
                 <ul style=" list-style-type: none;" class="mt-5 sidenav-menu">
                     <a><img class="logo02" src="../IMAGES/HOME/Logo.png" height="50px"></a>
                     <!-- LOGO -->
@@ -319,7 +320,7 @@
                             Scenario, We Prioritize The Safety Of Our Clients And Their Assets.
                         </p>
                         <img class="weprovideimg"
-                            src="https://i.pinimg.com/564x/6d/1b/d4/6d1bd41c703b0b17fbf11a421861d497.jpg">
+                            src="https://images.pond5.com/shot-field-black-hawk-helicopter-footage-052701827_iconl.jpeg">
                     </div>
                 </div>
             </li>
@@ -411,26 +412,25 @@
         <h1 class="fs-1 text-light mt-5 pt-5 pb-2 user-heading">USER INFORMATION</h1>
     </div>
 
-    <div class="d-flex justify-content-between text-light ps-5" style="height: 50vh;">
-        <div class="leftdiv d-flex flex-column align-items-center position-relative">
-            <!-- Name label and input -->
-            <h5 id="name-label" class="fs-5 transition-effect">NAME</h5>
-            <input id="nameinput" type="text" placeholder="NAME" class="fs-2">
-
-            <!-- Contact label and input -->
-            <h5 id="contact-label" class="fs-5 mt-4 transition-effect">CONTACT</h5>
-            <input id="contactinput" type="number" placeholder="CONTACT" class="fs-2 mt-3"
-                style="color: #fff; background: transparent; outline: none; text-align: center;">
+    <div class="form-container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <div class="input-container">
+                <input id="nameinput" type="text" placeholder="NAME" class="text-light maroon-input">
+            </div>
+            <div class="input-container">
+                <input id="contactinput" type="number" placeholder="CONTACT" class="text-light maroon-input">
+            </div>
         </div>
 
-        <div class="rightdiv d-flex flex-column align-items-center position-relative">
-            <!-- Zip label and input -->
-            <h5 id="zip-label" class="fs-5 transition-effect">ZIP</h5>
-            <input id="zipinput" type="text" placeholder="ZIP" class="fs-2">
-
-            <!-- Location label and input -->
-            <h5 id="location-label" class="fs-5 mt-4 transition-effect">LOCATION</h5>
-            <input id="locationinput" type="text" placeholder="LOCATION" class="fs-2 mt-5">
+        <!-- Right Column -->
+        <div class="right-column">
+            <div class="input-container">
+                <input id="zipinput" type="number" placeholder="ZIP" class="text-light maroon-input">
+            </div>
+            <div class="input-container">
+                <input id="locationinput" type="text" placeholder="LOCATION" class="text-light maroon-input">
+            </div>
         </div>
     </div>
 

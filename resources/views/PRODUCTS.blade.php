@@ -70,6 +70,7 @@
 
             <!-- Sidenav For Mobile -->
             <nav id="sidenav-1" data-mdb-sidenav-init class="sidenav" data-mdb-hidden="true">
+            <i id="close-sidenav" style="padding:1.5rem 1.5rem;" class='text-light fs-1 bx bx-x'></i>
                 <ul style=" list-style-type: none;" class="mt-5 sidenav-menu">
                     <a><img class="logo02" src="../IMAGES/HOME/Logo.png" height="50px"></a>
                     <!-- LOGO -->
@@ -196,12 +197,12 @@
     <!------------------------------------------------------------ BANNER ---------------------------------------------------------->
 
     <div class="products-banner">
-        <img src="../IMAGES/PRODUCTS/Products-Banner.jpg" class="w-100 object-fit-contain">
+        <img src="../IMAGES/PRODUCTS/Products-Banner.jpg" class="object-fit-contain">
         <h1 class="text-light">PRODUCTS</h1>
     </div>
 
     <div class="cardscontainer">
-        <div class="row">
+        <div class="cardsrow">
             <div class="col-xs-12 col-sm-12 col-md-4">
                 <div class="card">
                     <div class="image-box card1">

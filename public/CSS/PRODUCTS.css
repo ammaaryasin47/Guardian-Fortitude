@@ -26,6 +26,7 @@ html {
 }
 
 .products-banner img {
+    width: 100%;
     overflow: hidden;
     height: 30rem;
     filter: blur(2px);
@@ -46,7 +47,7 @@ html {
 }
 
 /*---- Card ----*/
-.row {
+.cardsrow {
     width: 100%;
     overflow-x: hidden;
     display: flex;
@@ -269,8 +270,15 @@ html {
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 992px) {
+    .cardsrow{
+        width: initial;
+    }
 
+    .products-banner img {
+        width: -webkit-fill-available;
+        overflow: hidden;
+    }
     .products-banner h1 {
         transform: translateY(-277%);
         text-align: right;

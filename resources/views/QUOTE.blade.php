@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACT US</title>
+    <title>guardianforitude.com</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- BOOTSTRAP CDN -->
@@ -78,6 +78,7 @@
 
             <!-- Sidenav For Mobile -->
             <nav id="sidenav-1" data-mdb-sidenav-init class="sidenav" data-mdb-hidden="true">
+            <i id="close-sidenav" style="padding:1.5rem 1.5rem;" class='text-light fs-1 bx bx-x'></i>
                 <ul style=" list-style-type: none;" class="mt-5 sidenav-menu">
                     <a><img class="logo02" src="../IMAGES/HOME/Logo.png" height="50px"></a>
                     <!-- LOGO -->

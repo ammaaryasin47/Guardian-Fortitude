@@ -27,6 +27,7 @@
 
             <!-- Sidenav For Mobile -->
             <nav id="sidenav-1" data-mdb-sidenav-init class="sidenav" data-mdb-hidden="true">
+            <i id="close-sidenav" style="padding:1.5rem 1.5rem;" class='text-light fs-1 bx bx-x'></i>
                 <ul style=" list-style-type: none;" class="mt-5 sidenav-menu">
                     <a><img class="logo02" src="../../IMAGES/HOME/Logo.png" height="50px"></a>
                     <!-- LOGO -->

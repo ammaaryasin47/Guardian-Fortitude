@@ -85,6 +85,9 @@ html {
     color: inherit;
 }   
 
+.blog-1,.blog-2{
+    border-right: 2px solid maroon;
+}
 .Blogs{
     letter-spacing: 1px;
     display: flex;
@@ -96,7 +99,16 @@ html {
 /*<------------------------------------------------------ MEDIA QUERY ---------------------------------------------->*/
 
 /* FOR PHONES */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 992px) {
+    .divtop, .divbottom {
+        flex-direction: column; /* Stack the divs vertically */
+        align-items: center; /* Center align the divs */
+        padding:10rem 0rem;
+    }
+
+    .divbottom{
+        padding-top:10rem;
+    }
 
     .NamePlate h1 {
         top: 10rem;
@@ -108,19 +120,13 @@ html {
         height: 35rem;
     }
 
-    .divtop h1,
-    .divbottom h2 {
-        font-size: 1.5rem;
-    }
-
     .divtop p,
     .divbottom p {
         font-size: 1.5rem;
+        padding: 0 4rem;
     }
-}
 
-/* For Desktops */
-@media only screen and (min-width: 1024px) {
-
-
+    .blog-1,.blog-2{
+        border-right:none;
+    }
 }

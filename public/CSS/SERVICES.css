@@ -44,7 +44,7 @@ html {
 }
 
 .dropdown-open .dropdown-content {
-    max-height: 200px;
+    max-height: 500px;
     opacity: 1;
     padding: 1rem;
 }
@@ -86,7 +86,7 @@ html {
 .weprovideimg {
     border: 1px solid grey;
     border-radius: 2rem;
-    height: 15rem;
+    height:min-content;
 }
 
 .weprovidelogo {
@@ -96,7 +96,7 @@ html {
     height: 4rem;
 }
 
-.heading-container {
+/* .heading-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,7 +148,7 @@ input {
 .rightdiv input {
     margin-top: 40px;
 
-}
+}*/
 
 #contact-label,
 #location-label {
@@ -156,6 +156,57 @@ input {
 
 }
 
+/* Form container to hold both columns */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Left and right columns */
+.left-column,
+.right-column {
+    width: 48%; /* Slightly less than 50% to allow space between columns */
+}
+
+/* Container for each input */
+.input-container {
+    margin-bottom: 20px; /* Space between inputs */
+}
+
+/* Base style for the input */
+.maroon-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Style when the input is focused */
+.maroon-input:focus {
+    border-color: darkred;
+    border-width: 2px;
+    padding: 12px;
+}
+
+/* Hide placeholder on focus */
+.maroon-input:focus::placeholder {
+    opacity: 0;
+}
+
+/* Remove number input arrows */
+.maroon-input[type="number"]::-webkit-outer-spin-button,
+.maroon-input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 /* <---------------------------------------------------- CHOOSE SERVICE ------------------------------------------------------------------>*/
 .radio-container {
@@ -218,13 +269,36 @@ label {
     background-color: rgb(65, 64, 64);
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 992px) {
+    .form-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-column,
+    .right-column {
+        flex-direction: row;
+        width: 50%; /* Ensure columns take up 50% of the screen */
+    }
 
+    .maroon-input {
+        width: 100%; /* Inputs take up 100% of their column width */
+        transition: none; /* Remove any width transitions */
+    }
+
+    .maroon-input:focus {
+        width: 100%; /* Ensure width remains 100% on focus */
+    }
+
+    /* Adjust other styles as needed */
     .service-banner h1 {
         transform: translateY(-277%);
         text-align: right;
         padding-right: 15rem;
         font-size: 3rem;
+    }
+
+    .products-banner img{
+        width: max-content;
     }
 
     .weprovide ul li h2 {
@@ -237,16 +311,18 @@ label {
     }
 
     .dropdown-open .dropdown-content {
-        max-height: 15rem;
+        max-height: fit-content;
     }
 
     .dropdown-content div p {
-        font-size: 0.5rem;
+        font-size: 0.4rem;
         width: 30rem;
+        display: none;
     }
 
     .weprovideimg {
-        height: 6rem;
+        height: auto;
+        width: 100%;
     }
 
     .service-banner img {

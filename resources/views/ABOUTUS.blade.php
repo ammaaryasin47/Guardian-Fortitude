@@ -70,6 +70,7 @@
 
         <!-- Sidenav For Mobile -->
         <nav id="sidenav-1" data-mdb-sidenav-init class="sidenav" data-mdb-hidden="true">
+        <i id="close-sidenav" style="padding:1.5rem 1.5rem;" class='text-light fs-1 bx bx-x'></i>
             <ul style=" list-style-type: none;" class="mt-5 sidenav-menu">
                 <a><img class="logo02" src="../IMAGES/HOME/Logo.png" height="50px"></a>
                 <!-- LOGO -->
@@ -123,8 +124,30 @@
                     <a href="{{URL::to('/login')}}" class="sidenav-link">LOGIN</a>
                 </li>
                 @endauth
-            </ul>
-        </nav>
+                <div class="mt-5">
+                        <div class="fs-2 mb-5">
+                            <li class=" pe-3 border-light align-items-center"
+                                style="border-right: 1px dotted #fff;">
+                                <i class='bx bx-envelope ='></i>
+                                guardianfortitudeservice@gmail.com
+                            </li>
+                            <li class="fs-2 pe-3 border-light align-items-center"
+                                style="border-right: 1px dotted #fff;"> <i class='bx bx-phone-call'></i>
+                                +91 1234567890</li>
+                            <li class="fs-2"><i class='bx bx-map'></i> Ahemdabad , India</li>
+                        </div>
+
+                        <li class="sidenav-item d-flex justify-content-between">
+                            <ul style="list-style-type: none;" class="justify-content-between d-flex flex-column">
+                                <li><i class='bx bxl-meta'></i></li>
+                                <li><i class='bx bxl-linkedin'></i></li>
+                                <li><i class='bx bxl-github'></i></li>
+                                <li><i class='bx bxl-instagram'></i></li>
+                            </ul>
+                        </li>
+                    </div>
+                </ul>
+            </nav>
 
         <ul style="cursor: pointer;"
                 class="navbtnul justify-content-end align-items-center list-unstyled gap-3 ms-auto d-flex pe-3 fs-2">
@@ -228,7 +251,7 @@
 
     <div class="profile-card-wrapper d-flex w-100">
         <div class="profile-card-2"
-            style="background-image: url('https://i.pinimg.com/enabled/564x/3c/ee/b2/3ceeb2bbf5f06a8d847bc40a0f95c39d.jpg');">
+            style="background-image: url('https://i.pinimg.com/564x/cb/13/b7/cb13b751d146415931fbd9f883f2bc10.jpg');">
             <div class="profile-name">SUPPЯESSOЯ</div>
             <div class="profile-username">BRAND AMBASSADOR</div>
             <div class="fs-2 profile-icons">
@@ -240,7 +263,7 @@
         </div>
 
         <div class="profile-card-2"
-            style="background-image: url('https://i.pinimg.com/564x/cb/13/b7/cb13b751d146415931fbd9f883f2bc10.jpg');">
+            style="background-image: url('https://i.pinimg.com/enabled/564x/3c/ee/b2/3ceeb2bbf5f06a8d847bc40a0f95c39d.jpg');">
             <div class="profile-name">EK_VILLAIN</div>
             <div class="profile-username">OWNER</div>
             <div class="fs-2 profile-icons">
@@ -252,7 +275,7 @@
         </div>
 
         <div class="profile-card-2"
-            style="background-image: url('https://i.pinimg.com/736x/f6/47/73/f64773ae9b1e8d3e2e1e34bc6932b243.jpg');">
+            style="background-image: url('https://i.pinimg.com/736x/5b/98/89/5b9889b63f5bd3d5aca5e2e89911935c.jpg');">
             <div class="profile-name">H3CT0R</div>
             <div class="profile-username">ASSOCIATE</div>
             <div class="fs-2 profile-icons">

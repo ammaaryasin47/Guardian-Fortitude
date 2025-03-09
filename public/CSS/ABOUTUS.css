@@ -153,7 +153,7 @@ html {
 .left-arrow {
     position: absolute;
     height: 0;
-    width: 9;
+    width: 9px;
     top: 28px;
     z-index: 1;
     border-top: 15px solid transparent;
@@ -205,7 +205,7 @@ html {
 
 /*<--------------------------------------------- RESPONSIVE ---------------------------------------------->*/
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 992px) {
 
     .about-banner img {
         height: 15rem;
@@ -222,6 +222,7 @@ html {
     }
 
     .goals {
+        justify-content:center;
         flex-direction: column;
     }
 
@@ -244,12 +245,16 @@ html {
 
     .profile-card-2 {
         max-width: 100%;
-        /* Full width for smaller screens */
-        margin: 10px 0;
+        margin: 10px 20px;
     }
 
-    .card-timeline{
+    /* .card-timeline{
         width: 8rem;
+    }
+
+    .card-timeline img {
+        right: -165px;
+        top:20px;
     }
 
     .card-title{
@@ -277,6 +282,64 @@ html {
     }
 
     .clients img{
-        height: 45rem;
+        height: 55rem;
+    } */
+    .timeline-row h2 {
+        font-size: 2rem;
+        padding-bottom: 5rem;
+        padding-left: 1rem;
+    }
+
+    .leftBox, .rightBox {
+        left: 0;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .card-timeline {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .card-timeline img {
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    .left-arrow, .right-arrow {
+        display: none;
+    }
+
+    .whiteLine::after {
+        background: none;
+        left: 10%;
+        margin-left: 0;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .card-text {
+        font-size: 1rem;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .left-arrow {
+        position: absolute;
+        height: 0;
+        width: 9px;
+        top: 28px;
+        z-index: 1;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 1px solid #fff;
+        right: -75px;
+    }
+
+    .card-timeline img {
+        right: -115px;
     }
 }
