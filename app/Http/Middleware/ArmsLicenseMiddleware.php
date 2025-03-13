@@ -10,8 +10,8 @@ class ArmsLicenseMiddleware
 {
     public function handle(Request $request, Closure $next)
     {
-        // Check if user is logged in and if armsliscence is NULL
-        if (Auth::check() && Auth::user()->armsliscence == null) {
+        // Check if the user is logged in and has an arms license
+        if (Auth::check() && Auth::user()->armsliscence != null) {
             return $next($request); // Allow access
         }
 

@@ -112,8 +112,11 @@ html {
     background-color: #C0392B;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 992px) {
 
+    .content .fs-5{
+        display: none;
+    }
     .books-banner h1 {
         top: 35%;
         font-size: 7em;

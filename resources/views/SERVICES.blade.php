@@ -539,6 +539,69 @@
 });
 
 </script>
+<script>
+    const locationInput = document.getElementById('locationinput');
+
+    locationInput.addEventListener('click', () => {
+        if (navigator.geolocation) {
+            // Show a loading indicator (optional)
+            locationInput.placeholder = 'Fetching location...';
+
+            // Request the user's location
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+
+                    // Perform reverse geocoding
+                    reverseGeocode(latitude, longitude);
+                },
+                (error) => {
+                    console.error('Error getting location:', error);
+                    alert('Unable to retrieve your location. Please enter it manually.');
+                    locationInput.placeholder = 'LOCATION'; // Reset placeholder
+                },
+                {
+                    enableHighAccuracy: true, // Request high accuracy
+                    timeout: 5000, // Timeout after 5 seconds
+                    maximumAge: 0 // Do not use cached location
+                }
+            );
+        } else {
+            alert('Your browser does not support location access. Please enter your location manually.');
+        }
+    });
+
+    function reverseGeocode(latitude, longitude) {
+        const apiKey = '16d7f22b808e4c41a0d2e0632bb70c7c'; // Replace with your Geoapify API key
+        const apiUrl = `https://api.geoapify.com/v1/geocode/reverse?lat=${latitude}&lon=${longitude}&apiKey=${apiKey}`;
+
+        fetch(apiUrl)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`API error: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then((data) => {
+                if (data.features && data.features.length > 0) {
+                    // Extract the formatted address
+                    const address = data.features[0].properties.formatted;
+                    // Fill the location input field with the address
+                    locationInput.value = address;
+                } else {
+                    alert('No address found for your location. Please enter it manually.');
+                }
+            })
+            .catch((error) => {
+                console.error('Error fetching address:', error);
+                alert('Failed to retrieve your address. Please enter it manually.');
+            })
+            .finally(() => {
+                locationInput.placeholder = 'LOCATION'; // Reset placeholder
+            });
+    }
+</script>
     <script src="../JS/SERVICES.js"></script>
     <script src="../JS/navbar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>

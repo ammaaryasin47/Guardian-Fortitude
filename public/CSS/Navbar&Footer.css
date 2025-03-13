@@ -30,9 +30,13 @@
     align-items: center;
 }
 
+ul.fs-4.list-unstyled.d-flex {
+    margin-top: 1rem;
+}
+
 .sidenav {
     border-left: 3px solid maroon;
-    width: 100%;
+    width: 75%;
     height: 100%;
     position: fixed;
     top: 0;
@@ -55,7 +59,7 @@
 }
 
 .sidenav .sidenav-link:hover {
-    background-color: #575757;
+    background-color: grey;
 }
 
 .sidenav .sidenav-item .sidenav-collapse {
@@ -71,7 +75,6 @@
 
 .hamburger-icon {
     display: none;
-    /* Hidden by default */
     cursor: pointer;
 }
 
@@ -79,6 +82,16 @@
     order: 2;
 }
 
+.logo-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.bx-envelope{
+    top: 3px;
+    position: relative;
+}
 /*<------------------------------------------------- SCROLLBAR ----------------------------------------------->*/
 
 ::-webkit-scrollbar {
@@ -306,12 +319,19 @@ hr {
 
 @media only screen and (max-width: 992px) {
 
+    .sidenav-item{
+        padding-right: 2rem;
+        border-bottom: 2px solid grey;
+        text-align: right;
+    }
+
     .logo01 {
         display: none;
     }
 
     .logo02 {
-        padding:0 1.5rem;
+        height: 100px;
+        padding: 1rem 1.5rem;
         font-size: 5rem;
         display: block;
         position: relative;
@@ -374,6 +394,11 @@ hr {
     .footer-form {
         align-items: center;
         justify-content: center;
+    }
+
+    .footer-form .bxs-envelope,
+    .footer-form .bxs-arrow-from-left {
+        font-size: 2.5rem !important;
     }
 
     .footer-form input {

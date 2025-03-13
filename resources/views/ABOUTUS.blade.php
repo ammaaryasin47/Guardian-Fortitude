@@ -404,26 +404,26 @@
 
     <div class="accredation row mt-5">
         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+            <img src="https://marketplace.canva.com/EAFK9uOYOsE/1/0/1600w/canva-black-gold-elegant-certificate-of-appreciation-lr5R15shSos.jpg"
                 class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
 
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
+            <img src="https://cdn.prod.website-files.com/5f51ff346f381e4105e072c5/6256bd164c7ad72cc1f41f52_badge-preview%20(46).png"
                 class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" />
         </div>
 
         <div class="col-lg-4 mb-4 mb-lg-0">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
+            <img src="https://docsandslides.com/wp-content/uploads/2023/08/Certificate-Of-Authenticity-Template.webp"
                 class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds" />
 
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+            <img src="https://img.freepik.com/premium-vector/premium-certificate-template-with-luxury-elegant-gold-black-curves-black-background_691616-298.jpg"
                 class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
         </div>
 
         <div class="col-lg-4 mb-4 mb-lg-0">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+            <img src="https://img.freepik.com/free-vector/luxury-ornamental-certificate-template-black-gold_53876-116393.jpg"
                 class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
 
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+            <img src="https://cdn.prod.website-files.com/5f51ff346f381e4105e072c5/6256bd164c7ad72cc1f41f52_badge-preview%20(46).png"
                 class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
         </div>
     </div>

@@ -19,7 +19,7 @@ class User extends Authenticatable
     protected $keyType = 'string';
 
     protected $fillable = [
-        'user_id', // Include user_id in fillable
+        'user_id',
         'name',
         'picture',
         'countrycode',

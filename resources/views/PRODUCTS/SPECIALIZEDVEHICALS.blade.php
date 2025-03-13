@@ -162,9 +162,6 @@
 	<section class="section-products">
 		<div class="container">
 			<div class="row justify-content-center text-center">
-				<div class="col-md-8 col-lg-6">
-					<h2 class="text-light">Luxury Section</h2>
-				</div>
 			</div>
 			<div class="row">
 				<!-- Single Product -->
@@ -292,7 +289,7 @@
 									<a href="#" class="expand-button" data-bs-toggle="modal"
 										data-bs-target="#productModal" data-title="ARMORED Toyota Land Cruiser 300"
 										data-price="$350,000"
-										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Toyota-Land-Cruiser-300.webp"
+										data-image="https://drive.google.com/file/d/1KpVLaImnUFcPOBZNlV1D26VtRrFdSsBz/view?usp=sharing"
 										data-category="Luxury">
 										<i class="fas fa-expand"></i>
 									</a>
@@ -629,9 +626,6 @@
 							<section class="section-products">
 								<div class="container">
 									<div class="row justify-content-center text-center">
-										<div class="col-md-8 col-lg-6">
-											<h2 class="text-light">Light Armored Vehicles</h2>
-										</div>
 									</div>
 									<div class="row">
 										<!-- Single Product -->
@@ -1346,7 +1340,7 @@
 										},
 										error: function (xhr, status, error) {
 											console.error("Error adding product:", xhr.responseText);
-											alert("Error adding product: " + xhr.responseText);
+											alert("Error adding product: User Must Be Logged In");
 										}
 									});
 								});

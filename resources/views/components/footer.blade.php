@@ -59,8 +59,7 @@
     <hr>
 
     <p style="font-family: 'Barlow',sans-serif;" class="copyright">Guardian Fortitude Security Services &copy; 2024
-      -
-      All Rights Reserved</p>
+    <br>- All Rights Reserved</p>
     <p style="font-family: 'Barlow',sans-serif;" class="copyright">Guardian Fortitude Security Services Is A
       Registered
       Trademark Under The D-Fuzer
