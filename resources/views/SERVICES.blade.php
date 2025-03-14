@@ -135,7 +135,7 @@
                             <li class=" fs-5 pe-3 border-light align-items-center"
                                 style="border-right: 1px dotted #fff;">
                                 <i class='bx bx-envelope'></i>
-                                guardianfortitude<p>service@gmail.com</p>
+                                guardianfortitudeservice<br>@gmail.com
                             </li>
                             <li class="fs-5 pe-3 border-light align-items-center"
                                 style="border-right: 1px dotted #fff;"> <i class='bx bx-phone-call'></i>

@@ -130,11 +130,15 @@ Route::post('/admin/subscription/update/{userId}', [AdminSubscriptionController:
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/items', [ProductController::class, 'index']); // Change /products to /items
-Route::get('/items/{id}', [ProductController::class, 'show']); // Change /products/{id} to /items/{id}
-Route::post('/items', [ProductController::class, 'store']); // Change /products to /items
+Route::get('/items', [ProductController::class, 'index']);
+Route::get('/items/{id}', [ProductController::class, 'show']); 
+Route::post('/items', [ProductController::class, 'store']); 
 
 Route::post('/submit-service', [ServiceController::class, 'submit'])->name('service.submit');
 Route::get('/debug-session', function () {
     dd(session()->all());
+});
+
+Route::get('/paymentcomplete', function () {
+    return view('paymentcomplete');
 });

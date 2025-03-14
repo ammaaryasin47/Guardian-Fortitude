@@ -129,7 +129,7 @@
                             <li class=" pe-3 border-light align-items-center"
                                 style="border-right: 1px dotted #fff;">
                                 <i class='bx bx-envelope ='></i>
-                                guardianfortitudeservice@gmail.com
+                                guardianfortitudeservice<br>@gmail.com
                             </li>
                             <li class="fs-2 pe-3 border-light align-items-center"
                                 style="border-right: 1px dotted #fff;"> <i class='bx bx-phone-call'></i>

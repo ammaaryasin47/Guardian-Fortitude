@@ -1,48 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACT US</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- BOOTSTRAP CDN -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- BOXICONS CDN -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="../CSS/Navbar&Footer.css" rel="stylesheet">
-    <script>
-     window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    const content = document.getElementById('content');
-
-    // Hide the preloader
-    preloader.classList.add('hidden');
-
-    // Show the main content after a delay
-    setTimeout(() => {
-      preloader.style.display = 'none';
-      content.style.display = 'block';
-    }, 5000); // Match the transition duration
-    });
-    </script>
-    <link href="../CSS/CONTACTUS.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <!---- FAVICONS ---->
+    <title>guardianfortitude.com</title>
+    <link href="../CSS/ABOUTUS.css" rel="stylesheet">
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/favicon-16x16.png" type="image/x-icon">
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/favicon-32x32.png" type="image/png">
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/android-chrome-192x192.png" type="image/svg+xml">
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/android-chrome-512x512.png" type="image/svg+xml">
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/apple-touch-icon.png" type="image/svg+xml">
+    <style>
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000; /* Black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 9999; /* Ensure it's on top of everything */
+        }
+
+        /* Professional rotating circle animation */
+        .loader {
+            border: 4px solid rgba(255, 255, 255, 0.3); /* Light grey border */
+            border-top: 4px solid maroon; /* Maroon color */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1.5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Loading text */
+        .loading-text {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #fff;
+            font-family: 'Barlow', sans-serif;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* Hide preloader when loaded */
+        #preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        /* Page Content Styles */
+        #page-content {
+            display: none; /* Hide content initially */
+        }
+
+        .links{
+            color:#fff;
+            text-decoration: none;
+        }
+
+        .links:hover{
+            color: maroon;
+        }
+    </style>
+    <script>
+        // Wait for the page to fully load
+        window.addEventListener('load', function () {
+            // Simulate a loading delay (replace this with your actual loading logic)
+            setTimeout(function () {
+                // Add the 'hidden' class to the preloader for the fade-out effect
+                document.getElementById('preloader').classList.add('hidden');
+
+                // Show the page content
+                document.getElementById('page-content').style.display = 'block';
+            }, 3000); // 3-second delay for demonstration
+        });
+    </script>
 </head>
-
 <body>
-
+    <!-- Preloader -->
     <div id="preloader">
-      <img src="../IMAGES/HOME/Logo.png" alt="Loading...">
+        <div class="loader"></div>
+        <div class="loading-text">Payment Processing...</div>
     </div>
 
-    <!--------------------------------------------- NAVBAR ----------------------------------------------------->
-    <nav style="background-color: black; position:sticky; top: 0; z-index: 10;" class=" text-light w-100">
+    <!-- Page Content -->
+    <div id="page-content">
+        <!-- Your Navbar and Page Content Here -->
+        <nav style="background-color: black; position:sticky !important; top: 0; z-index: 10;" class=" text-light w-100">
         <div class="uppernav">
             <ul style="cursor:default;" class="fs-4 list-unstyled gap-5 d-flex ps-3 ">
                 <li class="pe-3 border-light align-items-center" style="border-right: 1px dotted #fff;"> <i
@@ -61,7 +119,7 @@
             </ul>
         </div>
         <ul class="fs-4 list-unstyled d-flex">
-            <a><img class="logo01" src="../IMAGES/HOME/Logo.png" height="50px"></a>
+            <a><img class="logo01" src="../../IMAGES/HOME/Logo.png" height="50px"></a>
             <!-- LOGO -->
 
             <div class="fs-1 hamburger-icon">
@@ -71,9 +129,8 @@
 
             <!-- Sidenav For Mobile -->
             <nav id="sidenav-1" data-mdb-sidenav-init class="sidenav" data-mdb-hidden="true">
-            <i id="close-sidenav" style="padding:1.5rem 1.5rem;" class='text-light fs-1 bx bx-x'></i>
                 <ul style=" list-style-type: none;" class="mt-5 sidenav-menu">
-                    <a><img class="logo02" src="../IMAGES/HOME/Logo.png" height="50px"></a>
+                    <a><img class="logo02" src="../../IMAGES/HOME/Logo.png" height="50px"></a>
                     <!-- LOGO -->
 
                     <li class="sidenav-item">
@@ -105,15 +162,15 @@
                             <span>QUOTE</span></a>
                     </li>
 
-                     <!-- Conditional Login/Profile Picture -->
+                    <!-- Conditional Login/Profile Picture -->
                 @auth
 <li class="sidenav-item dropdown">
     <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
-    <img 
-                    src="{{ Auth::user()->picture ? asset(Auth::user()->picture) : asset('default-profile.png') }}" 
-                    alt="Profile Picture" 
-                    class="rounded-circle" 
-                    height="40px">
+        <img 
+            src="{{ Auth::user()->profile_picture ? asset('storage/' . Auth::user()->profile_picture) : asset('default-profile.png') }}" 
+            alt="Profile Picture" 
+            class="rounded-circle" 
+            height="40px">
     </a>
     <ul class="fs-2 dropdown-menu">
         <li><a class="dropdown-item" href="{{ route('profile.edit') }}">PROFILE</a></li>
@@ -136,7 +193,7 @@
                             <li class=" fs-5 pe-3 border-light align-items-center"
                                 style="border-right: 1px dotted #fff;">
                                 <i class='bx bx-envelope'></i>
-                                guardianfortitudeservice<br>@gmail.com
+                                guardianfortitude<p>service@gmail.com</p>
                             </li>
                             <li class="fs-5 pe-3 border-light align-items-center"
                                 style="border-right: 1px dotted #fff;"> <i class='bx bx-phone-call'></i>
@@ -162,14 +219,14 @@
                 <li><a href="{{URL::to('/aboutus')}}">ABOUT US</a></li>
                 <li><a href="{{URL::to('/services')}}">SERVICES</a></li>
                 <li><a href="{{URL::to('/products')}}">PRODUCTS</a></li>
-                <li><a style="color: maroon; font-weight: 500;" href="{{URL::to('/contactus')}}">CONTACT US</a></li>
+                <li><a href="{{URL::to('/contactus')}}">CONTACT US</a></li>
                 <li><a href="{{URL::to('/quote')}}">QUOTE</a></li>
-                <!-- Conditional Login/Profile Picture -->
+                 <!-- Conditional Login/Profile Picture -->
             @auth
             <li class="nav-item dropdown">
                 <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
-                <img 
-                    src="{{ Auth::user()->picture ? asset(Auth::user()->picture) : asset('default-profile.png') }}" 
+                    <img 
+                    src="{{ Auth::user()->profile_picture ?? asset('default-profile.png') }}" 
                     alt="Profile Picture" 
                     class="rounded-circle" 
                     height="40px">
@@ -195,68 +252,27 @@
         </ul>
     </nav>
 
-    <!------------------------------------------ BANNER -------------------------------------------->
-    <div class="contactus-banner">
-        <img src="../IMAGES/CONTACT US/CONTACTUS-Banner.png" class="w-100 object-fit-contain">
-        <h1 class="text-light">CONTACT US</h1>
-    </div>
-
-    <!--------------------------------------- CONTACT US -------------------------------------------------->
-
-    <div class="contactus d-flex justify-content-around">
-        <div class="address d-flex flex-column text-light text-center">
-            <i style="font-size: 6rem;" class='pb-3 px-5 bx bx-map'></i>
-            <h3>Ahemdabad , Gujarat India</h3>
+        <div class="text-light text-center">
+            <a><img class="logo01" src="../IMAGES/HOME/Logo.png" height="120px" style="margin-top: 14rem; margin-bottom: 2rem;"></a>
+            <h1>THANK YOU FOR KEEPING PATIENCE ...</h1>
+            <h2>YOUR ORDER HAS BEEN PLACED !</h2>
+            <h2>CONTACT US REGARDING ANY QUERIES</h2>
+            <br>
+            <div class="text-center w-100">
+                <p class="fs-2"><a class="links" href="{{URL::to('/contactus')}}">CONTACT US</a></p>
+                <h1 class="fs-2"><a class="links" href="{{URL::to('/products')}}">CONTINUE SHOPPING</a></h1>
+            </div>
         </div>
-        <div class="email d-flex flex-column text-light text-center">
-            <i style="font-size: 6rem;" class='pb-3 px-5 bx bx-envelope'></i>
-            <h3>guardianfortitudeservice@gmail.com</h3>
-        </div>
-        <div class="phone d-flex flex-column text-light text-center">
-            <i style="font-size: 6rem;" class='pb-3 px-5 bx bx-phone'></i>
-            <h3>+91 123456789</h3>
+
+        <div class="position-relative">
+            <x-footer />
         </div>
     </div>
 
-    <!----------------------------------------- MAP --------------------------------------------------->
-    <div class="mapandform d-flex mt-5 ">
-        <div class="m-5" id="map"></div>
-
-        <div class="contactform text-light w-100">
-            <h2 class="fs-1 text-center">CONTACT FORM</h2>
-
-            <h4 class="mt-5 fs-3 text-left pb-3">NAME</h4>
-            <input
-                style="color: #fff; font-size: 2rem; width: 70%; height: 2rem; border:none; border-bottom: 1px solid grey; background: transparent; outline: none;"
-                type="text" name="contactus">
-
-            <h4 class="mt-5 fs-3 text-left pb-3">CONTACT</h4>
-            <input
-                style="color: #fff; font-size: 2rem; width: 70%; height: 2rem; border:none; border-bottom: 1px solid grey; background: transparent; outline: none;"
-                type="text" name="contactus">
-
-            <h4 class="mt-5 fs-3 text-left pb-3">EMAIL ID</h4>
-            <input
-                style="color: #fff; font-size: 2rem; width: 70%; height: 2rem; border:none; border-bottom: 1px solid grey; background: transparent; outline: none;"
-                type="text" name="contactus">
-
-            <h4 class="mt-5 fs-3 text-left pb-3">MESSAGE</h4>
-            <input
-                style=" color: #fff; font-size: 2rem; width: 70%; height: 5rem; border:none; border-bottom: 1px solid grey; background: transparent; outline: none;"
-                type="text" name="contactus">
-
-        </div>
-    </div>
-    <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
-    <x-footer />
-
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="../JS/CONTACTUS.js"></script>
-    <script src="../JS/navbar.js"></script>
+    <script src="../JS/navbar.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script> <!--BOOTSTRAP JS-->
+        crossorigin="anonymous"></script>
 </body>
-
 </html>

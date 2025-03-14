@@ -51,4 +51,9 @@ class PaymentController extends Controller
         return redirect()->back()->with('success', 'Payment processed successfully!');
     }
 
+    public function show()
+    {
+        return view('paymentcomplete'); // 'payment' is the name of your Blade file
+    }
+
 }

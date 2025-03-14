@@ -218,7 +218,7 @@
             TPR Impact Protection with Trigger Finger Relief</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-Gloves-IRONCLADEXO">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -233,7 +233,7 @@
             Embossed Patterning For Added Grip Where You Need It Most.</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-Gloves-M-PACT3">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -248,7 +248,7 @@
             Closure . Proprietary Camouflage Design</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-Gloves-IRONCLAD">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -267,7 +267,7 @@
             Permeability And Strong Impact Resistance .</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-Gloves-FANGIER">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -281,7 +281,7 @@
             Vibrations</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-Gloves-WOLF-TACTICAL">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -297,7 +297,7 @@
             Reinforcement</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-Gloves-IRONCLAD-EXO-OD-GREEN">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -316,7 +316,7 @@
             & Breathable Air Mesh Fabric</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-Gloves-VALKEN">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -332,7 +332,7 @@
             Dexterity For Shooting</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-Gloves-PINTY-SCOPES">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -348,7 +348,7 @@
             And Tear</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-Gloves-AIRSOFTCORE">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -377,7 +377,7 @@
             Outdoor Activities .</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-backpack-OREUNIK">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -393,7 +393,7 @@
             Capacity . Black Color And Breathable Cloth.</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-backpack-GSTATIC">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -409,7 +409,7 @@
             With Easy Access .</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-backpack-MEANBUY">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -428,7 +428,7 @@
             And Back Support .</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-backpack-FGEAR">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -444,7 +444,7 @@
             Gear Loops & Rain Covers .</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-backpack-WOLFTACTICAL">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -460,7 +460,7 @@
             Compartment And Quick-Access Front Pocket </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-backpack-WILDCRAFT">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -479,7 +479,7 @@
             Access Compartments</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-backpack-CVLIFE">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -496,7 +496,7 @@
             Compartment With Zip Closure</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-backpack-VANHEUSEN">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -512,7 +512,7 @@
             Essentials Dry </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-backpack-MODPAC">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -542,7 +542,7 @@
             Large Area Illumination.</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-flashlight-HORBAC">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -558,7 +558,7 @@
           </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-flashlight-PHILIPS">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -572,7 +572,7 @@
             SAUER® and possibly other type of firearm</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-flashlight-FELIX GL06">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -590,7 +590,7 @@
             power <br> Featuring an ultra-high intensity 44,300 candela </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-flashlight-FENIXGL19R">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -604,7 +604,7 @@
             tactical switch panel that allows easy and fast operation</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-flashlight-FENIXAER05">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -619,7 +619,7 @@
             of 3100 lumens <br> single 21700 rechargeable battery </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-flashlight-FENIXTK-16">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -638,7 +638,7 @@
           </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-flashlight-CVLIFE2000">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -652,7 +652,7 @@
             alloy <br> LED Tactical Flashlight has five modes</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-flashlight-TDT3000">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -667,7 +667,7 @@
             functionality <br> Compatible with Remington </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-flashlight-TL-RACKER">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -695,7 +695,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-paracord-ATWOOD550-WHITE">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -708,7 +708,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-paracord-ATWOOD550-OLIVE">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -723,7 +723,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-paracord-ATWOOD550-NEONGREEN">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -740,7 +740,7 @@
           <p class="product-card__description fs-4"> Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-paracord-ATWOOD550-YELLOW">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -754,7 +754,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-paracord-ATWOOD550-HELIKONTEX">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -767,7 +767,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-paracord-ATWOOD550-BLACK">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -783,7 +783,7 @@
           <p class="product-card__description fs-4"> Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-paracord-ATWOOD550-BLUE">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -797,7 +797,7 @@
           <p class="product-card__description fs-4"> Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-paracord-PARACORDBRACELET-OLIVE">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -811,7 +811,7 @@
           <p class="product-card__description fs-4"> Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-paracord-PARACORD BRACELET-BROWN">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -827,7 +827,7 @@
           <p class="product-card__description fs-4"> Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-paracord-PARACORDBRACELET-TAN">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -841,7 +841,7 @@
           <p class="product-card__description fs-4"> Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-paracord-PARACORDBRACELET-GREEN">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -855,7 +855,7 @@
           <p class="product-card__description fs-4">Stainless Steel <br> Heavy Duty <br> Stealth Black Color</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-paracord-PARACORDCLASP">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -882,7 +882,7 @@
           <p class="product-card__description fs-4">All Metal <br> Tough Material <br> Physical Buttons</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-radio-DIGI-LOGGER">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -897,7 +897,7 @@
           <p class="product-card__description fs-4">All Metal <br> Tough Material <br> Physical Buttons</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-radio-BARRETT">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -913,7 +913,7 @@
             retention system</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-radio-MANPACK">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -932,7 +932,7 @@
             attach to belt or to molle gear </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-radio-ANTON">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -947,7 +947,7 @@
             construction <br>Comfortable for any body type </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-radio-VHF">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -964,7 +964,7 @@
           </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-radio-SPERASOFT">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -982,7 +982,7 @@
           </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-radio-PRC-152">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -997,7 +997,7 @@
             material facilitate <br> </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-radio-PORTABLEVHF">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1013,7 +1013,7 @@
           </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-radio-PRC-148">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1041,7 +1041,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-magp-DUALPISTOL">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1054,7 +1054,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-magp-SINGLECARBINE">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1069,7 +1069,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-magp-TRIPLECARBINE">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1086,7 +1086,7 @@
           <p class="product-card__description fs-4"> Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-magp-ANGLEDMAGPOUCH">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1100,7 +1100,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-magp-CARBINE&PISTOLCOMBO">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1113,7 +1113,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-magp-TRIPLE">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1129,7 +1129,7 @@
           <p class="product-card__description fs-4"> Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-magp-SINGLEPISTOL">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1143,7 +1143,7 @@
           <p class="product-card__description fs-4"> Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-magp-SAWPOUCH">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1171,7 +1171,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-tacp-TASMANIANPOUCH">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1184,7 +1184,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-tacp-MAGFORCEPOUCH">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1199,7 +1199,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-tacp-WALMARTPOUCH">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1216,7 +1216,7 @@
           <p class="product-card__description fs-4"> Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-tacp-SINGAPOREPOUCH">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1230,7 +1230,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-tacp-MOLLEPOUCH">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1243,7 +1243,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-tacp-UBUYPOUCH">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1259,7 +1259,7 @@
           <p class="product-card__description fs-4"> Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-tacp-TACWRKPOUCH">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1273,7 +1273,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-tacp-URBANPOUCH">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1286,7 +1286,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-headset-WalkersXCEL-500BT">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1313,7 +1313,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-headset-WalkersXCEL-500BT">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1326,7 +1326,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-headset-SLEEK250">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1341,7 +1341,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-headset-TECHNINEEARPIECES">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1368,7 +1368,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-chemlight-CyalumeRedChemlight">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1381,7 +1381,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-chemlight-CyalumeGreenChemlight">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1396,7 +1396,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-chemlight-CyalumeBlueChemlight">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1422,7 +1422,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-merch-GuardianFortitudeCUP">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1435,7 +1435,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-merch-GuardianFortitudeTshirt01">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1450,7 +1450,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-merch-GuardianFortitudeTshirt02">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1467,7 +1467,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions </p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-merch-GuardianFortitudeTshirt02">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1480,7 +1480,7 @@
           <p class="product-card__description fs-4">Premium Feel <br> Safety Tested <br> Trusted By Millions</p>
           <div class="product-card__price-row">
             <span class="product-card__price">$149.99</span>
-            <button class="product-card__btn fs-5">Add to Cart</button>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-merch-GuardianFortitudeTshirt02">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -1488,9 +1488,59 @@
   </div>
   <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
   <x-footer />
+  
+  <script>
+	document.addEventListener("DOMContentLoaded", function () {
+		console.log("DOM fully loaded and parsed");
+		let buttons = document.querySelectorAll(".add-to-cart-button");
+		console.log("Found buttons:", buttons.length);
+		if (buttons.length === 0) {
+			console.error("No .add-to-cart-button elements found.");
+		}
+								// Fix for dynamically added elements
+								$(document).on("click", ".add-to-cart-button", function (event) {
+									event.preventDefault();
 
+									let productId = $(this).data("product-id");
+									if (!productId) {
+										console.error("No product ID found for clicked button");
+										return;
+									}
+
+									console.log("Clicked button. Product ID:", productId);
+
+									$.ajax({
+										url: "/cart/add", // Ensure this route is correct
+										type: "POST",
+										data: {
+											_token: $('meta[name="csrf-token"]').attr("content"), // CSRF token
+											product_id: productId
+										},
+										headers: {
+											"X-Requested-With": "XMLHttpRequest" // Helps Laravel recognize AJAX requests
+										},
+										xhrFields: {
+											withCredentials: true // Ensures cookies (session) are sent with the request
+										},
+										success: function (response) {
+											console.log("Server response:", response);
+											if (response.success) {
+												alert("Product added to cart!");
+											} else {
+												alert("Failed to add product: " + response.message);
+											}
+										},
+										error: function (xhr, status, error) {
+											console.error("Error adding product:", xhr.responseText);
+											alert("Error adding product: " + xhr.responseText);
+										}
+									});
+								});
+							});
+	</script>
   <script src="../../JS/PRODUCTS/ACCESSORIES.js"></script>
   <script src="../../JS/navbar.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

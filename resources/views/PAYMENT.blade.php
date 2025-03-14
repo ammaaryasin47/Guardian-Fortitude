@@ -173,17 +173,13 @@
                             </div>
                             <div style="background:#000;" class="col-md-6 col-lg-7 d-flex align-items-center">
                                 <div style="background:#000;" class="card-body p-4 p-lg-5 text-black">
-                                    <form method="POST" action="{{ route('payment') }}">
+                                    <form method="POST" action="">
                                     @csrf
                                         <div class="d-flex align-items-center mb-3 pb-1">
                                             <!-- <img src="../IMAGES/HOME/Logo.png" style="width: 10rem;"> -->
                                             <span class="fs-1">GUARDIAN FORTITUDE<br> SECURITY SERVICES</span>
                                         </div>
                                         <input type="hidden" name="user_id" value="{{ auth()->user()->user_id }}">
-
-                                        <div class="mb-3">
-                                        <h6 style="display:none;" name="referrer" value="{{ $referrer }}" class="text-light">Referred By: {{ $referrer }}</h6>
-                                        </div>
 
                                         <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">CARD DETAILS</h5>
 

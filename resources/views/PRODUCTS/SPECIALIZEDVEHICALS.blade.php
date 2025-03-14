@@ -161,8 +161,6 @@
 	</h3>
 	<section class="section-products">
 		<div class="container">
-			<div class="row justify-content-center text-center">
-			</div>
 			<div class="row">
 				<!-- Single Product -->
 				<div class="col-md-6 col-lg-4 col-xl-3">
@@ -384,6 +382,9 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+	</section>
 
 				<!------------------------------------------ TACTICAL SECTION  --------------------------------------------------------->
 
@@ -616,6 +617,9 @@
 									</div>
 								</div>
 							</div>
+						</div>
+		</div>
+	</section>
 
 
 							<!------------------------------------------------------------- LIGHT ARMORED VEHICAL ----------------------------------------------------------------------->
@@ -625,8 +629,6 @@
 
 							<section class="section-products">
 								<div class="container">
-									<div class="row justify-content-center text-center">
-									</div>
 									<div class="row">
 										<!-- Single Product -->
 										<div class="col-md-6 col-lg-4 col-xl-3">
@@ -854,14 +856,18 @@
 												</div>
 											</div>
 										</div>
+										</div>
+				</div>
+				</section>
 
-
-										<!--------------------------------------------------------------------------- Mine Resistant Ambush Protected ---------------------------------------------------------------------------->
+										
+<!--------------------------------------------------------------------------- Mine Resistant Ambush Protected ---------------------------------------------------------------------------->
 										<h3 id="slideInSection"
 											class="Product-head mt-50 pb-5 mb-5 text-light text-center">MINE RESISTANT
 											AMBUSH
 											PROTECTED (MRAP)</h3>
 
+									<section class="section-products">
 										<div class="container">
 											<div class="row justify-content-center text-center">
 												<div class="col-md-8 col-lg-6">
@@ -979,11 +985,12 @@
 												</div>
 											</div>
 										</div>
+									</section>
 										<!----------------------------------------------------------------------------- RIOT CONTROL ---------------------------------------------------------------------->
 										<h3 id="slideInSection"
 											class="Product-head mt-50 pb-5 mb-5 text-light text-center">RIOT CONROL
 											VEHICALS</h3>
-
+									<section class="section-products">
 										<div class="container">
 											<div class="row justify-content-center text-center">
 												<div class="col-md-8 col-lg-6">
@@ -1134,13 +1141,13 @@
 												</div>
 											</div>
 										</div>
-
+									</section>
 										<!------------------------------------------------------ AMPHIBIOUS COMBAT VEHICAL --------------------------------------------------------------------->
 										<h3 id="slideInSection"
 											class="Product-head mt-50 pb-5 mb-5 text-light text-center">AMPHIBIOUS
 											COMBAT VEHICALS
 											(ACV)</h3>
-
+									<section class="section-products">
 										<div class="container">
 											<div class="row justify-content-center text-center">
 												<div class="col-md-8 col-lg-6">
@@ -1291,7 +1298,6 @@
 											</div>
 										</div>
 							</section>
-
 							<!------------------------------------------------------------ FOOTER ------------------------------------------------------->
 							<x-footer />
 							<script>

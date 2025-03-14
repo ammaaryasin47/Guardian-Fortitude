@@ -3,7 +3,8 @@
             <ul style="cursor:default;" class="fs-4 list-unstyled gap-5 d-flex ps-3 ">
                 <li class="pe-3 border-light align-items-center" style="border-right: 1px dotted #fff;"> <i
                         class='bx bx-envelope'></i>
-                    guardianfortitudeservice@gmail.com</li>
+                    guardianfortitude<br>
+                    service@gmail.com</li>
                 <li class="pe-3 border-light align-items-center" style="border-right: 1px dotted #fff;"> <i
                         class='bx bx-phone-call'></i>
                     +91 1234567890</li>
@@ -70,7 +71,7 @@
                             <li class=" fs-5 pe-3 border-light align-items-center"
                                 style="border-right: 1px dotted #fff;">
                                 <i class='bx bx-envelope'></i>
-                                guardianfortitude<p>service@gmail.com</p>
+                                guardianfortitudeservice<br>@gmail.com
                             </li>
                             <li class="fs-5 pe-3 border-light align-items-center"
                                 style="border-right: 1px dotted #fff;"> <i class='bx bx-phone-call'></i>

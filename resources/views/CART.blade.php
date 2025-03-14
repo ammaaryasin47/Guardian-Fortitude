@@ -298,33 +298,33 @@ p{
                                 <br>
                                 <div class="form-group">
                                     <label for="NAME" class="fs-5 text-muted mb-1">NAME ON CARD</label>
-                                    <input type="text" class="form-control form-control-sm fs-5" name="NAME" id="NAME" aria-describedby="helpId" placeholder="">
+                                    <input type="text" class="form-control form-control-sm fs-5" name="NAME" id="NAME" aria-describedby="helpId" placeholder="" requireq>
                                 </div>
                                 <br>
                                 <div class="form-group">
                                     <label for="NAME" class="fs-5 text-muted mb-1">CARD NUMBER</label>
-                                    <input type="text" class="form-control form-control-sm fs-5" name="NAME" id="NAME" aria-describedby="helpId" placeholder="XXXX XXXX XXXX XXXX">
+                                    <input type="text" class="form-control form-control-sm fs-5" name="NAME" id="NAME" aria-describedby="helpId" placeholder="XXXX XXXX XXXX XXXX" required>
                                 </div>
                                 <br>
                                 <div class="row no-gutters">
                                     <div class="col-sm-6 pr-sm-2">
                                         <div class="form-group">
                                             <label for="NAME" class="fs-5 text-muted mb-1">VALID THROUGH</label>
-                                            <input type="text" class="form-control form-control-sm fs-5" name="NAME" id="NAME" aria-describedby="helpId" placeholder="XX/XX">
+                                            <input type="text" class="form-control form-control-sm fs-5" name="NAME" id="NAME" aria-describedby="helpId" placeholder="XX/XX" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="NAME" class="fs-5 text-muted mb-1">CVC CODE</label>
-                                            <input type="text" class="form-control form-control-sm fs-5" name="NAME" id="NAME" aria-describedby="helpId" placeholder="XXX">
+                                            <input type="text" class="form-control form-control-sm fs-5" name="NAME" id="NAME" aria-describedby="helpId" placeholder="XXX" required>
                                         </div>
                                     </div>
                                 </div>
                                 <br>
                                 <div class="text-center row mb-md-5">
-                                    <div class="col">
-                                        <button style="background:maroon; outline:none; border:0;" type="button" name="" id="" class="px-3 fs-5 btn-lg btn-block ">PURCHASE</button>
-                                    </div>
+                                <div class="col">
+                                    <a style="background:maroon; outline:none; border:0;" href="{{URL::to('/paymentcomplete')}}" class="px-3 fs-5 btn-lg btn-block text-decoration-none text-white d-inline-block text-center">PURCHASE</a>
+                                </div>
                                 </div>    
                             </div>
                         </div>

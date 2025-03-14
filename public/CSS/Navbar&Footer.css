@@ -30,9 +30,9 @@
     align-items: center;
 }
 
-ul.fs-4.list-unstyled.d-flex {
+/* ul.fs-4.list-unstyled.d-flex {
     margin-top: 1rem;
-}
+} */
 
 .sidenav {
     border-left: 3px solid maroon;
