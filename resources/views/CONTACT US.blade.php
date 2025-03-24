@@ -33,6 +33,7 @@
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/android-chrome-192x192.png" type="image/svg+xml">
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/android-chrome-512x512.png" type="image/svg+xml">
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/apple-touch-icon.png" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -219,37 +220,74 @@
     </div>
 
     <!----------------------------------------- MAP --------------------------------------------------->
-    <div class="mapandform d-flex mt-5 ">
-        <div class="m-5" id="map"></div>
+    <div class="mapandform d-flex mt-5">
+    <div class="m-5" id="map"></div>
 
-        <div class="contactform text-light w-100">
-            <h2 class="fs-1 text-center">CONTACT FORM</h2>
+    <div class="contactform text-light w-100">
+        <h2 class="fs-1 text-center">CONTACT FORM</h2>
 
+        <form id="contact-form">
             <h4 class="mt-5 fs-3 text-left pb-3">NAME</h4>
             <input
                 style="color: #fff; font-size: 2rem; width: 70%; height: 2rem; border:none; border-bottom: 1px solid grey; background: transparent; outline: none;"
-                type="text" name="contactus">
+                type="text" name="from_name" id="from_name" required>
 
             <h4 class="mt-5 fs-3 text-left pb-3">CONTACT</h4>
             <input
                 style="color: #fff; font-size: 2rem; width: 70%; height: 2rem; border:none; border-bottom: 1px solid grey; background: transparent; outline: none;"
-                type="text" name="contactus">
+                type="tel" name="contact_number" id="contact_number" pattern="[0-9]{10}" required
+                title="Please enter exactly 10 digits">
 
             <h4 class="mt-5 fs-3 text-left pb-3">EMAIL ID</h4>
             <input
                 style="color: #fff; font-size: 2rem; width: 70%; height: 2rem; border:none; border-bottom: 1px solid grey; background: transparent; outline: none;"
-                type="text" name="contactus">
+                type="email" name="from_email" id="from_email" required>
 
             <h4 class="mt-5 fs-3 text-left pb-3">MESSAGE</h4>
-            <input
-                style=" color: #fff; font-size: 2rem; width: 70%; height: 5rem; border:none; border-bottom: 1px solid grey; background: transparent; outline: none;"
-                type="text" name="contactus">
+            <textarea
+                style="color: #fff; font-size: 2rem; width: 70%; height: 5rem; border:none; border-bottom: 1px solid grey; background: transparent; outline: none;"
+                name="message" id="message" required></textarea>
 
-        </div>
+            <button type="submit" class=" btn btn-danger mt-4 d-flex align-items-center" id="send-button">
+                SEND <span class="material-icons ms-2">arrow_forward</span>
+            </button>
+        </form>
     </div>
+</div>
+
     <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
     <x-footer />
 
+    <script>
+    // Initialize EmailJS with your user ID
+    (function() {
+        emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+    })();
+
+    // Handle form submission
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const sendButton = document.getElementById('send-button');
+        sendButton.disabled = true;
+        sendButton.innerHTML = 'SENDING... <span class="material-icons ms-2">hourglass_top</span>';
+        
+        // Send the email using EmailJS
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+            .then(function(response) {
+                alert('Message sent successfully!');
+                document.getElementById('contact-form').reset();
+                sendButton.innerHTML = 'SEND <span class="material-icons ms-2">arrow_forward</span>';
+                sendButton.disabled = false;
+            }, function(error) {
+                alert('Failed to send message. Please try again later.');
+                console.error('EmailJS Error:', error);
+                sendButton.innerHTML = 'SEND <span class="material-icons ms-2">arrow_forward</span>';
+                sendButton.disabled = false;
+                });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="../JS/CONTACTUS.js"></script>
     <script src="../JS/navbar.js"></script>

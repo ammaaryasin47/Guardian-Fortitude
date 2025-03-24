@@ -11,6 +11,7 @@ use App\Http\Controllers\UserSubscriptionController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +46,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/cart', [CartController::class, 'Cart'])->name('cart');
     Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
     Route::post('/add-to-cart', [CartController::class, 'addToCart']);
-    Route::delete('/cart/remove/{cartItemId}', [CartController::class, 'removeFromCart'])->name('cart.remove');
+    Route::post('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
 
     //---------------------PAYMENT------------------------------------------------------------
     Route::match(['get', 'post'], '/payment', function () {
@@ -105,16 +106,26 @@ Route::patch('/users/{user_id}/reject', [AdminController::class, 'reject'])->nam
 
 //<------------------------------- TO DATABASE ----------------------------------------------------------------------
 Route::prefix('register')->controller(RegisterController::class)->group(function () {
-    Route::get('/register', 'register')->name('register'); // First page
-    Route::post('/storebasicinfo', 'storeBasicInfo')->name('register.storebasicinfo'); // Store basic info
-    Route::get('/registerdetails', 'registerDetails')->name('registerdetails'); // Second page
-    Route::post('/storeadditionaldetails', 'storeAdditionalDetails')->name('register.storeadditionaldetails'); // Store additional details
-    Route::get('/registerpreferences', 'registerpreferences')->name('registerpreferences'); // Third page
-    Route::post('/storepreferences', 'storePreferences')->name('register.storepreferences'); // Store preferences
-    Route::get('/confirmationSuccess', 'confirmationSuccess')->name('register.confirmation.success'); // Success page
-    Route::get('/confirmationFailed', 'confirmationFailed')->name('register.confirmation.failed'); // Success page
-    Route::get('/confirmationwaiting', 'confirmationwaiting')->name('register.confirmation.waiting'); // Success page
-    Route::post('/storelegal', 'storeLegal')->name('register.storelegal'); 
+    Route::get('/', 'register')->name('register');
+    Route::post('/storebasicinfo', 'storeBasicInfo')->name('register.storebasicinfo');
+    
+    Route::middleware(['registration.step:details'])->group(function () {
+        Route::get('/details', 'registerDetails')->name('registerdetails');
+        Route::post('/storedetails', 'storeAdditionalDetails')->name('register.storedetails');
+    });
+    
+    Route::middleware(['registration.step:preferences'])->group(function () {
+        Route::get('/preferences', 'registerPreferences')->name('registerpreferences');
+        Route::post('/storepreferences', 'storePreferences')->name('register.storepreferences');
+    });
+    
+    Route::get('/legal', 'registerLegal')->name('register.legal');
+    Route::middleware(['registration.step:legal'])->post('/storelegal', 'storeLegal')->name('register.storelegal');
+    
+    // Confirmation routes
+    Route::get('/confirmation/waiting', 'confirmationWaiting')->name('register.confirmation.waiting');
+    Route::get('/confirmation/success', 'confirmationSuccess')->name('register.confirmation.success');
+    Route::get('/confirmation/failed', 'confirmationFailed')->name('register.confirmation.failed');
 });
 
 //<------------------------------ MIDDLEWARE ----------------------------------------------------------------------
@@ -141,4 +152,7 @@ Route::get('/debug-session', function () {
 
 Route::get('/paymentcomplete', function () {
     return view('paymentcomplete');
-});
+})->name('paymentcomplete');
+
+Route::get('/checkout', [OrderController::class, 'index'])->name('checkout');
+Route::post('/checkout', [OrderController::class, 'store'])->name('checkout.submit');

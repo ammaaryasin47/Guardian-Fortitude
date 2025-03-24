@@ -108,7 +108,7 @@
         <a class="text-decoration-none">
           <div class="card">
             <img
-              src="https://elesurvival.com/cdn/shop/products/extinction-level-event-triangle-carabiner-edc-tactical-paracord-knife-lanyard-keychain-zipper-pull-29977901400202.jpg?v=1663162044&width=1946"
+              src="https://live.staticflickr.com/5187/5733541221_80a2ea67b2_b.jpg"
               alt="Card 3">
             <div class="card-overlay">
               <h3>PARA CORD</h3>
@@ -158,7 +158,7 @@
         <a class="text-decoration-none">
           <div class="card">
             <img
-              src="https://www.karel-electronics.com/sites/karel-electronics.com/files/2023-12/askeri-baslik-takimlari.jpg"
+              src="https://infidelbodyarmor.com/media/catalog/product/cache/c6563591676072b2a1e384280db24c33/h/i/highcutdisplay.png"
               alt="Card 4">
             <div class="card-overlay">
               <h3>TACTICAL HEADSETS</h3>
@@ -503,7 +503,7 @@
       <div class="product-card">
         <div class="product-card__image">
           <img
-            src="https://www.reisemoto.com/cdn/shop/files/2_fcff838d-eee4-4327-9d88-139dff10331b.png?v=1733911405&width=900"
+            src="https://www.reisemoto.com/cdn/shop/files/Carbonado_Modpac_5L_7411320041-1_1.png?v=1734434510&width=900"
             alt="Red Nike Shoes">
         </div>
         <div class="product-card__info">
@@ -673,6 +673,115 @@
       </div>
     </div>
   </div>
+
+  <!----------------------------------------------------------------- HOLSTER ------------------------------------------------------------------------>
+  <div class="text-center mt-5" id="holster-heading">
+    <div class="heading-container">
+      <div class="heading-large">HOLSTER</div>
+      <div class="heading-normal">HOLSTER</div>
+    </div>
+  </div>
+
+  <div class="cont text-light" id="holster-products">
+    <div class="product-row">
+      <div class="product-card">
+        <div class="product-card__image">
+          <img
+            src="https://safariland.com/cdn/shop/files/SAF_IncogX_IWB_Gray_001.jpg?crop=center&height=1024&v=1690915017&width=1024"
+            alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">INCOG X</h2>
+          <p class="product-card__description fs-4">Intense Spotlight For Long Range Observation , Circle Floodlight For
+            Large Area Illumination.</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-flashlight-HORBAC">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img
+            src="https://hiddenhybridholsters.com/cdn/shop/files/Shield-Single-Clip-BlkCF-YesClaw-Rt-Sm_c50d6cfc-0396-4972-b828-8b65ad9b58ab_1200x.png?v=1728488447"
+            alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">SMITH & WESSONS</h2>
+          <p class="product-card__description fs-4">Aluminium body <br>Digital Electronic Display<br> Battery Indicator
+          </p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-flashlight-PHILIPS">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="https://www.galls.com/photos/styles/NP512_500_1.JPG" alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">DURATEK</h2>
+          <p class="product-card__description fs-4">Compact mount light <br> maximum output of 600 lumens <br> fits SIG
+            SAUER® and possibly other type of firearm</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-flashlight-FELIX GL06">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-row">
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="https://i.ebayimg.com/images/g/5aMAAOSw42JZJMXT/s-l400.jpg">
+
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">IWB</h2>
+          <p class="product-card__description fs-4"> a premium flashlight engineered for reliability, versatility, and
+            power <br> Featuring an ultra-high intensity 44,300 candela </p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-flashlight-FENIXGL19R">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img src="https://cdn11.bigcommerce.com/s-i8x3epyu14/images/stencil/500x659/products/198/1462/DSC00612__85551.1713803223.jpg?c=2" alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">Priority1</h2>
+          <p class="product-card__description fs-4">specialized in tactical flashlights with APF circuits. <br>dual
+            tactical switch panel that allows easy and fast operation</p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-flashlight-FENIXAER05">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+       <div class="product-card">
+        <div class="product-card__image">
+          <img src="https://cdn11.bigcommerce.com/s-f6h7auv/images/stencil/1024x1024/products/8028/125520/sidetuck-front__62197__48781.1693513255.jpg?c=4"
+            alt="Red Nike Shoes">
+        </div>
+        <div class="product-card__info">
+          <h2 class="product-card__title fs-2">SideTuck</h2>
+          <p class="product-card__description fs-4"> powerful and compact flashlight<br> offering an impressive output
+            of 3100 lumens <br> single 21700 rechargeable battery </p>
+          <div class="product-card__price-row">
+            <span class="product-card__price">$149.99</span>
+            <button class="product-card__btn fs-5 add-to-cart-button" data-product-id="Accessories-flashlight-FENIXTK-16">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
 
   <!----------------------------------------------------------- PARACORD ---------------------------------------------------------------->
 

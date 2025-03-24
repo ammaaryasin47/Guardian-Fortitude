@@ -30,10 +30,6 @@
     align-items: center;
 }
 
-/* ul.fs-4.list-unstyled.d-flex {
-    margin-top: 1rem;
-} */
-
 .sidenav {
     border-left: 3px solid maroon;
     width: 75%;
@@ -91,6 +87,20 @@
 .bx-envelope{
     top: 3px;
     position: relative;
+}
+.uppernav ul li{
+    margin-bottom: 0;
+}
+.uppernav ul {
+    
+    margin-bottom: 0;
+}
+.uppernav ul ul{
+    font-size: 2rem;
+}
+
+ul.fs-4.list-unstyled.d-flex:not(.gap-5){
+    margin-top: 1rem;
 }
 /*<------------------------------------------------- SCROLLBAR ----------------------------------------------->*/
 
@@ -166,6 +176,7 @@
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
   }
+
 /*<------------------------------------------------ FOOTER -------------------------------------------------------------->*/
 
 footer {
@@ -223,8 +234,6 @@ footer {
 
 .footer-email-id {
     width: max-content;
-    margin: 2rem 0;
-
 }
 
 ul li {
@@ -315,6 +324,10 @@ hr {
     position: absolute;
     top: 0;
     left: 1rem;
+}
+
+.footer-col ul{
+    padding-left: 0;
 }
 
 @media only screen and (max-width: 992px) {

@@ -274,112 +274,174 @@ p{
 </nav>
 
 <!----------------------------------------------- CART ---------------------------------------------------------------->
-
-<div class=" container-fluid my-5 ">
-    <div class="row justify-content-center ">
+@php
+    $totalAmount = $totalAmount ?? 0;
+@endphp
+<!-- Debugging: Check all variables passed to the view -->
+<div class="container-fluid my-5">
+    <div class="row justify-content-center">
         <div class="col-xl-10">
             <div style="background:#000;" class="card shadow-lg">
                 <div class="row justify-content-evenly">
+                    <!-- Left Column: Shipping and Payment Details -->
                     <div style="border-right:2px solid white;" class="pe-5 col-md-5">
                         <div class="card border-0">
                             <div style="background:#000; color:#fff;" class="text-center fs-2 card-header pb-0">
                                 <h2 style="color:maroon;" class="card-title space">CHECKOUT</h2>
-                                <p class="card-text text-muted mt-4  space">SHIPPING DETAILS</p>
+                                <p class="card-text text-muted mt-4 space">SHIPPING DETAILS</p>
                                 <hr class="my-0">
                             </div>
-                            <div style="background:#000; color:#fff;" class=" card-body">
+                            <div style="background:#000; color:#fff;" class="card-body">
+                                <!-- Shipping Address and Email -->
                                 <div class="fs-4 row justify-content-between">
                                     <div class="col-auto mt-0"><p><b>{{ $address }}</b></p></div>
-                                    <div class="col-auto"><p><b>{{ $email }}</b> </p></div>
+                                    <div class="col-auto"><p><b>{{ $email }}</b></p></div>
                                 </div>
+
+                                <!-- Payment Details -->
                                 <div class="row mt-4">
                                     <div class="col"><p style="color:maroon;" class="text-center fs-3 mb-2">PAYMENT DETAILS</p><hr class="mt-0"></div>
                                 </div>
                                 <br>
-                                <div class="form-group">
-                                    <label for="NAME" class="fs-5 text-muted mb-1">NAME ON CARD</label>
-                                    <input type="text" class="form-control form-control-sm fs-5" name="NAME" id="NAME" aria-describedby="helpId" placeholder="" requireq>
-                                </div>
-                                <br>
-                                <div class="form-group">
-                                    <label for="NAME" class="fs-5 text-muted mb-1">CARD NUMBER</label>
-                                    <input type="text" class="form-control form-control-sm fs-5" name="NAME" id="NAME" aria-describedby="helpId" placeholder="XXXX XXXX XXXX XXXX" required>
-                                </div>
-                                <br>
-                                <div class="row no-gutters">
-                                    <div class="col-sm-6 pr-sm-2">
-                                        <div class="form-group">
-                                            <label for="NAME" class="fs-5 text-muted mb-1">VALID THROUGH</label>
-                                            <input type="text" class="form-control form-control-sm fs-5" name="NAME" id="NAME" aria-describedby="helpId" placeholder="XX/XX" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="NAME" class="fs-5 text-muted mb-1">CVC CODE</label>
-                                            <input type="text" class="form-control form-control-sm fs-5" name="NAME" id="NAME" aria-describedby="helpId" placeholder="XXX" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="text-center row mb-md-5">
-                                <div class="col">
-                                    <a style="background:maroon; outline:none; border:0;" href="{{URL::to('/paymentcomplete')}}" class="px-3 fs-5 btn-lg btn-block text-decoration-none text-white d-inline-block text-center">PURCHASE</a>
-                                </div>
-                                </div>    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                    <div style="background:#000; color:#fff;" class="card border-0">
-                        <div style="background:#000;" class="card-header card-2">
-                            <p style="color:maroon;" class="text-center card-text mt-md-4 fs-4 mb-2 card-title space">
-                                YOUR ORDERS <br>
-                                <span class="fs-6 text-muted ml-2 cursor-pointer">SHOPPING CART</span>
-                            </p>
-                            <hr class="my-2">
-                        </div>
-                        <div class="card-body pt-0">
-                            @foreach($cartItems as $item)
-                            <div class="row d-flex justify-content-center align-items-center text-center mb-3">
-                                <div class="fs-3 col-auto col-md-7">
-                                    <div class="media d-flex flex-column flex-md-row align-items-center justify-content-center text-center">
-                                    <img class="img-fluid" src="{{ asset($item->product->image_url) }}" width="800" height="800">
-                                    <p class="mb-0"><b>{{ $item->product->name }}</b></p>
-                                        <div class="media-body my-auto">
-                                            <p class="fs-3 mb-0"><b>{{ $item->name }}</b></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="quantity-container d-flex justify-content-center align-items-center text-center">
-                                    <input style="background:#000; width:max-content; color:#fff;" 
-                                        type="number" class="fs-5 form-control form-control-sm text-center quantity-input" 
-                                        value="{{ $item->quantity }}" min="1">
-                                </div>
-                                <div class="pl-0 flex-sm-col col-auto my-auto">
-                                    <p><b>${{ number_format($item->price * $item->quantity, 2) }}</b></p>
-                                </div>
-                                <form method="POST" action="{{ route('cart.remove', $item->id) }}">
+
+                                <!-- Payment Form -->
+                                <form method="POST" action="{{ route('checkout.submit') }}">
                                     @csrf
-                                    @method('DELETE')
-                                    <button type="submit" style="outline:none; background:#000; border:0;" 
-                                            class="text-center text-light fs-6 pl-0 flex-sm-col col-auto my-5">
-                                        REMOVE
-                                    </button>
+                                    <!-- Hidden Fields -->
+                                    <input type="hidden" name="shipping_address" value="{{ $address }}">
+                                    <input type="hidden" name="email" value="{{ $email }}">
+                                    <input type="hidden" name="total_amount" value="{{ $totalAmount }}">
+                                    <input type="hidden" name="_method" value="DELETE">
+
+                                    <!-- Card Name -->
+                                    <div class="form-group">
+                                        <label for="card_name" class="fs-5 text-muted mb-1">NAME ON CARD</label>
+                                        <input type="text" class="form-control form-control-sm fs-5" name="card_name" id="card_name" placeholder="" required>
+                                    </div>
+                                    <br>
+
+                                    <!-- Card Number -->
+                                    <div class="form-group">
+                                        <label for="card_number" class="fs-5 text-muted mb-1">CARD NUMBER</label>
+                                        <input type="text" class="form-control form-control-sm fs-5" name="card_number" id="card_number" maxlength="16" placeholder="XXXX XXXX XXXX XXXX" required>
+                                    </div>
+                                    <br>
+
+                                    <!-- Card Expiry and CVC -->
+                                    <div class="row no-gutters">
+                                        <div class="col-sm-6 pr-sm-2">
+                                            <div class="form-group">
+                                                <label for="card_expiry" class="fs-5 text-muted mb-1">VALID THROUGH</label>
+                                                <input type="text" class="form-control form-control-sm fs-5" name="card_expiry" id="card_expiry" placeholder="XX/XX" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="card_cvc" class="fs-5 text-muted mb-1">CVC CODE</label>
+                                                <input type="text" class="form-control form-control-sm fs-5" name="card_cvc" maxlength="3" id="card_cvc" placeholder="XXX" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <!-- Purchase Button -->
+                                    <div class="text-center row mb-md-5">
+                                        <div class="col">
+                                            <button type="submit" style="background:maroon; outline:none; border:0;" class="px-3 fs-5 btn-lg btn-block text-decoration-none text-white d-inline-block text-center">PURCHASE</button>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
-                            @endforeach
                         </div>
                     </div>
-                </div>
+
+                    <!-- Right Column: Order Summary -->
+                    <div class="col-md-5">
+                        <div style="background:#000; color:#fff;" class="card border-0">
+                            <div style="background:#000;" class="card-header card-2">
+                                <p style="color:maroon;" class="text-center card-text mt-md-4 fs-4 mb-2 card-title space">
+                                    YOUR ORDERS <br>
+                                    <span class="fs-6 text-muted ml-2 cursor-pointer">SHOPPING CART</span>
+                                </p>
+                                <hr class="my-2">
+                            </div>
+                            <div class="card-body pt-0">
+                                <!-- Cart Items -->
+                                @foreach($cartItems as $item)
+                                <div class="row d-flex justify-content-center align-items-center text-center mb-3">
+                                    <div class="fs-3 col-auto col-md-7">
+                                        <div class="media d-flex flex-column flex-md-row align-items-center justify-content-center text-center">
+                                            <img class="img-fluid" src="{{ asset($item->product->image_url) }}" width="800" height="800">
+                                            <p class="mb-0"><b>{{ $item->product->name }}</b></p>
+                                            <div class="media-body my-auto">
+                                                <p class="fs-3 mb-0"><b>{{ $item->name }}</b></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="quantity-container d-flex justify-content-center align-items-center text-center">
+                                        <input style="background:#000; width:max-content; color:#fff;" 
+                                            type="number" class="fs-5 form-control form-control-sm text-center quantity-input" 
+                                            value="{{ $item->quantity }}" min="1">
+                                    </div>
+                                    <div class="pl-0 flex-sm-col col-auto my-auto">
+                                        <p><b>${{ number_format($item->price * $item->quantity, 2) }}</b></p>
+                                    </div>
+                                    <form method="POST" action="{{ route('cart.remove', $item->id) }}">
+                                        @csrf
+                                        @method('POST')
+                                        <button type="submit" style="outline:none; background:#000; border:0;" 
+                                                class="text-center text-light fs-6 pl-0 flex-sm-col col-auto my-5">
+                                            REMOVE
+                                        </button>
+                                    </form>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
       <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
  <x-footer />
 
+<script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const removeForms = document.querySelectorAll('form[action*="/cart/remove"]');
+        removeForms.forEach(form => {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault(); // Prevent default form submission
+                console.log('Form submitted:', form.action); // Log the form action
+                fetch(form.action, {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        _method: 'DELETE', // Simulate DELETE method
+                    }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Response:', data); // Log the response
+                    if (data.success) {
+                        window.location.reload(); // Reload the page on success
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error); // Log any errors
+                });
+            });
+        });
+    });
+</script>
+</script>
 <script src="../JS/navbar.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

@@ -177,7 +177,7 @@
 									<a href="#" class="expand-button" data-bs-toggle="modal"
 										data-bs-target="#productModal" data-title="ARMORED Mercedes G63 AMG"
 										data-price="$629,000"
-										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Mercedes-G63.webp"
+										data-image="https://drive.google.com/file/d/1MdZXN_Y8YoEMJEkoEGPcdqZm4qHSXW_V/view?usp=sharing"
 										data-category="Luxury">
 										<i class="fas fa-expand"></i>
 									</a>
@@ -205,7 +205,7 @@
 									<a href="#" class="expand-button" data-bs-toggle="modal"
 										data-bs-target="#productModal" data-title="ARMORED Range Rover"
 										data-price="$490,500"
-										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Range-Rover.webp"
+										data-image="https://drive.google.com/file/d/1GamqgLEzEdFX7Ztu_vyyCHr8e0TF0PJg/view?usp=sharing"
 										data-category="Luxury">
 										<i class="fas fa-expand"></i>
 									</a>
@@ -233,7 +233,7 @@
 									<a href="#" class="expand-button" data-bs-toggle="modal"
 										data-bs-target="#productModal" data-title="ARMORED Rolls Royce Phantom"
 										data-price="$900,000"
-										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Rolls-Royce.webp"
+										data-image="https://drive.google.com/file/d/1IfeFVxv4MuaPzqD8okVV6AcG-_D5O02Y/view?usp=sharing"
 										data-category="Luxury">
 										<i class="fas fa-expand"></i>
 									</a>
@@ -260,7 +260,7 @@
 									<a href="#" class="expand-button" data-bs-toggle="modal"
 										data-bs-target="#productModal" data-title="ARMORED Mercedes S600 Maybach"
 										data-price="$450,000"
-										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Mercedes-S680-Maybach.webp"
+										data-image="https://drive.google.com/file/d/1qKLxsaJEx-qDbPKrffp9eDPHzYN3c1hf/view?usp=sharing"
 										data-category="Luxury">
 										<i class="fas fa-expand"></i>
 									</a>
@@ -314,7 +314,7 @@
 									<a href="#" class="expand-button" data-bs-toggle="modal"
 										data-bs-target="#productModal" data-title="ARMORED Lexus LX-600"
 										data-price="$450,000"
-										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Lexus-LX-600.webp"
+										data-image="https://drive.google.com/file/d/1afBjRM7o0QovRXXeQ3lt8c4qxyeYOkgW/view?usp=sharing"
 										data-category="Luxury">
 										<i class="fas fa-expand"></i>
 									</a>
@@ -341,7 +341,7 @@
 									<a href="#" class="expand-button" data-bs-toggle="modal"
 										data-bs-target="#productModal" data-title="ARMORED Toyota Camry"
 										data-price="$490,000"
-										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Toyota-Camry.webp"
+										data-image="https://drive.google.com/file/d/1b5kwMgHbp9qaecWPEo-_7v5vdS-wW5Vr/view?usp=sharing"
 										data-category="Luxury">
 										<i class="fas fa-expand"></i>
 									</a>
@@ -369,7 +369,7 @@
 									<a href="#" class="expand-button" data-bs-toggle="modal"
 										data-bs-target="#productModal" data-title="ARMORED Cadillac Escalade"
 										data-price="$850,000"
-										data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Aksum-Armored-Vehicle-Cadillac-Escalade.webp"
+										data-image="https://drive.google.com/file/d/1r4bKrIW_tVRvP3p58dKv4utLj079jqGW/view?usp=drive_link"
 										data-category="Luxury">
 										<i class="fas fa-expand"></i>
 									</a>
@@ -410,7 +410,7 @@
 												<a href="#" class="expand-button" data-bs-toggle="modal"
 													data-bs-target="#productModal" data-title="ARMORED SWAT Vehicle"
 													data-price="$459,000"
-													data-image="https://aksumarmored.com/wp-content/uploads/2024/04/DS-SWAT.webp"
+													data-image="https://drive.google.com/file/d/11xDN7SUq-hLQypk_eRvGM7wiA685vU4D/view?usp=drive_link"
 													data-category="Tactical">
 													<i class="fas fa-expand"></i>
 												</a>
@@ -438,7 +438,7 @@
 												<a href="#" class="expand-button" data-bs-toggle="modal"
 													data-bs-target="#productModal" data-title="ARMORED 6X6"
 													data-price="$1,990,000"
-													data-image="https://aksumarmored.com/wp-content/uploads/2024/04/6X6.webp"
+													data-image="https://drive.google.com/file/d/1ur610Auw7YqTf_BYMevIO5LebQzozYMR/view?usp=sharing"
 													data-category="Tactical">
 													<i class="fas fa-expand"></i>
 												</a>
@@ -465,7 +465,7 @@
 												<a href="#" class="expand-button" data-bs-toggle="modal"
 													data-bs-target="#productModal" data-title="ARMORED 8 Seater PCV"
 													data-price="$990,000"
-													data-image="https://aksumarmored.com/wp-content/uploads/2024/04/S.webp"
+													data-image="https://drive.google.com/file/d/1QADd-BOA12aUIq-rwIxZqJbpSRWSfNZw/view?usp=drive_link"
 													data-category="Tactical">
 													<i class="fas fa-expand"></i>
 												</a>
@@ -493,7 +493,7 @@
 												<a href="#" class="expand-button" data-bs-toggle="modal"
 													data-bs-target="#productModal" data-title="ARMORED 12 Seater PCV"
 													data-price="$1,999,000"
-													data-image="https://aksumarmored.com/wp-content/uploads/2024/04/V.webp"
+													data-image="https://drive.google.com/file/d/1QADd-BOA12aUIq-rwIxZqJbpSRWSfNZw/view?usp=drive_link"
 													data-category="Tactical">
 													<i class="fas fa-expand"></i>
 												</a>
@@ -521,7 +521,7 @@
 												<a href="#" class="expand-button" data-bs-toggle="modal"
 													data-bs-target="#productModal" data-title="ARMORED HUMMER APC"
 													data-price="$1,622,650"
-													data-image="https://aksumarmored.com/wp-content/uploads/2024/04/Combat.webp"
+													data-image="https://drive.google.com/file/d/1QADd-BOA12aUIq-rwIxZqJbpSRWSfNZw/view?usp=drive_link"
 													data-category="Tactical">
 													<i class="fas fa-expand"></i>
 												</a>
@@ -880,7 +880,11 @@
 														<div class="part-1">
 															<span class="discount">15% off</span>
 															<ul>
-																<li><a href="#" class="add-to-cart-button" data-product-id="Vehc-MRAP-Cougar">
+																<li><a href="#"
+																		data-title="ARMORED Cougar"
+																		data-price="$459,000"
+																		data-image="../../../IMAGES/PRODUCTS/Local-Images/Specialized Vehicals/MRAP/ARMORED Cougar.jpg"
+																		data-category="MRAP" class="add-to-cart-button" data-product-id="Vehc-MRAP-Cougar" data-bs-toggle="modal">
 																	<i class="fas fa-shopping-cart"></i></a>
 																</li>
 																<li><a href="#"><i class="fas fa-expand"></i></a></li>

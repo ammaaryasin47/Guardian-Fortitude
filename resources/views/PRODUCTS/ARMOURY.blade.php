@@ -228,51 +228,51 @@
     <div id="home-by-series" class="tab-content content-section">
         <div class="series-item" data-category="HUNTINGRIFLES">
             <img src="https://cdnb.artstation.com/p/assets/images/images/031/942/803/large/ryzin-art-screenshot096.jpg?1605033339"
-                alt="PISTOLS">
+                alt="PISTOLS" onclick="scrollToCategory('pistols-heading')">
             <h3 class="text-center">PISTOLS</h3>
         </div>
         <div class="series-item" data-category="HUNTINGRIFLES">
             <img src="https://cdna.artstation.com/p/assets/images/images/010/130/402/large/linus-scheffel-5.jpg?1522743897"
-                alt="HUNTINGRIFLES">
+                alt="HUNTINGRIFLES" onclick="scrollToCategory('huntingrifle-heading')">
             <h3 class="text-center">HUNTING RIFLES</h3>
         </div>
         <div class="series-item" data-category="SUB_MACHINE_GUNS">
             <img src="https://cdna.artstation.com/p/assets/images/images/075/080/848/large/egor-rzhevskii-ump-4k-right-min.jpg?1713714355"
-                alt="SUB_MACHINE_GUNS">
+                alt="SUB_MACHINE_GUNS" onclick="scrollToCategory('submachine-heading')">
             <h3 class="text-center">SUB MACHINE GUNS</h3>
         </div>
         <div class="series-item" data-category="SHOTGUNS">
             <img src="https://cdnb.artstation.com/p/assets/images/images/069/643/793/large/pascual-hernandez-pascualhernandez-remington-870-frontground.jpg?1700641488"
-                alt="SHOTGUNS">
+                alt="SHOTGUNS" onclick="scrollToCategory('shotgun-heading')">
             <h3 class="text-center">SHOTGUNS</h3>
         </div>
         <div class="series-item" data-category="ASSAULT_RIFLES">
             <img src="https://cdnb.artstation.com/p/assets/images/images/024/195/279/large/florian-neumann-06-side.jpg?1581607642"
-                alt="ASSAULT_RIFLES">
+                alt="ASSAULT_RIFLES" onclick="scrollToCategory('assault-heading')">
             <h3 class="text-center">ASSAULT RIFLES</h3>
         </div>
         <div class="series-item" data-category="SNIPER_RIFLES">
             <img src="https://cdnb.artstation.com/p/assets/images/images/032/325/659/large/laurentiu-nedelca-pms-akrapov-s4-artstation-010.jpg?1606131873"
-                alt="SNIPER_RIFLES">
+                alt="SNIPER_RIFLES" onclick="scrollToCategory('sniper-heading')">
             <h3 class="text-center">SNIPER RIFLES</h3>
         </div>
         <div class="series-item" data-category="HUNTINGRIFLES">
             <img src="https://cdna.artstation.com/p/assets/images/images/043/750/398/large/james-shock-2-edited.jpg?1638179700"
-                alt="LAUNCHERS">
+                alt="LAUNCHERS" onclick="scrollToCategory('launcher-heading')">
             <h3 class="text-center">LAUNCHERS</h3>
         </div>
         <div class="series-item" data-category="MACHINE_GUNS">
             <img src="https://cdnb.artstation.com/p/assets/images/images/035/824/167/large/laurentiu-nedelca-pms-stal-51-0011.jpg?1615993846"
-                alt="MACHINE_GUNS">
+                alt="MACHINE_GUNS" onclick="scrollToCategory('machine-heading')">
             <h3 class="text-center">MACHINE GUNS</h3>
         </div>
         <div class="series-item" data-category="GRENADES_&_IED">
-            <img src="https://images2.alphacoders.com/108/1085880.jpg" alt="GRENADES_&_IED">
+            <img src="https://images2.alphacoders.com/108/1085880.jpg" alt="GRENADES_&_IED" onclick="scrollToCategory('grenade-heading')">
             <h3 class="text-center">GRENADES & IED</h3>
         </div>
         <div class="series-item" data-category="KNIVES">
             <img
-                src="https://cdna.artstation.com/p/assets/images/images/051/947/416/large/jason-h-ka-bar-second.jpg?1658571531" alt="KNIVES">
+                src="https://cdna.artstation.com/p/assets/images/images/051/947/416/large/jason-h-ka-bar-second.jpg?1658571531" alt="KNIVES" onclick="scrollToCategory('knife-heading')">
             <h3 class="text-center">KNIVES</h3>
         </div>
     </div>
@@ -497,7 +497,7 @@
         <div class="row mt-5 align-items-stretch" id="gun-list">
 
             <!--------------------------------------------------------- PISTOLS ------------------------------------------------------------------------>
-            <div class="text-center mt-5">
+            <div class="text-center mt-5" id="pistols-heading">
                 <div class="heading-container">
                     <div class="heading-large">PISTOLS</div>
                     <div class="heading-normal">PISTOLS</div>
@@ -1008,7 +1008,7 @@
 
 <!---------------------------------------------- HUNTING RIFLES ---------------------------------------------------->
 
-            <div class="heading-container text-center">
+            <div class="heading-container text-center" id="huntingrifle-heading">
                 <div class="heading-large">HUNTING RIFLES</div>
                 <div class="heading-normal">HUNTING RIFLES</div>
             </div>
@@ -1351,7 +1351,7 @@
 
  <!---------------------------------------------------- SUB MACHINE GUNS ----------------------------------------------------------------------->
 
-            <div class="heading-container text-center">
+            <div class="heading-container text-center" id="submachine-heading">
                 <div class="heading-large">SUB-MACHINE GUNS</div>
                 <div class="heading-normal">SMG</div>
             </div>
@@ -1851,7 +1851,7 @@
 
 <!------------------------------------------------- SHOTGUNS -------------------------------------------------------------------------->
 
-            <div class="heading-container text-center">
+            <div class="heading-container text-center" id="shotgun-heading">
                 <div class="heading-large">SHOTGUNS</div>
                 <div class="heading-normal">SHOTGUNS</div>
             </div>
@@ -2358,7 +2358,7 @@
 
 <!------------------------------------------------- ASSAULT RIFLES -------------------------------------------------------------------------->
 
-            <div class="heading-container text-center">
+            <div class="heading-container text-center" id="assault-heading">
                 <div class="heading-large">ASSAULT RIFLES</div>
                 <div class="heading-normal">ASSAULT RIFLES</div>
             </div>
@@ -2887,7 +2887,7 @@
 
 <!------------------------------------------------- SNIPER RIFLES -------------------------------------------------------------------------->
 
-            <div class="heading-container text-center">
+            <div class="heading-container text-center" id="sniper-heading">
                 <div class="heading-large">SNIPER RIFLES</div>
                 <div class="heading-normal">SNIPER RIFLES</div>
             </div>
@@ -3415,7 +3415,7 @@
 
 <!------------------------------------------------- LAUNCHERS -------------------------------------------------------------------------->
 
-            <div class="heading-container text-center">
+            <div class="heading-container text-center" id="launcher-heading">
                 <div class="heading-large">LAUNCHERS</div>
                 <div class="heading-normal">LAUNCHERS</div>
             </div>
@@ -3955,7 +3955,7 @@
 
 <!------------------------------------------------- MACHINE GUNS -------------------------------------------------------------------------->
 
-            <div class="heading-container text-center">
+            <div class="heading-container text-center" id="machine-heading">
                 <div class="heading-large">MACHINE GUNS</div>
                 <div class="heading-normal">MACHINE GUNS</div>
             </div>
@@ -4500,7 +4500,7 @@
 
 <!------------------------------------------------- GRENADES & IED-------------------------------------------------------------------------->
 
-            <div class="heading-container text-center">
+            <div class="heading-container text-center" id="grenade-heading">
                 <div class="heading-large">GRENADES & IED</div>
                 <div class="heading-normal">GRENADES & IED</div>
             </div>
@@ -5049,7 +5049,7 @@
 
             <!-------------------------------------------------KNIVES-------------------------------------------------------------------------->
 
-            <div class="heading-container text-center">
+            <div class="heading-container text-center" id="knife-heading">
                 <div class="heading-large">KNIVES</div>
                 <div class="heading-normal">KNIVES</div>
             </div>
@@ -5676,14 +5676,13 @@
 
     </footer>
     <script>
-    document.querySelectorAll(".series-item").forEach(card => {
-    card.addEventListener("click", function () {
-        const category = this.getAttribute("data-category") || this.querySelector("img").alt;
-        console.log("Clicked category:", category);
-        });
-    });
-
-    </script>
+    function scrollToCategory(categoryId) {
+        const element = document.getElementById(categoryId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+</script>
     <script>
     document.querySelectorAll(".svg-item").forEach(button => {
         button.addEventListener("click", function () {

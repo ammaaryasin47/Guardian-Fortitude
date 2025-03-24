@@ -63,20 +63,34 @@ class RegisterController extends Controller
 
     // Handle file upload for the profile picture
     if ($request->hasFile('picture')) {
-        // Store the file and get its path
-        $filePath = $request->file('picture')->store('profile_pictures', 'public');
-        $url = Storage::url($filePath);
-        echo $url; // Outputs: /storage/profile_pictures/<filename>
-        
-        // Generate the URL for the file
-        $validatedData['picture'] = Storage::url($filePath);
+        try {
+            // Store the file and get its path
+            $filePath = $request->file('picture')->store('profile_pictures', 'public');
+            
+            if (!$filePath) {
+                throw new \Exception("Failed to store profile picture");
+            }
+            
+            $url = Storage::url($filePath);
+            $validatedData['picture'] = $url;
+            
+        } catch (\Exception $e) {
+            return redirect()->back()
+                ->withInput()
+                ->withErrors(['picture' => 'Failed to upload profile picture. Please try again.']);
+        }
+    } else {
+
+        return redirect()->back()
+            ->withInput()
+            ->withErrors(['picture' => 'Profile picture is required']);
     }
 
-    // Hash the password
     $validatedData['password'] = bcrypt($validatedData['password']);
 
-    // Store data in session or database
+    // Store data in session
     session()->put('basic_info', $validatedData);
+    session()->put('basic_info_completed', true);
 
     return redirect()->route('registerdetails');
 }
@@ -98,8 +112,10 @@ class RegisterController extends Controller
     // Store additional details in session
     session()->put('additional_details', $validatedData);
 
+    session()->put('additional_details_completed', true); // Add this flag
     return redirect()->route('registerpreferences');
-    }
+
+}
 
     // -------------------- PREFERENCES ---------------------------------------------------------------------------
     public function storePreferences(Request $request)
@@ -118,8 +134,10 @@ class RegisterController extends Controller
     session(['preferences' => $preferences]);
 
     // Redirect to the next step
-    return redirect()->route('register.legal'); // Adjust the route as needed
-    }
+    session()->put('preferences_completed', true); // Add this flag
+    return redirect()->route('register.legal');
+
+}
 
     //<-------------------- STORE LEGAL ----------------------------------------------------------------------------->
     public function storeLegal(Request $request)
@@ -135,7 +153,7 @@ class RegisterController extends Controller
         $preferences = session('preferences');
     
         if (!$basicInfo || !$additionalDetails || !$preferences) {
-            return redirect()->route('register')->withErrors('Incomplete registration data.');
+            return redirect()->route('register')->withErrors('Incomplete Registration Data.');
         }
     
         // Merge all data into a single array
@@ -180,10 +198,14 @@ class RegisterController extends Controller
         ]);
     
         // Clear session data
-        session()->forget(['basic_info', 'additional_details', 'preferences']);
+        $request->session()->forget([
+            'basic_info_completed',
+            'additional_details_completed',
+            'preferences_completed'
+        ]);
     
         // Redirect to the login page
-        return redirect()->route('login')->with('success', 'Registration completed! Please log in.');
+        return redirect()->route('login')->with('success', 'Registration Completed! Please Log In.');
     }
 
 

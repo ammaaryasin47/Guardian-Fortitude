@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const sidenav = document.getElementById('sidenav-1');
     const toggler = document.querySelector('.hamburger-icon');
     const closeIcon = document.getElementById('close-sidenav'); // Get the cross icon
+    
 
     // Function to toggle sidenav
     function toggleSidenav() {
@@ -33,3 +34,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+

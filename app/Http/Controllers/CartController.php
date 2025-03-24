@@ -88,15 +88,19 @@ class CartController extends Controller
     return response()->json(['success' => true, 'message' => 'Product added to cart']);
 }
 
+    // Remove a cart item
+    public function remove($id)
+{
+    \Log::info('Removing cart item:', ['id' => $id, 'request' => request()->all()]);
 
-    // Remove a product from the cart
-    public function removeFromCart($cartItemId)
-    {
-        $cartItem = Cart::find($cartItemId);
-        if ($cartItem) {
-            $cartItem->delete();
-        }
+        // Find the cart item by ID
+        $cartItem = Cart::findOrFail($id);
+
+        // Delete the cart item
+        $cartItem->delete();
+
+        // Redirect back with a success message
+        return redirect()->back()->with('success', 'Item removed from cart successfully!');
     }
-
     
 }

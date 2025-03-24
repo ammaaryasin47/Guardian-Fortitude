@@ -87,14 +87,62 @@
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                 <div class="card-body p-4 p-lg-5 text-black">
 
-                                @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
+                              <!-- ERROR -->
+                              @if ($errors->any())
+<div class="error-alert-container" style="display: none;">
+    <div class="alert fade_error" style="position: relative; padding: 15px; border-radius: 4px; background-color: #ffdbdb; border: 1px solid #f95668;">
+        <button class="close-btn" type="button" style="position: absolute; top: 5px; right: 10px; background: none; border: none; font-size: 20px; cursor: pointer; color: #f95668;">&times;</button>
+        <strong style="display: block; color: #f95668; margin-bottom: 10px; text-transform: uppercase; font-size: 12px;">Error!</strong>
+        <ul class="error-list" style="margin: 0; padding-left: 20px; list-style: none;">
             @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
+                <li style="color: #f95668; margin-bottom: 5px; font-size: 14px;">{{ $error }}</li>
             @endforeach
         </ul>
     </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const errorContainer = document.querySelector('.error-alert-container');
+    if (errorContainer) {
+        // Show the error container
+        errorContainer.style.display = 'block';
+        
+        // Position it fixed at top-right
+        errorContainer.style.position = 'fixed';
+        errorContainer.style.top = '20px';
+        errorContainer.style.right = '20px';
+        errorContainer.style.zIndex = '9999';
+        errorContainer.style.maxWidth = '400px';
+        
+        // Close button functionality
+        const closeBtn = errorContainer.querySelector('.close-btn');
+        closeBtn.addEventListener('click', function() {
+            errorContainer.style.display = 'none';
+        });
+        
+        // Auto-hide after 5 seconds
+        setTimeout(function() {
+            errorContainer.style.display = 'none';
+        }, 5000);
+        
+        // Optional: Keep visible while hovering
+        errorContainer.addEventListener('mouseenter', function() {
+            clearTimeout(autoHideTimer);
+        });
+        
+        errorContainer.addEventListener('mouseleave', function() {
+            autoHideTimer = setTimeout(function() {
+                errorContainer.style.display = 'none';
+            }, 5000);
+        });
+        
+        let autoHideTimer = setTimeout(function() {
+            errorContainer.style.display = 'none';
+        }, 5000);
+    }
+});
+</script>
 @endif
     
 
@@ -127,7 +175,7 @@
                                         </div>
                                         
                                          <!-- Checkbox for Agreement -->
-                                         <div class="form-check mb-3">
+                                         <div class="fs-2 text-center form-check mb-3">
         <input type="checkbox" class="form-check-input" id="agree_to_terms" name="agree_to_terms" value="1" required>
         <label class="form-check-label" for="agree_to_terms">I Agree to the Terms and Conditions</label>
     </div>
