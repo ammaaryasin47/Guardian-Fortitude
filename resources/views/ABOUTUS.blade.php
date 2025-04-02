@@ -170,7 +170,14 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{{ route('profile.edit') }}">PROFILE</a></li>
-                    <li><a class="dropdown-item" href="{{ route('logout') }}">LOGOUT</a></li>
+                    <li><a class="dropdown-item" href="{{ route('cart') }}">CART</a></li>
+                    <li><a class="dropdown-item" href="{{ route('profile.edit') }}">YOUR ORDERS</a></li>
+                    <li>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="dropdown-item">LOGOUT</button>
+            </form>
+        </li>
                 </ul>
             </li>
             @else
@@ -180,7 +187,7 @@
             @endauth
         </ul>
     </ul>
-</nav>
+</nav>  
 
     <!------------------------------------------------------------ BANNER  ----------------------------------------------------->
     <div class="about-banner">

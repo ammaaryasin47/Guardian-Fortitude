@@ -7,32 +7,85 @@ use App\Models\User;
 
 class AdminController extends Controller
 {
-    //
-    public function index(){
-        $users = User::all();
-        return view('ADMIN.index', compact('users'));
-    }
-    public function register(){
-        return view ('ADMIN.tables-general');
-    }
-
-    public function approve($user_id)
+    public function index()
     {
-        $user = User::findOrFail($user_id);
-        $user->status = 'Approved'; // Set status to approved
-        $user->save();
-
-    return redirect()->route('register.confirmation.success')->with('success', 'User approved successfully.');
+        $users = User::orderBy('created_at', 'desc')->paginate(15);
+        
+        return view('admin.users.index', compact('users'));
     }
 
-    public function reject($user_id)
+    
+    public function approve(User $user)
+{
+    \DB::beginTransaction();
+    
+    try {
+        // 1. Verify current state
+        $currentStatus = \DB::table('users')
+            ->where('user_id', $user->user_id)
+            ->value('status');
+            
+        \Log::info("Approval starting", [
+            'user_id' => $user->user_id,
+            'current_status' => $currentStatus
+        ]);
+
+        // 2. Update using direct assignment
+        $user->status = 'Approved';
+        $user->timestamps = false; // Temporarily disable timestamps
+        
+        // 3. Save and verify
+        if (!$user->save()) {
+            throw new \Exception("Eloquent save failed");
+        }
+        
+        // 4. Verify database update
+        $newStatus = \DB::table('users')
+            ->where('user_id', $user->user_id)
+            ->value('status');
+            
+        if ($newStatus !== 'Approved') {
+            throw new \Exception("Database verification failed");
+        }
+
+        \DB::commit();
+        
+        return response()->json([
+            'status' => 'success',
+            'db_status' => $newStatus,
+            'message' => 'User approved successfully'
+        ]);
+
+    } catch (\Exception $e) {
+        \DB::rollBack();
+        \Log::error("Approval failed", [
+            'error' => $e->getMessage(),
+            'trace' => $e->getTraceAsString()
+        ]);
+        
+        return response()->json([
+            'status' => 'error',
+            'message' => 'Approval failed: ' . $e->getMessage()
+        ], 500);
+    }
+}
+    
+    public function reject(User $user)
     {
-    $user = User::findOrFail($user_id);
-    $user->status = 'Rejected'; // Set status to rejected
-    $user->save();
-
-    return redirect()->route('register.confirmation.failed ')->with('success', 'User rejected.');
+        $user->update(['status' => 'rejected']);
+        
+        if (request()->wantsJson()) {
+            return response()->json([
+                'status' => 'success',
+                'message' => 'User rejected successfully',
+                'user_id' => $user->user_id,
+                'new_status' => 'rejected'
+            ]);
+        }
+        
+        return back()->with('success', 'User rejected successfully');
     }
+
 
     public function updateServices(Request $request)
     {

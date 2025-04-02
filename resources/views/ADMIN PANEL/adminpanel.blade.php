@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT US</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>ADMIN PANEL</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- BOOTSTRAP CDN -->
@@ -25,6 +26,16 @@
     }, 5000); // Match the transition duration
     });
     </script>
+    <script>
+        fetch('/admin/users/b4393740-c758-4e1d-a4da-05fef3f8678f/approve', {
+    method: 'PATCH',
+    headers: {
+        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    }
+}).then(r => r.json()).then(console.log)
+    </script>
     <link href="../CSS/ABOUTUS.css" rel="stylesheet">
     <!---- FAVICONS ---->
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/favicon-16x16.png" type="image/x-icon">
@@ -32,6 +43,99 @@
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/android-chrome-192x192.png" type="image/svg+xml">
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/android-chrome-512x512.png" type="image/svg+xml">
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/apple-touch-icon.png" type="image/svg+xml">
+    <style>
+        /* Loading spinner */
+.fa-spinner {
+    margin-right: 5px;
+}
+
+/* Alert positioning */
+.alert {
+    transition: all 0.3s ease;
+}
+
+/* Table styling */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Button spacing */
+.btn-group .btn {
+    margin-right: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table td, .table th {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+    
+    .btn-sm {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+    }
+}
+    </style>
+    <script>
+// 1. First make sure we can find elements
+console.log("=== STARTING TAB SETUP ===");
+
+const buttons = document.querySelectorAll('div.bg-dark button.tab-button');
+const tabs = document.querySelectorAll('div[id$="-tab"]');
+
+console.log(`Found ${buttons.length} buttons and ${tabs.length} tabs`);
+
+// 2. Show tab function with maximum debugging
+function showTab(targetId) {
+    console.log(`Attempting to show tab: ${targetId}`);
+    
+    // Hide all tabs
+    tabs.forEach(tab => {
+        console.log(`Hiding tab: ${tab.id}`);
+        tab.style.display = 'none';
+        tab.classList.remove('active');
+    });
+    
+    // Show selected tab
+    const targetTab = document.getElementById(targetId);
+    if (targetTab) {
+        console.log(`Showing tab: ${targetTab.id}`);
+        targetTab.style.display = 'block';
+        targetTab.classList.add('active');
+    } else {
+        console.error(`Tab not found: ${targetId}`);
+    }
+    
+    // Update button states
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-target') === targetId) {
+            btn.classList.add('active');
+        }
+    });
+}
+
+// 3. Add click handlers with event delegation as fallback
+document.body.addEventListener('click', function(event) {
+    if (event.target.closest('.tab-button')) {
+        const button = event.target.closest('.tab-button');
+        console.log("Tab button clicked via delegation:", button);
+        showTab(button.getAttribute('data-target'));
+    }
+});
+
+// 4. Initialize - show first tab
+if (buttons.length > 0) {
+    console.log("Initializing first tab");
+    buttons[0].classList.add('active');
+    showTab(buttons[0].getAttribute('data-target'));
+} else {
+    console.error("No tab buttons found!");
+}
+
+console.log("=== TAB SETUP COMPLETE ===");
+</script>
 </head>
 
 <body>
@@ -170,7 +274,14 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{{ route('profile.edit') }}">PROFILE</a></li>
-                    <li><a class="dropdown-item" href="{{ route('logout') }}">LOGOUT</a></li>
+                    <li><a class="dropdown-item" href="{{ route('cart') }}">CART</a></li>
+                    <li><a class="dropdown-item" href="{{ route('profile.edit') }}">YOUR ORDERS</a></li>
+                    <li>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="dropdown-item">LOGOUT</button>
+            </form>
+        </li>
                 </ul>
             </li>
             @else
@@ -184,151 +295,447 @@
 
 
 <!--------------------------------------------------------------SUB NAVBAR ------------------------------------------------------->
+<div class="bg-dark d-flex justify-content-around align-items-center p-3 fs-2 tab-buttons-container">
+    <button class="tab-button active" data-tab="users-tab">USERS</button>
+    <button class="tab-button" data-tab="services-tab">SERVICES</button>
+    <button class="tab-button" data-tab="orders-tab">ORDERS</button>
+</div>
 
-    <div class="subnavbar fs-2 text-light ">
-        <ul class="list-unstyled d-flex justify-content-around align-items-center gap-5" style="border-bottom: 1px solid #fff; padding:1rem;">
-            <li><a href="{{URL::to('/aboutus')}}"></a>USERS</li>
-            <li><a href="{{URL::to('/services')}}"></a>SERVICES</li>
-            <li><a href="{{URL::to('/products')}}"></a>ORDERS</li>
-        </ul>
-    </div>
-
-    <div id="users" class="content-div">
-    <div class="container mt-4">
-        <h2>User Approval Dashboard</h2>
-        <div class="card shadow-sm">
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-hover table-bordered">
-                        <thead class="thead-light">
-                            <tr>
-                                <th>User ID</th>
-                                <th>Profile</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Contact</th>
-                                <th>Type</th>
-                                <th>Status</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($users as $user)
-                            <tr>
-                                <td>{{ Str::limit($user->user_id, 8) }}</td>
-                                <td>
-                                    @if($user->picture)
-                                        <img src="{{ Storage::disk('public')->url($user->picture) }}" 
-                                             class="rounded-circle" width="40" height="40" alt="Profile">
-                                    @else
-                                        <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center" 
-                                             style="width:40px;height:40px;">
-                                            <i class="fas fa-user text-white"></i>
-                                        </div>
-                                    @endif
-                                </td>
-                                <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
-                                <td>{{ $user->countrycode }} {{ $user->contact }}</td>
-                                <td>{{ ucfirst($user->type) }}</td>
-                                <td>
-                                    <span class="badge 
-                                        @if($user->status === 'approved') bg-success
-                                        @elseif($user->status === 'rejected') bg-danger
-                                        @else bg-warning text-dark @endif">
-                                        {{ ucfirst($user->status ?? 'pending') }}
-                                    </span>
-                                </td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        @if($user->status !== 'approved')
-                                        <form action="{{ route('users.approve', $user->user_id) }}" method="POST" class="d-inline">
-                                            @csrf
-                                            @method('PATCH')
-                                            <button type="submit" class="btn btn-sm btn-success">
-                                                <i class="fas fa-check"></i> Approve
-                                            </button>
-                                        </form>
-                                        @endif
-                                        
-                                        @if($user->status !== 'rejected')
-                                        <form action="{{ route('users.reject', $user->user_id) }}" method="POST" class="d-inline">
-                                            @csrf
-                                            @method('PATCH')
-                                            <button type="submit" class="btn btn-sm btn-danger ms-1">
-                                                <i class="fas fa-times"></i> Reject
-                                            </button>
-                                        </form>
-                                        @endif
-                                    </div>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-                
-                <!-- Pagination -->
-                @if($users->hasPages())
-                <div class="d-flex justify-content-center mt-4">
-                    {{ $users->links() }}
-                </div>
-                @endif
-            </div>
+<div id="users-tab" class="table-tab table-container mt-4 fs-3" data-tab-content>
+    <h2 class="text-center p-5 text-light">USER MANAGEMENT</h2>
+    
+    <!-- Success/Error Messages -->
+    <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="z-index: 9999"></div>
+    
+    <div class="table-responsive">
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>PROFILE</th>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th>CONTACT</th>
+                    <th>TYPE</th>
+                    <th>STATUS</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($users as $user)
+                <tr data-user-id="{{ $user->user_id }}">
+                    <td>{{ $user->user_id }}</td>
+                    <td>
+                        @if($user->picture)
+                        <img src="{{ Storage::disk('public')->url($user->picture) }}" 
+                             class="rounded-circle" width="40" height="40" alt="Profile">
+                        @else
+                        <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center" 
+                             style="width:40px;height:40px;">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        @endif
+                    </td>
+                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->email }}</td>
+                    <td>{{ $user->countrycode }} {{ $user->contact }}</td>
+                    <td>{{ ucfirst($user->type) }}</td>
+                    <td>
+        <span class="badge {{ $user->status === 'approved' ? 'bg-success' : ($user->status === 'rejected' ? 'bg-danger' : 'bg-warning') }}">
+            {{ ucfirst($user->status ?? 'pending') }}
+        </span>
+    </td>
+    <td>
+        <div class="btn-group">
+            @if($user->status != 'approved')
+            <button class="btn btn-success btn-sm approve-btn" 
+                    data-user-id="{{ $user->user_id }}">
+                <i class="fas fa-check"></i> Approve
+            </button>
+            @endif
+            
+            @if($user->status != 'rejected')
+            <button class="btn btn-danger btn-sm reject-btn" 
+                    data-user-id="{{ $user->user_id }}">
+                <i class="fas fa-times"></i> Reject
+            </button>
+            @endif
         </div>
+    </td>
+    </tr>
+                    
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="d-flex justify-content-center mt-3">
+        {{ $users->links() }}
+    </div>
+</div>
+@push('scripts')
+<script>
+   async function handleStatusChange(userId, action) {
+    const button = document.querySelector(`.${action}-btn[data-user-id="${userId}"]`);
+    const row = document.querySelector(`tr[data-user-id="${userId}"]`);
+    
+    if (!button || !row) return;
+
+    const originalHtml = button.innerHTML;
+    button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+    button.disabled = true;
+
+    try {
+        const response = await fetch(`/admin/users/${userId}/${action}`, {
+            method: 'PATCH',
+            headers: {
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+                'Accept': 'application/json'
+            }
+        });
+
+        const data = await response.json();
+        
+        if (!response.ok) throw new Error(data.message || 'Action failed');
+
+        // Update the UI immediately
+        updateUserRowUI(row, data.new_status);
+        
+        // Show success feedback
+        showAlert(data.message, 'success');
+
+    } catch (error) {
+        console.error('Error:', error);
+        showAlert(error.message, 'danger');
+        button.innerHTML = originalHtml;
+        button.disabled = false;
+    }
+}
+
+function updateUserRowUI(row, newStatus) {
+    // Update status badge
+    const statusBadge = row.querySelector('.badge');
+    if (statusBadge) {
+        statusBadge.className = newStatus === 'approved' 
+            ? 'badge bg-success' 
+            : 'badge bg-danger';
+        statusBadge.textContent = newStatus.charAt(0).toUpperCase() + newStatus.slice(1);
+    }
+
+    // Update action buttons
+    const buttonGroup = row.querySelector('.btn-group');
+    if (buttonGroup) {
+        if (newStatus === 'approved') {
+            // Remove approve button, keep reject if needed
+            const approveBtn = buttonGroup.querySelector('.approve-btn');
+            if (approveBtn) approveBtn.remove();
+        } else if (newStatus === 'rejected') {
+            // Remove reject button, keep approve if needed
+            const rejectBtn = buttonGroup.querySelector('.reject-btn');
+            if (rejectBtn) rejectBtn.remove();
+        }
+    }
+}
+
+function showAlert(message, type = 'success') {
+    const alertHtml = `
+        <div class="alert alert-${type} alert-dismissible fade show position-fixed top-0 end-0 m-3">
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    `;
+    
+    const alertContainer = document.getElementById('alert-container') || document.body;
+    alertContainer.insertAdjacentHTML('afterbegin', alertHtml);
+    
+    // Auto-dismiss after 5 seconds
+    setTimeout(() => {
+        const alert = document.querySelector('.alert');
+        if (alert) alert.remove();
+    }, 5000);
+}
+</script>
+@endpush
+<!----------------------------------------------------------------SERVICES TAB ------------------------------------------------------->
+<div id="services-tab" class="table-tab d-none table-container mt-4 fs-3" data-tab-content>
+    <h2 class="text-center p-5 text-light">USER SERVICES MANAGEMENT</h2>
+    
+    <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="z-index: 9999"></div>
+    
+    <div class="table-responsive">
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th>USER</th>
+                    <th>PROFILE</th>
+                    <th>NAME</th>
+                    <th>Personal Protection</th>
+                    <th>Asset Protection</th>
+                    <th>Surveillance Monitoring</th>
+                    <th>Site Security</th>
+                    <th>Training Consultation</th>
+                    <th>Emergency Extraction</th>
+                    <th>Special Assault Team</th>
+                    <th>Emergency Crisis Management</th>
+                    <th>Cyber Security</th>
+                    <th>Private Detectives</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($users as $user)
+                <tr data-user-id="{{ $user->user_id }}">
+                    <td>{{ $user->user_id }}</td>
+                    <td>
+                        @if($user->picture)
+                        <img src="{{ Storage::disk('public')->url($user->picture) }}" 
+                             class="rounded-circle" width="40" height="40" alt="Profile">
+                        @else
+                        <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center" 
+                             style="width:40px;height:40px;">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        @endif
+                    </td>
+                    <td>{{ $user->name }}</td>
+                    
+                    <!-- Service Checkboxes -->
+                    <td>
+                        <div class="form-check d-flex justify-content-center">
+                            <input class="form-check-input service-checkbox" type="checkbox" 
+                                   data-service="personal_protection"
+                                   data-user-id="{{ $user->user_id }}"
+                                   {{ $user->subscription && $user->subscription->personal_protection ? 'checked' : '' }}>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-check d-flex justify-content-center">
+                            <input class="form-check-input service-checkbox" type="checkbox" 
+                                   data-service="asset_protection"
+                                   data-user-id="{{ $user->user_id }}"
+                                   {{ $user->subscription && $user->subscription->asset_protection ? 'checked' : '' }}>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-check d-flex justify-content-center">
+                            <input class="form-check-input service-checkbox" type="checkbox" 
+                                   data-service="surveillance_monitoring"
+                                   data-user-id="{{ $user->user_id }}"
+                                   {{ $user->subscription && $user->subscription->surveillance_monitoring ? 'checked' : '' }}>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-check d-flex justify-content-center">
+                            <input class="form-check-input service-checkbox" type="checkbox" 
+                                   data-service="site_security"
+                                   data-user-id="{{ $user->user_id }}"
+                                   {{ $user->subscription && $user->subscription->site_security ? 'checked' : '' }}>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-check d-flex justify-content-center">
+                            <input class="form-check-input service-checkbox" type="checkbox" 
+                                   data-service="training_consultation"
+                                   data-user-id="{{ $user->user_id }}"
+                                   {{ $user->subscription && $user->subscription->training_consultation ? 'checked' : '' }}>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-check d-flex justify-content-center">
+                            <input class="form-check-input service-checkbox" type="checkbox" 
+                                   data-service="emergency_extraction"
+                                   data-user-id="{{ $user->user_id }}"
+                                   {{ $user->subscription && $user->subscription->emergency_extraction ? 'checked' : '' }}>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-check d-flex justify-content-center">
+                            <input class="form-check-input service-checkbox" type="checkbox" 
+                                   data-service="special_assault_team"
+                                   data-user-id="{{ $user->user_id }}"
+                                   {{ $user->subscription && $user->subscription->special_assault_team ? 'checked' : '' }}>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-check d-flex justify-content-center">
+                            <input class="form-check-input service-checkbox" type="checkbox" 
+                                   data-service="emergency_crisis_management"
+                                   data-user-id="{{ $user->user_id }}"
+                                   {{ $user->subscription && $user->subscription->emergency_crisis_management ? 'checked' : '' }}>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-check d-flex justify-content-center">
+                            <input class="form-check-input service-checkbox" type="checkbox" 
+                                   data-service="cyber_security"
+                                   data-user-id="{{ $user->user_id }}"
+                                   {{ $user->subscription && $user->subscription->cyber_security ? 'checked' : '' }}>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-check d-flex justify-content-center">
+                            <input class="form-check-input service-checkbox" type="checkbox" 
+                                   data-service="private_detectives"
+                                   data-user-id="{{ $user->user_id }}"
+                                   {{ $user->subscription && $user->subscription->private_detectives ? 'checked' : '' }}>
+                        </div>
+                    </td>
+                    
+                    <td>
+                        <button class="btn btn-primary btn-sm save-services-btn"
+                                data-user-id="{{ $user->user_id }}">
+                            <i class="fas fa-save"></i> Save
+                        </button>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="d-flex justify-content-center mt-3">
+        {{ $users->links() }}
     </div>
 </div>
 
 @push('styles')
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <style>
-    .table th {
-        white-space: nowrap;
+    .service-checkbox {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
     }
-    .badge {
-        font-size: 0.85em;
-        padding: 0.35em 0.65em;
-    }
-    .btn-sm {
+    .save-services-btn {
+        font-size: 0.875rem;
         padding: 0.25rem 0.5rem;
-        font-size: 0.765rem;
     }
 </style>
 @endpush
 
-    <div id="services"  class="content-div" style="display: none;"></div>
-    <div id="orders"  class="content-div" style="display: none;"></div> 
-    <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
-    <x-footer />
-
+@push('scripts')
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all navigation links
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    // Add click event to each link
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Get the target div ID
-            const targetId = this.getAttribute('data-target');
-            
-            // Hide all content divs
-            document.querySelectorAll('.content-div').forEach(div => {
-                div.style.display = 'none';
-            });
-            
-            // Show the target div
-            document.getElementById(targetId).style.display = 'block';
+    // Handle checkbox changes
+    document.querySelectorAll('.service-checkbox').forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            const userId = this.getAttribute('data-user-id');
+            const saveBtn = document.querySelector(`.save-services-btn[data-user-id="${userId}"]`);
+            if (saveBtn) {
+                saveBtn.classList.add('btn-warning');
+                saveBtn.innerHTML = '<i class="fas fa-exclamation-circle"></i> Save Changes';
+            }
         });
     });
-    
-    // Show users div by default
-    document.getElementById('users').style.display = 'block';
+
+    // Handle save button clicks
+    document.querySelectorAll('.save-services-btn').forEach(button => {
+        button.addEventListener('click', async function() {
+            const userId = this.getAttribute('data-user-id');
+            const checkboxes = document.querySelectorAll(`.service-checkbox[data-user-id="${userId}"]`);
+            
+            const services = {};
+            checkboxes.forEach(checkbox => {
+                services[checkbox.getAttribute('data-service')] = checkbox.checked;
+            });
+
+            try {
+                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Saving...';
+                this.disabled = true;
+                
+                const response = await fetch(`/admin/users/${userId}/services`, {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ services })
+                });
+
+                const data = await response.json();
+                
+                if (!response.ok) throw new Error(data.message || 'Failed to save services');
+
+                this.classList.remove('btn-warning');
+                this.classList.add('btn-success');
+                this.innerHTML = '<i class="fas fa-check"></i> Saved!';
+                
+                setTimeout(() => {
+                    this.classList.remove('btn-success');
+                    this.innerHTML = '<i class="fas fa-save"></i> Save';
+                    this.disabled = false;
+                }, 2000);
+
+            } catch (error) {
+                console.error('Error:', error);
+                this.innerHTML = '<i class="fas fa-times"></i> Error';
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-save"></i> Save';
+                    this.disabled = false;
+                }, 2000);
+            }
+        });
+    });
 });
 </script>
+@endpush
+
+<!----------------------------------------------------------------ORDERS TAB ------------------------------------------------------->
+<div id="orders-tab" class="table-tab d-none" data-tab-content>
+    <!-- Your orders table HTML would go here -->
+    <div class="table-container mt-4 fs-3">
+        <h2 class="text-center p-5 text-light">ORDERS MANAGEMENT</h2>
+        <p class="text-center text-light">Orders table content would go here</p>
+    </div>
+</div>
+
+    @push('styles')
+<style>
+    /* Tab buttons styling */
+    .tab-button {
+        background: none;
+        border: none;
+        color: #aaa;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+    }
+    
+    .tab-button.active {
+        color: white;
+        border-bottom: 3px solid #0d6efd;
+        font-weight: bold;
+    }
+    
+    .tab-button:hover:not(.active) {
+        color: #ddd;
+    }
+    
+    /* Tab content visibility */
+    [data-tab-content] {
+        display: none;
+    }
+    
+    [data-tab-content].active {
+        display: block;
+    }
+    
+    /* Override Bootstrap's d-none if needed */
+    [data-tab-content].active.d-none {
+        display: block !important;
+    }
+</style>
+@endpush
+
+@push('scripts') 
+<script>
+console.log("SIMPLEST POSSIBLE TEST - DELETE ME LATER");
+alert("JavaScript is loading!");
+</script>
+
+   
+@endpush
 
     <script src="../JS/navbar.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>

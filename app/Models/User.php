@@ -9,58 +9,29 @@ use Illuminate\Support\Str;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
-
-    // Define the primary key
-    protected $primaryKey = 'user_id';
-
-    // If the primary key is not an auto-incrementing integer
+    // Ensure these properties are set
     public $incrementing = false;
     protected $keyType = 'string';
+    protected $primaryKey = 'user_id';
 
+    // Make status fillable
     protected $fillable = [
-        'user_id',
-        'name',
-        'picture',
-        'countrycode',
-        'contact',
-        'email',
-        'password',
-        'type',
-        'sector',
-        'nature',
-        'armsliscence',
-        'address',
-        'langprefer',
-        'commandprefer',
-        'updateprefer',
-        'pastthreats',
+        // ... your other fields
+        'status'
     ];
 
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
-
-    public function subscription()
-    {
-        return $this->hasOne(Subscription::class, 'user_id', 'user_id');
-    }
-    
+    // Add this to debug model events
     protected static function boot()
     {
         parent::boot();
 
-        static::creating(function ($model) {
-            if (empty($model->user_id)) {
-                $model->user_id = (string) Str::uuid(); // Generate a UUID
-            }
+        static::updating(function($user) {
+            \Log::info("Model updating", [
+                'original' => $user->getOriginal(),
+                'changes' => $user->getDirty()
+            ]);
         });
     }
-
-
-    public function cart()
-    {
-        return $this->hasMany(Cart::class, 'user_id', 'user_id'); // 👈 Correct foreign key
-    }
-
 }
+
+

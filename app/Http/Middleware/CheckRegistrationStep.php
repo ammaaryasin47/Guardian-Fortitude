@@ -34,9 +34,9 @@ class CheckRegistrationStep
                 ];
                 
                 foreach ($requiredSteps as $stepFlag) {
-                    if (!session($stepFlag) {
+                    if (!session($stepFlag)) {
                         return redirect()->route('register')->with('error', 'Please complete all registration steps first.');
-                })
+                    }
                 }
                 break;
                 

@@ -53,4 +53,26 @@ class UserSubscriptionController extends Controller
         // Logic for loading the dashboard
         return view('dashboard');
     }
+
+    public function updateServices(User $user, Request $request)
+{
+    $validated = $request->validate([
+        'services' => 'required|array',
+        'services.*' => 'boolean'
+    ]);
+
+    $subscription = $user->subscription ?? new Subscription();
+    $subscription->user_id = $user->user_id;
+    
+    foreach ($validated['services'] as $service => $value) {
+        $subscription->$service = $value;
+    }
+    
+    $subscription->save();
+
+    return response()->json([
+        'status' => 'success',
+        'message' => 'Services updated successfully'
+    ]);
+}
 }

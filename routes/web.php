@@ -12,7 +12,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\OrderController;
-
+use App\Models\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -99,10 +99,10 @@ Route::prefix('register')->controller(RegisterController::class)->group(function
 });
 
 // <------------------------------ ADMIN ROUTES --------------------------------------------------------------
-Route::get('/adminphp', [AdminController::class, 'index'])->middleware(['auth', 'admin']);
-Route::get('/adminregister', [AdminController::class, 'register']);
-Route::patch('/users/{user_id}/approve', [AdminController::class, 'approve'])->name('users.approve');
-Route::patch('/users/{user_id}/reject', [AdminController::class, 'reject'])->name('users.reject');
+// Route::get('/adminphp', [AdminController::class, 'index'])->middleware(['auth', 'admin']);
+// Route::get('/adminregister', [AdminController::class, 'register']);
+// Route::patch('/users/{user_id}/approve', [AdminController::class, 'approve'])->name('users.approve');
+// Route::patch('/users/{user_id}/reject', [AdminController::class, 'reject'])->name('users.reject');
 
 //<------------------------------- TO DATABASE ----------------------------------------------------------------------
 Route::prefix('register')->controller(RegisterController::class)->group(function () {
@@ -145,7 +145,7 @@ Route::get('/items', [ProductController::class, 'index']);
 Route::get('/items/{id}', [ProductController::class, 'show']); 
 Route::post('/items', [ProductController::class, 'store']); 
 
-Route::post('/submit-service', [ServiceController::class, 'submit'])->name('service.submit');
+// Route::post('/submit-service', [ServiceController::class, 'submit'])->name('service.submit');
 Route::get('/debug-session', function () {
     dd(session()->all());
 });
@@ -156,3 +156,56 @@ Route::get('/paymentcomplete', function () {
 
 Route::get('/checkout', [OrderController::class, 'index'])->name('checkout');
 Route::post('/checkout', [OrderController::class, 'store'])->name('checkout.submit');
+
+//------------------------- ADMIN PANEL -----------------------------------------------------------
+Route::middleware(['auth', 'admin'])->group(function () {
+    
+    // Main Admin Dashboard
+    Route::get('/adminpanel', function () {
+        $users = User::orderBy('created_at', 'desc')->paginate(15);
+        return view('ADMIN PANEL.adminpanel', compact('users'));
+    })->name('admin.panel');
+
+    // User Management Routes
+    Route::prefix('users')->group(function () {
+        // User Approval
+       
+        Route::patch('/{user}/reject', [AdminController::class, 'reject'])->name('users.reject');
+       
+        // User Registration (if needed)
+        Route::get('/register', [AdminController::class, 'register'])
+            ->name('admin.register');
+            
+        // User Listing
+        Route::get('/', [AdminController::class, 'index'])
+            ->name('admin.users.index');
+    });
+
+    Route::get('/debug-routes', function() {
+        $routes = Route::getRoutes()->getRoutes();
+        return view('debug', ['routes' => $routes]);
+    });
+
+    Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
+        Route::patch('users/{user}/approve', [AdminController::class, 'approve'])
+            ->name('users.approve');
+    });
+
+});
+
+Route::get('/test-db', function() {
+    try {
+        $testUpdate = \DB::table('users')
+            ->where('user_id', 'b4393740-c758-4e1d-a4da-05fef3f8678f')
+            ->update(['status' => 'approved']);
+            
+        return response()->json([
+            'affected_rows' => $testUpdate,
+            'current_status' => \DB::table('users')
+                ->where('user_id', 'b4393740-c758-4e1d-a4da-05fef3f8678f')
+                ->value('status')
+        ]);
+    } catch (\Exception $e) {
+        return response()->json(['error' => $e->getMessage()], 500);
+    }
+}); 

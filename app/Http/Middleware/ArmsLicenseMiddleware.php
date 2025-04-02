@@ -16,6 +16,6 @@ class ArmsLicenseMiddleware
         }
 
         // Redirect unauthorized users with an error message
-        return redirect('/')->with('error', 'Unauthorized access! You need a valid arms license.');
+        return redirect('/products')->with('error', 'Unauthorized access! You need a valid arms license.');
     }
 }
