@@ -8,44 +8,53 @@ use Illuminate\Http\Request;
 
 class AdminSubscriptionController extends Controller
 {
-    // Show the subscription form to the admin for a specific user
     public function edit($userId)
     {
-        $user = User::findOrFail($userId); // Find the user
-        $subscription = Subscription::where('user_id', $user->id)->first(); // Get the user's subscription
-
-        if (!$subscription) {
-            // If no subscription exists for the user, create an empty one
-            $subscription = new Subscription([
-                'user_id' => $user->id,
-                'name' => $user->name,
-            ]);
+        \Log::info('Edit method called for user: '.$userId); // Debugging
+        
+        try {
+            $user = User::findOrFail($userId);
+            $subscription = Subscription::firstOrNew(
+                ['user_id' => $userId],
+                ['user_id' => $userId]
+            );
+            
+            \Log::debug('User found:', ['user' => $user]);
+            \Log::debug('Subscription:', ['subscription' => $subscription]);
+            
+            return view('ADMINPANEL.subscription-edit', compact('user', 'subscription'));
+        } catch (\Exception $e) {
+            \Log::error('Error in edit method: '.$e->getMessage());
+            abort(500, 'Error loading subscription edit page');
         }
-
-        return view('admin.subscriptions.edit', compact('user', 'subscription'));
     }
 
-    public function updateSubscription(Request $request, $userId)
+    public function update(Request $request, $userId)
     {
-        // Validate input
-        $request->validate([
-            'users.*.personal_protection' => 'nullable|boolean',
-            'users.*.asset_protection' => 'nullable|boolean',
-            'users.*.surveillance_monitoring' => 'nullable|boolean',
-            'users.*.site_security' => 'nullable|boolean',
-            'users.*.training_consultation' => 'nullable|boolean',
-            'users.*.emergency_extraction' => 'nullable|boolean',
-            'users.*.special_assault_team' => 'nullable|boolean',
-            'users.*.emergency_crisis_management' => 'nullable|boolean',
-            'users.*.cyber_security' => 'nullable|boolean',
-            'users.*.private_detectives' => 'nullable|boolean',
+        $validated = $request->validate([
+            'personal_protection' => 'nullable|boolean',
+            'asset_protection' => 'nullable|boolean',
+            'surveillance_monitoring' => 'nullable|boolean',
+            'site_security' => 'nullable|boolean',
+            'training_consultation' => 'nullable|boolean',
+            'emergency_extraction' => 'nullable|boolean',
+            'special_assault_team' => 'nullable|boolean',
+            'emergency_crisis_management' => 'nullable|boolean',
+            'cyber_security' => 'nullable|boolean',
+            'private_detectives' => 'nullable|boolean',
         ]);
-    
-        // Retrieve the user
-        $user = User::findOrFail($userId);
-        $subscription = $user->subscription;
-    
-        // Loop through each service and update it
+
+        $subscription = Subscription::updateOrCreate(
+            ['user_id' => $userId],
+            $this->prepareSubscriptionData($validated)
+        );
+
+        return redirect()->route('admin.panel') // Changed to your admin panel route
+            ->with('success', 'Subscription updated successfully!');
+    }
+
+    protected function prepareSubscriptionData($data)
+    {
         $services = [
             'personal_protection',
             'asset_protection',
@@ -58,26 +67,15 @@ class AdminSubscriptionController extends Controller
             'cyber_security',
             'private_detectives',
         ];
-    
-        $validTill = now()->addDays(365); // 365 days from now
-    
+
+        $result = [];
+        $validTill = now()->addYear();
+
         foreach ($services as $service) {
-            // If the admin ticks the checkbox, set the service to true and update valid_till
-            if ($request->input("users.{$userId}.{$service}") == true) {
-                $subscription->$service = true;
-                $subscription->{$service . '_valid_till'} = $validTill;
-            } else {
-                // If the checkbox is not ticked, set it to false and set valid_till to null
-                $subscription->$service = false;
-                $subscription->{$service . '_valid_till'} = null;
-            }
+            $result[$service] = $data[$service] ?? false;
+            $result[$service.'_valid_till'] = $data[$service] ? $validTill : null;
         }
-    
-        // Save the updated subscription
-        $subscription->save();
-    
-        return redirect()->route('admin.subscription.index')->with('success', 'Subscription updated successfully.');
+
+        return $result;
     }
-    
-    
 }

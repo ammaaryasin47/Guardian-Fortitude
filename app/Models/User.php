@@ -2,36 +2,38 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Str;
 
 class User extends Authenticatable
 {
-    // Ensure these properties are set
-    public $incrementing = false;
-    protected $keyType = 'string';
-    protected $primaryKey = 'user_id';
+    protected $primaryKey = 'user_id'; // Set primary key
+    public $incrementing = false; // For UUID
+    protected $keyType = 'string'; // For UUID
 
-    // Make status fillable
     protected $fillable = [
-        // ... your other fields
+        'user_id',
+        'name',
+        'picture',
+        'countrycode',
+        'contact',
+        'email',
+        'type',
+        'sector',
+        'nature',
+        'armsliscence',
+        'address',
+        'role',
         'status'
     ];
 
-    // Add this to debug model events
-    protected static function boot()
+    // Add this if your pictures are stored in storage/app/public
+    public function getPictureUrlAttribute()
     {
-        parent::boot();
+        return $this->picture ? asset('storage/'.$this->picture) : null;
+    }
 
-        static::updating(function($user) {
-            \Log::info("Model updating", [
-                'original' => $user->getOriginal(),
-                'changes' => $user->getDirty()
-            ]);
-        });
+    public function subscription()
+    {
+        return $this->hasOne(Subscription::class, 'user_id', 'user_id');
     }
 }
-
-
