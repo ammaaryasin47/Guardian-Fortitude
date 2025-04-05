@@ -362,7 +362,7 @@
     </div>
     
     <div id="orders-table" class="fs-3   table-container">
-        <h2>Orders</h2>
+        <h2 class="py-3 text-light text-center">ORDERS</h2>
         <table>
             <thead>
                 <tr>
@@ -373,24 +373,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>5001</td>
-                    <td>John Doe</td>
-                    <td>2023-05-15</td>
-                    <td>Completed</td>
-                </tr>
-                <tr>
-                    <td>5002</td>
-                    <td>Jane Smith</td>
-                    <td>2023-05-18</td>
-                    <td>Processing</td>
-                </tr>
-                <tr>
-                    <td>5003</td>
-                    <td>Bob Johnson</td>
-                    <td>2023-05-20</td>
-                    <td>Pending</td>
-                </tr>
+                
             </tbody>
         </table>
     </div>
