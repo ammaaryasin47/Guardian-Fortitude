@@ -18,6 +18,7 @@ class Cart extends Model
         'price',
     ];
 
+
     // Relationship with User
     public function user()
     {

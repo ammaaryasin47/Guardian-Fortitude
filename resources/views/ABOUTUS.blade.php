@@ -116,6 +116,16 @@
                     </a>
                     <ul class="fs-2 dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a></li>
+                        @auth
+    @if(Auth::user()->type === 'Admin')
+        <li class="sidenav-item">
+            <a href="{{ route('admin.panel') }}" class="dropdown-item sidenav-link">
+                <span>ADMIN PANEL</span>
+            </a>
+        </li>
+    @endif
+@endauth
+                        <li><a class="dropdown-item" href="{{ route('orders') }}">YOUR ORDERS</a></li>
                         <li><a class="dropdown-item" href="{{ route('logout') }}">Logout</a></li>
                     </ul>
                 </li>
@@ -162,29 +172,32 @@
             @auth
             <li class="nav-item dropdown">
                 <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
-                <img 
-                    src="{{ Auth::user()->picture ? asset(Auth::user()->picture) : asset('default-profile.png') }}" 
-                    alt="Profile Picture" 
-                    class="rounded-circle" 
-                    height="40px">
+                    <img 
+                        src="{{ Auth::user()->picture ? asset(Auth::user()->picture) : asset('default-profile.png') }}" 
+                        alt="Profile Picture" 
+                        class="rounded-circle" 
+                        height="40px">
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{{ route('profile.edit') }}">PROFILE</a></li>
+                    @if(Auth::user()->type === 'Admin')
+                        <li><a class="dropdown-item" href="{{ route('admin.panel') }}">ADMIN</a></li>
+                    @endif
                     <li><a class="dropdown-item" href="{{ route('cart') }}">CART</a></li>
-                    <li><a class="dropdown-item" href="{{ route('profile.edit') }}">YOUR ORDERS</a></li>
+                    <li><a class="dropdown-item" href="{{ route('orders') }}">YOUR ORDERS</a></li>
                     <li>
-            <form action="{{ route('logout') }}" method="POST">
-                @csrf
-                <button type="submit" class="dropdown-item">LOGOUT</button>
-            </form>
-        </li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="dropdown-item">LOGOUT</button>
+                        </form>
+                    </li>
                 </ul>
             </li>
-            @else
+@else
             <li class="nav-item">
                 <a href="{{URL::to('/login')}}">LOGIN</a>
             </li>
-            @endauth
+@endauth
         </ul>
     </ul>
 </nav>  

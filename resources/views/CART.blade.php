@@ -17,125 +17,125 @@
   <link rel="icon" href="../../IMAGES/HOME/favicon_io/android-chrome-192x192.png" type="image/svg+xml">
   <link rel="icon" href="../../IMAGES/HOME/favicon_io/android-chrome-512x512.png" type="image/svg+xml">
   <link rel="icon" href="../../IMAGES/HOME/favicon_io/apple-touch-icon.png" type="image/svg+xml">
-  <style>
+<style>
                 
 
-.space{
-    letter-spacing: 0.8px !important;
-}
+    .space{
+        letter-spacing: 0.8px !important;
+    }
 
-.second a:hover {
-    color: rgb(92, 92, 92) ;
-}
+    .second a:hover {
+        color: rgb(92, 92, 92) ;
+    }
 
-.active-2 {
-    color: rgb(92, 92, 92) 
-}
+    .active-2 {
+        color: rgb(92, 92, 92) 
+    }
 
 
-.breadcrumb>li+li:before {
-    content: "" !important
-}
+    .breadcrumb>li+li:before {
+        content: "" !important
+    }
 
-.breadcrumb {
-    padding: 0px;
-    font-size: 10px;
-    color: #aaa !important;
-}
+    .breadcrumb {
+        padding: 0px;
+        font-size: 10px;
+        color: #aaa !important;
+    }
 
-.first {
-    background-color: white ;
-}
+    .first {
+        background-color: white ;
+    }
 
-a {
-    text-decoration: none !important;
-    color: #aaa ;
-}
+    a {
+        text-decoration: none !important;
+        color: #aaa ;
+    }
 
-.btn-lg,.form-control-sm:focus,
-.form-control-sm:active,
-a:focus,a:active {
-    outline: none !important;
-    box-shadow: none !important
-}
+    .btn-lg,.form-control-sm:focus,
+    .form-control-sm:active,
+    a:focus,a:active {
+        outline: none !important;
+        box-shadow: none !important
+    }
 
-.form-control-sm:focus{
-    border:1.5px solid #4bb8a9 ; 
-}
+    .form-control-sm:focus{
+        border:1.5px solid #4bb8a9 ; 
+    }
 
-.btn-group-lg>.btn, .btn-lg {
-    padding: .5rem 0.1rem;
-    font-size: 1rem;
-    border-radius: 0;
-    color: white !important;
-    background-color: #4bb8a9;
-    height: 2.8rem !important;
-    border-radius: 0.2rem !important;
-}
+    .btn-group-lg>.btn, .btn-lg {
+        padding: .5rem 0.1rem;
+        font-size: 1rem;
+        border-radius: 0;
+        color: white !important;
+        background-color: #4bb8a9;
+        height: 2.8rem !important;
+        border-radius: 0.2rem !important;
+    }
 
-.btn-group-lg>.btn:hover, .btn-lg:hover {
-    background-color: #800000;
-}
+    .btn-group-lg>.btn:hover, .btn-lg:hover {
+        background-color: #800000;
+    }
 
-.btn-outline-primary{
-    background-color: #fff !important;
-    color:#4bb8a9 !important;
-    border-radius: 0.2rem !important;   
-    border:1px solid #4bb8a9;
-}
+    .btn-outline-primary{
+        background-color: #fff !important;
+        color:#4bb8a9 !important;
+        border-radius: 0.2rem !important;   
+        border:1px solid #4bb8a9;
+    }
 
-.btn-outline-primary:hover{
-    background-color:#4bb8a9  !important;
-    color:#fff !important;
-    border:1px solid #4bb8a9;
-}
+    .btn-outline-primary:hover{
+        background-color:#4bb8a9  !important;
+        color:#fff !important;
+        border:1px solid #4bb8a9;
+    }
 
-.card-2{
-    margin-top: 40px !important;
-}
+    .card-2{
+        margin-top: 40px !important;
+    }
 
-.card-header{
-    background-color: #fff;
-    border-bottom:0px solid #aaaa !important;
-}
+    .card-header{
+        background-color: #fff;
+        border-bottom:0px solid #aaaa !important;
+    }
 
-p{
-    font-size: 13px ;
-}
-        
-.small{
-    font-size: 9px !important;
-}
+    p{
+        font-size: 13px ;
+    }
+            
+    .small{
+        font-size: 9px !important;
+    }
 
-.form-control-sm {
-    height: calc(2.2em + .5rem + 2px);
-    font-size: .875rem;
-    line-height: 1.5;
-    border-radius: 0;   
-}
+    .form-control-sm {
+        height: calc(2.2em + .5rem + 2px);
+        font-size: .875rem;
+        line-height: 1.5;
+        border-radius: 0;   
+    }
 
-.cursor-pointer{
-    cursor: pointer;
-}
+    .cursor-pointer{
+        cursor: pointer;
+    }
 
-.boxed {
-    padding: 0px 8px 0 8px ;
-    background-color: #4bb8a9;
-    color: white;
-}
+    .boxed {
+        padding: 0px 8px 0 8px ;
+        background-color: #4bb8a9;
+        color: white;
+    }
 
-.boxed-1{
-    padding: 0px 8px 0 8px ;
-    color: black !important;
-    border: 1px solid #aaaa;
-}
+    .boxed-1{
+        padding: 0px 8px 0 8px ;
+        color: black !important;
+        border: 1px solid #aaaa;
+    }
 
-.bell{
-    opacity: 0.5;
-    cursor: pointer;
-}
+    .bell{
+        opacity: 0.5;
+        cursor: pointer;
+    }
 
-  </style>
+</style>
 </head>
 
 <body>
@@ -274,10 +274,7 @@ p{
 </nav>
 
 <!----------------------------------------------- CART ---------------------------------------------------------------->
-@php
-    $totalAmount = $totalAmount ?? 0;
-@endphp
-<!-- Debugging: Check all variables passed to the view -->
+
 <div class="container-fluid my-5">
     <div class="row justify-content-center">
         <div class="col-xl-10">
@@ -305,9 +302,22 @@ p{
                                 <br>
 
                                 <!-- Payment Form -->
-                                <form method="POST" action="{{ route('checkout.submit') }}">
+                                <form method="POST" action="{{ route('checkout.submit') }}" id="checkout-form">
                                     @csrf
+                                    @php
+        $viewCalculatedTotal = $cartItems->sum(function($item) {
+            return (float)$item->price * (int)$item->quantity;
+        });
+    @endphp
+    @php
+    $totalAmount = $cartItems->sum(function($item) {
+        return (float)$item->price * (int)$item->quantity;
+    });
+@endphp
+
+    
                                     <!-- Hidden Fields -->
+                                    
                                     <input type="hidden" name="shipping_address" value="{{ $address }}">
                                     <input type="hidden" name="email" value="{{ $email }}">
                                     <input type="hidden" name="total_amount" value="{{ $totalAmount }}">
@@ -396,6 +406,15 @@ p{
                                     </form>
                                 </div>
                                 @endforeach
+
+                                <div class="row justify-content-between mt-4 pt-3 border-top">
+                <div class="col-auto">
+                    <p class="fs-4"><b>TOTAL</b></p>
+                </div>
+                <div class="col-auto">
+                    <p class="fs-4"><b>${{ number_format($totalAmount, 2) }}</b></p>
+                </div>
+            </div>
                             </div>
                         </div>
                     </div>
@@ -407,7 +426,7 @@ p{
       <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
  <x-footer />
 
-<script>
+
     <script>
     document.addEventListener('DOMContentLoaded', function () {
         const removeForms = document.querySelectorAll('form[action*="/cart/remove"]');
@@ -440,8 +459,31 @@ p{
             });
         });
     });
-</script>
-</script>
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const quantityInputs = document.querySelectorAll('.quantity-input');
+        
+        quantityInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                // Update the cart via AJAX when quantity changes
+                const formData = new FormData();
+                formData.append('_token', '{{ csrf_token() }}');
+                formData.append('quantity', this.value);
+                formData.append('item_id', this.closest('.row').querySelector('form').getAttribute('action').split('/').pop());
+                
+                fetch(this.closest('.row').querySelector('form').getAttribute('action'), {
+                    method: 'POST',
+                    body: formData
+                }).then(response => {
+                    if(response.ok) {
+                        location.reload(); // Refresh to update totals
+                    }
+                });
+            });
+        });
+    });
+    </script>
 <script src="../JS/navbar.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

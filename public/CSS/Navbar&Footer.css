@@ -139,9 +139,9 @@ ul.fs-4.list-unstyled.d-flex:not(.gap-5){
 /*-----------------------------------------------------SELECTION--------------------------------------------------------- */
 
 ::selection {
-    background: #DC143C; /* maroon hex code */
+    background: #ffffff;
     color: #000;
-    text-shadow: none; /* Optional: removes text shadow if any */
+    text-shadow: none;
   }
   
   ::-moz-selection {

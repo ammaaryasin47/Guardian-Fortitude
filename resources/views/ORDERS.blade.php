@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>ADMIN PANEL</title>
+    <title>ORDERS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- BOOTSTRAP CDN -->
@@ -33,97 +32,115 @@
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/android-chrome-192x192.png" type="image/svg+xml">
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/android-chrome-512x512.png" type="image/svg+xml">
     <link rel="icon" href="../../IMAGES/HOME/favicon_io/apple-touch-icon.png" type="image/svg+xml">
+
+    
     <style>
-    .top-bar {
-        background-color: #333;
-        overflow: hidden;
-        display: flex;
-    }
-    
-    .top-bar button {
-        background-color: inherit;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 14px 20px;
-        color: white;
-        font-size: 16px;
-        flex: 1;
-        transition: 0.3s;
-    }
-    
-    .top-bar button:hover {
-        background-color: maroon;
-    }
-    
-    .top-bar button.active {
-        background-color: maroon;
-    }
-    
-    .table-container {
-        padding: 20px;
-        display: none;
-        margin: 20px auto;
-        max-width: 90%;
-    }
-    
-    .table-wrapper {
-        overflow-x: auto;
-        border: 1px solid #444;
-        border-radius: 4px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        background-color: #333;
-    }
-    
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        min-width: 600px; /* Ensures horizontal scroll when content is wide */
-    }
-    
-    th, td {
-        font-family:'Barlow',sans-serif;
-        padding: 12px 15px;
-        text-align: left;
-        border-bottom: 1px solid #444;
-        color: white;
-        border-right:2px solid #000;
-    }
-    
-    th {
-        text-align:center;
-        background-color: maroon;
-        position: sticky;
-        top: 0;
-        font-weight: 600;
-        border-right:2px solid black;
-    }
-    
-    tr {
-        text-align:center;
-        background-color: #333;
-       
-    }
-    
-    /* Scrollbar styling */
-    .table-wrapper::-webkit-scrollbar {
-        height: 8px;
-    }
-    
-    .table-wrapper::-webkit-scrollbar-track {
-        background: #444;
-        border-radius: 4px;
-    }
-    
-    .table-wrapper::-webkit-scrollbar-thumb {
-        background: maroon;
-        border-radius: 4px;
-    }
-    
-    .table-wrapper::-webkit-scrollbar-thumb:hover {
-        background: #800000;
-    }
-</style>    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: black;
+            border:2px solid white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .search-filter {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .search-box {
+            padding: 8px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .filter-dropdown {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #000;
+            position: sticky;
+            top: 0;
+        }
+        tr:hover {
+            background-color: white;
+            color:black;
+        }
+        .status-pending {
+            color: #ff9800;
+            font-weight: bold;
+        }
+        .status-shipped {
+            color: #4caf50;
+            font-weight: bold;
+        }
+        .status-cancelled {
+            color: #f44336;
+            font-weight: bold;
+        }
+        .action-btn {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        .view-btn {
+            background-color: #2196F3;
+            color: white;
+        }
+        .edit-btn {
+            background-color: #ffc107;
+            color: black;
+        }
+        .delete-btn {
+            background-color: #f44336;
+            color: white;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .pagination a {
+            color: black;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            margin: 0 4px;
+        }
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+        .card-number {
+            font-family: monospace;
+        }
+        .masked {
+            letter-spacing: 2px;
+        }
+    </style>
 
 </head>
 
@@ -282,175 +299,77 @@
                 </li>
     @endauth
             </ul>
-    </ul>
+        </ul>
 </nav>  
-<!------------------------------------------------------------ADMIN PANEL ------------------------------------------------------------>
-    <div class="fs-3 top-bar">
-        <button onclick="showTable('users-table')">USERS</button>
-        <button onclick="showTable('services-table')">SERVICES</button>
-        <button onclick="showTable('orders-table')">ORDERS</button>
-    </div>
-<!-----------------------------------------------USERS TABLE----------------------------------------------------->
-<div id="users-table" class="text-center fs-3 table-container">
-    <h2 class="text-light text-center py-3">USERS</h2>
-    @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-    @endif
-    <div class="table-responsive">
-    @isset($users)
-    @if($users->count() > 0)
-        <table class="">
-            <thead class="thead-dark">
-                <tr>
-                    <th>ID</th>
-                    <th>USER ID</th>
-                    <th>NAME</th>
-                    <th>PICTURE</th>
-                    <th>CONTACT</th>
-                    <th>EMAIL</th>
-                    <th>TYPE</th>
-                    <th>STATUS</th>
-                    <th>ACTION</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($users as $user)
-                <tr>
-                    <td>{{ $user->id }}</td>
-                    <td>{{ $user->user_id }}</td>
-                    <td>{{ $user->name }}</td>
-                    <td>
-                        @if($user->picture)
-                            <img src="{{ asset('storage/'.$user->picture) }}" alt="User Image" width="50">
-                        @else
-                            No Image
-                        @endif
-                    </td>
-                    <td>{{ $user->countrycode }} {{ $user->contact }}</td>
-                    <td>{{ $user->email }}</td>
-                    <td>{{ $user->type }}</td>
-                    <td>
-                        <span class="badge 
-                            @if($user->status == 'approved') badge-success 
-                            @elseif($user->status == 'rejected') badge-danger 
-                            @else badge-warning @endif">
-                            {{ ucfirst($user->status) }}
-                        </span>
-                    </td>
-                    <td>
-                        <div class="btn-group" role="group">
-                        
-                       
-                        </div>
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
-    @else
-        <p class="alert alert-info">No users found in database</p>
-    @endif
-    @else
-        <p class="alert alert-danger">ERROR: Users data not passed to view</p>
-    @endisset
-    </div>
-</div>
+<!-------------------------------------------------------ORDER TABLE_----------------------------------------------------------->
 
-<div id="services-table" class="text-center fs-3 table-container">
-    <h2 class="text-center text-light py-3">SERVICES</h2>
-        <table>
-            <thead>
-                <tr>
-                <th>USERS</th>
-                <th>EDIT SUBSCRIPTION</th>
-                </tr>
-            </thead>
-            <tbody>
-        @foreach($subscriptions as $subscription)
-        <tr>
-            <td>{{ $subscription->user->name }}</td>
-                <td class="text-center">
-                    <a href="{{ route('admin.subscriptions.edit', $subscription->user_id) }}" 
-                    class="btn btn-sm btn-danger fs-4 text-center">
-                        EDIT 
-                    </a>
-                </td>
-            </td>
-        </tr>
-@endforeach
-    </tbody>   
-        </table>
-</div>
+<div class="container text-light fs-4">
+    <h1 class="text-center text-light">YOUR ORDERS</h1>
     
-<div id="orders-table" class="fs-3 table-container">
-    <h2 class="py-3 text-light text-center">ORDERS</h2>
-    <table class="">
-        <thead class="thead-dark">
+    <div class="search-filter">
+        <input type="text" style="background:#000;" class="text-light search-box" placeholder="Search Orders">
+        <select style="background-color:black; color:#fff;" class="filter-dropdown">
+            <option>All Status</option>
+            <option>Pending</option>
+            <option>Shipped</option>
+            <option>Cancelled</option>
+        </select>
+    </div>
+    
+    <table>
+        <thead>
             <tr>
-                <th>ORDER ID</th>
-                <th>CUSTOMER</th>
-                <th>EMAIL</th>
-                <th>SHIPPING ADDRESS</th>
-                <th>DATE</th>
-                <th>TOTAL AMOUNT</th>
-                <th>PAYMENT METHOD</th>
+                <th>Order ID</th>
+                <th>Products</th>
+                <th>Shipping Address</th>
+                <th>Email</th>
+                <th>Card Name</th>
+                <th>Card Number</th>
+                <th>Card Expiry</th>
+                <th>Card CVC</th>
+                <th>Total Amount</th>
+                <th>Status</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             @foreach($orders as $order)
             <tr>
-                <td>{{ $order->id }}</td>
-                <td>{{ $order->user->name ?? 'Guest' }}</td>
-                <td>{{ $order->email }}</td>
-                <td>{{ $order->shipping_address }}</td>
-                <td>{{ $order->created_at->format('Y-m-d') }}</td>
-                <td>${{ number_format($order->total_amount, 2) }}</td>
+                <td>#{{ $order->id }}</td>
                 <td>
-                    {{ $order->card_name }}<br>
-                    ****-****-****-{{ substr($order->card_number, -4) }}
+                    <ul style="margin: 0; padding-left: 20px;">
+                        @if(isset($order->products))
+                            @foreach(json_decode($order->products, true) as $product)
+                                <li>{{ $product['name'] }} (x{{ $product['quantity'] }})</li>
+                            @endforeach
+                        @else
+                            <li>No products information available</li>
+                        @endif
+                    </ul>
+                </td>
+                <td>{{ $order->shipping_address }}</td>
+                <td>{{ $order->email }}</td>
+                <td>{{ $order->card_name }}</td>
+                <td class="card-number">•••• •••• •••• {{ substr($order->card_number, -4) }}</td>
+                <td>{{ $order->card_expiry }}</td>
+                <td>•••</td>
+                <td>${{ number_format($order->total_amount, 2) }}</td>
+                <td class="status-{{ strtolower($order->status) }}">{{ ucfirst($order->status) }}</td>
+                <td>
+                    <button class="action-btn view-btn">View</button>
+                    <button class="action-btn edit-btn">Edit</button>
                 </td>
             </tr>
             @endforeach
         </tbody>
     </table>
+    
+    <div class="pagination">
+        {{ $orders->links() }}
+    </div>
 </div>
-</form>
-    <script>
-        // Show the users table by default when the page loads
-        window.onload = function() {
-            showTable('users-table');
-            document.querySelector('.top-bar button').classList.add('active');
-        };
-        
-        function showTable(tableId) {
-            // Hide all tables
-            const tables = document.getElementsByClassName('table-container');
-            for (let i = 0; i < tables.length; i++) {
-                tables[i].style.display = 'none';
-            }
-            
-            // Remove active class from all buttons
-            const buttons = document.querySelectorAll('.top-bar button');
-            buttons.forEach(button => {
-                button.classList.remove('active');
-            });
-            
-            // Show the selected table and mark its button as active
-            document.getElementById(tableId).style.display = 'block';
-            event.currentTarget.classList.add('active');
-        }
 
-        document.getElementById('statusForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    console.log('Submitting to:', this.action);
-    console.log('Method:', this.querySelector('input[name="_method"]').value);
-    this.submit(); // Remove this line after checking console
-});
-    </script>
-
-<!------------------------------------------------------------ FOOTER ------------------------------------------------------->
+    <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
     <x-footer />
 
 
@@ -461,4 +380,4 @@
         crossorigin="anonymous"></script> <!--BOOTSTRAP JS-->
 </body>
 
-</html>
+</html> 

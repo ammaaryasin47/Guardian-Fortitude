@@ -26,15 +26,19 @@ class User extends Authenticatable
         'status'
     ];
 
-  // app/Models/User.php
-public function getProfilePictureUrlAttribute()
-{
-    return $this->picture 
-        ? asset('storage/' . $this->picture)
-        : asset('default-profile.png');
-}
+    public function getProfilePictureUrlAttribute()
+    {
+        return $this->picture 
+            ? asset('storage/' . $this->picture)
+            : asset('default-profile.png');
+    }
     public function subscription()
     {
         return $this->hasOne(Subscription::class, 'user_id', 'user_id');
     }
+
+    public function orders()
+{
+    return $this->hasMany(Order::class);
+}
 }

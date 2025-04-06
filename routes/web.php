@@ -155,16 +155,23 @@ Route::get('/paymentcomplete', function () {
     return view('paymentcomplete');
 })->name('paymentcomplete');
 
-Route::get('/checkout', [OrderController::class, 'index'])->name('checkout');
+Route::get('/orders', [OrderController::class, 'index'])->name('orders.index')->middleware('auth');
 Route::post('/checkout', [OrderController::class, 'store'])->name('checkout.submit');
+Route::delete('/checkout', [OrderController::class, 'store'])->name('checkout.submit');
 
 //------------------------- ADMIN PANEL ----------------------------------------------------------------
-
 Route::get('/adminpanel', [AdminUserController::class, 'index'])
-     ->name('admin.panel');
+    ->name('admin.panel')
+    ->middleware(['auth', 'admin']); // Requires both auth and admin checks
 
-     Route::get('/adminpanel/subscriptions/{user}/edit', [AdminSubscriptionController::class, 'edit'])
+Route::get('/adminpanel/subscriptions/{user}/edit', [AdminSubscriptionController::class, 'edit'])
      ->name('admin.subscriptions.edit');
      
 Route::put('/adminpanel/subscriptions/{user}', [AdminSubscriptionController::class, 'update'])
      ->name('admin.subscriptions.update');
+
+Route::get('/users', [AdminUserController::class, 'index'])->name('admin.users');
+
+Route::get('/orders',function(){
+    return view('ORDERS');
+})->name('orders');
