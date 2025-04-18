@@ -84,6 +84,9 @@
   </button>
 </div>
 
+<div class="text-center py-5 my-5 bg-light">
+  <h1 style="color:maroon; font-weight:500;">COMING SOON</h1>
+</div>
     <!------------------------------------------------------------ FOOTER ------------------------------------------------------->
     <x-footer />
 
